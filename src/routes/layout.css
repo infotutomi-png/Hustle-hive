@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-brand-orange: #F7931E;
+	--color-brand-orange-dark: #E07D0A;
+	--font-display: 'Clash Display', sans-serif;
+	--font-body: 'Inter', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	background-color: black;
+}
+
+body {
+	font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-display);
+}
