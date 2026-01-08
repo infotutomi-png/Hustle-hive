@@ -25,6 +25,9 @@
 </script>
 
 <footer class="relative bg-black border-t border-stone-800">
+	<!-- Honeycomb pattern overlay -->
+	<div class="absolute inset-0 opacity-5" style="background-image: url('/images/honeycomb-pattern.svg'); background-size: 60px 60px;"></div>
+
 	<div class="relative z-10 max-w-6xl mx-auto px-6 py-16">
 		<!-- Main Footer Content -->
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -135,6 +138,11 @@
 					&copy; {currentYear} Hustle Hive. All rights reserved.
 				</p>
 				<div class="flex items-center gap-6">
+					<img
+						src="/images/national-lottery-community-fund-digital-logo-black-background.webp"
+						alt="Supported by The National Lottery Community Fund"
+						class="h-16"
+					/>
 					<a href="#privacy" class="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200">
 						Privacy Policy
 					</a>
