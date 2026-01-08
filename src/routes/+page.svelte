@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
+	import Programmes from '$lib/components/Programmes.svelte';
+	import MakersToMarket from '$lib/components/MakersToMarket.svelte';
 </script>
 
 <svelte:head>
@@ -9,4 +11,6 @@
 
 <main class="bg-black">
 	<Hero />
+	<Programmes />
+	<MakersToMarket />
 </main>
