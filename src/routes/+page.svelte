@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
+	import MissionVision from '$lib/components/MissionVision.svelte';
 	import Programmes from '$lib/components/Programmes.svelte';
 	import MakersToMarket from '$lib/components/MakersToMarket.svelte';
 </script>
@@ -11,6 +12,7 @@
 
 <main class="bg-black">
 	<Hero />
+	<MissionVision />
 	<Programmes />
 	<MakersToMarket />
 </main>

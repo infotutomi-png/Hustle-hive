@@ -117,4 +117,27 @@
 			</a>
 		</div>
 	</section>
+
+	<!-- Meet Our Makers Section -->
+	<section class="max-w-6xl mx-auto px-4 mt-16">
+		<div class="rounded-2xl bg-gradient-to-br from-stone-800/80 to-stone-900/90 border border-stone-700/50 p-8 md:p-10">
+			<div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+				<div class="flex-1 text-center md:text-left">
+					<h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Meet Our Makers</h2>
+					<p class="text-gray-300">
+						Browse products from our talented Makers to Market graduates. Each purchase supports a young entrepreneur on their business journey.
+					</p>
+				</div>
+				<a
+					href="/programmes/makers-to-market/sellers"
+					class="inline-flex items-center gap-2 px-6 py-3 bg-stone-700/60 hover:bg-stone-600/60 text-white font-semibold rounded-lg transition-colors duration-200 border border-stone-600/50 whitespace-nowrap"
+				>
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+					</svg>
+					Browse Sellers
+				</a>
+			</div>
+		</div>
+	</section>
 </main>
