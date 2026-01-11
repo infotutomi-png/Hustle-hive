@@ -1,3 +1,17 @@
+<script lang="ts">
+	import ImageCarousel from '$lib/components/ImageCarousel.svelte';
+
+	const outdoorImages = [
+		'/images/outdoor1.jpeg',
+		'/images/outdoor2.jpeg',
+		'/images/outdoor3.jpeg',
+		'/images/outdoor4.jpeg',
+		'/images/outdoor5.jpeg',
+		'/images/outdoor6.jpeg',
+		'/images/outdoor7.jpeg'
+	];
+</script>
+
 <svelte:head>
 	<title>Outdoors & Wellbeing - Hustle Hive</title>
 	<meta name="description" content="Nature-based learning, teamwork and wellbeing activities at Hustle Hive's Outdoors & Wellbeing programme." />
@@ -23,15 +37,9 @@
 		<div class="border-t border-stone-700/50 mb-12"></div>
 	</div>
 
-	<!-- Hero Image -->
-	<section class="max-w-6xl mx-auto px-4 mb-12">
-		<div class="rounded-2xl overflow-hidden">
-			<img
-				src="/images/outdoor-wellbeing.jpg"
-				alt="Outdoors & Wellbeing programme"
-				class="w-full h-64 md:h-96 object-cover"
-			/>
-		</div>
+	<!-- Image Carousel -->
+	<section class="max-w-4xl mx-auto px-8 md:px-12 mb-12">
+		<ImageCarousel images={outdoorImages} alt="Outdoors & Wellbeing programme" />
 	</section>
 
 	<!-- Content -->
