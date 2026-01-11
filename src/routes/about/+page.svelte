@@ -5,12 +5,12 @@
 <svelte:head>
 	<title>About Us - Hustle Hive</title>
 	<meta name="description" content="Learn about Hustle Hive - a community-powered makerspace and enterprise hub helping people of all ages build confidence, skills, and real-world opportunities." />
-	<link rel="preload" as="image" href="/images/about.webp" type="image/webp" />
+	<link rel="preload" as="image" href="/images/aboutus2.jpeg" type="image/jpeg" />
 </svelte:head>
 
 <main class="bg-black">
 	<!-- Hero Section -->
-	<section class="relative min-h-[45vh] md:min-h-[95vh] overflow-hidden">
+	<section class="relative min-h-[55vh] md:min-h-[95vh] overflow-hidden">
 		<!-- Background Image -->
 		<div class="absolute inset-0 z-0">
 			<!-- Placeholder gradient shown while loading -->
@@ -19,9 +19,9 @@
 				class:opacity-0={imageLoaded}
 			></div>
 			<img
-				src="/images/about.webp"
+				src="/images/aboutus2.jpeg"
 				alt="Hustle Hive community"
-				class="w-full h-full object-cover object-[70%_20%] md:object-[center_60%] transition-opacity duration-500"
+				class="w-full h-full object-cover object-[45%_15%] md:object-[center_60%] transition-opacity duration-500"
 				class:opacity-0={!imageLoaded}
 				onload={() => (imageLoaded = true)}
 				fetchpriority="high"
