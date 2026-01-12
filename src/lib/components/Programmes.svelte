@@ -71,14 +71,23 @@
 
 					<!-- Card Image -->
 					<div class="h-48 overflow-hidden">
-						<img
-							src={programme.image}
-							alt={programme.title}
-							loading="lazy"
-							class="w-full h-full object-cover transition-transform duration-500 {programme.imagePosition || ''}"
-							class:group-hover:scale-105={!programme.comingSoon}
-							class:grayscale={programme.comingSoon}
-						/>
+						{#if programme.comingSoon}
+							<img
+								src={programme.image}
+								alt={programme.title}
+								loading="lazy"
+								class="w-full h-full object-cover transition-transform duration-500 grayscale {programme.imagePosition || ''}"
+							/>
+						{:else}
+							<a href={programme.href}>
+								<img
+									src={programme.image}
+									alt={programme.title}
+									loading="lazy"
+									class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 {programme.imagePosition || ''}"
+								/>
+							</a>
+						{/if}
 					</div>
 
 					<!-- Card Content -->
