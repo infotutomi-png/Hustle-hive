@@ -1,44 +1,36 @@
 <script lang="ts">
-	type EventCategory = 'Adult Programme' | 'Outdoors & Wellbeing' | 'Young People' | 'Community';
+	type EventCategory = 'Makers to Market' | 'Outdoors & Wellbeing' | 'Young People' | 'Community';
 
 	interface Event {
 		title: string;
 		date: string;
 		category: EventCategory;
 		description: string;
-		buttonText: string;
-		buttonLink: string;
 	}
 
 	const events: Event[] = [
 		{
-			title: 'Makers to Market – Open Evening',
-			date: 'Thu 21 March',
-			category: 'Adult Programme',
-			description: 'Learn more about our 12-week enterprise programme and meet the team.',
-			buttonText: 'Register interest',
-			buttonLink: '/programmes/makers-to-market/apply'
-		},
-		{
-			title: 'Outdoor Wellbeing Taster Session',
-			date: 'Sat 6 April',
+			title: 'Bushcraft for Homeschooling',
+			date: 'TBC',
 			category: 'Outdoors & Wellbeing',
-			description: 'Learn more about our 12-week enterprise programme and meet the team.',
-			buttonText: 'Find out more',
-			buttonLink: '#'
+			description: 'Outdoor learning and bushcraft skills for homeschool families. More details coming soon.'
 		},
 		{
-			title: 'After-school Creative Club – Launch',
-			date: 'Starts Mon 15 April',
-			category: 'Young People',
-			description: 'Starts Mon 15 April',
-			buttonText: 'Register interest',
-			buttonLink: '#'
+			title: 'Makers to Market – Open Evening',
+			date: 'TBC',
+			category: 'Makers to Market',
+			description: 'Learn about our 12-week enterprise programme and meet the team. Date to be announced.'
+		},
+		{
+			title: 'Community Workshop',
+			date: 'TBC',
+			category: 'Community',
+			description: 'Hands-on making session open to all. Details coming soon.'
 		}
 	];
 
 	const categoryColors: Record<EventCategory, string> = {
-		'Adult Programme': 'bg-amber-600/20 text-amber-400 border-amber-600/30',
+		'Makers to Market': 'bg-amber-600/20 text-amber-400 border-amber-600/30',
 		'Outdoors & Wellbeing': 'bg-green-600/20 text-green-400 border-green-600/30',
 		'Young People': 'bg-orange-600/20 text-orange-400 border-orange-600/30',
 		'Community': 'bg-blue-600/20 text-blue-400 border-blue-600/30'
@@ -76,14 +68,25 @@
 		<!-- Divider -->
 		<div class="border-t border-stone-700/50 mb-12"></div>
 
+		<!-- Notice Banner -->
+		<div class="bg-brand-orange/10 border border-brand-orange/30 rounded-2xl p-6 mb-10 text-center">
+			<svg class="w-10 h-10 text-brand-orange mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+			</svg>
+			<h2 class="text-xl font-bold text-white mb-2">Events Coming Soon</h2>
+			<p class="text-gray-300">
+				We're currently planning our upcoming events. Check back soon or follow us on social media for updates.
+			</p>
+		</div>
+
 		<!-- Events Grid -->
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 			{#each events as event}
 				<div
-					class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-6 backdrop-blur-sm flex flex-col"
+					class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-6 backdrop-blur-sm flex flex-col opacity-70"
 				>
 					<!-- Event Title -->
-					<h2 class="text-xl md:text-2xl font-bold text-brand-orange mb-4 leading-tight">
+					<h2 class="text-xl md:text-2xl font-bold text-brand-orange mb-4 leading-tight min-h-[3.5rem]">
 						{event.title}
 					</h2>
 
@@ -97,7 +100,7 @@
 								d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
 							/>
 						</svg>
-						<span>{event.date}</span>
+						<span class="font-medium">{event.date}</span>
 					</div>
 
 					<!-- Category Tag -->
@@ -117,20 +120,25 @@
 					</div>
 
 					<!-- Description -->
-					<p class="text-gray-400 mb-6 flex-1">
+					<p class="text-gray-400 flex-1">
 						{event.description}
 					</p>
-
-					<!-- Button -->
-					<a
-						href={event.buttonLink}
-						class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-stone-800/80 hover:bg-stone-700/80 text-white font-medium rounded-lg transition-colors duration-200 border border-stone-600/50"
-					>
-						{event.buttonText}
-					</a>
 				</div>
 			{/each}
 		</div>
 
+		<!-- Contact CTA -->
+		<div class="text-center">
+			<p class="text-gray-400 mb-4">Want to be notified when events are announced?</p>
+			<a
+				href="/contact"
+				class="inline-flex items-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200"
+			>
+				Get in Touch
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+				</svg>
+			</a>
+		</div>
 	</div>
 </main>

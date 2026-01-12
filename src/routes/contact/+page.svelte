@@ -28,24 +28,7 @@
 					</p>
 
 					<div class="space-y-6">
-						<!-- Address -->
-						<div class="flex items-start gap-4">
-							<div class="w-12 h-12 bg-brand-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
-								<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-								</svg>
-							</div>
-							<div>
-								<h3 class="text-xl font-semibold text-white mb-1">Visit Us</h3>
-								<p class="text-gray-400">
-									47 Enterprise Way<br />
-									Darlington, DL1 4QZ
-								</p>
-							</div>
-						</div>
-
-						<!-- Email -->
+						<!-- Email - Kieron -->
 						<div class="flex items-start gap-4">
 							<div class="w-12 h-12 bg-brand-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
 								<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,9 +36,24 @@
 								</svg>
 							</div>
 							<div>
-								<h3 class="text-xl font-semibold text-white mb-1">Email Us</h3>
-								<a href="mailto:hello@hustlehive.com" class="text-gray-400 hover:text-brand-orange transition-colors duration-200">
-									hello@hustlehive.com
+								<h3 class="text-xl font-semibold text-white mb-1">Email - Kieron</h3>
+								<a href="mailto:kieron@hustlehive.co.uk" class="text-gray-400 hover:text-brand-orange transition-colors duration-200">
+									kieron@hustlehive.co.uk
+								</a>
+							</div>
+						</div>
+
+						<!-- Email - Gavin -->
+						<div class="flex items-start gap-4">
+							<div class="w-12 h-12 bg-brand-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-semibold text-white mb-1">Email - Gavin</h3>
+								<a href="mailto:gavin@hustlehive.co.uk" class="text-gray-400 hover:text-brand-orange transition-colors duration-200">
+									gavin@hustlehive.co.uk
 								</a>
 							</div>
 						</div>
@@ -69,30 +67,11 @@
 							</div>
 							<div>
 								<h3 class="text-xl font-semibold text-white mb-1">Call Us</h3>
-								<a href="tel:+441325123456" class="text-gray-400 hover:text-brand-orange transition-colors duration-200">
-									+44 1325 123 456
+								<a href="tel:+447593975681" class="text-gray-400 hover:text-brand-orange transition-colors duration-200">
+									07593 975681
 								</a>
 							</div>
 						</div>
-					</div>
-
-					<!-- Opening Hours -->
-					<div class="mt-10 p-6 bg-stone-900/50 border border-stone-700/50 rounded-2xl">
-						<h3 class="text-xl font-semibold text-white mb-4">Opening Hours</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li class="flex justify-between">
-								<span>Monday - Friday</span>
-								<span class="text-white">9:00 AM - 5:00 PM</span>
-							</li>
-							<li class="flex justify-between">
-								<span>Saturday</span>
-								<span class="text-white">10:00 AM - 2:00 PM</span>
-							</li>
-							<li class="flex justify-between">
-								<span>Sunday</span>
-								<span class="text-white">Closed</span>
-							</li>
-						</ul>
 					</div>
 				</div>
 

@@ -1,58 +1,21 @@
 <script lang="ts">
 	// Form state
 	let formData = $state({
-		firstName: '',
-		lastName: '',
-		email: '',
-		phone: '',
+		name: '',
 		age: '',
-		productType: '',
-		productDescription: '',
-		experience: '',
-		goals: '',
-		availability: '',
-		heardAbout: '',
-		additionalInfo: ''
+		location: '',
+		areaOfInterest: ''
 	});
 
 	let isSubmitting = $state(false);
 	let submitSuccess = $state(false);
 	let submitError = $state('');
 
-	const productTypes = [
-		'Crafts & Handmade Goods',
-		'Art & Illustration',
-		'Jewellery & Accessories',
+	const areasOfInterest = [
+		'3D Printing',
 		'Clothing & Textiles',
-		'Food & Baked Goods',
-		'Woodwork & Carpentry',
-		'Candles & Home Fragrance',
-		'Skincare & Beauty',
-		'Other'
-	];
-
-	const experienceLevels = [
-		'Complete beginner - I have an idea but haven\'t started yet',
-		'Hobbyist - I make things for fun/gifts',
-		'Side hustle - I\'ve sold a few items informally',
-		'Established - I have an existing small business'
-	];
-
-	const availabilityOptions = [
-		'Weekday evenings (6pm-9pm)',
-		'Saturday mornings',
-		'Saturday afternoons',
-		'Sunday afternoons',
-		'Flexible - most times work for me'
-	];
-
-	const heardAboutOptions = [
-		'Social media (Facebook, Instagram)',
-		'Friend or family recommendation',
-		'School or college',
-		'Community centre or local event',
-		'Google search',
-		'Other'
+		'Art & Illustration',
+		'Other Craft Activities'
 	];
 
 	async function handleSubmit(e: SubmitEvent) {
@@ -89,7 +52,7 @@
 		></div>
 	</div>
 
-	<div class="max-w-3xl mx-auto px-4">
+	<div class="max-w-xl mx-auto px-4">
 		<!-- Header -->
 		<div class="text-center mb-10">
 			<a
@@ -125,7 +88,7 @@
 			</div>
 
 			<p class="text-gray-300 max-w-xl mx-auto">
-				Ready to turn your creative ideas into a real business? Fill out this application to join
+				Ready to turn your creative ideas into a real business? Fill out this quick application to join
 				our 12-week programme.
 			</p>
 		</div>
@@ -173,224 +136,72 @@
 				onsubmit={handleSubmit}
 				class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-6 md:p-8 backdrop-blur-sm"
 			>
-				<!-- Personal Information -->
-				<div class="mb-8">
-					<h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-						<span
-							class="w-8 h-8 bg-brand-orange/20 rounded-full flex items-center justify-center text-brand-orange text-sm font-bold"
-							>1</span
-						>
-						Personal Information
-					</h2>
-
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-						<div>
-							<label for="firstName" class="block text-sm font-medium text-gray-300 mb-1"
-								>First Name *</label
-							>
-							<input
-								type="text"
-								id="firstName"
-								bind:value={formData.firstName}
-								required
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
-								placeholder="Your first name"
-							/>
-						</div>
-
-						<div>
-							<label for="lastName" class="block text-sm font-medium text-gray-300 mb-1"
-								>Last Name *</label
-							>
-							<input
-								type="text"
-								id="lastName"
-								bind:value={formData.lastName}
-								required
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
-								placeholder="Your last name"
-							/>
-						</div>
-
-						<div>
-							<label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email *</label
-							>
-							<input
-								type="email"
-								id="email"
-								bind:value={formData.email}
-								required
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
-								placeholder="your@email.com"
-							/>
-						</div>
-
-						<div>
-							<label for="phone" class="block text-sm font-medium text-gray-300 mb-1"
-								>Phone Number</label
-							>
-							<input
-								type="tel"
-								id="phone"
-								bind:value={formData.phone}
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
-								placeholder="07xxx xxxxxx"
-							/>
-						</div>
-
-						<div>
-							<label for="age" class="block text-sm font-medium text-gray-300 mb-1">Age *</label>
-							<input
-								type="number"
-								id="age"
-								bind:value={formData.age}
-								required
-								min="11"
-								max="99"
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
-								placeholder="Your age"
-							/>
-						</div>
+				<div class="space-y-5">
+					<!-- Name -->
+					<div>
+						<label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name *</label>
+						<input
+							type="text"
+							id="name"
+							bind:value={formData.name}
+							required
+							class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
+							placeholder="Your full name"
+						/>
 					</div>
-				</div>
 
-				<!-- Product Information -->
-				<div class="mb-8">
-					<h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-						<span
-							class="w-8 h-8 bg-brand-orange/20 rounded-full flex items-center justify-center text-brand-orange text-sm font-bold"
-							>2</span
-						>
-						Your Product
-					</h2>
-
-					<div class="space-y-4">
-						<div>
-							<label for="productType" class="block text-sm font-medium text-gray-300 mb-1"
-								>What type of product do you want to create/sell? *</label
-							>
-							<select
-								id="productType"
-								bind:value={formData.productType}
-								required
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white focus:outline-none focus:border-brand-orange transition-colors"
-							>
-								<option value="">Select a category</option>
-								{#each productTypes as type}
-									<option value={type}>{type}</option>
-								{/each}
-							</select>
-						</div>
-
-						<div>
-							<label for="productDescription" class="block text-sm font-medium text-gray-300 mb-1"
-								>Describe your product idea *</label
-							>
-							<textarea
-								id="productDescription"
-								bind:value={formData.productDescription}
-								required
-								rows="3"
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors resize-none"
-								placeholder="Tell us about what you want to make and sell..."
-							></textarea>
-						</div>
-
-						<div>
-							<label for="experience" class="block text-sm font-medium text-gray-300 mb-1"
-								>What's your current experience level? *</label
-							>
-							<select
-								id="experience"
-								bind:value={formData.experience}
-								required
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white focus:outline-none focus:border-brand-orange transition-colors"
-							>
-								<option value="">Select your experience</option>
-								{#each experienceLevels as level}
-									<option value={level}>{level}</option>
-								{/each}
-							</select>
-						</div>
+					<!-- Age -->
+					<div>
+						<label for="age" class="block text-sm font-medium text-gray-300 mb-1">Age *</label>
+						<input
+							type="number"
+							id="age"
+							bind:value={formData.age}
+							required
+							min="11"
+							max="99"
+							class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
+							placeholder="Your age"
+						/>
 					</div>
-				</div>
 
-				<!-- Goals & Availability -->
-				<div class="mb-8">
-					<h2 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-						<span
-							class="w-8 h-8 bg-brand-orange/20 rounded-full flex items-center justify-center text-brand-orange text-sm font-bold"
-							>3</span
-						>
-						Goals & Availability
-					</h2>
+					<!-- Location -->
+					<div>
+						<label for="location" class="block text-sm font-medium text-gray-300 mb-1">Where do you live? *</label>
+						<input
+							type="text"
+							id="location"
+							bind:value={formData.location}
+							required
+							class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
+							placeholder="Town or area"
+						/>
+					</div>
 
-					<div class="space-y-4">
-						<div>
-							<label for="goals" class="block text-sm font-medium text-gray-300 mb-1"
-								>What do you hope to achieve from this programme? *</label
-							>
-							<textarea
-								id="goals"
-								bind:value={formData.goals}
-								required
-								rows="3"
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors resize-none"
-								placeholder="Your goals and what you want to learn..."
-							></textarea>
-						</div>
-
-						<div>
-							<label for="availability" class="block text-sm font-medium text-gray-300 mb-1"
-								>When are you available for sessions? *</label
-							>
-							<select
-								id="availability"
-								bind:value={formData.availability}
-								required
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white focus:outline-none focus:border-brand-orange transition-colors"
-							>
-								<option value="">Select your availability</option>
-								{#each availabilityOptions as option}
-									<option value={option}>{option}</option>
-								{/each}
-							</select>
-						</div>
-
-						<div>
-							<label for="heardAbout" class="block text-sm font-medium text-gray-300 mb-1"
-								>How did you hear about us?</label
-							>
-							<select
-								id="heardAbout"
-								bind:value={formData.heardAbout}
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white focus:outline-none focus:border-brand-orange transition-colors"
-							>
-								<option value="">Select an option</option>
-								{#each heardAboutOptions as option}
-									<option value={option}>{option}</option>
-								{/each}
-							</select>
-						</div>
-
-						<div>
-							<label for="additionalInfo" class="block text-sm font-medium text-gray-300 mb-1"
-								>Anything else you'd like us to know?</label
-							>
-							<textarea
-								id="additionalInfo"
-								bind:value={formData.additionalInfo}
-								rows="3"
-								class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors resize-none"
-								placeholder="Any additional information, questions, or accessibility needs..."
-							></textarea>
+					<!-- Area of Interest -->
+					<div>
+						<label for="areaOfInterest" class="block text-sm font-medium text-gray-300 mb-2">Area of Interest *</label>
+						<div class="space-y-2">
+							{#each areasOfInterest as area}
+								<label class="flex items-center gap-3 p-3 bg-stone-800/30 border border-stone-600/30 rounded-lg cursor-pointer hover:border-brand-orange/50 transition-colors has-[:checked]:border-brand-orange has-[:checked]:bg-brand-orange/10">
+									<input
+										type="radio"
+										name="areaOfInterest"
+										value={area}
+										bind:group={formData.areaOfInterest}
+										required
+										class="w-4 h-4 text-brand-orange bg-stone-700 border-stone-600 focus:ring-brand-orange focus:ring-2"
+									/>
+									<span class="text-white">{area}</span>
+								</label>
+							{/each}
 						</div>
 					</div>
 				</div>
 
 				<!-- Error Message -->
 				{#if submitError}
-					<div class="bg-red-900/30 border border-red-500/50 rounded-lg p-4 mb-6">
+					<div class="bg-red-900/30 border border-red-500/50 rounded-lg p-4 mt-6">
 						<p class="text-red-400 text-sm">{submitError}</p>
 					</div>
 				{/if}
@@ -399,7 +210,7 @@
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					class="w-full flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark disabled:bg-brand-orange/50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors duration-200 text-lg"
+					class="w-full flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark disabled:bg-brand-orange/50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors duration-200 text-lg mt-6"
 				>
 					{#if isSubmitting}
 						<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
