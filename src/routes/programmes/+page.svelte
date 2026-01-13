@@ -9,6 +9,13 @@
 			imagePosition: 'object-[center_30%]'
 		},
 		{
+			title: 'Outdoors & Wellbeing',
+			description: 'Nature-based learning, teamwork and wellbeing activities',
+			image: '/images/outdoor-wellbeing.jpg',
+			icon: 'tent',
+			href: '/programmes/outdoors-wellbeing'
+		},
+		{
 			title: 'After-School Programme',
 			description: 'Creative, skill-building activities for ages 11–16, after school',
 			image: '/images/after-school-programe2.png',
@@ -16,13 +23,6 @@
 			href: '/programmes/after-school',
 			imagePosition: 'object-[center_30%]',
 			comingSoon: true
-		},
-		{
-			title: 'Outdoors & Wellbeing',
-			description: 'Nature-based learning, teamwork and wellbeing activities',
-			image: '/images/outdoor-wellbeing.jpg',
-			icon: 'tent',
-			href: '/programmes/outdoors-wellbeing'
 		},
 		{
 			title: 'Entrepreneurship Hub',

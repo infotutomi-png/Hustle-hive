@@ -5,7 +5,7 @@
 <svelte:head>
 	<title>About Us - Hustle Hive</title>
 	<meta name="description" content="Learn about Hustle Hive - a community-powered makerspace and enterprise hub helping people of all ages build confidence, skills, and real-world opportunities." />
-	<link rel="preload" as="image" href="/images/aboutus2.jpeg" type="image/jpeg" />
+	<link rel="preload" as="image" href="/images/aboutus3.png" type="image/jpeg" />
 </svelte:head>
 
 <main class="bg-black">
@@ -19,9 +19,9 @@
 				class:opacity-0={imageLoaded}
 			></div>
 			<img
-				src="/images/aboutus2.jpeg"
+				src="/images/aboutus3.png"
 				alt="Hustle Hive community"
-				class="w-full h-full object-cover object-[45%_15%] md:object-[center_60%] transition-opacity duration-500"
+				class="w-full h-full object-cover object-[80%_15%] md:object-[center_60%] transition-opacity duration-500"
 				class:opacity-0={!imageLoaded}
 				onload={() => (imageLoaded = true)}
 				fetchpriority="high"

@@ -17,10 +17,10 @@
 	];
 
 	const socials = [
-		{ label: 'Facebook', href: '#', icon: 'facebook' },
-		{ label: 'Instagram', href: '#', icon: 'instagram' },
-		{ label: 'LinkedIn', href: '#', icon: 'linkedin' },
-		{ label: 'YouTube', href: '#', icon: 'youtube' }
+		{ label: 'Facebook', href: 'https://www.facebook.com/share/1Gmf1xJUC8/', icon: 'facebook' }
+		// { label: 'Instagram', href: '#', icon: 'instagram' },
+		// { label: 'LinkedIn', href: '#', icon: 'linkedin' },
+		// { label: 'YouTube', href: '#', icon: 'youtube' }
 	];
 </script>
 
