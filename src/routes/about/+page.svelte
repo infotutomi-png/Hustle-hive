@@ -30,6 +30,7 @@
 			<div class="absolute inset-0 bg-black/50 z-10"></div>
 		</div>
 
+		
 		<!-- Content -->
 		<div class="absolute inset-0 z-20 flex items-end md:items-center justify-start md:justify-center px-6 pb-8 md:pb-0 md:px-4">
 			<div class="text-left md:text-center max-w-4xl">
