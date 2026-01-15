@@ -13,8 +13,8 @@
 </script>
 
 <svelte:head>
-	<title>Outdoors & Wellbeing - Hustle Hive</title>
-	<meta name="description" content="Nature-based learning, teamwork and wellbeing activities at Hustle Hive's Outdoors & Wellbeing programme." />
+	<title>Outdoor Education & Wellbeing - Hustle Hive</title>
+	<meta name="description" content="Nature-based learning, teamwork and wellbeing activities at Hustle Hive's Outdoor Education & Wellbeing programme." />
 </svelte:head>
 
 <main class="bg-black min-h-screen pt-32 pb-20">
@@ -25,7 +25,7 @@
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2L2 19h20L12 2z" />
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v17" />
 			</svg>
-			<h1 class="text-4xl md:text-5xl font-bold text-white italic">Outdoors & Wellbeing</h1>
+			<h1 class="text-4xl md:text-5xl font-bold text-white italic">Outdoor Education & Wellbeing</h1>
 		</div>
 		<p class="text-lg md:text-xl text-gray-300">
 			Nature-based learning, teamwork and wellbeing activities.
@@ -39,7 +39,7 @@
 
 	<!-- Image Carousel -->
 	<section class="max-w-4xl mx-auto px-8 md:px-12 mb-12">
-		<ImageCarousel images={outdoorImages} alt="Outdoors & Wellbeing programme" />
+		<ImageCarousel images={outdoorImages} alt="Outdoor Education & Wellbeing programme" />
 	</section>
 
 	<!-- Content -->
@@ -50,7 +50,7 @@
 				<h2 class="text-2xl md:text-3xl font-bold text-white mb-6">About This Programme</h2>
 				<div class="space-y-4 text-gray-300">
 					<p>
-						Our Outdoors & Wellbeing programme connects participants with nature through hands-on activities designed to build resilience, teamwork, and mental wellbeing.
+						Our Outdoor Education & Wellbeing programme connects participants with nature through hands-on activities designed to build resilience, teamwork, and mental wellbeing.
 					</p>
 					<p>
 						From forest walks and campfire cooking to bushcraft skills and mindfulness sessions, we create space for people to step away from screens, breathe fresh air, and reconnect with themselves and others.

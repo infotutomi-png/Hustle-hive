@@ -9,7 +9,7 @@
 			imagePosition: 'object-[center_30%]'
 		},
 		{
-			title: 'Outdoors & Wellbeing',
+			title: 'Outdoor Education & Wellbeing',
 			description: 'Nature-based learning, teamwork and wellbeing activities',
 			image: '/images/outdoor-wellbeing.jpg',
 			icon: 'tent',
@@ -37,7 +37,7 @@
 
 <svelte:head>
 	<title>Our Programmes - Hustle Hive</title>
-	<meta name="description" content="Explore Hustle Hive's programmes - from Makers to Market to our After-School Programme, Outdoors & Wellbeing, and Entrepreneurship Hub." />
+	<meta name="description" content="Explore Hustle Hive's programmes - from Makers to Market to our After-School Programme, Outdoor Education & Wellbeing, and Entrepreneurship Hub." />
 </svelte:head>
 
 <main class="bg-black min-h-screen pt-32 pb-20">

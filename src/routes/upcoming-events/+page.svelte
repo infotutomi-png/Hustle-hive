@@ -1,5 +1,5 @@
 <script lang="ts">
-	type EventCategory = 'Makers to Market' | 'Outdoors & Wellbeing' | 'Young People' | 'Community';
+	type EventCategory = 'Makers to Market' | 'Outdoor Education & Wellbeing' | 'Young People' | 'Community';
 
 	interface Event {
 		title: string;
@@ -12,7 +12,7 @@
 		{
 			title: 'Bushcraft for Homeschooling',
 			date: 'TBC',
-			category: 'Outdoors & Wellbeing',
+			category: 'Outdoor Education & Wellbeing',
 			description: 'Outdoor learning and bushcraft skills for homeschool families. More details coming soon.'
 		},
 		{
@@ -31,7 +31,7 @@
 
 	const categoryColors: Record<EventCategory, string> = {
 		'Makers to Market': 'bg-amber-600/20 text-amber-400 border-amber-600/30',
-		'Outdoors & Wellbeing': 'bg-green-600/20 text-green-400 border-green-600/30',
+		'Outdoor Education & Wellbeing': 'bg-green-600/20 text-green-400 border-green-600/30',
 		'Young People': 'bg-orange-600/20 text-orange-400 border-orange-600/30',
 		'Community': 'bg-blue-600/20 text-blue-400 border-blue-600/30'
 	};

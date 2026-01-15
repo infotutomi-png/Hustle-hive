@@ -12,7 +12,7 @@
 	const programmes = [
 		{ label: 'Makers to Market', href: '/programmes/makers-to-market' },
 		{ label: 'After-School Programme', href: '/programmes/after-school' },
-		{ label: 'Outdoors & Wellbeing', href: '/programmes/outdoors-wellbeing' },
+		{ label: 'Outdoor Education & Wellbeing', href: '/programmes/outdoors-wellbeing' },
 		{ label: 'Entrepreneurship Hub', href: '/programmes/entrepreneurship-hub' }
 	];
 

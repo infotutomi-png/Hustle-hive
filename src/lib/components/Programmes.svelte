@@ -10,7 +10,7 @@
 			imagePosition: 'object-[center_30%]'
 		},
 		{
-			title: 'OUTDOORS & WELLBEING',
+			title: 'OUTDOOR EDUCATION & WELLBEING',
 			description: 'Nature-based learning, teamwork and wellbeing activities',
 			image: '/images/outdoor-wellbeing.jpg',
 			icon: 'tent',
