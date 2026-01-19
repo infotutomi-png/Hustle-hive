@@ -12,9 +12,10 @@
 		{
 			title: 'OUTDOOR EDUCATION & WELLBEING',
 			description: 'Nature-based learning, teamwork and wellbeing activities',
-			image: '/images/outdoor-wellbeing.jpg',
+			image: '/images/outdoor_activities.jpeg',
 			icon: 'tent',
-			href: '/programmes/outdoors-wellbeing'
+			href: '/programmes/outdoors-wellbeing',
+			imagePosition: 'object-[center_75%]'
 		},
 		{
 			title: 'AFTER-SCHOOL PROGRAMME',
