@@ -2,6 +2,7 @@
 	import ImageCarousel from '$lib/components/ImageCarousel.svelte';
 
 	const outdoorImages = [
+		'/images/outdoor_activities.jpeg',
 		'/images/outdoor1.jpeg',
 		'/images/outdoor2.jpeg',
 		'/images/outdoor3.jpeg',
