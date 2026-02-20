@@ -1,3 +1,10 @@
+<script lang="ts">
+	import { enhance } from '$app/forms';
+	import { page } from '$app/stores';
+
+	let isSubmitting = $state(false);
+</script>
+
 <svelte:head>
 	<title>Contact Us - Hustle Hive</title>
 	<meta name="description" content="Get in touch with Hustle Hive. We'd love to hear from you about our programmes, events, or partnership opportunities." />
@@ -77,69 +84,128 @@
 
 				<!-- Contact Form -->
 				<div class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-8">
-					<h2 class="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-					<form class="space-y-6">
-						<div>
-							<label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-							<input
-								type="text"
-								id="name"
-								name="name"
-								required
-								class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors duration-200"
-								placeholder="Your name"
-							/>
-						</div>
-
-						<div>
-							<label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-							<input
-								type="email"
-								id="email"
-								name="email"
-								required
-								class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors duration-200"
-								placeholder="your@email.com"
-							/>
-						</div>
-
-						<div>
-							<label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
-							<select
-								id="subject"
-								name="subject"
-								required
-								class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white focus:outline-none focus:border-brand-orange transition-colors duration-200"
+					{#if $page.form?.success}
+						<!-- Success Message -->
+						<div class="text-center py-8">
+							<div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+							</div>
+							<h2 class="text-2xl font-bold text-white mb-2">Message Sent!</h2>
+							<p class="text-gray-300 mb-6">
+								Thank you for getting in touch. We'll get back to you as soon as possible.
+							</p>
+							<a
+								href="/"
+								class="inline-flex items-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold rounded-lg transition-colors"
 							>
-								<option value="">Select a subject</option>
-								<option value="general">General Enquiry</option>
-								<option value="programmes">Programmes</option>
-								<option value="events">Events</option>
-								<option value="partnership">Partnership Opportunities</option>
-								<option value="volunteer">Volunteering</option>
-								<option value="other">Other</option>
-							</select>
+								Return to Homepage
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+								</svg>
+							</a>
 						</div>
-
-						<div>
-							<label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-							<textarea
-								id="message"
-								name="message"
-								rows="5"
-								required
-								class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors duration-200 resize-none"
-								placeholder="How can we help you?"
-							></textarea>
-						</div>
-
-						<button
-							type="submit"
-							class="w-full px-6 py-4 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200"
+					{:else}
+						<h2 class="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+						<form
+							method="POST"
+							use:enhance={() => {
+								isSubmitting = true;
+								return async ({ update }) => {
+									isSubmitting = false;
+									await update();
+								};
+							}}
+							class="space-y-6"
 						>
-							Send Message
-						</button>
-					</form>
+							<div>
+								<label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									required
+									value={$page.form?.values?.name ?? ''}
+									class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors duration-200"
+									placeholder="Your name"
+								/>
+								{#if $page.form?.errors?.name}
+									<p class="text-red-400 text-sm mt-1">{$page.form.errors.name}</p>
+								{/if}
+							</div>
+
+							<div>
+								<label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									required
+									value={$page.form?.values?.email ?? ''}
+									class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors duration-200"
+									placeholder="your@email.com"
+								/>
+								{#if $page.form?.errors?.email}
+									<p class="text-red-400 text-sm mt-1">{$page.form.errors.email}</p>
+								{/if}
+							</div>
+
+							<div>
+								<label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+								<select
+									id="subject"
+									name="subject"
+									required
+									class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white focus:outline-none focus:border-brand-orange transition-colors duration-200"
+								>
+									<option value="">Select a subject</option>
+									<option value="general" selected={$page.form?.values?.subject === 'general'}>General Enquiry</option>
+									<option value="programmes" selected={$page.form?.values?.subject === 'programmes'}>Programmes</option>
+									<option value="events" selected={$page.form?.values?.subject === 'events'}>Events</option>
+									<option value="partnership" selected={$page.form?.values?.subject === 'partnership'}>Partnership Opportunities</option>
+									<option value="volunteer" selected={$page.form?.values?.subject === 'volunteer'}>Volunteering</option>
+									<option value="other" selected={$page.form?.values?.subject === 'other'}>Other</option>
+								</select>
+								{#if $page.form?.errors?.subject}
+									<p class="text-red-400 text-sm mt-1">{$page.form.errors.subject}</p>
+								{/if}
+							</div>
+
+							<div>
+								<label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+								<textarea
+									id="message"
+									name="message"
+									rows="5"
+									required
+									class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors duration-200 resize-none"
+									placeholder="How can we help you?"
+								>{$page.form?.values?.message ?? ''}</textarea>
+								{#if $page.form?.errors?.message}
+									<p class="text-red-400 text-sm mt-1">{$page.form.errors.message}</p>
+								{/if}
+							</div>
+
+							{#if $page.form?.errors?.form}
+								<div class="bg-red-900/30 border border-red-500/50 rounded-lg p-4">
+									<p class="text-red-400 text-sm">{$page.form.errors.form}</p>
+								</div>
+							{/if}
+
+							<button
+								type="submit"
+								disabled={isSubmitting}
+								class="w-full px-6 py-4 bg-brand-orange hover:bg-brand-orange-dark disabled:bg-brand-orange/50 disabled:cursor-not-allowed text-black font-semibold rounded-lg transition-colors duration-200"
+							>
+								{#if isSubmitting}
+									Sending...
+								{:else}
+									Send Message
+								{/if}
+							</button>
+						</form>
+					{/if}
 				</div>
 		</div>
 	</section>

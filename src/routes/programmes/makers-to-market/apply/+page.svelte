@@ -23,9 +23,25 @@
 		isSubmitting = true;
 		submitError = '';
 
-		// Simulate form submission (replace with actual API call)
 		try {
-			await new Promise((resolve) => setTimeout(resolve, 1500));
+			const response = await fetch('/programmes/makers-to-market/apply', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData)
+			});
+
+			const result = await response.json();
+
+			if (!response.ok) {
+				if (result.errors) {
+					const messages = Object.values(result.errors) as string[];
+					submitError = messages.join('. ');
+				} else {
+					submitError = result.error || 'Something went wrong. Please try again.';
+				}
+				return;
+			}
+
 			submitSuccess = true;
 		} catch {
 			submitError = 'Something went wrong. Please try again.';
