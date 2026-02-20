@@ -2,6 +2,8 @@
 	// Form state
 	let formData = $state({
 		name: '',
+		email: '',
+		phone: '',
 		age: '',
 		location: '',
 		areaOfInterest: ''
@@ -163,6 +165,31 @@
 							required
 							class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
 							placeholder="Your full name"
+						/>
+					</div>
+
+					<!-- Email -->
+					<div>
+						<label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email *</label>
+						<input
+							type="email"
+							id="email"
+							bind:value={formData.email}
+							required
+							class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
+							placeholder="your@email.com"
+						/>
+					</div>
+
+					<!-- Phone -->
+					<div>
+						<label for="phone" class="block text-sm font-medium text-gray-300 mb-1">Phone</label>
+						<input
+							type="tel"
+							id="phone"
+							bind:value={formData.phone}
+							class="w-full px-4 py-3 bg-stone-800/50 border border-stone-600/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors"
+							placeholder="07xxx xxxxxx (optional)"
 						/>
 					</div>
 

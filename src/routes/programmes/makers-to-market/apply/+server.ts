@@ -19,6 +19,8 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 	}
 
 	const name = typeof body.name === 'string' ? body.name.trim() : '';
+	const email = typeof body.email === 'string' ? body.email.trim() : '';
+	const phone = typeof body.phone === 'string' ? body.phone.trim() : '';
 	const age = String(body.age ?? '').trim();
 	const location = typeof body.location === 'string' ? body.location.trim() : '';
 	const areaOfInterest = typeof body.areaOfInterest === 'string' ? body.areaOfInterest.trim() : '';
@@ -28,6 +30,10 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 
 	if (!name || name.length < 2) {
 		errors.name = 'Name must be at least 2 characters';
+	}
+
+	if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+		errors.email = 'Please enter a valid email address';
 	}
 
 	const ageNum = parseInt(age, 10);
@@ -55,12 +61,21 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 
 	const result = await sendEmail(apiToken, {
 		subject: `Makers to Market Application - ${name}`,
+		replyTo: email,
 		htmlBody: `
 			<h2>New Makers to Market Application</h2>
 			<table style="border-collapse: collapse; width: 100%;">
 				<tr>
 					<td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Name</td>
 					<td style="padding: 8px; border: 1px solid #ddd;">${escapeHtml(name)}</td>
+				</tr>
+				<tr>
+					<td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Email</td>
+					<td style="padding: 8px; border: 1px solid #ddd;"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td>
+				</tr>
+				<tr>
+					<td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Phone</td>
+					<td style="padding: 8px; border: 1px solid #ddd;">${phone ? escapeHtml(phone) : 'Not provided'}</td>
 				</tr>
 				<tr>
 					<td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Age</td>
@@ -76,7 +91,7 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 				</tr>
 			</table>
 		`,
-		textBody: `New Makers to Market Application\n\nName: ${name}\nAge: ${ageNum}\nLocation: ${location}\nArea of Interest: ${areaOfInterest}`
+		textBody: `New Makers to Market Application\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nAge: ${ageNum}\nLocation: ${location}\nArea of Interest: ${areaOfInterest}`
 	});
 
 	if (!result.success) {
