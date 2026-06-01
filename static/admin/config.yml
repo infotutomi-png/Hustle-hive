@@ -3,11 +3,10 @@
 
 backend:
   name: github
-  repo: dmac925/hive-fresh # <-- CHANGE to the client's GitHub repo if different (owner/name)
+  repo: dmac925/hive-fresh
   branch: main
-  # base_url is the URL of the OAuth worker the client deploys (see CMS-SETUP.md).
-  # Until that worker is deployed, GitHub login will not work. Uncomment and set it then:
-  # base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
+  # OAuth worker that handles GitHub login (deployed to Cloudflare).
+  base_url: https://sveltia-cms-auth.andrew-gove.workers.dev
 
 # Where uploaded images are stored in the repo, and the URL they're served from.
 media_folder: "static/images"
