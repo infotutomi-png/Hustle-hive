@@ -1,0 +1,29 @@
+{
+  "heroImage": "/images/aboutus3.png",
+  "heroTitle": "About Us",
+  "heroSubtitle": "Building futures, one skill at a time",
+  "missionTitle": "Our Mission",
+  "missionText": "Hustle Hive CIC empowers people of all ages through hands-on learning enterprise and wellbeing. We provide alternative provision for young people, creative spaces for homeschool families, and skills, mentoring and resources for adults to launch businesses. By combining entrepreneurship, innovation and mindfulness we help our community grow in confidence, resilience and opportunity.",
+  "visionTitle": "Our Vision",
+  "visionText": "To create a vibrant community hub where enterprise, education, and wellbeing connect, inspiring young people and adults alike to learn by doing, build their futures, and thrive together.",
+  "valuesTitle": "Our Values",
+  "values": [
+    {
+      "icon": "people",
+      "title": "Inclusive Community",
+      "text": "We believe in being a fully inclusive community of aspiration where a person's past decisions do not dictate their future opportunities."
+    },
+    {
+      "icon": "heart",
+      "title": "Personalised Support",
+      "text": "We believe that people of all ages and backgrounds have the right to a personalised offer which instills aspiration, entrepreneurship, physical and emotional resilience in a nurturing environment."
+    },
+    {
+      "icon": "flag",
+      "title": "Hands-on Learning",
+      "text": "We believe the route to self-development and self-actualisation is through real hands-on experiences where people create, build, test and grow."
+    }
+  ],
+  "ctaLabel": "Explore Our Programmes",
+  "ctaHref": "/#programmes"
+}

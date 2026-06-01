@@ -1,40 +1,9 @@
 <script lang="ts">
 	// Programmes section for Hustle Hive homepage
-	const programmes = [
-		{
-			title: 'MAKERS TO MARKET',
-			description: '12-week journey from product design to real-world market sales',
-			image: '/images/makers_to_market2.png',
-			icon: 'pencil',
-			href: '/programmes/makers-to-market',
-			imagePosition: 'object-[center_30%]'
-		},
-		{
-			title: 'OUTDOOR EDUCATION & WELLBEING',
-			description: 'Nature-based learning, teamwork and wellbeing activities',
-			image: '/images/outdoor_activities.jpeg',
-			icon: 'tent',
-			href: '/programmes/outdoors-wellbeing',
-			imagePosition: 'object-[center_75%]'
-		},
-		{
-			title: 'AFTER-SCHOOL PROGRAMME',
-			description: 'Creative, skill-building activities for ages 11–16, after school',
-			image: '/images/after-school-programe2.png',
-			icon: 'lightbulb',
-			href: '/programmes/after-school',
-			imagePosition: 'object-[center_30%]',
-			comingSoon: true
-		},
-		{
-			title: 'ENTREPRENEURSHIP HUB',
-			description: 'Startups and side-hustles: mentorship, co-working, and workshops.',
-			image: '/images/entrepreneurs-hub.png',
-			icon: 'rocket',
-			href: '/programmes/entrepreneurship-hub',
-			comingSoon: true
-		}
-	];
+	import home from '$lib/content/home.json';
+
+	const section = home.programmesSection;
+	const programmes = section.programmes;
 </script>
 
 <section id="programmes" class="relative py-20 overflow-hidden scroll-mt-20">
@@ -52,10 +21,10 @@
 		<!-- Section Header -->
 		<div class="text-center mb-12">
 			<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-				Explore Our Programmes
+				{section.heading}
 			</h2>
 			<p class="text-lg md:text-xl text-gray-300 italic">
-				Empowering young people and adults to create, connect, and grow.
+				{section.subheading}
 			</p>
 		</div>
 

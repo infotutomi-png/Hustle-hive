@@ -1,0 +1,26 @@
+{
+  "title": "What's Coming Up",
+  "subtitle": "Upcoming workshops, taster sessions, and community events at Hustle Hive.",
+  "noticeTitle": "Events Coming Soon",
+  "noticeText": "We're currently planning our upcoming events. Check back soon or follow us on social media for updates.",
+  "events": [
+    {
+      "title": "Bushcraft for Homeschooling",
+      "date": "TBC",
+      "category": "Outdoor Education & Wellbeing",
+      "description": "Outdoor learning and bushcraft skills for homeschool families. More details coming soon."
+    },
+    {
+      "title": "Makers to Market – Open Evening",
+      "date": "TBC",
+      "category": "Makers to Market",
+      "description": "Learn about our 12-week enterprise programme and meet the team. Date to be announced."
+    },
+    {
+      "title": "Community Workshop",
+      "date": "TBC",
+      "category": "Community",
+      "description": "Hands-on making session open to all. Details coming soon."
+    }
+  ]
+}

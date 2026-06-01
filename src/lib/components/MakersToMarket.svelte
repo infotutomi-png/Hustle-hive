@@ -1,18 +1,15 @@
 <script lang="ts">
 	// Makers to Market feature section
+	import home from '$lib/content/home.json';
+
+	const content = home.makersToMarket;
 	let currentSlide = $state(0);
 	let dragOffset = $state(0);
 	let isDragging = $state(false);
 	let containerWidth = $state(0);
 	let sliderElement: HTMLDivElement;
 
-	const slides = [
-		'/images/market1.png',
-		'/images/market2.png',
-		'/images/market3.png',
-		'/images/market4.png',
-		'/images/market5.png'
-	];
+	const slides = content.slides.map((s) => s.image);
 
 	// Track drag state
 	let startX = 0;
@@ -209,17 +206,16 @@
 					</svg>
 				</div>
 				<h2 class="text-3xl md:text-5xl font-bold text-white italic">
-					Makers to Market
+					{content.heading}
 				</h2>
 			</div>
 
 			<p class="text-xl text-gray-300 italic mb-6">
-				A 12-week journey turning creative ideas into<br class="hidden sm:block" />
-				real-world success.
+				{content.tagline}
 			</p>
 
 			<p class="text-gray-300 max-w-2xl mx-auto leading-relaxed">
-				Take your <span class="text-brand-orange font-semibold">handmade</span> products from idea to market with Hustle Hive's 12-week Makers to Market program, designed to help you design, brand and sell your creations at real-world markets.
+				{content.description}
 			</p>
 		</div>
 
@@ -310,10 +306,10 @@
 		<!-- CTA Button -->
 		<div class="text-center">
 			<a
-				href="/programmes/makers-to-market/apply"
+				href={content.ctaHref}
 				class="inline-flex items-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold rounded-lg transition-colors duration-200 text-lg"
 			>
-				Apply to Makers to Market
+				{content.ctaLabel}
 				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 				</svg>

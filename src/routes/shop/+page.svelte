@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { products } from '$lib/data/products';
+	import shop from '$lib/content/shop.json';
 </script>
 
 <svelte:head>
@@ -10,9 +11,9 @@
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<!-- Header -->
 	<section class="max-w-6xl mx-auto px-4 mb-12">
-		<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">Student Marketplace</h1>
+		<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">{shop.title}</h1>
 		<p class="text-lg md:text-xl text-gray-300">
-			Handmade with care by our talented young makers. Every purchase supports their journey.
+			{shop.subtitle}
 		</p>
 	</section>
 
@@ -65,10 +66,9 @@
 			<svg class="w-12 h-12 text-brand-orange mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
 			</svg>
-			<h3 class="text-xl font-bold text-white mb-2">Supporting Young Entrepreneurs</h3>
+			<h3 class="text-xl font-bold text-white mb-2">{shop.infoTitle}</h3>
 			<p class="text-gray-300 max-w-2xl mx-auto">
-				All products are handmade by students in our Makers to Market programme.
-				Your purchase directly supports their entrepreneurial journey and helps fund future workshops.
+				{shop.infoText}
 			</p>
 		</div>
 	</section>

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import eventsContent from '$lib/content/events.json';
+
 	type EventCategory = 'Makers to Market' | 'Outdoor Education & Wellbeing' | 'Young People' | 'Community';
 
 	interface Event {
@@ -8,26 +10,7 @@
 		description: string;
 	}
 
-	const events: Event[] = [
-		{
-			title: 'Bushcraft for Homeschooling',
-			date: 'TBC',
-			category: 'Outdoor Education & Wellbeing',
-			description: 'Outdoor learning and bushcraft skills for homeschool families. More details coming soon.'
-		},
-		{
-			title: 'Makers to Market – Open Evening',
-			date: 'TBC',
-			category: 'Makers to Market',
-			description: 'Learn about our 12-week enterprise programme and meet the team. Date to be announced.'
-		},
-		{
-			title: 'Community Workshop',
-			date: 'TBC',
-			category: 'Community',
-			description: 'Hands-on making session open to all. Details coming soon.'
-		}
-	];
+	const events = eventsContent.events as Event[];
 
 	const categoryColors: Record<EventCategory, string> = {
 		'Makers to Market': 'bg-amber-600/20 text-amber-400 border-amber-600/30',
@@ -35,6 +18,9 @@
 		'Young People': 'bg-orange-600/20 text-orange-400 border-orange-600/30',
 		'Community': 'bg-blue-600/20 text-blue-400 border-blue-600/30'
 	};
+
+	// Fallback styling if a category from the CMS isn't in the map above
+	const defaultCategoryColor = 'bg-stone-600/20 text-stone-300 border-stone-600/30';
 </script>
 
 <svelte:head>
@@ -59,9 +45,9 @@
 	<div class="max-w-6xl mx-auto px-4">
 		<!-- Header -->
 		<div class="mb-12">
-			<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">What's Coming Up</h1>
+			<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">{eventsContent.title}</h1>
 			<p class="text-lg md:text-xl text-gray-300">
-				Upcoming workshops, taster sessions, and community events at Hustle Hive.
+				{eventsContent.subtitle}
 			</p>
 		</div>
 
@@ -73,9 +59,9 @@
 			<svg class="w-10 h-10 text-brand-orange mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 			</svg>
-			<h2 class="text-xl font-bold text-white mb-2">Events Coming Soon</h2>
+			<h2 class="text-xl font-bold text-white mb-2">{eventsContent.noticeTitle}</h2>
 			<p class="text-gray-300">
-				We're currently planning our upcoming events. Check back soon or follow us on social media for updates.
+				{eventsContent.noticeText}
 			</p>
 		</div>
 
@@ -106,7 +92,7 @@
 					<!-- Category Tag -->
 					<div class="mb-4">
 						<span
-							class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border {categoryColors[event.category]}"
+							class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border {categoryColors[event.category] ?? defaultCategoryColor}"
 						>
 							<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
 								<path

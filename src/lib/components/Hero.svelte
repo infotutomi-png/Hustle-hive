@@ -1,4 +1,7 @@
 <script lang="ts">
+	import home from '$lib/content/home.json';
+
+	const hero = home.hero;
 	const videoId = '0198fa18f3bdbfb4c31d8bcbf0c11f23';
 	const customerSubdomain = 'customer-sf4ifbppskki29nb';
 </script>
@@ -19,33 +22,33 @@
 	<div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-24 md:pt-0">
 		<div class="mb-8">
 			<img
-				src="/images/logo-full.png"
+				src={hero.logo}
 				alt="Hustle Hive"
 				class="h-32 md:h-40 mx-auto"
 			/>
 		</div>
 
 		<h1 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-			Turning Ideas Into Skills.<br />
-			Skills Into Futures.
+			{hero.headingLine1}<br />
+			{hero.headingLine2}
 		</h1>
 
 		<p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-			A community-powered makerspace and enterprise hub helping people of all ages build confidence, skills, and real-world opportunities.
+			{hero.subheading}
 		</p>
 
 		<div class="flex flex-col sm:flex-row gap-4 justify-center">
 			<a
-				href="#programmes"
+				href={hero.primaryButtonHref}
 				class="px-8 py-3 bg-brand-orange text-black font-semibold rounded-md hover:bg-brand-orange-dark transition-colors duration-200"
 			>
-				Explore Programmes
+				{hero.primaryButtonLabel}
 			</a>
 			<a
-				href="/contact"
+				href={hero.secondaryButtonHref}
 				class="px-8 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white/10 transition-colors duration-200"
 			>
-				Get Involved
+				{hero.secondaryButtonLabel}
 			</a>
 		</div>
 	</div>

@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "logo": "/images/logo-full.png",
+    "headingLine1": "Turning Ideas Into Skills.",
+    "headingLine2": "Skills Into Futures.",
+    "subheading": "A community-powered makerspace and enterprise hub helping people of all ages build confidence, skills, and real-world opportunities.",
+    "primaryButtonLabel": "Explore Programmes",
+    "primaryButtonHref": "#programmes",
+    "secondaryButtonLabel": "Get Involved",
+    "secondaryButtonHref": "/contact"
+  },
+  "mission": {
+    "missionTitle": "Our Mission",
+    "missionText": "Hustle Hive CIC empowers people of all ages through hands-on learning, enterprise and wellbeing. We provide alternative provision for young people, creative spaces for homeschool families, and skills, mentoring and resources for adults to launch businesses.",
+    "visionTitle": "Our Vision",
+    "visionText": "To create a vibrant community hub where enterprise, education, and wellbeing connect, inspiring young people and adults alike to learn by doing, build their futures, and thrive together.",
+    "learnMoreLabel": "Learn more about us",
+    "learnMoreHref": "/about"
+  },
+  "programmesSection": {
+    "heading": "Explore Our Programmes",
+    "subheading": "Empowering young people and adults to create, connect, and grow.",
+    "programmes": [
+      {
+        "title": "MAKERS TO MARKET",
+        "description": "12-week journey from product design to real-world market sales",
+        "image": "/images/makers_to_market2.png",
+        "icon": "pencil",
+        "href": "/programmes/makers-to-market",
+        "imagePosition": "object-[center_30%]",
+        "comingSoon": false
+      },
+      {
+        "title": "OUTDOOR EDUCATION & WELLBEING",
+        "description": "Nature-based learning, teamwork and wellbeing activities",
+        "image": "/images/outdoor_activities.jpeg",
+        "icon": "tent",
+        "href": "/programmes/outdoors-wellbeing",
+        "imagePosition": "object-[center_75%]",
+        "comingSoon": false
+      },
+      {
+        "title": "AFTER-SCHOOL PROGRAMME",
+        "description": "Creative, skill-building activities for ages 11–16, after school",
+        "image": "/images/after-school-programe2.png",
+        "icon": "lightbulb",
+        "href": "/programmes/after-school",
+        "imagePosition": "object-[center_30%]",
+        "comingSoon": true
+      },
+      {
+        "title": "ENTREPRENEURSHIP HUB",
+        "description": "Startups and side-hustles: mentorship, co-working, and workshops.",
+        "image": "/images/entrepreneurs-hub.png",
+        "icon": "rocket",
+        "href": "/programmes/entrepreneurship-hub",
+        "imagePosition": "",
+        "comingSoon": true
+      }
+    ]
+  },
+  "makersToMarket": {
+    "heading": "Makers to Market",
+    "tagline": "A 12-week journey turning creative ideas into real-world success.",
+    "description": "Take your handmade products from idea to market with Hustle Hive's 12-week Makers to Market program, designed to help you design, brand and sell your creations at real-world markets.",
+    "ctaLabel": "Apply to Makers to Market",
+    "ctaHref": "/programmes/makers-to-market/apply",
+    "slides": [
+      { "image": "/images/market1.png" },
+      { "image": "/images/market2.png" },
+      { "image": "/images/market3.png" },
+      { "image": "/images/market4.png" },
+      { "image": "/images/market5.png" }
+    ]
+  }
+}

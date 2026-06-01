@@ -1,39 +1,7 @@
 <script lang="ts">
-	const programmes = [
-		{
-			title: 'Makers to Market',
-			description: '12-week journey from product design to real-world market sales',
-			image: '/images/makers_to_market2.png',
-			icon: 'pencil',
-			href: '/programmes/makers-to-market',
-			imagePosition: 'object-[center_30%]'
-		},
-		{
-			title: 'Outdoor Education & Wellbeing',
-			description: 'Nature-based learning, teamwork and wellbeing activities',
-			image: '/images/outdoor_activities.jpeg',
-			imagePosition: 'object-[center_75%]',
-			icon: 'tent',
-			href: '/programmes/outdoors-wellbeing'
-		},
-		{
-			title: 'After-School Programme',
-			description: 'Creative, skill-building activities for ages 11–16, after school',
-			image: '/images/after-school-programe2.png',
-			icon: 'lightbulb',
-			href: '/programmes/after-school',
-			imagePosition: 'object-[center_30%]',
-			comingSoon: true
-		},
-		{
-			title: 'Entrepreneurship Hub',
-			description: 'Startups and side-hustles: mentorship, co-working, and workshops.',
-			image: '/images/entrepreneurs-hub.png',
-			icon: 'rocket',
-			href: '/programmes/entrepreneurship-hub',
-			comingSoon: true
-		}
-	];
+	import programmesContent from '$lib/content/programmes.json';
+
+	const programmes = programmesContent.programmes;
 </script>
 
 <svelte:head>
@@ -44,9 +12,9 @@
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<!-- Header -->
 	<section class="max-w-6xl mx-auto px-4 mb-12">
-		<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">Our Programmes</h1>
+		<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">{programmesContent.title}</h1>
 		<p class="text-lg md:text-xl text-gray-300">
-			Empowering young people and adults to create, connect, and grow.
+			{programmesContent.subtitle}
 		</p>
 	</section>
 
