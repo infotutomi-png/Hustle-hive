@@ -17,6 +17,12 @@ export const actions: Actions = {
 	default: async ({ request, platform }) => {
 		const data = await request.formData();
 
+		// Honeypot field is hidden from people; if it's filled in, it's a bot.
+		// Pretend it worked so the bot doesn't retry.
+		if (data.get('website')?.toString()) {
+			return { success: true };
+		}
+
 		const name = data.get('name')?.toString().trim() ?? '';
 		const email = data.get('email')?.toString().trim() ?? '';
 		const subject = data.get('subject')?.toString().trim() ?? '';

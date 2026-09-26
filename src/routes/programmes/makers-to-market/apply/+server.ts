@@ -18,6 +18,12 @@ export const POST: RequestHandler = async ({ request, platform }) => {
 		return json({ error: 'Invalid request body' }, { status: 400 });
 	}
 
+	// Honeypot field is hidden from people; if it's filled in, it's a bot.
+	// Pretend it worked so the bot doesn't retry.
+	if (typeof body.website === 'string' && body.website.trim()) {
+		return json({ success: true });
+	}
+
 	const name = typeof body.name === 'string' ? body.name.trim() : '';
 	const email = typeof body.email === 'string' ? body.email.trim() : '';
 	const phone = typeof body.phone === 'string' ? body.phone.trim() : '';

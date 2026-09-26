@@ -119,6 +119,11 @@
 							}}
 							class="space-y-6"
 						>
+							<!-- Honeypot: hidden from people, bots tend to fill it in -->
+							<div class="absolute -left-[9999px]" aria-hidden="true">
+								<label for="website">Leave this field empty</label>
+								<input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+							</div>
 							<div>
 								<label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
 								<input

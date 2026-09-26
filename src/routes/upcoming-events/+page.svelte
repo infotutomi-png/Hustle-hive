@@ -1,5 +1,6 @@
 <script lang="ts">
 	import eventsContent from '$lib/content/events.json';
+	import { BOOKINGS_URL } from '$lib/links';
 
 	type EventCategory = 'Makers to Market' | 'Outdoor Education & Wellbeing' | 'Young People' | 'Community';
 
@@ -35,10 +36,6 @@
 	<!-- Background -->
 	<div class="fixed inset-0 -z-10">
 		<div class="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950"></div>
-		<div
-			class="absolute inset-0 opacity-30"
-			style="background-image: url('/images/texture-dark.jpg'); background-size: cover; background-position: center;"
-		></div>
 		<div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
 	</div>
 
@@ -63,6 +60,30 @@
 			<p class="text-gray-300">
 				{eventsContent.noticeText}
 			</p>
+		</div>
+
+		<!-- Bookings Banner -->
+		<div class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-6 md:p-8 mb-10 backdrop-blur-sm flex flex-col md:flex-row md:items-center gap-6">
+			<div class="w-14 h-14 bg-brand-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
+				<svg class="w-7 h-7 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+				</svg>
+			</div>
+			<div class="flex-1">
+				<h2 class="text-xl md:text-2xl font-bold text-white mb-1">Book workshops & courses online</h2>
+				<p class="text-gray-300">See live dates, check availability and reserve your place on our bookings site.</p>
+			</div>
+			<a
+				href={BOOKINGS_URL}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200 flex-shrink-0"
+			>
+				View & book
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+				</svg>
+			</a>
 		</div>
 
 		<!-- Events Grid -->

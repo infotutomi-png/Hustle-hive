@@ -51,7 +51,7 @@
       {
         "title": "MAKERS TO MARKET",
         "description": "12-week journey from product design to real-world market sales",
-        "image": "/images/makers_to_market2.png",
+        "image": "/images/makers_to_market2.webp",
         "icon": "pencil",
         "href": "/programmes/makers-to-market",
         "imagePosition": "object-[center_30%]",
@@ -69,7 +69,7 @@
       {
         "title": "AFTER-SCHOOL PROGRAMME",
         "description": "Creative, skill-building activities for ages 11–16, after school",
-        "image": "/images/after-school-programe2.png",
+        "image": "/images/after-school-programe2.webp",
         "icon": "lightbulb",
         "href": "/programmes/after-school",
         "imagePosition": "object-[center_30%]",
@@ -78,7 +78,7 @@
       {
         "title": "ENTREPRENEURSHIP HUB",
         "description": "Startups and side-hustles: mentorship, co-working, and workshops.",
-        "image": "/images/entrepreneurs-hub.png",
+        "image": "/images/entrepreneurs-hub.webp",
         "icon": "rocket",
         "href": "/programmes/entrepreneurship-hub",
         "imagePosition": "",
@@ -93,11 +93,11 @@
     "ctaLabel": "Apply to Makers to Market",
     "ctaHref": "/programmes/makers-to-market/apply",
     "slides": [
-      { "image": "/images/market1.png" },
-      { "image": "/images/market2.png" },
-      { "image": "/images/market3.png" },
-      { "image": "/images/market4.png" },
-      { "image": "/images/market5.png" }
+      { "image": "/images/market1.webp" },
+      { "image": "/images/market2.webp" },
+      { "image": "/images/market3.webp" },
+      { "image": "/images/market4.webp" },
+      { "image": "/images/market5.webp" }
     ]
   }
 }

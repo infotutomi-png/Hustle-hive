@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import { getProductById } from '$lib/data/products';
 
-	const product = $derived(getProductById(page.params.id));
+	const product = $derived(getProductById(page.params.id ?? ''));
 </script>
 
 <svelte:head>
