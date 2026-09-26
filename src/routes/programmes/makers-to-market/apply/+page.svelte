@@ -6,7 +6,8 @@
 		phone: '',
 		age: '',
 		location: '',
-		areaOfInterest: ''
+		areaOfInterest: '',
+		website: '' // honeypot, hidden from people
 	});
 
 	let isSubmitting = $state(false);
@@ -154,6 +155,12 @@
 				onsubmit={handleSubmit}
 				class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-6 md:p-8 backdrop-blur-sm"
 			>
+				<!-- Honeypot: hidden from people, bots tend to fill it in -->
+				<div class="absolute -left-[9999px]" aria-hidden="true">
+					<label for="website">Leave this field empty</label>
+					<input type="text" id="website" bind:value={formData.website} tabindex="-1" autocomplete="off" />
+				</div>
+
 				<div class="space-y-5">
 					<!-- Name -->
 					<div>

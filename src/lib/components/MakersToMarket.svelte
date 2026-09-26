@@ -189,8 +189,6 @@
 <section id="makers-to-market" class="relative py-20 overflow-hidden scroll-mt-20">
 	<!-- Smokey/Textured Background -->
 	<div class="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-900 to-stone-950">
-		<!-- Texture overlay -->
-		<div class="absolute inset-0 opacity-30" style="background-image: url('/images/texture-dark.jpg'); background-size: cover; background-position: center;"></div>
 		<!-- Gradient overlays for depth -->
 		<div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
 	</div>

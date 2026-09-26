@@ -112,7 +112,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
 									</svg>
 								</span>
-								<span class="block text-gray-500 text-xs mt-0.5">{site.domain}</span>
+								<span class="block text-gray-400 text-xs mt-0.5">{site.domain}</span>
 							</a>
 						</li>
 					{/each}
@@ -154,7 +154,7 @@
 		<!-- Divider -->
 		<div class="border-t border-stone-800 pt-8">
 			<div class="flex flex-col md:flex-row items-center justify-between gap-4">
-				<p class="text-gray-500 text-sm">
+				<p class="text-gray-400 text-sm">
 					&copy; {currentYear} Hustle Hive. All rights reserved.
 				</p>
 				<div class="flex items-center gap-6">
@@ -163,10 +163,10 @@
 						alt="Supported by The National Lottery Community Fund"
 						class="h-16"
 					/>
-					<a href="#privacy" class="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200">
+					<a href="#privacy" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">
 						Privacy Policy
 					</a>
-					<a href="#terms" class="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200">
+					<a href="#terms" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">
 						Terms of Service
 					</a>
 				</div>

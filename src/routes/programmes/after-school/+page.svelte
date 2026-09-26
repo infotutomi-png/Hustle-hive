@@ -26,7 +26,7 @@
 	<section class="max-w-6xl mx-auto px-4 mb-12">
 		<div class="rounded-2xl overflow-hidden">
 			<img
-				src="/images/after-school-programe2.png"
+				src="/images/after-school-programe2.webp"
 				alt="After-School Programme"
 				class="w-full h-64 md:h-96 object-cover object-[center_30%]"
 			/>

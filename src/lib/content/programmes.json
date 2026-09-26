@@ -5,7 +5,7 @@
     {
       "title": "Makers to Market",
       "description": "12-week journey from product design to real-world market sales",
-      "image": "/images/makers_to_market2.png",
+      "image": "/images/makers_to_market2.webp",
       "icon": "pencil",
       "href": "/programmes/makers-to-market",
       "imagePosition": "object-[center_30%]",
@@ -23,7 +23,7 @@
     {
       "title": "After-School Programme",
       "description": "Creative, skill-building activities for ages 11–16, after school",
-      "image": "/images/after-school-programe2.png",
+      "image": "/images/after-school-programe2.webp",
       "icon": "lightbulb",
       "href": "/programmes/after-school",
       "imagePosition": "object-[center_30%]",
@@ -32,7 +32,7 @@
     {
       "title": "Entrepreneurship Hub",
       "description": "Startups and side-hustles: mentorship, co-working, and workshops.",
-      "image": "/images/entrepreneurs-hub.png",
+      "image": "/images/entrepreneurs-hub.webp",
       "icon": "rocket",
       "href": "/programmes/entrepreneurship-hub",
       "imagePosition": "",

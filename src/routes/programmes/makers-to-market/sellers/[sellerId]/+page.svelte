@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import { getSellerById } from '$lib/data/sellers';
 
-	const seller = $derived(getSellerById(page.params.sellerId));
+	const seller = $derived(getSellerById(page.params.sellerId ?? ''));
 </script>
 
 <svelte:head>
