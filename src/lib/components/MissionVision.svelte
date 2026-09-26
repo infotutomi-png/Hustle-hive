@@ -1,5 +1,6 @@
 <script lang="ts">
 	import home from '$lib/content/home.json';
+	import { sisterSites } from '$lib/links';
 
 	const mission = home.mission;
 </script>
@@ -20,6 +21,21 @@
 				<p class="text-gray-300 leading-relaxed">
 					{mission.missionText}
 				</p>
+				<div class="flex flex-col sm:flex-row flex-wrap gap-3 mt-6">
+					{#each sisterSites as site}
+						<a
+							href={site.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center gap-2 px-4 py-2 bg-stone-700/60 hover:bg-stone-600/60 text-white text-sm font-medium rounded-lg transition-colors duration-200 border border-stone-600/50 w-fit"
+						>
+							{site.label}
+							<svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+							</svg>
+						</a>
+					{/each}
+				</div>
 			</div>
 
 			<!-- Vision -->

@@ -9,6 +9,33 @@
     "secondaryButtonLabel": "Get Involved",
     "secondaryButtonHref": "/contact"
   },
+  "helpSection": {
+    "heading": "How can we help you?",
+    "subheading": "Whether you're a school, a young person, a family or an adult with an idea, there's a place for you in the Hive.",
+    "cards": [
+      {
+        "title": "ALTERNATIVE PROVISION",
+        "description": "Hands-on, practical learning for young people who thrive outside a traditional classroom, with referrals from schools and local authorities.",
+        "icon": "graduation",
+        "linkLabel": "Visit Hustle Hive Learning",
+        "href": "https://hustlehivelearning.co.uk"
+      },
+      {
+        "title": "WORKSHOPS & COURSES",
+        "description": "Make, build and learn new skills in our makerspace. Browse upcoming workshops and courses and book your place online.",
+        "icon": "tools",
+        "linkLabel": "Book a workshop",
+        "href": "https://hustlehivebookings.com"
+      },
+      {
+        "title": "COMMUNITY PROGRAMMES",
+        "description": "From Makers to Market to outdoor education and wellbeing, our programmes help people of all ages create, connect and grow.",
+        "icon": "community",
+        "linkLabel": "Explore programmes",
+        "href": "#programmes"
+      }
+    ]
+  },
   "mission": {
     "missionTitle": "Our Mission",
     "missionText": "Hustle Hive CIC empowers people of all ages through hands-on learning, enterprise and wellbeing. We provide alternative provision for young people, creative spaces for homeschool families, and skills, mentoring and resources for adults to launch businesses.",

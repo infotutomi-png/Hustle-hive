@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { sisterSites } from '$lib/links';
+
 	const currentYear = new Date().getFullYear();
 
 	const quickLinks = [
@@ -30,7 +32,7 @@
 
 	<div class="relative z-10 max-w-6xl mx-auto px-6 py-16">
 		<!-- Main Footer Content -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr_1.2fr] gap-10 mb-12">
 			<!-- Brand Column -->
 			<div class="lg:col-span-1">
 				<a href="/" class="inline-block mb-4">
@@ -91,6 +93,26 @@
 						<li>
 							<a href={programme.href} class="text-gray-400 hover:text-brand-orange transition-colors duration-200">
 								{programme.label}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</div>
+
+			<!-- Learn & Book (sister sites) -->
+			<div>
+				<h3 class="text-white font-semibold text-lg mb-4">Learn & Book</h3>
+				<ul class="space-y-4">
+					{#each sisterSites as site}
+						<li>
+							<a href={site.href} target="_blank" rel="noopener noreferrer" class="group block">
+								<span class="inline-flex items-center gap-1.5 text-gray-400 group-hover:text-brand-orange transition-colors duration-200">
+									{site.label}
+									<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+									</svg>
+								</span>
+								<span class="block text-gray-500 text-xs mt-0.5">{site.domain}</span>
 							</a>
 						</li>
 					{/each}

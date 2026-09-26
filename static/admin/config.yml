@@ -41,6 +41,25 @@ collections:
               - { label: "Primary button — link", name: primaryButtonHref, widget: string }
               - { label: "Secondary button — label", name: secondaryButtonLabel, widget: string }
               - { label: "Secondary button — link", name: secondaryButtonHref, widget: string }
+          - label: "How can we help you? section"
+            name: helpSection
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Subheading", name: subheading, widget: text }
+              - label: "Cards"
+                name: cards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - label: "Icon"
+                    name: icon
+                    widget: select
+                    options: ["graduation", "tools", "community"]
+                  - { label: "Button label", name: linkLabel, widget: string }
+                  - { label: "Button link", name: href, widget: string, hint: "Full web address (https://...) opens in a new tab" }
           - label: "Mission & Vision"
             name: mission
             widget: object
