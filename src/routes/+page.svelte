@@ -19,7 +19,7 @@
 	<Hero />
 	<HappeningSoon />
 	<WhereToNext />
-	<EmailSignup />
 	<AboutIntro />
 	<InsideTheHive />
+	<EmailSignup />
 </main>
