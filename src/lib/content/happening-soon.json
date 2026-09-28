@@ -13,8 +13,8 @@
       ],
       "buttonLabel": "Book now",
       "buttonHref": "https://hustlehivebookings.com",
-      "image": "",
-      "imageAlt": "Children designing and printing their own T-shirts at Brand Lab"
+      "image": "/images/brand-lab.webp",
+      "imageAlt": "Children printing their own T-shirt designs with a heat press"
     },
     {
       "title": "Makers to Market",
@@ -23,8 +23,8 @@
       "details": [],
       "buttonLabel": "Apply now",
       "buttonHref": "/programmes/makers-to-market/apply",
-      "image": "/images/market1.webp",
-      "imageAlt": "Makers selling handmade products at a market stall"
+      "image": "/images/makers-market-stall.webp",
+      "imageAlt": "Makers selling personalised T-shirts, mugs and 3D-printed gifts at a market stall"
     }
   ]
 }
