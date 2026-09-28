@@ -2,8 +2,14 @@
 	// Holiday club mailing list sign-up for the homepage (handled by the "subscribe" action in routes/+page.server.ts)
 	import { enhance } from '$app/forms';
 	import { page } from '$app/state';
+	import { activeCards } from '$lib/happening-soon';
 
 	let isSubmitting = $state(false);
+
+	// "These dates" refers to the Happening Soon cards, so fall back when they've all expired
+	const heading = activeCards().length
+		? "Can't make these dates? Get the next ones first"
+		: 'Get the next holiday club dates first';
 
 	const form = $derived(page.form as {
 		subscribed?: boolean;
@@ -27,7 +33,7 @@
 				</div>
 			{:else}
 				<div class="text-center mb-8">
-					<h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Get the next holiday club dates first</h2>
+					<h2 class="text-3xl md:text-4xl font-bold text-white mb-3">{heading}</h2>
 					<p class="text-gray-300">Join our mailing list and we'll let you know as soon as new holiday clubs and workshops open for booking.</p>
 				</div>
 
