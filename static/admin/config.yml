@@ -149,16 +149,19 @@ collections:
   # INSIDE THE HIVE (homepage photo strip)
   # ---------------------------------------------------------------------------
   - name: insideTheHive
-    label: "Inside the Hive (homepage photos)"
+    label: "Inside Hustle HQ (homepage photos)"
     delete: false
     editor:
       preview: false
     files:
       - name: insideTheHive
-        label: "Inside the Hive photos"
+        label: "Inside Hustle HQ photos"
         file: "src/lib/content/inside-the-hive.json"
         fields:
           - { label: "Heading", name: heading, widget: string }
+          - { label: "Line under the photos", name: caption, widget: string }
+          - { label: "Button label", name: buttonLabel, widget: string }
+          - { label: "Button link", name: buttonHref, widget: string }
           - label: "Photos"
             name: photos
             widget: list
@@ -211,6 +214,33 @@ collections:
               - { label: "Photo (square)", name: photo, widget: image }
               - { label: "Tagline", name: tagline, widget: string }
               - { label: "Bio", name: bio, widget: text }
+          - label: "Inside Hustle HQ (kit)"
+            name: hq
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - label: "Cards"
+                name: cards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - label: "Icon"
+                    name: icon
+                    widget: select
+                    options: ["cube", "scissors", "press", "laptop"]
+                  - { label: "Photo (optional — replaces the icon)", name: image, widget: image, required: false }
+                  - { label: "Description", name: description, widget: text }
+                  - label: "Kit"
+                    name: kit
+                    widget: list
+                    field: { label: "Item", name: item, widget: string }
+              - { label: "Text under the cards", name: outro, widget: text }
+              - { label: "First button — label", name: primaryButtonLabel, widget: string }
+              - { label: "First button — link", name: primaryButtonHref, widget: string }
+              - { label: "Second button — label", name: secondaryButtonLabel, widget: string }
+              - { label: "Second button — link", name: secondaryButtonHref, widget: string }
           - { label: "Button label", name: ctaLabel, widget: string }
           - { label: "Button link", name: ctaHref, widget: string }
 
