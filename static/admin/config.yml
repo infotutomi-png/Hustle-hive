@@ -63,9 +63,18 @@ collections:
             fields:
               - { label: "Heading", name: heading, widget: string }
               - { label: "Text", name: text, widget: text }
-              - { label: "Strapline", name: strapline, widget: string }
               - { label: "Button label", name: buttonLabel, widget: string }
               - { label: "Button link", name: buttonHref, widget: string }
+              - label: "Funding story (photo + text)"
+                name: funding
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: text, widget: text }
+                  - { label: "Photo", name: image, widget: image }
+                  - { label: "Photo description (for screen readers)", name: imageAlt, widget: string }
+                  - { label: "Button label", name: buttonLabel, widget: string }
+                  - { label: "Button link", name: buttonHref, widget: string }
           - label: "Programmes grid (not shown on the homepage at the moment)"
             name: programmesSection
             widget: object
@@ -150,6 +159,7 @@ collections:
         file: "src/lib/content/about.json"
         fields:
           - { label: "Hero image", name: heroImage, widget: image }
+          - { label: "Hero image description (for screen readers)", name: heroImageAlt, widget: string }
           - { label: "Hero title", name: heroTitle, widget: string }
           - { label: "Hero subtitle", name: heroSubtitle, widget: string }
           - { label: "Mission title", name: missionTitle, widget: string }

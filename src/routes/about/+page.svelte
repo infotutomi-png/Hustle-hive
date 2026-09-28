@@ -25,21 +25,24 @@
 				class="absolute inset-0 bg-gradient-to-br from-stone-800 via-stone-900 to-black transition-opacity duration-500"
 				class:opacity-0={imageLoaded}
 			></div>
+			<!-- Focus point on the faces (upper third); on phones shift right so both faces fit -->
 			<img
 				src={about.heroImage}
-				alt="Hustle Hive community"
-				class="w-full h-full object-cover object-[80%_15%] md:object-[center_60%] transition-opacity duration-500"
+				alt={about.heroImageAlt}
+				class="w-full h-full object-cover object-[58%_22%] md:object-[center_25%] transition-opacity duration-500"
 				class:opacity-0={!imageLoaded}
 				onload={() => (imageLoaded = true)}
 				fetchpriority="high"
 			/>
-			<!-- Dark Overlay -->
-			<div class="absolute inset-0 bg-black/50 z-10"></div>
+			<!-- Subtle overlay, darker at the bottom where the title sits -->
+			<div class="absolute inset-0 z-10 bg-black/20"></div>
+			<!-- Darken the bright sky behind the menu so the links stay readable -->
+			<div class="absolute inset-x-0 top-0 h-40 z-10 bg-gradient-to-b from-black/75 to-transparent"></div>
+			<div class="absolute inset-x-0 bottom-0 h-2/3 z-10 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
 		</div>
 
-		
-		<!-- Content -->
-		<div class="absolute inset-0 z-20 flex items-end md:items-center justify-start md:justify-center px-6 pb-8 md:pb-0 md:px-4">
+		<!-- Content (kept low so it doesn't cover the faces) -->
+		<div class="absolute inset-0 z-20 flex items-end justify-start md:justify-center px-6 pb-8 md:pb-16 md:px-4">
 			<div class="text-left md:text-center max-w-4xl">
 				<h1 class="text-4xl md:text-6xl font-bold text-white mb-2 md:mb-6">
 					{about.heroTitle}
