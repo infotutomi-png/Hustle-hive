@@ -57,8 +57,8 @@
 <style>
 	/* Keep the pattern faint and fade it out towards the edges so it never competes with the text */
 	.honeycomb {
-		opacity: 0.14;
-		-webkit-mask-image: radial-gradient(ellipse 70% 75% at center, black 25%, transparent 80%);
-		mask-image: radial-gradient(ellipse 70% 75% at center, black 25%, transparent 80%);
+		opacity: 0.22;
+		-webkit-mask-image: radial-gradient(ellipse 75% 80% at center, black 30%, transparent 85%);
+		mask-image: radial-gradient(ellipse 75% 80% at center, black 30%, transparent 85%);
 	}
 </style>
