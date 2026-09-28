@@ -36,9 +36,16 @@
   "about": {
     "heading": "About Hustle Hive",
     "text": "Hustle Hive CIC empowers people of all ages through hands-on learning, enterprise and wellbeing. We're building a vibrant community hub where young people and adults learn by doing, grow in confidence and build their futures together.",
-    "strapline": "Founded by teachers · Supported by The National Lottery Community Fund",
     "buttonLabel": "Learn more about us",
-    "buttonHref": "/about"
+    "buttonHref": "/about",
+    "funding": {
+      "heading": "Backed by The National Lottery Community Fund",
+      "text": "We're proud to have received £15,000 from The National Lottery Community Fund to run our Makers to Market programme in Darlington. Thanks to National Lottery players, local makers can get the skills, support and confidence to turn their ideas into real businesses. Founded by teachers Gavin Copland and Kieron Davis, Hustle Hive is all about helping people learn by doing.",
+      "image": "/images/national-lottery-cheque.webp",
+      "imageAlt": "Gavin Copland and Kieron Davis receiving a £15,000 cheque from The National Lottery Community Fund",
+      "buttonLabel": "Apply for Makers to Market",
+      "buttonHref": "/programmes/makers-to-market/apply"
+    }
   },
   "programmesSection": {
     "heading": "Explore Our Programmes",
