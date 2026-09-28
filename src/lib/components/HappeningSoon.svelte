@@ -18,7 +18,7 @@
 </script>
 
 {#if cards.length}
-<section id="happening-soon" class="relative py-20 overflow-hidden scroll-mt-24">
+<section id="happening-soon" class="relative pt-10 pb-20 md:pt-12 overflow-hidden scroll-mt-24">
 	<div class="absolute inset-0 bg-gradient-to-b from-black via-stone-950 to-black">
 		<div class="absolute inset-0 opacity-10" style="background-image: url('/images/honeycomb-pattern.svg'); background-size: 60px 60px;"></div>
 		<div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent"></div>
@@ -26,7 +26,7 @@
 	</div>
 
 	<div class="relative z-10 max-w-6xl mx-auto px-4">
-		<h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+		<h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-8 md:mb-10">
 			{content.heading}
 		</h2>
 

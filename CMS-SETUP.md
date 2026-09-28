@@ -111,7 +111,7 @@ approve, and you’re in.
 
 | Page        | You can change |
 |-------------|----------------|
-| **Home**    | Hero heading/text/button + logo, the "Where to next?" cards, the About Hustle Hive section, and the Makers to Market photo carousel (shown on the Makers to Market page) |
+| **Home**    | Hero heading/text/button, the "Where to next?" cards, the About Hustle Hive section, and the Makers to Market photo carousel (shown on the Makers to Market page) |
 | **Happening Soon** | The big cards under the homepage hero — swap these for each new holiday club, event or intake (title, badge, text, details, button, image) |
 | **About**   | Hero image & title, Mission, Vision, the 3 Values, the founders, the button |
 | **Programmes** | Page title/subtitle and each programme card (title, description, image, “Coming soon” toggle, “Register interest” subject) |

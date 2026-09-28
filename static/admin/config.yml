@@ -33,7 +33,6 @@ collections:
             name: hero
             widget: object
             fields:
-              - { label: "Logo image", name: logo, widget: image }
               - { label: "Heading — line 1", name: headingLine1, widget: string }
               - { label: "Heading — line 2", name: headingLine2, widget: string }
               - { label: "Subheading", name: subheading, widget: text }
