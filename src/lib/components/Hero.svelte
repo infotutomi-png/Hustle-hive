@@ -3,6 +3,10 @@
 	import { activeCards } from '$lib/happening-soon';
 
 	const hero = home.hero;
+	// The last word of the second headline line (e.g. "Futures.") is shown in brand orange
+	const line2Words = hero.headingLine2.trim().split(/\s+/);
+	const line2Last = line2Words.pop() ?? '';
+	const line2Start = line2Words.join(' ');
 	// "See what's on" scrolls to Happening Soon, so hide it when that section has no cards left
 	const showButton = !hero.buttonHref.startsWith('#happening-soon') || activeCards().length > 0;
 </script>
@@ -31,7 +35,7 @@
 	<div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
 		<h1 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
 			{hero.headingLine1}<br />
-			{hero.headingLine2}
+			{line2Start} <span class="text-brand-orange">{line2Last}</span>
 		</h1>
 
 		<p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
