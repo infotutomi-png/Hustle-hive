@@ -1,9 +1,41 @@
-<svelte:head>
-	<title>Makers to Market - Hustle Hive</title>
-	<meta name="description" content="Join our 12-week Makers to Market programme - take your handmade products from idea to market with Hustle Hive." />
-</svelte:head>
+<script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
+	import ImageCarousel from '$lib/components/ImageCarousel.svelte';
+	import home from '$lib/content/home.json';
+	import { SHOW_SELLERS } from '$lib/features';
+	import { MAKERS_APPLY_URL } from '$lib/links';
+
+	const gallery = home.makersToMarket.slides.map((slide) => slide.image);
+</script>
+
+<Seo
+	title="Makers to Market - Hustle Hive"
+	description="Applications open now for our 12-week Makers to Market programme in Darlington - take your handmade products from idea to real-world market sales."
+/>
 
 <main class="bg-black min-h-screen pt-32 pb-20">
+	<!-- Applications Open Banner -->
+	<section class="max-w-6xl mx-auto px-4 mb-10">
+		<div class="bg-brand-orange/10 border border-brand-orange/40 rounded-2xl p-5 md:p-6 flex flex-col sm:flex-row sm:items-center gap-4">
+			<div class="flex items-center gap-3 flex-1">
+				<span class="relative flex h-3 w-3 flex-shrink-0" aria-hidden="true">
+					<span class="animate-ping motion-reduce:animate-none absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+					<span class="relative inline-flex rounded-full h-3 w-3 bg-brand-orange"></span>
+				</span>
+				<p class="text-white text-lg font-semibold">Applications open now</p>
+			</div>
+			<a
+				href={MAKERS_APPLY_URL}
+				class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200"
+			>
+				Apply now
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+				</svg>
+			</a>
+		</div>
+	</section>
+
 	<!-- Header -->
 	<section class="max-w-6xl mx-auto px-4 mb-12">
 		<div class="flex items-center gap-3 mb-4">
@@ -12,9 +44,18 @@
 			</svg>
 			<h1 class="text-4xl md:text-5xl font-bold text-white italic">Makers to Market</h1>
 		</div>
-		<p class="text-lg md:text-xl text-gray-300">
+		<p class="text-lg md:text-xl text-gray-300 mb-6">
 			A 12-week journey turning creative ideas into real-world success.
 		</p>
+
+		<!-- At a Glance -->
+		<div class="inline-block bg-stone-900/50 border border-stone-700/50 rounded-xl px-5 py-4">
+			<h2 class="text-sm font-semibold uppercase tracking-wide text-brand-orange mb-1">At a glance</h2>
+			<p class="text-white font-medium">12-week programme · Darlington</p>
+			<!-- TODO (add when confirmed): Who it's for, e.g. <p class="text-gray-300">Who it's for: ...</p> -->
+			<!-- TODO (add when confirmed): Cost, e.g. <p class="text-gray-300">Cost: ...</p> -->
+			<!-- TODO (add when confirmed): Time per week, e.g. <p class="text-gray-300">Time per week: ...</p> -->
+		</div>
 	</section>
 
 	<!-- Divider -->
@@ -107,10 +148,10 @@
 		<!-- CTA -->
 		<div class="mt-16 text-center">
 			<a
-				href="/programmes/makers-to-market/apply"
+				href={MAKERS_APPLY_URL}
 				class="inline-flex items-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200 text-lg"
 			>
-				Apply Now
+				Apply now
 				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 				</svg>
@@ -118,14 +159,21 @@
 		</div>
 	</section>
 
-	<!-- Meet Our Makers Section -->
+	<!-- Gallery -->
+	<section class="max-w-4xl mx-auto px-4 mt-20">
+		<h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-8">Makers to Market in pictures</h2>
+		<ImageCarousel images={gallery} alt="Makers to Market" />
+	</section>
+
+	<!-- Meet Our Makers Section (hidden until the sellers pages show real makers; see $lib/features) -->
+	{#if SHOW_SELLERS}
 	<section class="max-w-6xl mx-auto px-4 mt-16">
 		<div class="rounded-2xl bg-gradient-to-br from-stone-800/80 to-stone-900/90 border border-stone-700/50 p-8 md:p-10">
 			<div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
 				<div class="flex-1 text-center md:text-left">
 					<h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Meet Our Makers</h2>
 					<p class="text-gray-300">
-						Browse products from our talented Makers to Market graduates. Each purchase supports a young entrepreneur on their business journey.
+						Browse products from our talented Makers to Market graduates. Each purchase supports a local maker on their business journey.
 					</p>
 				</div>
 				<a
@@ -140,4 +188,5 @@
 			</div>
 		</div>
 	</section>
+	{/if}
 </main>

@@ -3,7 +3,7 @@
   "heroTitle": "About Us",
   "heroSubtitle": "Building futures, one skill at a time",
   "missionTitle": "Our Mission",
-  "missionText": "Hustle Hive CIC empowers people of all ages through hands-on learning enterprise and wellbeing. We provide alternative provision for young people, creative spaces for homeschool families, and skills, mentoring and resources for adults to launch businesses. By combining entrepreneurship, innovation and mindfulness we help our community grow in confidence, resilience and opportunity.",
+  "missionText": "Hustle Hive CIC empowers people of all ages through hands-on learning, enterprise and wellbeing. We provide alternative provision for young people, creative spaces for homeschool families, and skills, mentoring and resources for adults to launch businesses. By combining entrepreneurship, innovation and mindfulness we help our community grow in confidence, resilience and opportunity.",
   "visionTitle": "Our Vision",
   "visionText": "To create a vibrant community hub where enterprise, education, and wellbeing connect, inspiring young people and adults alike to learn by doing, build their futures, and thrive together.",
   "valuesTitle": "Our Values",
@@ -24,6 +24,23 @@
       "text": "We believe the route to self-development and self-actualisation is through real hands-on experiences where people create, build, test and grow."
     }
   ],
+  "foundersTitle": "Meet the founders",
+  "founders": [
+    {
+      "name": "Gavin Copland",
+      "role": "Co-founder & Director",
+      "photo": "/images/gavin-copland.webp",
+      "tagline": "Former Executive Headteacher · Qualified Mountain Leader · Level 4 Safeguarding Lead · Outdoor Mental Health Practitioner",
+      "bio": "Gavin is a former Executive Headteacher with years of experience supporting children and young people across a wide range of settings. He leads Hustle Hive's safeguarding, wellbeing and outdoor education, combining mentoring, outdoor learning and hands-on experiences to help people of all ages build confidence, resilience and self-belief."
+    },
+    {
+      "name": "Kieron Davis",
+      "role": "Co-founder & Director",
+      "photo": "/images/kieron-davis.webp",
+      "tagline": "Former Head of Secondary School · Engineering & STEM Specialist · Entrepreneur",
+      "bio": "Kieron is an educator and entrepreneur with over 20 years' teaching experience in the UK and internationally, including roles as Assistant Headteacher and Head of Secondary School. A specialist in engineering, design technology and enterprise, he helps lead Hustle Hive's education and enterprise programmes, including Makers to Market, using 3D printing, product design and real-world projects to help people turn ideas into skills."
+    }
+  ],
   "ctaLabel": "Explore Our Programmes",
-  "ctaHref": "/#programmes"
+  "ctaHref": "/programmes"
 }

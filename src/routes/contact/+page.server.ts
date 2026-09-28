@@ -2,16 +2,13 @@ import { fail } from '@sveltejs/kit';
 import { sendEmail, escapeHtml } from '$lib/server/email';
 import type { Actions } from './$types';
 
-const VALID_SUBJECTS = ['general', 'programmes', 'events', 'partnership', 'volunteer', 'other'];
+import { CONTACT_SUBJECTS } from '$lib/links';
 
-const SUBJECT_LABELS: Record<string, string> = {
-	general: 'General Enquiry',
-	programmes: 'Programmes',
-	events: 'Events',
-	partnership: 'Partnership Opportunities',
-	volunteer: 'Volunteering',
-	other: 'Other'
-};
+const VALID_SUBJECTS = CONTACT_SUBJECTS.map((s) => s.value);
+
+const SUBJECT_LABELS: Record<string, string> = Object.fromEntries(
+	CONTACT_SUBJECTS.map((s) => [s.value, s.label])
+);
 
 export const actions: Actions = {
 	default: async ({ request, platform }) => {

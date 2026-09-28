@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
+
 	// Form state
 	let formData = $state({
 		name: '',
@@ -27,7 +29,8 @@
 		submitError = '';
 
 		try {
-			const response = await fetch('/programmes/makers-to-market/apply', {
+			// Separate API route so the page URL itself always returns the page (no 405s)
+			const response = await fetch('/api/makers-to-market/apply', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(formData)
@@ -54,13 +57,10 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Apply to Makers to Market | Hustle Hive</title>
-	<meta
-		name="description"
-		content="Apply for the Makers to Market programme - a 12-week journey from product design to real-world market sales."
-	/>
-</svelte:head>
+<Seo
+	title="Apply to Makers to Market - Hustle Hive"
+	description="Apply for the Makers to Market programme - a 12-week journey from product design to real-world market sales."
+/>
 
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<!-- Background -->

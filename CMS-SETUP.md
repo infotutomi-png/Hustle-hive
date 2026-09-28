@@ -102,7 +102,7 @@ approve, and you’re in.
 ## Day-to-day: how to edit content
 
 1. Go to **https://YOUR-SITE-DOMAIN/admin/** and log in with GitHub.
-2. Pick the page on the left: **Home, About, Programmes, Events, Shop**.
+2. Pick the page on the left: **Home, Happening Soon, About, Programmes, Shop**.
 3. Edit the text fields, or click an image to upload/replace a photo.
 4. Click **Publish** (top right).
 5. Wait ~1–2 minutes and refresh the live site — your change is there.
@@ -111,10 +111,10 @@ approve, and you’re in.
 
 | Page        | You can change |
 |-------------|----------------|
-| **Home**    | Hero heading/text/buttons + logo, Mission & Vision, the 4 programme cards, the Makers to Market section + its photo carousel |
-| **About**   | Hero image & title, Mission, Vision, the 3 Values, the button |
-| **Programmes** | Page title/subtitle and each programme card (title, description, image, “Coming soon” toggle) |
-| **Events**  | Page title, the notice banner, and the full list of events (add/remove/reorder) |
+| **Home**    | Hero heading/text/button + logo, the "Where to next?" cards, the About Hustle Hive section, and the Makers to Market photo carousel (shown on the Makers to Market page) |
+| **Happening Soon** | The big cards under the homepage hero — swap these for each new holiday club, event or intake (title, badge, text, details, button, image) |
+| **About**   | Hero image & title, Mission, Vision, the 3 Values, the founders, the button |
+| **Programmes** | Page title/subtitle and each programme card (title, description, image, “Coming soon” toggle, “Register interest” subject) |
 | **Shop**    | Page text and each product (name, maker, price, images, description, bullet-point details) |
 
 ### Tips
@@ -122,7 +122,7 @@ approve, and you’re in.
 - **Images:** click an image field → upload from your computer. It’s saved into
   the site automatically. Use reasonably sized photos (under ~1–2 MB) so pages
   stay fast.
-- **Adding/removing items** (a programme card, an event, a product): use the
+- **Adding/removing items** (a programme card, a Happening Soon card, a product): use the
   **+ Add** button and the drag handle to reorder; the trash icon removes one.
 - **“Image position” fields** are an advanced layout setting — leave them as they
   are unless Andy advises otherwise.

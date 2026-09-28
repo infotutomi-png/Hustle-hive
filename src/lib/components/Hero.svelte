@@ -58,18 +58,15 @@
 			{hero.subheading}
 		</p>
 
-		<div class="flex flex-col sm:flex-row gap-4 justify-center">
+		<div class="flex justify-center">
 			<a
-				href={hero.primaryButtonHref}
-				class="px-8 py-3 bg-brand-orange text-black font-semibold rounded-md hover:bg-brand-orange-dark transition-colors duration-200"
+				href={hero.buttonHref}
+				class="inline-flex items-center gap-2 px-8 py-3 bg-brand-orange text-black font-semibold rounded-md hover:bg-brand-orange-dark transition-colors duration-200"
 			>
-				{hero.primaryButtonLabel}
-			</a>
-			<a
-				href={hero.secondaryButtonHref}
-				class="px-8 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white/10 transition-colors duration-200"
-			>
-				{hero.secondaryButtonLabel}
+				{hero.buttonLabel}
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+				</svg>
 			</a>
 		</div>
 	</div>

@@ -37,16 +37,13 @@ collections:
               - { label: "Heading — line 1", name: headingLine1, widget: string }
               - { label: "Heading — line 2", name: headingLine2, widget: string }
               - { label: "Subheading", name: subheading, widget: text }
-              - { label: "Primary button — label", name: primaryButtonLabel, widget: string }
-              - { label: "Primary button — link", name: primaryButtonHref, widget: string }
-              - { label: "Secondary button — label", name: secondaryButtonLabel, widget: string }
-              - { label: "Secondary button — link", name: secondaryButtonHref, widget: string }
-          - label: "How can we help you? section"
-            name: helpSection
+              - { label: "Button label", name: buttonLabel, widget: string }
+              - { label: "Button link", name: buttonHref, widget: string, hint: "#happening-soon scrolls to the Happening soon section" }
+          - label: "Where to next? section"
+            name: whereNext
             widget: object
             fields:
               - { label: "Heading", name: heading, widget: string }
-              - { label: "Subheading", name: subheading, widget: text }
               - label: "Cards"
                 name: cards
                 widget: list
@@ -57,20 +54,19 @@ collections:
                   - label: "Icon"
                     name: icon
                     widget: select
-                    options: ["graduation", "tools", "community"]
+                    options: ["graduation", "tools", "lightbulb", "community"]
                   - { label: "Button label", name: linkLabel, widget: string }
                   - { label: "Button link", name: href, widget: string, hint: "Full web address (https://...) opens in a new tab" }
-          - label: "Mission & Vision"
-            name: mission
+          - label: "About Hustle Hive section"
+            name: about
             widget: object
             fields:
-              - { label: "Mission title", name: missionTitle, widget: string }
-              - { label: "Mission text", name: missionText, widget: text }
-              - { label: "Vision title", name: visionTitle, widget: string }
-              - { label: "Vision text", name: visionText, widget: text }
-              - { label: "Link label", name: learnMoreLabel, widget: string }
-              - { label: "Link URL", name: learnMoreHref, widget: string }
-          - label: "Programmes section"
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Text", name: text, widget: text }
+              - { label: "Strapline", name: strapline, widget: string }
+              - { label: "Button label", name: buttonLabel, widget: string }
+              - { label: "Button link", name: buttonHref, widget: string }
+          - label: "Programmes grid (not shown on the homepage at the moment)"
             name: programmesSection
             widget: object
             fields:
@@ -91,7 +87,7 @@ collections:
                   - { label: "Link", name: href, widget: string }
                   - { label: "Image position (advanced — leave as-is)", name: imagePosition, widget: string, required: false }
                   - { label: "Coming soon?", name: comingSoon, widget: boolean, default: false }
-          - label: "Makers to Market section"
+          - label: "Makers to Market section (only the carousel images are shown, on the Makers to Market page)"
             name: makersToMarket
             widget: object
             fields:
@@ -106,6 +102,39 @@ collections:
                 summary: "Image"
                 fields:
                   - { label: "Image", name: image, widget: image }
+
+  # ---------------------------------------------------------------------------
+  # HAPPENING SOON (homepage cards for holiday clubs, events, applications)
+  # ---------------------------------------------------------------------------
+  - name: happeningSoon
+    label: "Happening Soon (homepage)"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: happeningSoon
+        label: "Happening Soon cards"
+        file: "src/lib/content/happening-soon.json"
+        fields:
+          - { label: "Heading", name: heading, widget: string }
+          - label: "Cards"
+            name: cards
+            widget: list
+            summary: "{{fields.title}} — {{fields.tagline}}"
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Tagline (orange badge)", name: tagline, widget: string, hint: "e.g. 'October half term' or 'Applications open now'" }
+              - { label: "Text", name: text, widget: text }
+              - label: "Details"
+                name: details
+                widget: list
+                required: false
+                hint: "Short facts shown as tags, e.g. 'Ages 8–11'"
+                field: { label: "Detail", name: detail, widget: string }
+              - { label: "Button label", name: buttonLabel, widget: string }
+              - { label: "Button link", name: buttonHref, widget: string, hint: "Full web address (https://...) opens in a new tab" }
+              - { label: "Image", name: image, widget: image, required: false, hint: "Leave empty to show a Hustle Hive placeholder" }
+              - { label: "Image description (for screen readers)", name: imageAlt, widget: string }
 
   # ---------------------------------------------------------------------------
   # ABOUT PAGE
@@ -139,6 +168,17 @@ collections:
                 options: ["people", "heart", "flag"]
               - { label: "Title", name: title, widget: string }
               - { label: "Text", name: text, widget: text }
+          - { label: "Founders section title", name: foundersTitle, widget: string }
+          - label: "Founders"
+            name: founders
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Role", name: role, widget: string }
+              - { label: "Photo (square)", name: photo, widget: image }
+              - { label: "Tagline", name: tagline, widget: string }
+              - { label: "Bio", name: bio, widget: text }
           - { label: "Button label", name: ctaLabel, widget: string }
           - { label: "Button link", name: ctaHref, widget: string }
 
@@ -172,40 +212,12 @@ collections:
               - { label: "Link", name: href, widget: string }
               - { label: "Image position (advanced — leave as-is)", name: imagePosition, widget: string, required: false }
               - { label: "Coming soon?", name: comingSoon, widget: boolean, default: false }
-
-  # ---------------------------------------------------------------------------
-  # UPCOMING EVENTS PAGE
-  # ---------------------------------------------------------------------------
-  - name: events
-    label: "Events Page"
-    delete: false
-    editor:
-      preview: false
-    files:
-      - name: events
-        label: "Events Page Content"
-        file: "src/lib/content/events.json"
-        fields:
-          - { label: "Page title", name: title, widget: string }
-          - { label: "Page subtitle", name: subtitle, widget: string }
-          - { label: "Notice banner title", name: noticeTitle, widget: string }
-          - { label: "Notice banner text", name: noticeText, widget: text }
-          - label: "Events"
-            name: events
-            widget: list
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: title, widget: string }
-              - { label: "Date", name: date, widget: string, hint: "e.g. 'TBC' or '12 June 2026'" }
-              - label: "Category"
-                name: category
+              - label: "Register interest — contact form subject"
+                name: interestSubject
                 widget: select
-                options:
-                  - "Makers to Market"
-                  - "Outdoor Education & Wellbeing"
-                  - "Young People"
-                  - "Community"
-              - { label: "Description", name: description, widget: text }
+                required: false
+                hint: "Used by the 'Register interest' button on coming-soon programmes"
+                options: ["general", "makers-to-market", "holiday-clubs", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "partnership", "volunteer", "other"]
 
   # ---------------------------------------------------------------------------
   # SHOP / MARKETPLACE
