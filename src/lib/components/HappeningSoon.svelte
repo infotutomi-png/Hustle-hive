@@ -1,10 +1,23 @@
 <script lang="ts">
 	// "Happening soon" section for the homepage.
 	// Edit the cards in src/lib/content/happening-soon.json (or in the CMS).
+	// Cards hide automatically after their end date; the section hides when none are left.
 	import content from '$lib/content/happening-soon.json';
+	import { activeCards } from '$lib/happening-soon';
 	import { isExternal } from '$lib/links';
+
+	const cards = activeCards();
+
+	// One card sits centred at a comfortable width; two or more share the row
+	const gridClass =
+		cards.length === 1
+			? 'grid-cols-1 max-w-3xl mx-auto'
+			: cards.length === 2
+				? 'grid-cols-1 md:grid-cols-2'
+				: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
 </script>
 
+{#if cards.length}
 <section id="happening-soon" class="relative py-20 overflow-hidden scroll-mt-24">
 	<div class="absolute inset-0 bg-gradient-to-b from-black via-stone-950 to-black">
 		<div class="absolute inset-0 opacity-10" style="background-image: url('/images/honeycomb-pattern.svg'); background-size: 60px 60px;"></div>
@@ -17,8 +30,8 @@
 			{content.heading}
 		</h2>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			{#each content.cards as card}
+		<div class="grid gap-6 {gridClass}">
+			{#each cards as card}
 				{@const external = isExternal(card.buttonHref)}
 				<article class="rounded-2xl overflow-hidden bg-stone-900/50 border border-stone-700/50 backdrop-blur-sm flex flex-col h-full hover:border-brand-orange/50 transition-colors duration-200">
 					<!-- Image (branded placeholder until one is set) -->
@@ -77,3 +90,4 @@
 		</div>
 	</div>
 </section>
+{/if}

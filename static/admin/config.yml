@@ -142,8 +142,31 @@ collections:
                 field: { label: "Detail", name: detail, widget: string }
               - { label: "Button label", name: buttonLabel, widget: string }
               - { label: "Button link", name: buttonHref, widget: string, hint: "Full web address (https://...) opens in a new tab" }
+              - { label: "End date", name: endDate, widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD", required: false, hint: "The card hides automatically after this day. Leave empty to keep it showing." }
               - { label: "Image", name: image, widget: image, required: false, hint: "Leave empty to show a Hustle Hive placeholder" }
               - { label: "Image description (for screen readers)", name: imageAlt, widget: string }
+
+  # ---------------------------------------------------------------------------
+  # INSIDE THE HIVE (homepage photo strip)
+  # ---------------------------------------------------------------------------
+  - name: insideTheHive
+    label: "Inside the Hive (homepage photos)"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: insideTheHive
+        label: "Inside the Hive photos"
+        file: "src/lib/content/inside-the-hive.json"
+        fields:
+          - { label: "Heading", name: heading, widget: string }
+          - label: "Photos"
+            name: photos
+            widget: list
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: "Photo (square works best)", name: image, widget: image }
+              - { label: "Photo description (for screen readers)", name: alt, widget: string }
 
   # ---------------------------------------------------------------------------
   # ABOUT PAGE

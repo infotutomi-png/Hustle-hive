@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import home from '$lib/content/home.json';
+	import { activeCards } from '$lib/happening-soon';
 
 	const hero = home.hero;
+	// "See what's on" scrolls to Happening Soon, so hide it when that section has no cards left
+	const showButton = !hero.buttonHref.startsWith('#happening-soon') || activeCards().length > 0;
 	const videoId = '0198fa18f3bdbfb4c31d8bcbf0c11f23';
 	const customerSubdomain = 'customer-sf4ifbppskki29nb';
 
@@ -58,6 +61,7 @@
 			{hero.subheading}
 		</p>
 
+		{#if showButton}
 		<div class="flex justify-center">
 			<a
 				href={hero.buttonHref}
@@ -69,6 +73,7 @@
 				</svg>
 			</a>
 		</div>
+		{/if}
 	</div>
 </section>
 

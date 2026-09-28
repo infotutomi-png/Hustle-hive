@@ -30,6 +30,10 @@
 			<strong>Makers to Market application form:</strong> your name, email address, phone number (optional), age,
 			location and area of interest.
 		</li>
+		<li>
+			<strong>Holiday club mailing list:</strong> your first name and email address, and a record that you ticked the
+			box agreeing to receive our emails (with the date and time).
+		</li>
 		<li><strong>Emails and phone calls:</strong> anything you tell us when you contact us directly.</li>
 	</ul>
 
@@ -38,11 +42,24 @@
 		<li>To reply to your enquiry.</li>
 		<li>To assess your Makers to Market application, contact you about it and, if you join, run the programme.</li>
 		<li>To keep a record of our conversations with you.</li>
+		<li>If you join our mailing list, to email you about holiday clubs and workshops.</li>
 	</ul>
 	<p>
 		We use your information because we have a legitimate interest in responding to people who contact us, and, for
 		applications, because you have asked us to consider you for a programme. We will not sell your information or use
 		it for marketing without your permission.
+	</p>
+
+	<h2 id="mailing-list">Holiday club mailing list</h2>
+	<p>
+		If you sign up on our homepage, we'll email you about upcoming holiday clubs and workshops. We only do this because
+		you've given us your consent by ticking the box, and we only use your first name and email address for these
+		emails.
+	</p>
+	<p>
+		You can unsubscribe at any time by replying to any of our emails or by emailing
+		<a href="mailto:kieron@hustlehive.co.uk">kieron@hustlehive.co.uk</a>. We'll then remove you from the list. We keep
+		your details on the list until you unsubscribe.
 	</p>
 
 	<h2>Young people</h2>
@@ -55,7 +72,7 @@
 	<p>We don't share your information with anyone except the services we use to run this website:</p>
 	<ul>
 		<li><strong>Cloudflare</strong> hosts this website and helps keep it secure.</li>
-		<li><strong>Postmark</strong> delivers the messages sent through our forms to our inbox.</li>
+		<li><strong>Postmark</strong> delivers the messages and sign-ups sent through our forms to our inbox.</li>
 		<li><strong>Google</strong> provides the email inbox those messages are delivered to.</li>
 	</ul>
 	<p>

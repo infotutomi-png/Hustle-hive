@@ -13,6 +13,7 @@
       ],
       "buttonLabel": "Book now",
       "buttonHref": "https://hustlehivebookings.com",
+      "endDate": "2026-10-30",
       "image": "/images/brand-lab.webp",
       "imageAlt": "Children printing their own T-shirt designs with a heat press"
     },
@@ -23,6 +24,7 @@
       "details": [],
       "buttonLabel": "Apply now",
       "buttonHref": "/programmes/makers-to-market/apply",
+      "endDate": "",
       "image": "/images/makers-market-stall.webp",
       "imageAlt": "Makers selling personalised T-shirts, mugs and 3D-printed gifts at a market stall"
     }
