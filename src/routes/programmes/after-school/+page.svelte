@@ -1,7 +1,12 @@
-<svelte:head>
-	<title>After-School Programme - Hustle Hive</title>
-	<meta name="description" content="Creative, skill-building activities for ages 11–16 at Hustle Hive's After-School Programme." />
-</svelte:head>
+<script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
+	import { contactHref } from '$lib/links';
+</script>
+
+<Seo
+	title="After-School Programme - Hustle Hive"
+	description="Creative, skill-building activities for ages 11–16 at Hustle Hive's After-School Programme."
+/>
 
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<!-- Header -->
@@ -107,10 +112,10 @@
 		<!-- CTA -->
 		<div class="mt-16 text-center">
 			<a
-				href="/contact"
+				href={contactHref('after-school')}
 				class="inline-flex items-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200 text-lg"
 			>
-				Register Interest
+				Register interest
 				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 				</svg>

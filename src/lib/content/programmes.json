@@ -9,7 +9,8 @@
       "icon": "pencil",
       "href": "/programmes/makers-to-market",
       "imagePosition": "object-[center_30%]",
-      "comingSoon": false
+      "comingSoon": false,
+      "interestSubject": "makers-to-market"
     },
     {
       "title": "Outdoor Education & Wellbeing",
@@ -18,7 +19,8 @@
       "icon": "tent",
       "href": "/programmes/outdoors-wellbeing",
       "imagePosition": "object-[center_75%]",
-      "comingSoon": false
+      "comingSoon": false,
+      "interestSubject": "outdoor-education"
     },
     {
       "title": "After-School Programme",
@@ -27,7 +29,8 @@
       "icon": "lightbulb",
       "href": "/programmes/after-school",
       "imagePosition": "object-[center_30%]",
-      "comingSoon": true
+      "comingSoon": true,
+      "interestSubject": "after-school"
     },
     {
       "title": "Entrepreneurship Hub",
@@ -36,7 +39,8 @@
       "icon": "rocket",
       "href": "/programmes/entrepreneurship-hub",
       "imagePosition": "",
-      "comingSoon": true
+      "comingSoon": true,
+      "interestSubject": "entrepreneurship-hub"
     }
   ]
 }

@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>Our Makers - Hustle Hive</title>
-	<meta name="description" content="Meet the talented young entrepreneurs behind our Makers to Market programme. Browse their unique handmade products." />
+	<meta name="description" content="Meet the local makers behind our Makers to Market programme. Browse their unique handmade products." />
 </svelte:head>
 
 <main class="bg-black min-h-screen pt-32 pb-20">
@@ -17,7 +17,7 @@
 			<h1 class="text-4xl md:text-5xl font-bold text-white italic">Our Makers</h1>
 		</div>
 		<p class="text-lg md:text-xl text-gray-300">
-			Meet the talented young entrepreneurs from our Makers to Market programme. Each maker brings their unique skills and passion to create beautiful handmade products.
+			Meet the talented local makers from our Makers to Market programme. Each maker brings their unique skills and passion to create beautiful handmade products.
 		</p>
 	</section>
 

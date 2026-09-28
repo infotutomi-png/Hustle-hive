@@ -1,14 +1,25 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
+	import Seo from '$lib/components/Seo.svelte';
+	import { CONTACT_SUBJECTS, LEARNING_URL, company } from '$lib/links';
 
 	let isSubmitting = $state(false);
+
+	// Pre-select a subject from the web address, e.g. /contact?subject=after-school.
+	// After a failed submit, keep whatever the person had chosen.
+	const isValidSubject = (value: string | null | undefined) =>
+		!!value && CONTACT_SUBJECTS.some((s) => s.value === value);
+	const fromUrl = $page.url.searchParams.get('subject');
+	let subject = $state(
+		isValidSubject($page.form?.values?.subject) ? $page.form.values.subject : isValidSubject(fromUrl) ? fromUrl! : ''
+	);
 </script>
 
-<svelte:head>
-	<title>Contact Us - Hustle Hive</title>
-	<meta name="description" content="Get in touch with Hustle Hive. We'd love to hear from you about our programmes, events, or partnership opportunities." />
-</svelte:head>
+<Seo
+	title="Contact Us - Hustle Hive"
+	description="Get in touch with Hustle Hive in Darlington about Makers to Market, holiday clubs and workshops, our programmes, or partnership opportunities."
+/>
 
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<!-- Hero Section -->
@@ -77,6 +88,22 @@
 								<a href="tel:+447593975681" class="text-gray-400 hover:text-brand-orange transition-colors duration-200">
 									07593 975681
 								</a>
+							</div>
+						</div>
+
+						<!-- Address -->
+						<div class="flex items-start gap-4">
+							<div class="w-12 h-12 bg-brand-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
+								<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-xl font-semibold text-white mb-1">Visit Us</h3>
+								<address class="not-italic text-gray-400">
+									{company.businessAddress}
+								</address>
 							</div>
 						</div>
 					</div>
@@ -162,18 +189,22 @@
 									id="subject"
 									name="subject"
 									required
+									bind:value={subject}
 									class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white focus:outline-none focus:border-brand-orange transition-colors duration-200"
 								>
 									<option value="">Select a subject</option>
-									<option value="general" selected={$page.form?.values?.subject === 'general'}>General Enquiry</option>
-									<option value="programmes" selected={$page.form?.values?.subject === 'programmes'}>Programmes</option>
-									<option value="events" selected={$page.form?.values?.subject === 'events'}>Events</option>
-									<option value="partnership" selected={$page.form?.values?.subject === 'partnership'}>Partnership Opportunities</option>
-									<option value="volunteer" selected={$page.form?.values?.subject === 'volunteer'}>Volunteering</option>
-									<option value="other" selected={$page.form?.values?.subject === 'other'}>Other</option>
+									{#each CONTACT_SUBJECTS as option}
+										<option value={option.value}>{option.label}</option>
+									{/each}
 								</select>
 								{#if $page.form?.errors?.subject}
 									<p class="text-red-400 text-sm mt-1">{$page.form.errors.subject}</p>
+								{/if}
+								{#if subject === 'school-referral'}
+									<p class="mt-3 px-4 py-3 rounded-lg bg-brand-orange/10 border border-brand-orange/30 text-gray-200 text-sm" role="status">
+										For school referrals, please visit
+										<a href={LEARNING_URL} target="_blank" rel="noopener noreferrer" class="text-brand-orange font-semibold hover:underline">Hustle Hive Learning</a>
+									</p>
 								{/if}
 							</div>
 

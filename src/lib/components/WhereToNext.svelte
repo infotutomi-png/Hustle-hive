@@ -1,30 +1,18 @@
 <script lang="ts">
-	// "How can we help you?" section for Hustle Hive homepage
+	// "Where to next?" section for the homepage: one card per type of visitor
 	import home from '$lib/content/home.json';
 	import { isExternal } from '$lib/links';
 
-	const section = home.helpSection;
+	const section = home.whereNext;
 	const cards = section.cards;
 </script>
 
-<section id="how-can-we-help" class="relative py-20 overflow-hidden scroll-mt-20">
-	<!-- Honeycomb Background -->
-	<div class="absolute inset-0 bg-gradient-to-b from-black via-stone-950 to-black">
-		<div class="absolute inset-0 opacity-10" style="background-image: url('/images/honeycomb-pattern.svg'); background-size: 60px 60px;"></div>
-		<div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent"></div>
-		<div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
-	</div>
-
+<section id="where-to-next" class="relative py-20 overflow-hidden scroll-mt-24 bg-gradient-to-b from-black via-stone-950 to-black">
 	<div class="relative z-10 max-w-6xl mx-auto px-4">
 		<!-- Section Header -->
-		<div class="text-center mb-12">
-			<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-				{section.heading}
-			</h2>
-			<p class="text-lg md:text-xl text-gray-300 italic max-w-3xl mx-auto">
-				{section.subheading}
-			</p>
-		</div>
+		<h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+			{section.heading}
+		</h2>
 
 		<!-- Cards Grid -->
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -43,7 +31,11 @@
 								<svg class="w-7 h-7 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437" />
 								</svg>
-							{:else if card.icon === 'community'}
+							{:else if card.icon === 'lightbulb'}
+							<svg class="w-7 h-7 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+							</svg>
+						{:else if card.icon === 'community'}
 								<svg class="w-7 h-7 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
 								</svg>

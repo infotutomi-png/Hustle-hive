@@ -1,20 +1,21 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import Hero from '$lib/components/Hero.svelte';
-	import HowCanWeHelp from '$lib/components/HowCanWeHelp.svelte';
-	import MissionVision from '$lib/components/MissionVision.svelte';
-	import Programmes from '$lib/components/Programmes.svelte';
-	import MakersToMarket from '$lib/components/MakersToMarket.svelte';
+	import HappeningSoon from '$lib/components/HappeningSoon.svelte';
+	import WhereToNext from '$lib/components/WhereToNext.svelte';
+	import AboutIntro from '$lib/components/AboutIntro.svelte';
+	// Programmes.svelte (programmes grid) and MakersToMarket.svelte (gallery) are no longer
+	// on the homepage; the grid lives on /programmes and the gallery on /programmes/makers-to-market.
 </script>
 
-<svelte:head>
-	<title>Hustle Hive - Turning Ideas Into Skills. Skills Into Futures.</title>
-	<meta name="description" content="A community-powered makerspace and enterprise hub helping people of all ages build confidence, skills, and real-world opportunities." />
-</svelte:head>
+<Seo
+	title="Hustle Hive - Turning Ideas Into Skills. Skills Into Futures."
+	description="A community-powered makerspace and enterprise hub in Darlington helping people of all ages build confidence, skills, and real-world opportunities."
+/>
 
 <main class="bg-black">
 	<Hero />
-	<HowCanWeHelp />
-	<MissionVision />
-	<Programmes />
-	<MakersToMarket />
+	<HappeningSoon />
+	<WhereToNext />
+	<AboutIntro />
 </main>

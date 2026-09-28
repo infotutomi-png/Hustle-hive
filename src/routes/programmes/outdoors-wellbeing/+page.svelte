@@ -1,5 +1,7 @@
 <script lang="ts">
 	import ImageCarousel from '$lib/components/ImageCarousel.svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import { contactHref } from '$lib/links';
 
 	const outdoorImages = [
 		'/images/outdoor_activities.jpeg',
@@ -13,10 +15,10 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Outdoor Education & Wellbeing - Hustle Hive</title>
-	<meta name="description" content="Nature-based learning, teamwork and wellbeing activities at Hustle Hive's Outdoor Education & Wellbeing programme." />
-</svelte:head>
+<Seo
+	title="Outdoor Education & Wellbeing - Hustle Hive"
+	description="Nature-based learning, teamwork and wellbeing activities at Hustle Hive's Outdoor Education & Wellbeing programme."
+/>
 
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<!-- Header -->
@@ -117,10 +119,10 @@
 		<!-- CTA -->
 		<div class="mt-16 text-center">
 			<a
-				href="/contact"
+				href={contactHref('outdoor-education')}
 				class="inline-flex items-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200 text-lg"
 			>
-				Register Interest
+				Register interest
 				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 				</svg>

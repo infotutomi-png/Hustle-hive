@@ -1,13 +1,18 @@
 <script lang="ts">
+	import Seo from '$lib/components/Seo.svelte';
 	import about from '$lib/content/about.json';
+	import { LEARNING_TEAM_URL } from '$lib/links';
 
 	let imageLoaded = $state(false);
 </script>
 
+<Seo
+	title="About Us - Hustle Hive"
+	description="Learn about Hustle Hive CIC - a community-powered makerspace and enterprise hub in Darlington, founded by teachers, helping people of all ages build confidence, skills, and real-world opportunities."
+/>
+
 <svelte:head>
-	<title>About Us - Hustle Hive</title>
-	<meta name="description" content="Learn about Hustle Hive - a community-powered makerspace and enterprise hub helping people of all ages build confidence, skills, and real-world opportunities." />
-	<link rel="preload" as="image" href={about.heroImage} type="image/jpeg" />
+	<link rel="preload" as="image" href={about.heroImage} type="image/webp" />
 </svelte:head>
 
 <main class="bg-black">
@@ -89,6 +94,39 @@
 						</div>
 					{/each}
 				</div>
+			</div>
+
+			<!-- Meet the Founders -->
+			<div class="mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">{about.foundersTitle}</h2>
+				<div class="grid md:grid-cols-2 gap-6">
+					{#each about.founders as founder}
+						<article class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center">
+							<img
+								src={founder.photo}
+								alt={founder.name}
+								width="160"
+								height="160"
+								loading="lazy"
+								class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover border-4 border-brand-orange/60 mb-5"
+							/>
+							<h3 class="text-2xl font-bold text-white">{founder.name}</h3>
+							<p class="text-brand-orange font-semibold mb-3">{founder.role}</p>
+							<p class="text-gray-300 text-sm font-medium mb-4">{founder.tagline}</p>
+							<p class="text-gray-400 leading-relaxed text-left md:text-center">{founder.bio}</p>
+						</article>
+					{/each}
+				</div>
+				<p class="text-center mt-6">
+					<a
+						href={LEARNING_TEAM_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-gray-400 hover:text-brand-orange transition-colors duration-200"
+					>
+						Meet the full Hustle Hive Learning team →
+					</a>
+				</p>
 			</div>
 
 			<!-- CTA -->

@@ -1,0 +1,30 @@
+{
+  "heading": "Happening soon",
+  "cards": [
+    {
+      "title": "Brand Lab",
+      "tagline": "October half term",
+      "text": "Create your own mini brand, design products and make something to take home.",
+      "details": [
+        "Thu 29 & Fri 30 October",
+        "Ages 8–11",
+        "£39.99 per day",
+        "Only 10 places per day"
+      ],
+      "buttonLabel": "Book now",
+      "buttonHref": "https://hustlehivebookings.com",
+      "image": "",
+      "imageAlt": "Children designing and printing their own T-shirts at Brand Lab"
+    },
+    {
+      "title": "Makers to Market",
+      "tagline": "Applications open now",
+      "text": "A 12-week programme taking your handmade products from idea to real-world market sales.",
+      "details": [],
+      "buttonLabel": "Apply now",
+      "buttonHref": "/programmes/makers-to-market/apply",
+      "image": "/images/market1.webp",
+      "imageAlt": "Makers selling handmade products at a market stall"
+    }
+  ]
+}
