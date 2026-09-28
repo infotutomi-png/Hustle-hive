@@ -2,9 +2,12 @@
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	import Seo from '$lib/components/Seo.svelte';
-	import { CONTACT_SUBJECTS, LEARNING_URL, company } from '$lib/links';
+	import { CONTACT_SUBJECTS, LEARNING_URL, MAPS_DIRECTIONS_URL, MAPS_EMBED_URL, company } from '$lib/links';
 
 	let isSubmitting = $state(false);
+
+	// TODO: replace with arrival and parking details (e.g. where to park, which door to use)
+	const arrivalInfo = 'Arrival and parking information coming soon.';
 
 	// Pre-select a subject from the web address, e.g. /contact?subject=after-school.
 	// After a failed submit, keep whatever the person had chosen.
@@ -243,6 +246,53 @@
 						</form>
 					{/if}
 				</div>
+		</div>
+	</section>
+
+	<!-- Find Us -->
+	<section class="max-w-6xl mx-auto px-4 mt-16" aria-labelledby="find-us-heading">
+		<div class="border-t border-stone-700/50 pt-12">
+			<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
+				<div>
+					<h2 id="find-us-heading" class="text-3xl font-bold text-white mb-3">Find Us</h2>
+					<address class="not-italic text-gray-300 text-lg">{company.businessAddress}</address>
+					<p class="text-gray-400 mt-2">{arrivalInfo}</p>
+				</div>
+				<a
+					href={MAPS_DIRECTIONS_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200 w-full md:w-auto flex-shrink-0"
+				>
+					Get directions
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+					</svg>
+				</a>
+			</div>
+
+			<!-- Photo and map: side by side on desktop, stacked on mobile -->
+			<div class="grid md:grid-cols-2 gap-6">
+				<img
+					src="/images/hustle-hive-building.webp"
+					alt="The outside of Paramo House on Denmark Street, Darlington, home of Hustle Hive"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+					class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50"
+				/>
+				<div class="w-full aspect-[4/3] rounded-2xl overflow-hidden border border-stone-700/50 bg-stone-900">
+					<iframe
+						src={MAPS_EMBED_URL}
+						title="Map showing Hustle Hive at {company.businessAddress}"
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						class="w-full h-full border-0"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
 		</div>
 	</section>
 </main>

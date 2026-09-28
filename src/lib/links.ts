@@ -20,6 +20,11 @@ export const company = {
 	phone: '07593 975681'
 };
 
+// Google Maps for the business address (no API key needed)
+const mapsQuery = encodeURIComponent(`Hustle Hive, ${company.businessAddress}`);
+export const MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${mapsQuery}`;
+export const MAPS_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(company.businessAddress)}&output=embed`;
+
 // Structured data (JSON-LD) so search engines understand who we are and where we are
 export const organisationJsonLd = {
 	'@context': 'https://schema.org',

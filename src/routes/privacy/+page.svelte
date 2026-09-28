@@ -90,7 +90,8 @@
 	<p>
 		This website doesn't use advertising or analytics cookies. Cloudflare may set strictly necessary cookies to protect
 		the site. When you visit, your browser also loads fonts from Google Fonts and Fontshare, which means those services
-		receive your IP address.
+		receive your IP address. The map on our Contact page is provided by Google Maps; when it loads, Google receives your
+		IP address and may set its own cookies, as described in Google's privacy policy.
 	</p>
 
 	<h2>Bookings and Hustle Hive Learning</h2>
