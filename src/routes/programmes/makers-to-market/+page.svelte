@@ -67,8 +67,8 @@
 	<section class="max-w-6xl mx-auto px-4 mb-12">
 		<div class="rounded-2xl overflow-hidden">
 			<img
-				src="/images/makers_to_market2.webp"
-				alt="Makers to Market programme"
+				src="/images/makers-market-stall.webp"
+				alt="Makers selling personalised T-shirts, mugs and 3D-printed gifts at a market stall"
 				class="w-full h-64 md:h-96 object-cover object-[center_30%]"
 			/>
 		</div>
