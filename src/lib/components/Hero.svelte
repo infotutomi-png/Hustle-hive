@@ -1,57 +1,34 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import home from '$lib/content/home.json';
 	import { activeCards } from '$lib/happening-soon';
 
 	const hero = home.hero;
 	// "See what's on" scrolls to Happening Soon, so hide it when that section has no cards left
 	const showButton = !hero.buttonHref.startsWith('#happening-soon') || activeCards().length > 0;
-	const videoId = '0198fa18f3bdbfb4c31d8bcbf0c11f23';
-	const customerSubdomain = 'customer-sf4ifbppskki29nb';
-
-	// Phones and people who prefer reduced motion get the still image only;
-	// the video iframe isn't created at all, so it's never downloaded.
-	let showVideo = $state(false);
-
-	onMount(() => {
-		const query = window.matchMedia('(min-width: 768px) and (prefers-reduced-motion: no-preference)');
-		showVideo = query.matches;
-		const onChange = (e: MediaQueryListEvent) => (showVideo = e.matches);
-		query.addEventListener('change', onChange);
-		return () => query.removeEventListener('change', onChange);
-	});
 </script>
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-	<!-- Background: still frame always, video layered on top on larger screens -->
-	<div class="absolute inset-0 z-0 overflow-hidden">
-		<img
-			src="/images/hero-still.webp"
-			alt=""
-			fetchpriority="high"
-			class="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center"
-		/>
-		{#if showVideo}
-			<iframe
-				src="https://{customerSubdomain}.cloudflarestream.com/{videoId}/iframe?muted=true&loop=true&autoplay=true&controls=false&poster=https%3A%2F%2F{customerSubdomain}.cloudflarestream.com%2F{videoId}%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D2s%26height%3D1080"
-				title="Hustle Hive background video"
-				class="video-background"
-				allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-			></iframe>
-		{/if}
-		<div class="absolute inset-0 bg-black/50 z-10"></div>
-	</div>
+<!-- Compact hero so the top of the Happening Soon cards shows on a typical laptop screen -->
+<section class="relative overflow-hidden bg-black pt-32 pb-10 md:pt-36 md:pb-12">
+	<!-- Subtle orange honeycomb (inline SVG), fading out towards the edges -->
+	<svg class="honeycomb absolute inset-0 w-full h-full text-brand-orange" aria-hidden="true">
+		<defs>
+			<!-- One pointy-top hexagon plus the vertical link to the next row tiles into a full honeycomb -->
+			<pattern id="hero-honeycomb" width="56" height="97" patternUnits="userSpaceOnUse">
+				<path
+					d="M28 0 L56 16.17 V48.5 L28 64.67 L0 48.5 V16.17 Z M28 64.67 V97"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.2"
+				/>
+			</pattern>
+		</defs>
+		<rect width="100%" height="100%" fill="url(#hero-honeycomb)" />
+	</svg>
+	<!-- Soft orange glow behind the headline -->
+	<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(247,147,30,0.10),transparent_60%)]" aria-hidden="true"></div>
 
 	<!-- Content -->
-	<div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-24 md:pt-0">
-		<div class="mb-8">
-			<img
-				src={hero.logo}
-				alt="Hustle Hive"
-				class="h-32 md:h-40 mx-auto"
-			/>
-		</div>
-
+	<div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
 		<h1 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
 			{hero.headingLine1}<br />
 			{hero.headingLine2}
@@ -78,13 +55,10 @@
 </section>
 
 <style>
-	.video-background {
-		position: absolute;
-		border: none;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: max(100vw, 133.33vh);
-		height: max(100vh, 75vw);
+	/* Keep the pattern faint and fade it out towards the edges so it never competes with the text */
+	.honeycomb {
+		opacity: 0.14;
+		-webkit-mask-image: radial-gradient(ellipse 70% 75% at center, black 25%, transparent 80%);
+		mask-image: radial-gradient(ellipse 70% 75% at center, black 25%, transparent 80%);
 	}
 </style>

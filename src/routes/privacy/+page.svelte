@@ -89,8 +89,8 @@
 	<h2>Cookies and third-party content</h2>
 	<p>
 		This website doesn't use advertising or analytics cookies. Cloudflare may set strictly necessary cookies to protect
-		the site. When you visit, your browser also loads fonts from Google Fonts and Fontshare, and the homepage video from
-		Cloudflare Stream, which means those services receive your IP address.
+		the site. When you visit, your browser also loads fonts from Google Fonts and Fontshare, which means those services
+		receive your IP address.
 	</p>
 
 	<h2>Bookings and Hustle Hive Learning</h2>
