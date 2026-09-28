@@ -42,6 +42,45 @@
       "bio": "Kieron is an educator and entrepreneur with over 20 years' teaching experience in the UK and internationally, including roles as Assistant Headteacher and Head of Secondary School. A specialist in engineering, design technology and enterprise, he helps lead Hustle Hive's education and enterprise programmes, including Makers to Market, using 3D printing, product design and real-world projects to help people turn ideas into skills."
     }
   ],
+  "hq": {
+    "title": "Inside Hustle HQ",
+    "intro": "Hustle HQ is packed with the kind of kit most people never get to use. Here's what you'll find when you visit.",
+    "cards": [
+      {
+        "title": "3D Printing",
+        "icon": "cube",
+        "image": "",
+        "description": "Bring your designs to life, from multi-colour prototypes and keyrings to super-detailed miniatures and jewellery.",
+        "kit": ["Bambu Lab P2S multi-colour 3D printer", "Elegoo 16K resin printer"]
+      },
+      {
+        "title": "Cutting & Vinyl",
+        "icon": "scissors",
+        "image": "",
+        "description": "Cut your own stickers, decals and iron-on designs.",
+        "kit": ["Cricut vinyl cutter"]
+      },
+      {
+        "title": "Printing & Pressing",
+        "icon": "press",
+        "image": "",
+        "description": "Turn artwork into real products: T-shirts, tote bags, mugs and gifts in full, vibrant colour.",
+        "kit": ["Epson A3 sublimation printer", "HTVRONT Auto Heat Press", "Cricut Mug Press"]
+      },
+      {
+        "title": "Design",
+        "icon": "laptop",
+        "image": "",
+        "description": "Design, brand and plan your projects on our laptops.",
+        "kit": ["ASUS Vivobook laptops"]
+      }
+    ],
+    "outro": "Our holiday clubs and Makers to Market programme use this kit to turn ideas into real products.",
+    "primaryButtonLabel": "Book a holiday club",
+    "primaryButtonHref": "https://hustlehivebookings.com",
+    "secondaryButtonLabel": "Makers to Market",
+    "secondaryButtonHref": "/programmes/makers-to-market"
+  },
   "ctaLabel": "Explore Our Programmes",
   "ctaHref": "/programmes"
 }

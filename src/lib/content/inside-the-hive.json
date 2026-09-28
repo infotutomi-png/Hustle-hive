@@ -1,5 +1,8 @@
 {
-  "heading": "Inside the Hive",
+  "heading": "Inside Hustle HQ",
+  "caption": "3D printers, heat presses, vinyl cutters and more.",
+  "buttonLabel": "See what's at Hustle HQ",
+  "buttonHref": "/about#hustle-hq",
   "photos": [
     { "image": "/images/market1.webp", "alt": "Makers carving wooden figures and sketching designs around a workshop table" },
     { "image": "/images/market2.webp", "alt": "Two makers in aprons crafting small wooden pieces" },

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
+	import HustleHQ from '$lib/components/HustleHQ.svelte';
 	import about from '$lib/content/about.json';
 	import { LEARNING_TEAM_URL } from '$lib/links';
 
@@ -131,6 +132,9 @@
 					</a>
 				</p>
 			</div>
+
+			<!-- Inside Hustle HQ (kit) -->
+			<HustleHQ />
 
 			<!-- CTA -->
 			<div class="text-center">

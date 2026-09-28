@@ -1,5 +1,5 @@
 <script lang="ts">
-	// "Inside the Hive" photo strip for the homepage.
+	// "Inside Hustle HQ" photo strip for the homepage.
 	// Add photos in src/lib/content/inside-the-hive.json (or in the CMS) — the strip grows to fit.
 	import content from '$lib/content/inside-the-hive.json';
 </script>
@@ -30,5 +30,18 @@
 				</li>
 			{/each}
 		</ul>
+
+		<div class="max-w-6xl mx-auto px-4 mt-8 text-center">
+			<p class="text-gray-300 text-lg mb-5">{content.caption}</p>
+			<a
+				href={content.buttonHref}
+				class="inline-flex items-center gap-2 px-6 py-3 bg-stone-700/60 hover:bg-stone-600/60 text-white font-medium rounded-lg transition-colors duration-200 border border-stone-600/50"
+			>
+				{content.buttonLabel}
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+				</svg>
+			</a>
+		</div>
 	</section>
 {/if}
