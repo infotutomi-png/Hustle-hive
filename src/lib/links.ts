@@ -16,7 +16,27 @@ export const company = {
 	name: 'Hustle Hive CIC',
 	number: '16691281',
 	registeredOffice: '69 Woodland Terrace, Darlington, DL3 9NT',
-	businessAddress: 'Unit 5 Paramo House, Denmark Street, Darlington, DL3 0LP'
+	businessAddress: 'Unit 5 Paramo House, Denmark Street, Darlington, DL3 0LP',
+	phone: '07593 975681'
+};
+
+// Structured data (JSON-LD) so search engines understand who we are and where we are
+export const organisationJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': ['Organization', 'LocalBusiness'],
+	name: company.name,
+	url: SITE_URL,
+	logo: `${SITE_URL}/images/logo-full.png`,
+	image: `${SITE_URL}/og-image.jpg`,
+	telephone: '+44 7593 975681',
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: 'Unit 5 Paramo House, Denmark Street',
+		addressLocality: 'Darlington',
+		postalCode: 'DL3 0LP',
+		addressCountry: 'GB'
+	},
+	sameAs: [FACEBOOK_URL]
 };
 
 export function isExternal(href: string) {

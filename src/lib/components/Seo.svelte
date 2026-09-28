@@ -27,7 +27,7 @@
 	<meta property="og:image" content="{SITE_URL}/og-image.jpg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Hustle Hive logo" />
+	<meta property="og:image:alt" content="Hustle Hive founders Gavin Copland and Kieron Davis in Darlington" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
