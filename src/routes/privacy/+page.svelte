@@ -73,7 +73,7 @@
 	<ul>
 		<li><strong>Cloudflare</strong> hosts this website and helps keep it secure.</li>
 		<li><strong>Postmark</strong> delivers the messages and sign-ups sent through our forms to our inbox.</li>
-		<li><strong>Google</strong> provides the email inbox those messages are delivered to.</li>
+		<li><strong>Microsoft</strong> provides the email inboxes those messages are delivered to.</li>
 	</ul>
 	<p>
 		Some of these providers may process data outside the UK. Where they do, they use legal safeguards approved under UK

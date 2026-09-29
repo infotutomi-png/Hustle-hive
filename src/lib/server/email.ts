@@ -1,6 +1,7 @@
 const POSTMARK_API_URL = 'https://api.postmarkapp.com/email';
-const FROM_EMAIL = 'noreply@hustlehive.co.uk';
-const TO_EMAIL = 'info.hustlehive@gmail.com';
+// Must match a confirmed Sender Signature in the Postmark account
+const FROM_EMAIL = 'Hustle Hive website <kieron@hustlehive.co.uk>';
+const TO_EMAIL = 'gavin@hustlehive.co.uk, kieron@hustlehive.co.uk';
 
 interface SendEmailOptions {
 	subject: string;
