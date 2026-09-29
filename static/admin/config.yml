@@ -3,10 +3,11 @@
 
 backend:
   name: github
-  repo: dmac925/hive-fresh
+  repo: infotutomi-png/Hustle-hive
   branch: main
-  # OAuth worker that handles GitHub login (deployed to Cloudflare).
-  base_url: https://sveltia-cms-auth.andrew-gove.workers.dev
+  # OAuth worker that handles "Sign in with GitHub" (see CMS-SETUP.md, Part A-C).
+  # Until it's set up, use "Sign In Using Access Token" on the /admin login screen instead.
+  # base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
 
 # Where uploaded images are stored in the repo, and the URL they're served from.
 media_folder: "static/images"
@@ -285,7 +286,7 @@ collections:
   # SHOP / MARKETPLACE
   # ---------------------------------------------------------------------------
   - name: shop
-    label: "Shop Page"
+    label: "Shop Page (hidden from the site at the moment)"
     delete: false
     editor:
       preview: false
