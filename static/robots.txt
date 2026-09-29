@@ -1,3 +1,5 @@
-# allow crawling everything by default
+# allow crawling everything by default, except the content editor
 User-agent: *
-Disallow:
+Disallow: /admin/
+
+Sitemap: https://hustlehive.co.uk/sitemap.xml

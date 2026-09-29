@@ -3,7 +3,7 @@
 The site now has a built-in content manager so you can edit text and images
 yourself, without touching code. It lives at:
 
-    https://YOUR-SITE-DOMAIN/admin/
+    https://hustlehive.co.uk/admin/
 
 You log in with **GitHub**, make your changes in a simple form, and click
 **Publish**. The site rebuilds automatically (usually live within ~1–2 minutes).
@@ -85,23 +85,23 @@ There are two parts: (A) deploy a tiny login helper to Cloudflare, and
    ```yaml
    backend:
      name: github
-     repo: dmac925/hive-fresh
+     repo: infotutomi-png/Hustle-hive
      branch: main
      base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
    ```
 
 4. Also check the `repo:` line says the correct GitHub repo
    (`owner/repository-name`) for **your** copy of the site.
-5. Save and commit/push that change (or ask Andy to).
+5. Save and commit/push that change.
 
-That’s it. Go to `https://YOUR-SITE-DOMAIN/admin/`, click **Login with GitHub**,
+That’s it. Go to `https://hustlehive.co.uk/admin/`, click **Login with GitHub**,
 approve, and you’re in.
 
 ---
 
 ## Day-to-day: how to edit content
 
-1. Go to **https://YOUR-SITE-DOMAIN/admin/** and log in with GitHub.
+1. Go to **https://hustlehive.co.uk/admin/** and log in with GitHub.
 2. Pick the page on the left: **Home, Happening Soon, About, Programmes, Shop**.
 3. Edit the text fields, or click an image to upload/replace a photo.
 4. Click **Publish** (top right).
@@ -125,13 +125,20 @@ approve, and you’re in.
 - **Adding/removing items** (a programme card, a Happening Soon card, a product): use the
   **+ Add** button and the drag handle to reorder; the trash icon removes one.
 - **“Image position” fields** are an advanced layout setting — leave them as they
-  are unless Andy advises otherwise.
+  are unless you know what they do.
 - **Product “ID” field:** lowercase letters, numbers and dashes only (it becomes
   part of the product’s web address). Avoid changing it after a product is live.
 
 ---
 
-## Want to try it before the GitHub login is set up?
+## Signing in before the GitHub login is set up
+
+On the `/admin` login screen, choose **Sign In Using Access Token** and paste a GitHub
+personal access token. Create one at **GitHub → Settings → Developer settings → Personal access
+tokens → Fine-grained tokens**: give it access to the **infotutomi-png/Hustle-hive** repository only,
+with **Contents: Read and write**. Keep it private, like a password.
+
+## Want to try it locally?
 
 Developers can test the CMS locally without any of the setup above:
 
@@ -148,4 +155,4 @@ This edits the JSON files on disk directly — handy for a demo or a dry run.
 
 Edits are just saved to GitHub, so nothing can be permanently broken — any change
 can be reverted from the repo’s history. If a login or publish step misbehaves,
-send Andy the Worker URL and a screenshot and he can check the configuration.
+check the Worker’s variables (Part C) and that `base_url` in `static/admin/config.yml` matches the Worker URL exactly.
