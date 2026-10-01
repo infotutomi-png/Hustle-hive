@@ -67,9 +67,10 @@
 
 	<!-- On this page -->
 	<nav aria-label="About sections" class="max-w-4xl mx-auto px-4 pt-10">
-		<ul class="flex gap-2 overflow-x-auto pb-1 justify-start md:justify-center">
+		<!-- Wraps onto extra lines on phones so every link is visible without sideways scrolling -->
+		<ul class="flex flex-wrap gap-2 justify-center">
 			{#each sections as s}
-				<li class="shrink-0">
+				<li>
 					<a href={s.href} class="block px-4 py-2 rounded-full border border-stone-700 text-sm font-medium text-gray-300 hover:border-brand-orange hover:text-brand-orange transition-colors duration-200">{s.label}</a>
 				</li>
 			{/each}

@@ -15,14 +15,15 @@
 	<div class="text-sm text-gray-400 mb-3">
 		<a href="/" class="hover:text-brand-orange">Home</a> / <a href={AP_URL} class="hover:text-brand-orange">Alternative Provision</a>
 	</div>
-	<ul class="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
+	<!-- 2x2 grid on phones so every link is visible without sideways scrolling; one row (wrapping if needed) on wider screens -->
+	<ul class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
 		{#each items as item}
 			{@const current = page.url.pathname === item.href}
-			<li class="shrink-0">
+			<li>
 				<a
 					href={item.href}
 					aria-current={current ? 'page' : undefined}
-					class="block px-4 py-2 rounded-full border text-sm font-medium transition-colors duration-200 {current
+					class="flex items-center justify-center h-full min-h-11 px-3 sm:px-4 py-2 rounded-xl sm:rounded-full border text-sm font-medium text-center leading-snug transition-colors duration-200 {current
 						? 'bg-brand-orange text-black border-brand-orange'
 						: 'border-stone-700 text-gray-300 hover:border-brand-orange hover:text-brand-orange'}"
 				>
