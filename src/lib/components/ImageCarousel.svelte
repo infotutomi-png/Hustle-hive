@@ -236,14 +236,20 @@
 </div>
 
 <!-- Dot Indicators -->
-<div class="flex items-center justify-center gap-2 mt-6">
+<!-- Each button is 36px square so it's easy to tap; the visible dot inside stays small -->
+<div class="flex items-center justify-center mt-3">
 	{#each images as _, index}
 		<button
 			onclick={() => goToSlide(index)}
-			class="w-3 h-3 rounded-full transition-colors duration-200"
-			class:bg-brand-orange={currentSlide === index}
-			class:bg-stone-600={currentSlide !== index}
+			class="w-9 h-9 flex items-center justify-center"
 			aria-label="Go to slide {index + 1}"
-		></button>
+			aria-current={currentSlide === index ? 'true' : undefined}
+		>
+			<span
+				class="w-3 h-3 rounded-full transition-colors duration-200"
+				class:bg-brand-orange={currentSlide === index}
+				class:bg-stone-600={currentSlide !== index}
+			></span>
+		</button>
 	{/each}
 </div>

@@ -55,7 +55,7 @@
 			<!-- Brand Column -->
 			<div>
 				<a href="/" class="inline-block mb-4">
-					<img src="/images/logo-full.png" alt="Hustle Hive" class="h-20" />
+					<img src="/images/logo-full-160.webp" alt="Hustle Hive" class="h-20" />
 				</a>
 				<p class="text-gray-400 text-sm leading-relaxed mb-6">
 					A community-powered makerspace and enterprise hub in Darlington, helping people of all ages build confidence, skills and real-world opportunities.

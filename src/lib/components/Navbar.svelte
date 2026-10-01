@@ -14,6 +14,21 @@
 		mobileMenuOpen = false;
 	}
 
+	// While the mobile menu is open, stop the page behind it from scrolling
+	$effect(() => {
+		if (!mobileMenuOpen) return;
+		const previous = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		return () => {
+			document.body.style.overflow = previous;
+		};
+	});
+
+	// Esc closes the mobile menu
+	function onKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape' && mobileMenuOpen) closeMenu();
+	}
+
 	// Same items on desktop and in the mobile menu
 	// "Book a course" is the orange button. (A News / Stories item can be added once there are posts.)
 	const menuItems: { label: string; href: string; icon: string; external?: boolean; section: string[] }[] = [
@@ -28,14 +43,16 @@
 		item.section.some((s) => page.url.pathname === s || page.url.pathname.startsWith(s + '/'));
 </script>
 
+<svelte:window onkeydown={onKeydown} />
+
 <nav class="fixed top-0 left-0 right-0 z-50">
 	<div class="mx-4 mt-4">
 		<div class="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl px-6 py-3">
 			<div class="flex items-center justify-between max-w-7xl mx-auto">
 				<!-- Logo -->
 				<a href="/" class="flex items-center gap-2">
-					<img src="/images/hustlehive-logo.png" alt="Hustle Hive" class="h-10" />
-					<img src="/images/logo-title.png" alt="" class="h-6 lg:hidden" />
+					<img src="/images/hustlehive-logo-160.webp" alt="Hustle Hive" class="h-10" />
+					<img src="/images/logo-title-48.webp" alt="" class="h-6 lg:hidden" />
 				</a>
 
 				<!-- Navigation Links -->
@@ -67,6 +84,8 @@
 				<button
 					class="lg:hidden text-brand-orange p-2"
 					aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+					aria-expanded={mobileMenuOpen}
+					aria-controls="mobile-menu"
 					onclick={toggleMenu}
 				>
 					{#if mobileMenuOpen}
@@ -86,7 +105,7 @@
 
 <!-- Mobile Menu Overlay -->
 {#if mobileMenuOpen}
-	<div class="fixed inset-0 z-40 lg:hidden overflow-y-auto">
+	<div id="mobile-menu" class="fixed inset-0 z-40 lg:hidden overflow-y-auto">
 		<!-- Backdrop -->
 		<button
 			transition:fade={{ duration: 250, easing: cubicOut }}
@@ -171,7 +190,7 @@
 
 			<!-- Logo at bottom -->
 			<div class="absolute bottom-12 left-0 right-0 flex justify-center opacity-30 pointer-events-none [@media(max-height:860px)]:hidden">
-				<img src="/images/hustlehive-logo.png" alt="" class="h-20" />
+				<img src="/images/hustlehive-logo-160.webp" alt="" class="h-20" />
 			</div>
 		</div>
 	</div>
