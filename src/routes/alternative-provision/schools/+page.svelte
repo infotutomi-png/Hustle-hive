@@ -103,7 +103,7 @@
 		<div class="rounded-2xl bg-stone-900/50 border border-stone-700/50 p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
 			<div class="flex-1">
 				<h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Policies and procedures</h2>
-				<p class="text-gray-300">Our up-to-date policies, including safeguarding, health and safety, data protection and complaints, are available in our Safeguarding &amp; policies section.</p>
+				<p class="text-gray-300">Our up-to-date policies, including safeguarding, health and safety, data protection and behaviour, are available in our Safeguarding &amp; policies section.</p>
 			</div>
 			<a href="{SAFEGUARDING_URL}#policies" class="inline-flex justify-center px-6 py-3 border border-stone-600 hover:border-brand-orange text-white font-semibold rounded-lg transition-colors duration-200 flex-shrink-0">View our policies</a>
 		</div>

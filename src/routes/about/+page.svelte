@@ -151,7 +151,7 @@
 			<div class="mb-16 rounded-2xl bg-stone-900/50 border border-brand-orange/40 p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
 				<div class="flex-1">
 					<h2 class="text-2xl md:text-3xl font-bold text-white mb-2">{about.safeguarding.heading}</h2>
-					<p class="text-gray-300">Designated Safeguarding Lead: <strong class="text-white">{about.safeguarding.dsl}</strong>. Read how we keep everyone safe and find all of our policies, including privacy and complaints.</p>
+					<p class="text-gray-300">Designated Safeguarding Lead: <strong class="text-white">{about.safeguarding.dsl}</strong>. Read how we keep everyone safe and find all of our policies, including privacy and data protection.</p>
 				</div>
 				<a href={SAFEGUARDING_URL} class="inline-flex justify-center px-6 py-3 border border-stone-600 hover:border-brand-orange text-white font-semibold rounded-lg transition-colors duration-200 flex-shrink-0">Safeguarding &amp; policies</a>
 			</div>
