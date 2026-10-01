@@ -10,9 +10,35 @@
       "image": "/images/makers-market-stall.webp",
       "icon": "pencil",
       "href": "/programmes/makers-to-market",
+      "buttonLabel": "",
       "imagePosition": "object-[center_30%]",
       "comingSoon": false,
+      "archived": false,
       "interestSubject": "makers-to-market"
+    },
+    {
+      "title": "Brand Lab",
+      "description": "Holiday club for ages 8–11: create your own mini brand, design products and make something to take home.",
+      "image": "/images/brand-lab.webp",
+      "icon": "sparkles",
+      "href": "https://hustlehivebookings.com",
+      "buttonLabel": "See dates & book",
+      "imagePosition": "object-[center_35%]",
+      "comingSoon": false,
+      "archived": false,
+      "interestSubject": "holiday-clubs"
+    },
+    {
+      "title": "Maker Days",
+      "description": "Hands-on project days for home-educated children aged 8–16: design it, model it, pitch it.",
+      "image": "/images/maker-days.webp",
+      "icon": "tools",
+      "href": "/programmes/maker-days",
+      "buttonLabel": "",
+      "imagePosition": "object-[center_60%]",
+      "comingSoon": false,
+      "archived": false,
+      "interestSubject": "maker-days"
     },
     {
       "title": "Outdoor Education & Wellbeing",
@@ -20,8 +46,10 @@
       "image": "/images/outdoor_activities.jpeg",
       "icon": "tent",
       "href": "/programmes/outdoors-wellbeing",
+      "buttonLabel": "",
       "imagePosition": "object-[center_75%]",
       "comingSoon": false,
+      "archived": true,
       "interestSubject": "outdoor-education"
     },
     {
@@ -30,8 +58,10 @@
       "image": "/images/after-school-programe2.webp",
       "icon": "lightbulb",
       "href": "/programmes/after-school",
+      "buttonLabel": "",
       "imagePosition": "object-[center_30%]",
       "comingSoon": true,
+      "archived": true,
       "interestSubject": "after-school"
     },
     {
@@ -40,8 +70,10 @@
       "image": "/images/entrepreneurs-hub.webp",
       "icon": "rocket",
       "href": "/programmes/entrepreneurship-hub",
+      "buttonLabel": "",
       "imagePosition": "",
       "comingSoon": true,
+      "archived": true,
       "interestSubject": "entrepreneurship-hub"
     }
   ]

@@ -1,6 +1,7 @@
 import { redirect, type Handle } from '@sveltejs/kit';
 import { SHOW_SELLERS, SHOW_SHOP } from '$lib/features';
 import { BOOKINGS_URL, COMMUNITY_URL, MAKERS_URL } from '$lib/links';
+import { archivedProgrammePaths } from '$lib/programmes';
 
 // Permanent (308) redirects for pages that have been removed or hidden.
 export const handle: Handle = async ({ event, resolve }) => {
@@ -14,6 +15,11 @@ export const handle: Handle = async ({ event, resolve }) => {
 	// The programmes list is now part of Community & Youth (individual programme pages stay put).
 	if (path === '/programmes') {
 		redirect(308, `${COMMUNITY_URL}#programmes`);
+	}
+
+	// Archived programmes (ticked Archived in the CMS) send visitors to the programmes list.
+	if (archivedProgrammePaths.includes(path)) {
+		redirect(307, `${COMMUNITY_URL}#programmes`);
 	}
 
 	// Sellers pages are hidden until they show real makers (see $lib/features).
