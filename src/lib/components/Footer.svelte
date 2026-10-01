@@ -1,18 +1,47 @@
 <script lang="ts">
-	import { BOOKINGS_URL, LEARNING_URL, MAKERS_URL, FACEBOOK_URL, company } from '$lib/links';
+	import {
+		AP_APPROACH_URL,
+		AP_SCHOOLS_URL,
+		AP_URL,
+		BOOKINGS_URL,
+		COMMISSIONER_PACK_URL,
+		COMMUNITY_URL,
+		FACEBOOK_URL,
+		MAKERS_URL,
+		SAFEGUARDING_URL,
+		company
+	} from '$lib/links';
 
 	const currentYear = new Date().getFullYear();
 
-	const quickLinks = [
-		{ label: 'About Us', href: '/about' },
-		{ label: 'Contact Us', href: '/contact' }
-	];
-
-	const programmes = [
-		{ label: 'Makers to Market', href: MAKERS_URL },
-		{ label: 'Holiday Clubs & Workshops', href: BOOKINGS_URL, external: true },
-		{ label: 'Alternative Provision', href: LEARNING_URL, external: true },
-		{ label: 'All Programmes', href: '/programmes' }
+	type FooterLink = { label: string; href: string; external?: boolean; download?: boolean };
+	const columns: { title: string; links: FooterLink[] }[] = [
+		{
+			title: 'About',
+			links: [
+				{ label: 'About Us', href: '/about' },
+				{ label: 'Meet the team', href: '/about#team' },
+				{ label: 'Safeguarding & policies', href: SAFEGUARDING_URL },
+				{ label: 'Contact Us', href: '/contact' }
+			]
+		},
+		{
+			title: 'Community & Youth',
+			links: [
+				{ label: 'Community & Youth', href: COMMUNITY_URL },
+				{ label: 'Makers to Market', href: MAKERS_URL },
+				{ label: 'Book a course', href: BOOKINGS_URL, external: true }
+			]
+		},
+		{
+			title: 'Alternative Provision',
+			links: [
+				{ label: 'Our provision', href: AP_URL },
+				{ label: 'Approach & curriculum', href: AP_APPROACH_URL },
+				{ label: 'For schools & local authorities', href: AP_SCHOOLS_URL },
+				{ label: 'Commissioner pack (PDF)', href: COMMISSIONER_PACK_URL, download: true }
+			]
+		}
 	];
 </script>
 
@@ -22,7 +51,7 @@
 
 	<div class="relative z-10 max-w-6xl mx-auto px-6 py-16">
 		<!-- Main Footer Content -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1fr_1.3fr] gap-10 mb-12">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_0.9fr_0.9fr_1fr_1.3fr] gap-10 mb-12">
 			<!-- Brand Column -->
 			<div>
 				<a href="/" class="inline-block mb-4">
@@ -47,43 +76,32 @@
 				</a>
 			</div>
 
-			<!-- Quick Links -->
-			<div>
-				<h3 class="text-white font-semibold text-lg mb-4">Quick Links</h3>
-				<ul class="space-y-3">
-					{#each quickLinks as link}
-						<li>
-							<a href={link.href} class="text-gray-400 hover:text-brand-orange transition-colors duration-200">
-								{link.label}
-							</a>
-						</li>
-					{/each}
-				</ul>
-			</div>
-
-			<!-- Programmes -->
-			<div>
-				<h3 class="text-white font-semibold text-lg mb-4">Programmes</h3>
-				<ul class="space-y-3">
-					{#each programmes as programme}
-						<li>
-							<a
-								href={programme.href}
-								target={programme.external ? '_blank' : undefined}
-								rel={programme.external ? 'noopener noreferrer' : undefined}
-								class="inline-flex items-center gap-1.5 text-gray-400 hover:text-brand-orange transition-colors duration-200"
-							>
-								{programme.label}
-								{#if programme.external}
-									<svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-									</svg>
-								{/if}
-							</a>
-						</li>
-					{/each}
-				</ul>
-			</div>
+			<!-- Link columns -->
+			{#each columns as column}
+				<div>
+					<h3 class="text-white font-semibold text-lg mb-4">{column.title}</h3>
+					<ul class="space-y-3">
+						{#each column.links as link}
+							<li>
+								<a
+									href={link.href}
+									target={link.external ? '_blank' : undefined}
+									rel={link.external ? 'noopener noreferrer' : undefined}
+									download={link.download ? 'Hustle-Hive-Commissioner-Pack.pdf' : undefined}
+									class="inline-flex items-center gap-1.5 text-gray-400 hover:text-brand-orange transition-colors duration-200"
+								>
+									{link.label}
+									{#if link.external}
+										<svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+										</svg>
+									{/if}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</div>
+			{/each}
 
 			<!-- Contact -->
 			<div>

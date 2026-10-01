@@ -1,0 +1,44 @@
+# _redirects for the OLD Hustle Hive Learning site (hustlehivelearning.co.uk)
+# Sends every old address to its new home on hustlehive.co.uk with a permanent (301) redirect.
+# Use this ONLY once the merged site is live on hustlehive.co.uk. See README.md in this folder.
+#
+# Format: /old-path   https://new-address   301
+# If an old link had a #section on the end, the browser keeps it after the redirect.
+
+# Current pages (clean addresses)
+/                           https://hustlehive.co.uk/alternative-provision             301
+/our-approach               https://hustlehive.co.uk/alternative-provision/approach    301
+/for-schools                https://hustlehive.co.uk/alternative-provision/schools     301
+/team                       https://hustlehive.co.uk/about#team                        301
+/contact                    https://hustlehive.co.uk/alternative-provision#contact     301
+
+# Same pages with .html on the end
+/index.html                 https://hustlehive.co.uk/alternative-provision             301
+/our-approach.html          https://hustlehive.co.uk/alternative-provision/approach    301
+/for-schools.html           https://hustlehive.co.uk/alternative-provision/schools     301
+/team.html                  https://hustlehive.co.uk/about#team                        301
+/contact.html               https://hustlehive.co.uk/alternative-provision#contact     301
+
+# Addresses from the original (pre-2026) Learning site
+/services                   https://hustlehive.co.uk/alternative-provision#services          301
+/services/                  https://hustlehive.co.uk/alternative-provision#services          301
+/our-curriculum             https://hustlehive.co.uk/alternative-provision/approach#curriculum 301
+/our-curriculum/            https://hustlehive.co.uk/alternative-provision/approach#curriculum 301
+/policies-and-procedures    https://hustlehive.co.uk/about/safeguarding#policies             301
+/policies-and-procedures/   https://hustlehive.co.uk/about/safeguarding#policies             301
+/meet-the-team              https://hustlehive.co.uk/about#team                              301
+/meet-the-team/             https://hustlehive.co.uk/about#team                              301
+/gallery                    https://hustlehive.co.uk/alternative-provision#gallery           301
+/gallery/                   https://hustlehive.co.uk/alternative-provision#gallery           301
+/day-in-the-life            https://hustlehive.co.uk/alternative-provision/approach#day      301
+/day-in-the-life/           https://hustlehive.co.uk/alternative-provision/approach#day      301
+/pricing                    https://hustlehive.co.uk/alternative-provision/schools#pricing   301
+/pricing/                   https://hustlehive.co.uk/alternative-provision/schools#pricing   301
+/privacy                    https://hustlehive.co.uk/about/safeguarding#policies             301
+/privacy/                   https://hustlehive.co.uk/about/safeguarding#policies             301
+
+# Downloads
+/downloads/hustle-hive-commissioner-pack.pdf   https://hustlehive.co.uk/downloads/hustle-hive-commissioner-pack.pdf   301
+
+# Anything else (old images, the sitemap, mistyped addresses) goes to the Alternative Provision page
+/*                          https://hustlehive.co.uk/alternative-provision             301

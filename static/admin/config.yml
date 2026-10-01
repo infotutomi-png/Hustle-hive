@@ -39,7 +39,21 @@ collections:
               - { label: "Subheading", name: subheading, widget: text }
               - { label: "Button label", name: buttonLabel, widget: string }
               - { label: "Button link", name: buttonHref, widget: string, hint: "#happening-soon scrolls to the Happening soon section" }
-          - label: "Where to next? section"
+              - label: "Pathway buttons"
+                name: pathways
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Short description", name: text, widget: string }
+                  - { label: "Link", name: href, widget: string }
+                  - label: "Icon"
+                    name: icon
+                    widget: select
+                    options: ["people", "graduation"]
+              - { label: "Book a course button — label", name: bookLabel, widget: string }
+              - { label: "Book a course button — link", name: bookHref, widget: string }
+          - label: "Where to next? section (not shown on the homepage at the moment)"
             name: whereNext
             widget: object
             fields:
@@ -204,8 +218,8 @@ collections:
                 options: ["people", "heart", "flag"]
               - { label: "Title", name: title, widget: string }
               - { label: "Text", name: text, widget: text }
-          - { label: "Founders section title", name: foundersTitle, widget: string }
-          - label: "Founders"
+          - { label: "Team section title", name: foundersTitle, widget: string }
+          - label: "Team"
             name: founders
             widget: list
             summary: "{{fields.name}}"
@@ -215,6 +229,38 @@ collections:
               - { label: "Photo (square)", name: photo, widget: image }
               - { label: "Tagline", name: tagline, widget: string }
               - { label: "Bio", name: bio, widget: text }
+          - label: "Safeguarding & policies (shown on /about/safeguarding)"
+            name: safeguarding
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - { label: "Safeguarding box heading", name: leadHeading, widget: string }
+              - { label: "Designated Safeguarding Lead", name: dsl, widget: string }
+              - label: "Safeguarding points"
+                name: points
+                widget: list
+                field: { label: "Point", name: point, widget: text }
+              - { label: "Health & safety heading", name: healthHeading, widget: string }
+              - label: "Health & safety paragraphs"
+                name: health
+                widget: list
+                field: { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Policies heading", name: policiesHeading, widget: string }
+              - { label: "Policies intro", name: policiesIntro, widget: text }
+              - label: "Policy groups"
+                name: policyGroups
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Group title", name: title, widget: string }
+                  - label: "Documents"
+                    name: links
+                    widget: list
+                    summary: "{{fields.label}}"
+                    fields:
+                      - { label: "Document name", name: label, widget: string }
+                      - { label: "Link (Google Drive share link or page address)", name: href, widget: string }
           - label: "Inside Hustle HQ (kit)"
             name: hq
             widget: object
@@ -246,20 +292,301 @@ collections:
           - { label: "Button link", name: ctaHref, widget: string }
 
   # ---------------------------------------------------------------------------
-  # PROGRAMMES LIST PAGE
+  # ALTERNATIVE PROVISION (/alternative-provision, /approach, /schools)
+  # Every field in alternative-provision.json is listed so nothing is lost on save.
+  # ---------------------------------------------------------------------------
+  - name: alternativeProvision
+    label: "Alternative Provision"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: alternativeProvision
+        label: "Alternative Provision pages"
+        file: "src/lib/content/alternative-provision.json"
+        fields:
+          - label: "Our provision page (/alternative-provision)"
+            name: overview
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Subheading", name: subheading, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - label: "Hero photos"
+                name: heroImages
+                widget: list
+                fields:
+                  - { label: "Photo", name: image, widget: image }
+                  - { label: "Description", name: alt, widget: string }
+              - { label: "Price", name: price, widget: string }
+              - { label: "Price unit", name: priceUnit, widget: string }
+              - { label: "Price note", name: priceNote, widget: string }
+              - label: "At a glance facts"
+                name: facts
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Value", name: value, widget: string }
+              - label: "Why choose us"
+                name: why
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Paragraphs", name: paragraphs, widget: list, field: { label: "Paragraph", name: p, widget: text } }
+                  - { label: "Photo", name: image, widget: image }
+                  - { label: "Photo description", name: imageAlt, widget: string }
+              - label: "Who we work with"
+                name: who
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Intro", name: intro, widget: text }
+                  - { label: "Points", name: points, widget: list, field: { label: "Point", name: p, widget: text } }
+                  - { label: "Suitability heading", name: suitabilityHeading, widget: string }
+                  - { label: "Suitability paragraphs", name: suitability, widget: list, field: { label: "Paragraph", name: p, widget: text } }
+                  - { label: "Accessibility", name: accessibility, widget: text }
+              - label: "Our offer"
+                name: offer
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Paragraphs", name: paragraphs, widget: list, field: { label: "Paragraph", name: p, widget: text } }
+                  - { label: "Photo", name: image, widget: image }
+                  - { label: "Photo description", name: imageAlt, widget: string }
+              - label: "Experience & Engagement Days"
+                name: days
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Intro", name: intro, widget: text }
+                  - label: "Day types"
+                    name: types
+                    widget: list
+                    fields:
+                      - { label: "Title", name: title, widget: string }
+                      - { label: "Text", name: text, widget: text }
+                  - { label: "Note", name: note, widget: text }
+                  - { label: "Photo", name: image, widget: image }
+                  - { label: "Photo description", name: imageAlt, widget: string }
+              - label: "Considering a placement? box"
+                name: schoolsCta
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: text, widget: text }
+              - label: "Gallery"
+                name: gallery
+                widget: list
+                fields:
+                  - { label: "Photo", name: image, widget: image }
+                  - { label: "Description", name: alt, widget: string }
+              - label: "AP contact section"
+                name: contact
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Intro", name: intro, widget: text }
+                  - label: "People"
+                    name: people
+                    widget: list
+                    summary: "{{fields.name}}"
+                    fields:
+                      - { label: "Name", name: name, widget: string }
+                      - { label: "Role", name: role, widget: string }
+                      - { label: "Email", name: email, widget: string }
+          - label: "Approach & curriculum page (/alternative-provision/approach)"
+            name: approach
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - label: "Mental health & resilience"
+                name: resilience
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Intro", name: intro, widget: text }
+                  - label: "Steps"
+                    name: steps
+                    widget: list
+                    fields:
+                      - { label: "Label", name: label, widget: string }
+                      - { label: "Word", name: word, widget: string }
+                      - { label: "Text", name: text, widget: text }
+                  - { label: "Frameworks intro", name: frameworksIntro, widget: string }
+                  - label: "Frameworks"
+                    name: frameworks
+                    widget: list
+                    fields:
+                      - { label: "Name (bold)", name: name, widget: string }
+                      - { label: "Text", name: text, widget: text }
+                  - { label: "Photo", name: image, widget: image }
+                  - { label: "Photo description", name: imageAlt, widget: string }
+              - label: "What our students do"
+                name: activities
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Intro", name: intro, widget: text }
+                  - label: "Groups"
+                    name: groups
+                    widget: list
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Group title", name: title, widget: string }
+                      - label: "Activities"
+                        name: items
+                        widget: list
+                        summary: "{{fields.title}}"
+                        fields:
+                          - { label: "Title", name: title, widget: string }
+                          - { label: "Text", name: text, widget: text }
+                          - { label: "Hustle 100 tag", name: tag, widget: string }
+              - label: "A day in the life"
+                name: day
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Intro", name: intro, widget: text }
+                  - { label: "Note", name: note, widget: text }
+                  - label: "Timetable"
+                    name: timeline
+                    widget: list
+                    summary: "{{fields.time}} {{fields.title}}"
+                    fields:
+                      - { label: "Time", name: time, widget: string }
+                      - { label: "Title", name: title, widget: string }
+                      - { label: "Text", name: text, widget: text }
+              - label: "Curriculum"
+                name: curriculum
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Paragraphs", name: paragraphs, widget: list, field: { label: "Paragraph", name: p, widget: text } }
+                  - { label: "Note", name: note, widget: text }
+                  - { label: "Areas heading", name: areasHeading, widget: string }
+                  - { label: "Areas of learning", name: areas, widget: list, field: { label: "Area", name: a, widget: string } }
+                  - { label: "Image", name: image, widget: image }
+                  - { label: "Image description", name: imageAlt, widget: string }
+              - label: "Hustle 100"
+                name: hustle100
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Tagline", name: tagline, widget: string }
+                  - { label: "Paragraphs", name: paragraphs, widget: list, field: { label: "Paragraph", name: p, widget: text } }
+                  - label: "Ten areas"
+                    name: areas
+                    widget: list
+                    summary: "{{fields.name}}"
+                    fields:
+                      - { label: "Name", name: name, widget: string }
+                      - { label: "Colour (hex, e.g. #E5484D)", name: colour, widget: string }
+                      - { label: "Challenges", name: points, widget: list, field: { label: "Challenge", name: p, widget: string } }
+                  - { label: "Pathways heading", name: pathwaysHeading, widget: string }
+                  - label: "Example pathways"
+                    name: pathways
+                    widget: list
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Title", name: title, widget: string }
+                      - { label: "Text", name: text, widget: text }
+                      - { label: "Areas", name: areas, widget: list, field: { label: "Area", name: a, widget: string } }
+                  - { label: "Quote", name: quote, widget: string }
+                  - { label: "Full overview image", name: overviewImage, widget: image }
+              - label: "Our ambition (outcomes)"
+                name: ambition
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Intro", name: intro, widget: text }
+                  - label: "Areas tracked"
+                    name: items
+                    widget: list
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Title", name: title, widget: string }
+                      - { label: "Text", name: text, widget: text }
+          - label: "For schools & local authorities page (/alternative-provision/schools)"
+            name: schools
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - label: "Referral & placement"
+                name: referrals
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Intro", name: intro, widget: text }
+                  - { label: "Commissioner pack heading", name: packHeading, widget: string }
+                  - { label: "Commissioner pack text", name: packText, widget: text }
+                  - { label: "Commissioner pack details (pages/size)", name: packMeta, widget: string }
+                  - label: "Referral steps"
+                    name: steps
+                    widget: list
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Title", name: title, widget: string }
+                      - { label: "Text", name: text, widget: text }
+                  - { label: "Agreed list heading", name: agreedHeading, widget: string }
+                  - { label: "Agreed before every placement", name: agreed, widget: list, field: { label: "Item", name: i, widget: string } }
+              - label: "Monitoring & quality"
+                name: monitoring
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Attendance heading", name: attendanceHeading, widget: string }
+                  - { label: "Attendance points", name: attendance, widget: list, field: { label: "Point", name: p, widget: text } }
+                  - { label: "Quality heading", name: qualityHeading, widget: string }
+                  - { label: "Quality paragraphs", name: quality, widget: list, field: { label: "Paragraph", name: p, widget: text } }
+                  - { label: "Due diligence heading", name: ddHeading, widget: string }
+                  - { label: "Due diligence documents", name: dd, widget: list, field: { label: "Document", name: d, widget: string } }
+                  - { label: "Due diligence note", name: ddNote, widget: string }
+              - label: "Pricing"
+                name: pricing
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Text", name: text, widget: text }
+                  - { label: "Card heading", name: cardHeading, widget: string }
+                  - { label: "Price", name: price, widget: string }
+                  - { label: "Unit", name: unit, widget: string }
+                  - { label: "Included", name: included, widget: list, field: { label: "Item", name: i, widget: string } }
+              - label: "FAQs"
+                name: faqs
+                widget: object
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - label: "Questions"
+                    name: items
+                    widget: list
+                    summary: "{{fields.q}}"
+                    fields:
+                      - { label: "Question", name: q, widget: string }
+                      - { label: "Answer", name: a, widget: text }
+
+  # ---------------------------------------------------------------------------
+  # PROGRAMMES LIST PAGE (now the Community & Youth page)
   # ---------------------------------------------------------------------------
   - name: programmes
-    label: "Programmes Page"
+    label: "Community & Youth Page"
     delete: false
     editor:
       preview: false
     files:
       - name: programmes
-        label: "Programmes Page Content"
+        label: "Community & Youth Page Content"
         file: "src/lib/content/programmes.json"
         fields:
-          - { label: "Page title", name: title, widget: string }
-          - { label: "Page subtitle", name: subtitle, widget: string }
+          - { label: "Page title", name: communityTitle, widget: string }
+          - { label: "Page introduction", name: communityIntro, widget: text }
+          - { label: "Programmes heading", name: title, widget: string }
+          - { label: "Programmes subheading", name: subtitle, widget: string }
           - label: "Programmes"
             name: programmes
             widget: list

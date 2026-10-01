@@ -2,9 +2,19 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import HustleHQ from '$lib/components/HustleHQ.svelte';
 	import about from '$lib/content/about.json';
-	import { LEARNING_TEAM_URL } from '$lib/links';
+	import home from '$lib/content/home.json';
+	import { AP_URL, SAFEGUARDING_URL } from '$lib/links';
 
 	let imageLoaded = $state(false);
+
+	const funding = home.about.funding;
+	const sections = [
+		{ label: 'Our story', href: '#story' },
+		{ label: 'Team', href: '#team' },
+		{ label: 'Hustle HQ', href: '#hustle-hq' },
+		{ label: 'Safeguarding & policies', href: SAFEGUARDING_URL },
+		{ label: 'Partners & funders', href: '#partners' }
+	];
 </script>
 
 <Seo
@@ -55,8 +65,19 @@
 		</div>
 	</section>
 
+	<!-- On this page -->
+	<nav aria-label="About sections" class="max-w-4xl mx-auto px-4 pt-10">
+		<ul class="flex gap-2 overflow-x-auto pb-1 justify-start md:justify-center">
+			{#each sections as s}
+				<li class="shrink-0">
+					<a href={s.href} class="block px-4 py-2 rounded-full border border-stone-700 text-sm font-medium text-gray-300 hover:border-brand-orange hover:text-brand-orange transition-colors duration-200">{s.label}</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
+
 	<!-- Mission Statement Section -->
-	<section class="py-20 bg-gradient-to-b from-black via-stone-950 to-black">
+	<section id="story" class="py-20 bg-gradient-to-b from-black via-stone-950 to-black scroll-mt-24">
 		<div class="max-w-4xl mx-auto px-4">
 			<!-- Mission Statement -->
 			<div class="text-center mb-16">
@@ -100,8 +121,8 @@
 				</div>
 			</div>
 
-			<!-- Meet the Founders -->
-			<div class="mb-16">
+			<!-- Meet the Team -->
+			<div id="team" class="mb-16 scroll-mt-28">
 				<h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">{about.foundersTitle}</h2>
 				<div class="grid md:grid-cols-2 gap-6">
 					{#each about.founders as founder}
@@ -121,31 +142,49 @@
 						</article>
 					{/each}
 				</div>
-				<p class="text-center mt-6">
-					<a
-						href={LEARNING_TEAM_URL}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-gray-400 hover:text-brand-orange transition-colors duration-200"
-					>
-						Meet the full Hustle Hive Learning team →
-					</a>
-				</p>
 			</div>
 
 			<!-- Inside Hustle HQ (kit) -->
 			<HustleHQ />
 
+			<!-- Safeguarding & policies -->
+			<div class="mb-16 rounded-2xl bg-stone-900/50 border border-brand-orange/40 p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
+				<div class="flex-1">
+					<h2 class="text-2xl md:text-3xl font-bold text-white mb-2">{about.safeguarding.heading}</h2>
+					<p class="text-gray-300">Designated Safeguarding Lead: <strong class="text-white">{about.safeguarding.dsl}</strong>. Read how we keep everyone safe and find all of our policies, including privacy and complaints.</p>
+				</div>
+				<a href={SAFEGUARDING_URL} class="inline-flex justify-center px-6 py-3 border border-stone-600 hover:border-brand-orange text-white font-semibold rounded-lg transition-colors duration-200 flex-shrink-0">Safeguarding &amp; policies</a>
+			</div>
+
+			<!-- Partners & funders -->
+			<div id="partners" class="mb-16 scroll-mt-28">
+				<h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">Partners &amp; funders</h2>
+				<div class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-5 md:p-8 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
+					<img src={funding.image} alt={funding.imageAlt} width="615" height="410" loading="lazy" class="w-full max-w-[615px] mx-auto rounded-xl" />
+					<div>
+						<h3 class="text-2xl font-bold text-white mb-4">{funding.heading}</h3>
+						<p class="text-gray-300 leading-relaxed mb-5">{funding.text}</p>
+						<img src="/images/national-lottery-community-fund-digital-logo-black-background.webp" alt="The National Lottery Community Fund" class="h-14" />
+					</div>
+				</div>
+			</div>
+
 			<!-- CTA -->
-			<div class="text-center">
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
 				<a
 					href={about.ctaHref}
-					class="inline-flex items-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200 text-lg"
+					class="inline-flex justify-center items-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200 text-lg"
 				>
 					{about.ctaLabel}
-					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 					</svg>
+				</a>
+				<a
+					href={AP_URL}
+					class="inline-flex justify-center items-center gap-2 px-8 py-4 border border-stone-600 hover:border-brand-orange text-white font-semibold rounded-lg transition-colors duration-200 text-lg"
+				>
+					Explore Alternative Provision
 				</a>
 			</div>
 		</div>

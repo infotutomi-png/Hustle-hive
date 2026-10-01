@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
 	import LegalPage from '$lib/components/LegalPage.svelte';
-	import { BOOKINGS_URL, LEARNING_URL, company } from '$lib/links';
+	import { BOOKINGS_URL, company } from '$lib/links';
 </script>
 
 <Seo
@@ -37,9 +37,8 @@
 	<h2>Bookings and applications</h2>
 	<p>
 		Holiday clubs and workshops are booked through <a href={BOOKINGS_URL} target="_blank" rel="noopener noreferrer">hustlehivebookings.com</a>,
-		and school referrals are handled through <a href={LEARNING_URL} target="_blank" rel="noopener noreferrer">hustlehivelearning.co.uk</a>.
-		Those sites have their own terms. Sending an application or enquiry through this website doesn't guarantee a place
-		on a programme.
+		which has its own terms. Alternative Provision placements are agreed directly with the commissioning school or local
+		authority. Sending an application, referral or enquiry through this website doesn't guarantee a place on a programme.
 	</p>
 
 	<h2>Links to other websites</h2>

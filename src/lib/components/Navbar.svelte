@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
-	import { LEARNING_URL, BOOKINGS_URL, MAKERS_URL } from '$lib/links';
-
+	import { page } from '$app/state';
+	import { AP_URL, BOOKINGS_URL, COMMUNITY_URL } from '$lib/links';
 
 	let mobileMenuOpen = $state(false);
 
@@ -15,13 +15,17 @@
 	}
 
 	// Same items on desktop and in the mobile menu
-	const menuItems = [
-		{ label: 'About', href: '/about', icon: 'info' },
-		{ label: 'Makers to Market', href: MAKERS_URL, icon: 'pencil' },
-		{ label: 'Alternative Provision', href: LEARNING_URL, icon: 'graduation', external: true },
-		{ label: 'Holiday Clubs & Workshops', href: BOOKINGS_URL, icon: 'tools', external: true },
-		{ label: 'Contact', href: '/contact', icon: 'mail' }
+	// "Book a course" is the orange button. (A News / Stories item can be added once there are posts.)
+	const menuItems: { label: string; href: string; icon: string; external?: boolean; section: string[] }[] = [
+		{ label: 'About', href: '/about', icon: 'info', section: ['/about'] },
+		{ label: 'Community & Youth', href: COMMUNITY_URL, icon: 'people', section: [COMMUNITY_URL, '/programmes'] },
+		{ label: 'Alternative Provision', href: AP_URL, icon: 'graduation', section: [AP_URL] },
+		{ label: 'Contact', href: '/contact', icon: 'mail', section: ['/contact'] }
 	];
+
+	// Highlight the section the visitor is in
+	const isCurrent = (item: (typeof menuItems)[number]) =>
+		item.section.some((s) => page.url.pathname === s || page.url.pathname.startsWith(s + '/'));
 </script>
 
 <nav class="fixed top-0 left-0 right-0 z-50">
@@ -41,7 +45,8 @@
 							href={item.href}
 							target={item.external ? '_blank' : undefined}
 							rel={item.external ? 'noopener noreferrer' : undefined}
-							class="text-brand-orange hover:text-white transition-colors duration-200 font-medium whitespace-nowrap"
+							aria-current={isCurrent(item) ? 'page' : undefined}
+							class="hover:text-white transition-colors duration-200 font-medium whitespace-nowrap {isCurrent(item) ? 'text-white' : 'text-brand-orange'}"
 						>
 							{item.label}
 						</a>
@@ -55,7 +60,7 @@
 					rel="noopener noreferrer"
 					class="hidden lg:block px-5 py-2 bg-brand-orange text-black font-semibold rounded-lg hover:bg-brand-orange-dark transition-colors duration-200 whitespace-nowrap"
 				>
-					Book a workshop
+					Book a course
 				</a>
 
 				<!-- Mobile Menu Button -->
@@ -111,9 +116,9 @@
 								<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 								</svg>
-							{:else if item.icon === 'pencil'}
+							{:else if item.icon === 'people'}
 								<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
 								</svg>
 							{:else if item.icon === 'graduation'}
 								<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,7 +162,7 @@
 					onclick={closeMenu}
 					class="flex items-center justify-center gap-2 w-full px-6 py-4 bg-brand-orange hover:bg-brand-orange-dark text-black font-bold rounded-xl transition-colors duration-200 text-lg"
 				>
-					Book a workshop
+					Book a course
 					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
 					</svg>

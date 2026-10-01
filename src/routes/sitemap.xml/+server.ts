@@ -6,7 +6,11 @@ import { SITE_URL } from '$lib/links';
 const PAGES = [
 	'/',
 	'/about',
-	'/programmes',
+	'/about/safeguarding',
+	'/community',
+	'/alternative-provision',
+	'/alternative-provision/approach',
+	'/alternative-provision/schools',
 	'/programmes/makers-to-market',
 	'/programmes/makers-to-market/apply',
 	'/programmes/after-school',
