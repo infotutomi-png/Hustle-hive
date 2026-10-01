@@ -41,7 +41,7 @@
 						{:else}
 							<div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-stone-800 via-stone-900 to-black">
 								<div class="absolute inset-0 opacity-20" style="background-image: url('/images/honeycomb-pattern.svg'); background-size: 60px 60px;"></div>
-								<img src="/images/hustlehive-logo.png" alt="" class="relative h-20 opacity-60" />
+								<img src="/images/hustlehive-logo-160.webp" alt="" class="relative h-20 opacity-60" />
 							</div>
 						{/if}
 						<span class="absolute top-4 left-4 px-3 py-1 bg-brand-orange text-black text-sm font-bold rounded-full">

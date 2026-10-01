@@ -18,6 +18,20 @@
       "imageAlt": "Children printing their own T-shirt designs with a heat press"
     },
     {
+      "title": "Maker Days",
+      "tagline": "For home-educated children",
+      "text": "Hands-on project days: design a real-world project, build a model with CAD, 3D printers and vinyl cutters, then pitch it to family and friends.",
+      "details": [
+        "Ages 8–16",
+        "Ends with a pitch day"
+      ],
+      "buttonLabel": "Find out more",
+      "buttonHref": "/programmes/maker-days",
+      "endDate": "",
+      "image": "/images/maker-days.webp",
+      "imageAlt": "Children building scale models of restaurant designs at Hustle HQ"
+    },
+    {
       "title": "Makers to Market",
       "tagline": "Applications open now",
       "text": "A 12-week programme taking your handmade products from idea to real-world market sales.",
