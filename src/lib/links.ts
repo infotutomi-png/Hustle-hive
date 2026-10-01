@@ -1,4 +1,5 @@
 // Shared site-wide links and company details, used by the navbar, footer and pages.
+import programmesContent from '$lib/content/programmes.json';
 
 export const SITE_URL = 'https://hustlehive.co.uk';
 
@@ -61,10 +62,11 @@ export function contactHref(subject: string) {
 }
 
 // Subjects offered on the contact form. The value is what goes in ?subject=... and the email.
-export const CONTACT_SUBJECTS = [
+const ALL_CONTACT_SUBJECTS = [
 	{ value: 'general', label: 'General Enquiry' },
 	{ value: 'makers-to-market', label: 'Makers to Market' },
 	{ value: 'holiday-clubs', label: 'Holiday Clubs & Workshops' },
+	{ value: 'maker-days', label: 'Maker Days (home education)' },
 	{ value: 'school-referral', label: 'School Referral / Alternative Provision' },
 	{ value: 'after-school', label: 'After-School Programme' },
 	{ value: 'entrepreneurship-hub', label: 'Entrepreneurship Hub' },
@@ -73,3 +75,10 @@ export const CONTACT_SUBJECTS = [
 	{ value: 'volunteer', label: 'Volunteering' },
 	{ value: 'other', label: 'Other' }
 ];
+
+// Archived programmes (see programmes.json) drop out of the dropdown, unless a live programme still uses the subject.
+const liveSubjects = new Set(programmesContent.programmes.filter((p) => !p.archived).map((p) => p.interestSubject));
+const archivedSubjects = new Set(
+	programmesContent.programmes.filter((p) => p.archived && !liveSubjects.has(p.interestSubject)).map((p) => p.interestSubject)
+);
+export const CONTACT_SUBJECTS = ALL_CONTACT_SUBJECTS.filter((s) => !archivedSubjects.has(s.value));

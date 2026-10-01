@@ -1,8 +1,9 @@
 import type { RequestHandler } from './$types';
 import { SITE_URL } from '$lib/links';
+import { activeProgrammePaths } from '$lib/programmes';
 
 // Public pages for search engines. Hidden sections (sellers, shop, /admin) are left out on purpose.
-// Add new pages here when they're created.
+// Add new pages here when they're created. Programme pages come from programmes.json (archived ones are left out).
 const PAGES = [
 	'/',
 	'/about',
@@ -11,11 +12,8 @@ const PAGES = [
 	'/alternative-provision',
 	'/alternative-provision/approach',
 	'/alternative-provision/schools',
-	'/programmes/makers-to-market',
+	...activeProgrammePaths,
 	'/programmes/makers-to-market/apply',
-	'/programmes/after-school',
-	'/programmes/entrepreneurship-hub',
-	'/programmes/outdoors-wellbeing',
 	'/contact',
 	'/privacy',
 	'/terms'

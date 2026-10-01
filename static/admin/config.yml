@@ -598,16 +598,18 @@ collections:
               - label: "Icon"
                 name: icon
                 widget: select
-                options: ["pencil", "tent", "lightbulb", "rocket"]
-              - { label: "Link", name: href, widget: string }
+                options: ["pencil", "tent", "lightbulb", "rocket", "sparkles", "tools"]
+              - { label: "Link", name: href, widget: string, hint: "Full web address (https://...) opens in a new tab" }
+              - { label: "Button label (optional — default is Find out more)", name: buttonLabel, widget: string, required: false }
               - { label: "Image position (advanced — leave as-is)", name: imagePosition, widget: string, required: false }
               - { label: "Coming soon?", name: comingSoon, widget: boolean, default: false }
+              - { label: "Archived (hidden from the site)", name: archived, widget: boolean, default: false, hint: "Hides the card, sends its page to Community & Youth and leaves it out of the sitemap. Untick to bring it back." }
               - label: "Register interest — contact form subject"
                 name: interestSubject
                 widget: select
                 required: false
                 hint: "Used by the 'Register interest' button on coming-soon programmes"
-                options: ["general", "makers-to-market", "holiday-clubs", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "partnership", "volunteer", "other"]
+                options: ["general", "makers-to-market", "holiday-clubs", "maker-days", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "partnership", "volunteer", "other"]
 
   # ---------------------------------------------------------------------------
   # SHOP / MARKETPLACE
