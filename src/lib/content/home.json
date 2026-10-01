@@ -4,7 +4,23 @@
     "headingLine2": "Skills Into Futures.",
     "subheading": "A community-powered makerspace and enterprise hub in Darlington, helping people of all ages build confidence, skills and real-world opportunities.",
     "buttonLabel": "See what's on",
-    "buttonHref": "#happening-soon"
+    "buttonHref": "#happening-soon",
+    "pathways": [
+      {
+        "title": "Community & Youth",
+        "text": "Holiday clubs, workshops and programmes for young people, families and adults.",
+        "href": "/community",
+        "icon": "people"
+      },
+      {
+        "title": "Alternative Provision",
+        "text": "Small-group, hands-on education for schools and local authorities.",
+        "href": "/alternative-provision",
+        "icon": "graduation"
+      }
+    ],
+    "bookLabel": "Book a course",
+    "bookHref": "https://hustlehivebookings.com"
   },
   "whereNext": {
     "heading": "Where to next?",
@@ -13,8 +29,8 @@
         "title": "Schools & referrers",
         "description": "Alternative provision and engagement days for young people who thrive outside the classroom.",
         "icon": "graduation",
-        "linkLabel": "Visit Hustle Hive Learning",
-        "href": "https://hustlehivelearning.co.uk"
+        "linkLabel": "Alternative Provision",
+        "href": "/alternative-provision"
       },
       {
         "title": "Parents & young people",

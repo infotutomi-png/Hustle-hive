@@ -2,10 +2,17 @@
 
 export const SITE_URL = 'https://hustlehive.co.uk';
 
-// Sister sites
-export const LEARNING_URL = 'https://hustlehivelearning.co.uk'; // schools & referrers
-export const LEARNING_TEAM_URL = 'https://hustlehivelearning.co.uk/meet-the-team';
-export const BOOKINGS_URL = 'https://hustlehivebookings.com'; // holiday clubs & workshops
+// Booking site for holiday clubs, workshops and courses
+export const BOOKINGS_URL = 'https://hustlehivebookings.com';
+
+// Main sections
+export const COMMUNITY_URL = '/community'; // Community & Youth
+export const AP_URL = '/alternative-provision'; // Alternative Provision (was hustlehivelearning.co.uk)
+export const AP_APPROACH_URL = '/alternative-provision/approach';
+export const AP_SCHOOLS_URL = '/alternative-provision/schools';
+export const AP_CONTACT_URL = '/alternative-provision#contact';
+export const SAFEGUARDING_URL = '/about/safeguarding';
+export const COMMISSIONER_PACK_URL = '/downloads/hustle-hive-commissioner-pack.pdf';
 
 export const MAKERS_URL = '/programmes/makers-to-market';
 export const MAKERS_APPLY_URL = '/programmes/makers-to-market/apply';

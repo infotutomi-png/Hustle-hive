@@ -1,0 +1,303 @@
+{
+  "overview": {
+    "heading": "Learning beyond the classroom.",
+    "subheading": "Build skills. Grow confidence. Succeed.",
+    "intro": "Hustle Hive Alternative Provision offers small-group, hands-on learning in Darlington for young people in Years 6 to 11, commissioned by schools and local authorities.",
+    "heroImages": [
+      { "image": "/images/ap/treetop.webp", "alt": "A smiling student on a treetop ropes course" },
+      { "image": "/images/ap/beach.webp", "alt": "Students in wetsuits relaxing on the beach with Gavin" },
+      { "image": "/images/ap/summit.webp", "alt": "Students at a hilltop trig point during a litter pick" }
+    ],
+    "price": "£155",
+    "priceUnit": "per learner, per day",
+    "priceNote": "Includes transport, snacks and refreshments.",
+    "facts": [
+      { "label": "Who", "value": "Years 6 to 11, with Key Stages taught separately" },
+      { "label": "Group size", "value": "Up to 6 learners per day" },
+      { "label": "When", "value": "Thursday and Friday, 9:30am to 2:30pm" },
+      { "label": "Where", "value": "Denmark Street, Darlington, and out across the Tees Valley" }
+    ],
+    "why": {
+      "heading": "Why choose us?",
+      "paragraphs": [
+        "Choosing Hustle Hive Learning means selecting a nurturing environment that prioritises your child's individual needs. Our engaging approach not only fosters academic growth but also supports personal development, with a focus on developing strong, resilient mental health alongside transferable skills.",
+        "With a focus on practical and tech-based skills, we prepare students for the realities of the modern world. Our diverse activities and dedicated staff ensure that every student can thrive and find their unique pathway to success."
+      ],
+      "image": "/images/ap/classroom.webp",
+      "imageAlt": "Students working on laptops beside a 3D printer at Hustle Hive"
+    },
+    "who": {
+      "heading": "Who do we work with?",
+      "intro": "Hustle Hive may be right for young people in Years 6 to 11 who would benefit from a smaller, practical and highly structured learning environment as part of an agreed education plan.",
+      "points": [
+        "Young people who are disengaging from mainstream learning, or whose attendance and participation are becoming a concern.",
+        "Learners who respond well to practical, project-based and vocationally relevant activities.",
+        "Young people who need to rebuild confidence, routine, motivation and positive relationships with adults.",
+        "Learners who may benefit from a smaller group and a calmer environment than a busy mainstream classroom.",
+        "Young people whose objectives include improving engagement, communication, independence, practical skills or readiness for reintegration or transition."
+      ],
+      "suitabilityHeading": "How we decide suitability",
+      "suitability": [
+        "Suitability is considered individually. A referral isn't accepted just because a place is available: we need enough information about a learner's education, safeguarding, health, behaviour and support needs to be sure we can meet them safely and effectively.",
+        "Our small size means we can adapt day to day, but it doesn't mean we can meet every level of SEND, medical or behavioural need. Where specialist input is needed, we work with the commissioner and relevant professionals."
+      ],
+      "accessibility": "Our Denmark Street premises is not currently wheelchair accessible. Accessibility, reasonable adjustments and any personal-care needs are considered carefully during referral."
+    },
+    "offer": {
+      "heading": "Our Alternative Provision",
+      "paragraphs": [
+        "Our alternative provision is designed to meet the needs of young people who may find conventional schooling challenging. We use a hands-on approach that brings together STEM, outdoor education and creative projects, from 3D printing and engineering to digital media.",
+        "Our dedicated educators work closely with students, making sure they get the individual attention they need to build confidence and skills, and prepare for future opportunities."
+      ],
+      "image": "/images/ap/hiking.webp",
+      "imageAlt": "A group of students hiking beside a lake with backpacks"
+    },
+    "days": {
+      "heading": "Experience & Engagement Days",
+      "intro": "Not every school needs a full placement to see the benefit of what we do. Book a one-off session for a small group, without the commitment of an ongoing placement.",
+      "types": [
+        { "title": "STEM / Tech", "text": "A hands-on build, design or 3D-print challenge, using the same research, design, prototype and improve cycle as our Hustle 100 curriculum." },
+        { "title": "Wellbeing / Mental Health", "text": "Outdoor learning, mindfulness or nature-based activities to help learners reset, reconnect and build confidence." }
+      ],
+      "note": "A low-risk, high-impact way to trial our approach, mark a transition point, reward a group, or give learners a day that reminds them what they're capable of.",
+      "image": "/images/ap/cooking.webp",
+      "imageAlt": "Students cooking on a camping stove on a hillside"
+    },
+    "schoolsCta": {
+      "heading": "Considering a placement?",
+      "text": "See how referrals work, how we keep young people safe and report back to you, and our policies. Or download our commissioner information pack."
+    },
+    "gallery": [
+      { "image": "/images/ap/treetop.webp", "alt": "A smiling student on a treetop ropes course" },
+      { "image": "/images/ap/hiking.webp", "alt": "Students hiking beside a lake" },
+      { "image": "/images/ap/beach.webp", "alt": "Students in wetsuits on the beach" },
+      { "image": "/images/ap/summit.webp", "alt": "Students on a hilltop litter pick" },
+      { "image": "/images/ap/cooking.webp", "alt": "Students cooking outdoors on a camping stove" },
+      { "image": "/images/ap/classroom.webp", "alt": "Students working on laptops at Hustle Hive" }
+    ],
+    "contact": {
+      "heading": "Alternative Provision contact",
+      "intro": "Talk to us about a placement, an Experience & Engagement Day or the referral process. We usually reply within 24 hours.",
+      "people": [
+        { "name": "Gavin Copland", "role": "Designated Safeguarding Lead", "email": "gavin@hustlehive.co.uk" },
+        { "name": "Kieron Davis", "role": "Education Lead", "email": "kieron@hustlehive.co.uk" }
+      ]
+    }
+  },
+
+  "approach": {
+    "heading": "Our approach & the Hustle 100",
+    "intro": "Regulate, relate, reason: how we support young people, what a day looks like, and the curriculum behind it.",
+    "resilience": {
+      "heading": "Supporting Mental Health & Resilience",
+      "intro": "We understand that a young person's behaviour and engagement are often the visible signs of much deeper experiences of stress, disruption or trauma. So our sessions are built in a clear order.",
+      "steps": [
+        { "label": "Step 1", "word": "Regulate.", "text": "Through movement, rhythm, routine and calm relationships." },
+        { "label": "Step 2", "word": "Relate.", "text": "Through consistent, trusted adults." },
+        { "label": "Step 3", "word": "Reason.", "text": "Academic and practical learning, once a young person feels safe and settled." }
+      ],
+      "frameworksIntro": "Our approach is grounded in two complementary frameworks.",
+      "frameworks": [
+        { "name": "The Power Threat Meaning Framework", "text": "(Johnstone & Boyle, 2018) helps us move away from labelling young people by \"what's wrong with them\" and instead ask what has happened to them, so staff can respond with understanding rather than judgement." },
+        { "name": "Dr Bruce Perry's Neurosequential Model of Therapeutics", "text": "recognises that the brain develops and regulates in a specific sequence, from basic survival responses through to higher-level thinking and learning." }
+      ],
+      "image": "/images/ap/beach.webp",
+      "imageAlt": "Students in wetsuits relaxing on the beach with Gavin"
+    },
+    "activities": {
+      "heading": "What our students do",
+      "intro": "We balance cutting-edge technology and entrepreneurship with ancient skills like bushcraft, mindfulness and wild wellness, using Darlington and the wider Tees Valley as our classroom. Every activity links to the Hustle 100.",
+      "groups": [
+        {
+          "title": "At Hustle HQ",
+          "items": [
+            { "title": "3D Print Challenge", "text": "Design a useful product in CAD, then prototype, test and improve it before printing the final version.", "tag": "Hustle 100: Innovation & Mindset" },
+            { "title": "Product Design Challenge", "text": "Solve a real-world problem by researching, sketching, modelling and creating a prototype.", "tag": "Hustle 100: Creativity & Innovation" },
+            { "title": "STEM Build Challenge", "text": "Teams take on a challenge like the strongest bridge, tallest tower or fastest vehicle.", "tag": "Hustle 100: Leadership & Community Engagement" },
+            { "title": "Hustle Hive Market Day", "text": "Develop products, calculate costs, make stock and displays, then sell at a real mini market.", "tag": "Hustle 100: Enterprise & Communication" }
+          ]
+        },
+        {
+          "title": "Out and about",
+          "items": [
+            { "title": "Dere Street Roman walk & Piercebridge Roman Fort", "text": "Linked to our Year 7 Roman Britain unit, with the group presenting a find or feature back at the fort.", "tag": "Hustle 100: Communication" },
+            { "title": "Beach clean & coastal erosion survey", "text": "A litter audit and pick, leading to an upcycled beach-plastic mini-enterprise product.", "tag": "Hustle 100: Community Engagement & Enterprise" },
+            { "title": "Cleveland Mountain Rescue visit", "text": "A mini enterprise task: costing kit, designing a callout process and pitching improvements.", "tag": "Hustle 100: Enterprise & Innovation" },
+            { "title": "Roseberry Topping & Captain Cook's Monument", "text": "A hike in the Cleveland Hills.", "tag": "Hustle 100: Mindset & Independence" }
+          ]
+        }
+      ]
+    },
+    "day": {
+      "heading": "A day in the life of a Hustle Hive student",
+      "intro": "A calm, predictable structure, with a check-in at the start and a reflection at the end.",
+      "note": "Mobile phones are handed in while on the premises, in line with current guidance.",
+      "timeline": [
+        { "time": "9:30–9:45", "title": "Arrival & check-in", "text": "Settle in, attendance, wellbeing check and goals for the day." },
+        { "time": "9:45–10:30", "title": "Session 1", "text": "English and maths reinforced through practical projects, enterprise and wellbeing-focused learning, adapted to each learner's targets." },
+        { "time": "10:30–10:45", "title": "Break", "text": "Supervised social time." },
+        { "time": "10:45–12:15", "title": "Session 2", "text": "STEM, design, digital making or enterprise." },
+        { "time": "12:15–12:45", "title": "Lunch", "text": "Supervised lunch and relationship-building." },
+        { "time": "12:45–2:15", "title": "Session 3", "text": "Practical work, teamwork, problem solving and employability." },
+        { "time": "2:15–2:30", "title": "Reflection, review & departure", "text": "Learners review what they achieved, identify next steps and leave safely. Key information is shared with the commissioner as agreed." }
+      ]
+    },
+    "curriculum": {
+      "heading": "Our Unique Curriculum",
+      "paragraphs": [
+        "We deliver a broad, balanced and engaging curriculum designed around each learner. Core academic development is combined with practical, real-world experiences that build confidence, resilience and essential life skills.",
+        "Learners keep developing literacy, numeracy, communication and problem-solving through meaningful projects, alongside enterprise, STEM, creative technologies, outdoor education, wellbeing and personal development."
+      ],
+      "note": "Through meaningful work experience and employer days, we can also help you better hit your Gatsby Benchmarks for hard-to-reach students.",
+      "areasHeading": "Key areas of learning",
+      "areas": [
+        "Literacy & Communication",
+        "Numeracy & Problem Solving",
+        "STEM & Digital Technologies",
+        "Enterprise & Entrepreneurship",
+        "Creative Design & Making",
+        "Outdoor Education & Wellbeing",
+        "Personal Development & Life Skills",
+        "Employability & Future Pathways",
+        "Teamwork, Leadership & Confidence Building",
+        "Community & Social Responsibility"
+      ],
+      "image": "/images/ap/wheel.webp",
+      "imageAlt": "The Hustle 100 wheel showing its ten areas"
+    },
+    "hustle100": {
+      "heading": "The Hustle 100",
+      "tagline": "10 areas. 100 challenges. Real impact.",
+      "paragraphs": [
+        "Hustle 100 gives young people the chance to build real skills, confidence and life experience. Ten connected areas, each with ten challenges, help them grow, achieve and prepare for what's next. Learners don't need to complete all 100: each young person follows a flexible, personalised pathway that fits their needs, interests, placement objectives and length of placement.",
+        "Where appropriate, Hustle 100 activities can count towards recognised awards, unit accreditation and certificates of achievement, so even learners on shorter placements leave with tangible recognition."
+      ],
+      "areas": [
+        { "name": "Mindset & Resilience", "colour": "#E5484D", "points": ["Build confidence and self-belief", "Set goals and plan ahead", "Develop resilience", "Overcome challenges", "Grow a positive mindset"] },
+        { "name": "Community & Citizenship", "colour": "#E8803A", "points": ["Get involved in local projects", "Support the community", "Understand citizenship", "Learn about local heritage", "Make a positive impact"] },
+        { "name": "Health & Wellbeing", "colour": "#D9B23A", "points": ["Understand healthy lifestyles", "Try new physical activities", "Develop strategies for mental health", "Make healthy food choices", "Build positive routines", "Look after your wellbeing"] },
+        { "name": "Practical & Making Skills", "colour": "#3FB06A", "points": ["Use tools and equipment safely", "Learn making and building skills", "Complete practical projects", "Explore CAD, 3D printing and design", "Learn maintenance and repair", "Solve real-world problems"] },
+        { "name": "Digital & AI Skills", "colour": "#2BB3D1", "points": ["Build digital skills", "Use online tools and software", "Explore AI and emerging tech", "Create digital content", "Stay safe online", "Develop problem-solving skills"] },
+        { "name": "Creativity & Innovation", "colour": "#4C8DF5", "points": ["Explore different art forms", "Create original work", "Use digital and traditional media", "Turn ideas into prototypes", "Share work with others", "Develop creative thinking"] },
+        { "name": "Outdoor & Environment", "colour": "#A276F0", "points": ["Learn about the natural world", "Take part in outdoor activities", "Explore sustainability", "Complete environmental projects", "Understand climate change", "Make a positive difference"] },
+        { "name": "Enterprise & Employability", "colour": "#E35D9C", "points": ["Develop workplace skills", "Create a CV and portfolio", "Explore enterprise and business", "Take part in work-related projects", "Meet employers and professionals", "Prepare for future careers"] },
+        { "name": "Communication & Relationships", "colour": "#9472F2", "points": ["Improve communication skills", "Work effectively in a team", "Build positive relationships", "Understand equality and respect", "Develop leadership skills", "Manage and resolve conflict"] },
+        { "name": "Independence & Next Steps", "colour": "#2DB3A6", "points": ["Develop independence", "Make informed choices", "Plan for the future", "Build life management skills", "Prepare for further education, training or work", "Take positive next steps"] }
+      ],
+      "pathwaysHeading": "Example learner pathways",
+      "pathways": [
+        { "title": "Confidence & Re-engagement", "text": "Build confidence and routines, explore new experiences and develop core skills.", "areas": ["Mindset & Wellbeing", "Practical Skills", "Community", "Next Steps"] },
+        { "title": "Outdoor Explorer", "text": "Get active and connect with nature.", "areas": ["Environment", "Community", "Health & Wellbeing", "Practical Skills", "Personal Development"] },
+        { "title": "Creative Expression", "text": "Develop creative skills and share your voice.", "areas": ["Creative Arts", "Digital", "People & Relationships", "Employability", "Next Steps"] },
+        { "title": "Enterprise Maker", "text": "Turn ideas into action.", "areas": ["Practical Skills", "Digital", "Employability", "Creativity", "Community", "Next Steps"] },
+        { "title": "Leadership Progression", "text": "Lead, contribute and prepare for what's next.", "areas": ["People & Relationships", "Community", "Employability", "Health & Wellbeing", "Next Steps"] }
+      ],
+      "quote": "Confidence today. Opportunities tomorrow.",
+      "overviewImage": "/images/ap/hustle-100-overview.webp"
+    },
+    "ambition": {
+      "heading": "Our ambition for every learner",
+      "intro": "For every learner to leave with greater confidence, new skills, positive experiences and a clearer sense of what they can achieve next. We track progress in six areas.",
+      "items": [
+        { "title": "Engagement", "text": "More participation, willingness to try tasks, better learning stamina and fewer refusals or withdrawals." },
+        { "title": "Attendance", "text": "Better attendance at commissioned sessions, and improved routines around arrival, punctuality and readiness to learn." },
+        { "title": "Learning", "text": "Progress against agreed academic or practical targets, evidenced by completed work, observation and assessment." },
+        { "title": "Behaviour & regulation", "text": "A better ability to manage frustration, follow agreed expectations, repair relationships and use support strategies." },
+        { "title": "Confidence & communication", "text": "More willingness to ask for help, contribute, explain ideas, work with others and reflect on progress." },
+        { "title": "Transition readiness", "text": "Evidence the learner is better prepared for reintegration, a new placement, post-16 education, training or employment." }
+      ]
+    }
+  },
+
+  "schools": {
+    "heading": "For schools & local authorities",
+    "intro": "How referrals work, how we keep young people safe, how we report back, and everything you need for due diligence.",
+    "referrals": {
+      "heading": "Referral & placement",
+      "intro": "We welcome conversations with schools, local-authority teams and other commissioners exploring whether Hustle Hive could be part of a young person's education package.",
+      "packHeading": "Commissioner information pack",
+      "packText": "Everything in one place: who we work with, our curriculum, a typical day, referral and placement planning, safeguarding, monitoring and reporting, SEND support, health and safety, our team and due diligence documents.",
+      "packMeta": "PDF, 20 pages, 3.4 MB",
+      "steps": [
+        { "title": "Referral", "text": "The commissioner shares education history, attendance, SEND, health, behaviour, safeguarding and risk information." },
+        { "title": "Suitability discussion", "text": "We review the information and talk with the commissioner about whether we can safely and appropriately meet the learner's needs." },
+        { "title": "Meeting parents and carers", "text": "A chance to build a positive, trusting relationship from the start, see the building and meet the staff." },
+        { "title": "Placement agreement", "text": "Together we agree days, hours, objectives, responsibilities, information-sharing, safeguarding escalation, attendance procedures, review dates and costs." },
+        { "title": "Induction", "text": "The learner is introduced to the environment, staff, routines, expectations, safety procedures and the purpose of the placement." },
+        { "title": "Baseline and targets", "text": "Strengths, needs and priorities are recorded and turned into a small number of measurable targets." },
+        { "title": "Review", "text": "Progress, attendance, behaviour and suitability are reviewed at agreed intervals, with changes made when needed." },
+        { "title": "Transition or exit", "text": "The end of the placement is planned, with clear next steps and a summary of progress and recommendations." }
+      ],
+      "agreedHeading": "Agreed before every placement starts",
+      "agreed": [
+        "Start date, expected duration and review dates",
+        "Days and hours of attendance",
+        "Placement objectives and success measures",
+        "Attendance and absence procedures",
+        "Safeguarding escalation and information-sharing",
+        "SEND, medical and risk information",
+        "Transport arrangements",
+        "Reporting frequency and named contacts",
+        "Fees, invoicing, cancellation and notice",
+        "Transition, reintegration or exit planning"
+      ]
+    },
+    "monitoring": {
+      "heading": "Safeguarding, monitoring & quality",
+      "attendanceHeading": "Attendance & communication",
+      "attendance": [
+        "Attendance is recorded for every session, and non-attendance is reported promptly to the commissioner.",
+        "Named contacts are agreed for Hustle Hive, parents and carers, and the commissioner.",
+        "Significant incidents are recorded and shared promptly. Urgent safeguarding, health or safety information is shared immediately.",
+        "Formal progress updates are provided at agreed review points."
+      ],
+      "qualityHeading": "Monitoring & quality assurance",
+      "quality": [
+        "We record attendance, learning, Hustle 100 milestones, behaviour, wellbeing and placement outcomes, using a simple cycle of baseline, delivery, review and improvement.",
+        "If progress isn't on track, we'll raise it with you rather than let a placement continue without a clear purpose. External quality-assurance visits are welcomed."
+      ],
+      "ddHeading": "Due diligence documents available to commissioners",
+      "dd": [
+        "Safeguarding / child protection policy",
+        "Staff behaviour / code of conduct",
+        "Behaviour and anti-bullying policy",
+        "Attendance / absence procedure",
+        "Complaints policy",
+        "Health and safety policy",
+        "Fire risk assessment and evacuation plan",
+        "First-aid arrangements",
+        "Premises and activity risk assessments",
+        "Specialist equipment checks and maintenance records",
+        "Safer recruitment evidence / single central record",
+        "DBS and prohibition check evidence",
+        "Safeguarding and DSL training evidence",
+        "Insurance certificates",
+        "Data protection / privacy documentation",
+        "Equality, SEND and reasonable-adjustment information",
+        "Referral, admissions and suitability process",
+        "Placement agreement / SLA template",
+        "Sample progress report and review template",
+        "Staff qualifications and training records"
+      ],
+      "ddNote": "Ask us for any of these when discussing a placement."
+    },
+    "pricing": {
+      "heading": "Exceptional value",
+      "text": "Our £155 daily rate includes transport, snacks and refreshments, specialist facilities, learning resources and personalised support. With no hidden charges and everything included as standard, schools can be confident they are receiving a high-quality provision that offers excellent value for money.",
+      "cardHeading": "One price. Everything included.",
+      "price": "£155",
+      "unit": "per day",
+      "included": ["Transport", "Snacks and refreshments", "Specialist facilities", "Learning resources", "Personalised support"]
+    },
+    "faqs": {
+      "heading": "Frequently asked questions",
+      "items": [
+        { "q": "What makes Hustle Hive Learning different to other alternative provisions?", "a": "We balance cutting-edge technology and entrepreneurship with skills like bushcraft, mindfulness and wild wellness. Groups are small by design, learning is practical and purposeful, and everything is built around our Hustle 100 curriculum and a regulate, relate, reason approach." },
+        { "q": "Who is Hustle Hive Learning suitable for?", "a": "Young people in Years 6 to 11 who would benefit from a smaller, practical and highly structured learning environment as part of an agreed education plan. Key Stages are taught separately." },
+        { "q": "How many students attend each day?", "a": "Up to 6 learners per day, so staff can know each young person well and respond quickly when needs change." },
+        { "q": "Do you provide transport?", "a": "Yes. Transport is included in our £155 daily rate, along with snacks and refreshments. Lunch can be provided by agreement." },
+        { "q": "How do schools make a referral?", "a": "Contact Gavin or Kieron to discuss a placement. We'll ask for the learner's education, attendance, SEND, health, behaviour, safeguarding and risk information, then talk through suitability. See \"Referral & placement\" above for the full process." }
+      ]
+    }
+  }
+}

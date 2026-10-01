@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
 	import LegalPage from '$lib/components/LegalPage.svelte';
-	import { BOOKINGS_URL, LEARNING_URL, company } from '$lib/links';
+	import { BOOKINGS_URL, SAFEGUARDING_URL, company } from '$lib/links';
 </script>
 
 <Seo
@@ -94,11 +94,14 @@
 		IP address and may set its own cookies, as described in Google's privacy policy.
 	</p>
 
-	<h2>Bookings and Hustle Hive Learning</h2>
+	<h2>Bookings and Alternative Provision</h2>
 	<p>
-		Holiday club and workshop bookings are made on <a href={BOOKINGS_URL} target="_blank" rel="noopener noreferrer">hustlehivebookings.com</a>,
-		and school referrals through <a href={LEARNING_URL} target="_blank" rel="noopener noreferrer">hustlehivelearning.co.uk</a>.
-		Information you give on those sites is covered by their own privacy notices.
+		Holiday club and workshop bookings are made on <a href={BOOKINGS_URL} target="_blank" rel="noopener noreferrer">hustlehivebookings.com</a>.
+		Information you give on that site is covered by its own privacy notice.
+	</p>
+	<p>
+		Information about young people referred to our Alternative Provision is covered by our
+		<a href="{SAFEGUARDING_URL}#policies">Parent &amp; learner privacy notice</a>, listed with our other policies.
 	</p>
 
 	<h2>Your rights</h2>

@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	import Seo from '$lib/components/Seo.svelte';
-	import { CONTACT_SUBJECTS, LEARNING_URL, MAPS_DIRECTIONS_URL, MAPS_EMBED_URL, company } from '$lib/links';
+	import { AP_CONTACT_URL, AP_SCHOOLS_URL, CONTACT_SUBJECTS, COMMUNITY_URL, MAPS_DIRECTIONS_URL, MAPS_EMBED_URL, company } from '$lib/links';
 
 	let isSubmitting = $state(false);
 
@@ -31,6 +31,18 @@
 		<p class="text-lg md:text-xl text-gray-300">
 			We'd love to hear from you
 		</p>
+	</section>
+
+	<!-- Which team? -->
+	<section aria-label="Contacts by area" class="max-w-6xl mx-auto px-4 mb-12 grid md:grid-cols-2 gap-4">
+		<a href="{COMMUNITY_URL}#contact" class="group rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-6 transition-colors duration-200">
+			<h2 class="text-xl font-bold text-white group-hover:text-brand-orange mb-1">Community &amp; Youth</h2>
+			<p class="text-gray-300">Programmes, holiday clubs, workshops, volunteering and general questions. Use the form below.</p>
+		</a>
+		<a href={AP_CONTACT_URL} class="group rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-6 transition-colors duration-200">
+			<h2 class="text-xl font-bold text-white group-hover:text-brand-orange mb-1">Alternative Provision</h2>
+			<p class="text-gray-300">Schools and local authorities: placements, referrals and Experience &amp; Engagement Days.</p>
+		</a>
 	</section>
 
 	<!-- Divider -->
@@ -205,8 +217,9 @@
 								{/if}
 								{#if subject === 'school-referral'}
 									<p class="mt-3 px-4 py-3 rounded-lg bg-brand-orange/10 border border-brand-orange/30 text-gray-200 text-sm" role="status">
-										For school referrals, please visit
-										<a href={LEARNING_URL} target="_blank" rel="noopener noreferrer" class="text-brand-orange font-semibold hover:underline">Hustle Hive Learning</a>
+										Making a referral? See
+										<a href="{AP_SCHOOLS_URL}#referrals" class="text-brand-orange font-semibold hover:underline">how referrals work</a>
+										and the information we'll need, then send us a message here.
 									</p>
 								{/if}
 							</div>
