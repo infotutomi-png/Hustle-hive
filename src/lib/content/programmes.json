@@ -31,11 +31,11 @@
     {
       "title": "Maker Days",
       "description": "Hands-on project days for home-educated children aged 8–16: design it, model it, pitch it.",
-      "image": "/images/ap/classroom.webp",
+      "image": "/images/maker-days.webp",
       "icon": "tools",
       "href": "/programmes/maker-days",
       "buttonLabel": "",
-      "imagePosition": "object-center",
+      "imagePosition": "object-[center_60%]",
       "comingSoon": false,
       "archived": false,
       "interestSubject": "maker-days"

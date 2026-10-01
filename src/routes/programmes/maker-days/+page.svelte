@@ -39,9 +39,9 @@
 	<!-- Image -->
 	<section class="max-w-4xl mx-auto px-4 mb-12">
 		<img
-			src="/images/ap/classroom.webp"
-			alt="Young people working on a design project at Hustle HQ"
-			class="w-full aspect-[16/9] object-cover rounded-2xl border border-stone-700/50"
+			src="/images/maker-days.webp"
+			alt="Children building scale models of restaurant designs at Hustle HQ, with a 3D printer in the background"
+			class="w-full aspect-[16/9] object-cover object-[center_60%] rounded-2xl border border-stone-700/50"
 		/>
 	</section>
 
