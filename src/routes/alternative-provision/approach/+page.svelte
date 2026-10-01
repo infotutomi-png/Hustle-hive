@@ -117,11 +117,10 @@
 			</div>
 
 			<h3 class="text-xl font-bold text-white mb-4">{a.hustle100.pathwaysHeading}</h3>
-			<!-- Focusable on purpose: keyboard users need to be able to scroll this strip sideways (WCAG 2.1.1) -->
-			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-			<div class="flex gap-4 overflow-x-auto snap-x pb-3" role="region" tabindex="0" aria-label="Example learner pathways (scroll sideways on small screens)">
+			<!-- Stacked on phones, 2-3 across on wider screens (no sideways scrolling) -->
+			<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 				{#each a.hustle100.pathways as pathway}
-					<article class="snap-start shrink-0 w-72 rounded-2xl bg-stone-900/70 border border-stone-700/50 p-5">
+					<article class="rounded-2xl bg-stone-900/70 border border-stone-700/50 p-5">
 						<h4 class="text-lg font-semibold text-brand-orange mb-2">{pathway.title}</h4>
 						<p class="text-gray-300 text-sm mb-3">{pathway.text}</p>
 						<ul class="flex flex-wrap gap-1.5">
