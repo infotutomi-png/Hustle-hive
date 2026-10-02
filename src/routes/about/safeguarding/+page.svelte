@@ -31,6 +31,20 @@
 		</div>
 	</section>
 
+	<!-- Online safety (text only: no classroom.cloud logo until NetSupport gives permission) -->
+	<section id="online-safety" class="max-w-6xl mx-auto px-4 mb-16 scroll-mt-28">
+		<div class="rounded-2xl bg-stone-900/50 border border-stone-700/50 p-6 md:p-8">
+			<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">{sg.onlineHeading}</h2>
+			<div class="max-w-3xl">
+				{#each sg.online as p}<p class="text-gray-300 mb-3">{p}</p>{/each}
+				<p class="text-gray-300">
+					{sg.onlineContact}
+					<a href="/contact" class="text-brand-orange font-semibold hover:underline">contact us</a>.
+				</p>
+			</div>
+		</div>
+	</section>
+
 	<section id="policies" class="max-w-6xl mx-auto px-4 scroll-mt-28">
 		<h2 class="text-3xl md:text-4xl font-bold text-white mb-3">{sg.policiesHeading}</h2>
 		<p class="text-gray-300 text-lg mb-8">{sg.policiesIntro}</p>
