@@ -35,7 +35,10 @@
       "title": "Makers to Market",
       "tagline": "Applications open now",
       "text": "A 12-week programme taking your handmade products from idea to real-world market sales.",
-      "details": [],
+      "details": [
+        "Starts Monday 4 January 2027",
+        "12 weeks"
+      ],
       "buttonLabel": "Apply now",
       "buttonHref": "/programmes/makers-to-market/apply",
       "endDate": "",
