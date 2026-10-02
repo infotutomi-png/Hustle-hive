@@ -107,6 +107,17 @@
 		<div class="border-t border-stone-700/50 mb-12"></div>
 	</div>
 
+	<!-- Image -->
+	<section class="max-w-4xl mx-auto px-4 mb-12">
+		<img
+			src="/images/rangers.webp"
+			alt="A young Ranger and a leader balancing across a fallen tree over a stream in the woods"
+			width="1400"
+			height="788"
+			class="w-full h-auto aspect-[16/9] object-cover rounded-2xl border border-stone-700/50"
+		/>
+	</section>
+
 	<div class="max-w-6xl mx-auto px-4 space-y-16">
 		<!-- What Rangers will learn + The 10 weeks -->
 		<div class="grid md:grid-cols-2 gap-12">

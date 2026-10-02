@@ -46,12 +46,12 @@
     {
       "title": "Hustle Hive Rangers",
       "description": "10 weeks of maps, trails and outdoor skills for ages 8–16.",
-      "image": "",
+      "image": "/images/rangers.webp",
       "icon": "map",
       "href": "/programmes/rangers",
       "buttonLabel": "",
       "badge": "Dates to be confirmed",
-      "imagePosition": "",
+      "imagePosition": "object-[center_45%]",
       "comingSoon": false,
       "archived": false,
       "interestSubject": "rangers"
