@@ -108,7 +108,7 @@
 
 			<p class="text-gray-300 max-w-xl mx-auto">
 				Ready to turn your creative ideas into a real business? Fill out this quick application to join
-				our 12-week programme.
+				our 12-week programme, starting Monday 4 January 2027.
 			</p>
 		</div>
 

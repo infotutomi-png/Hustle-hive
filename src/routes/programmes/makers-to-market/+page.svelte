@@ -10,7 +10,7 @@
 
 <Seo
 	title="Makers to Market - Hustle Hive"
-	description="Applications open now for our 12-week Makers to Market programme in Darlington - take your handmade products from idea to real-world market sales."
+	description="Applications open now for our 12-week Makers to Market programme in Darlington, starting Monday 4 January 2027 - take your handmade products from idea to real-world market sales."
 />
 
 <main class="bg-black min-h-screen pt-32 pb-20">
@@ -52,6 +52,7 @@
 		<div class="inline-block bg-stone-900/50 border border-stone-700/50 rounded-xl px-5 py-4">
 			<h2 class="text-sm font-semibold uppercase tracking-wide text-brand-orange mb-1">At a glance</h2>
 			<p class="text-white font-medium">12-week programme · Darlington</p>
+			<p class="text-gray-300">Starts: <strong class="text-white">Monday 4 January 2027</strong></p>
 			<!-- TODO (add when confirmed): Who it's for, e.g. <p class="text-gray-300">Who it's for: ...</p> -->
 			<!-- TODO (add when confirmed): Cost, e.g. <p class="text-gray-300">Cost: ...</p> -->
 			<!-- TODO (add when confirmed): Time per week, e.g. <p class="text-gray-300">Time per week: ...</p> -->
