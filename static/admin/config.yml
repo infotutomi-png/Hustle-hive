@@ -246,6 +246,12 @@ collections:
                 name: health
                 widget: list
                 field: { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Online safety heading", name: onlineHeading, widget: string }
+              - label: "Online safety paragraphs"
+                name: online
+                widget: list
+                field: { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Online safety — contact sentence (a contact us link is added at the end)", name: onlineContact, widget: string }
               - { label: "Policies heading", name: policiesHeading, widget: string }
               - { label: "Policies intro", name: policiesIntro, widget: text }
               - label: "Policy groups"
