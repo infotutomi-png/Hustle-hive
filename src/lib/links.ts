@@ -67,6 +67,7 @@ const ALL_CONTACT_SUBJECTS = [
 	{ value: 'makers-to-market', label: 'Makers to Market' },
 	{ value: 'holiday-clubs', label: 'Holiday Clubs & Workshops' },
 	{ value: 'maker-days', label: 'Maker Days (home education)' },
+	{ value: 'rangers', label: 'Hustle Hive Rangers' },
 	{ value: 'school-referral', label: 'School Referral / Alternative Provision' },
 	{ value: 'after-school', label: 'After-School Programme' },
 	{ value: 'entrepreneurship-hub', label: 'Entrepreneurship Hub' },

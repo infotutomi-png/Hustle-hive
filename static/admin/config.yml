@@ -594,13 +594,14 @@ collections:
             fields:
               - { label: "Title", name: title, widget: string }
               - { label: "Description", name: description, widget: text }
-              - { label: "Image", name: image, widget: image }
+              - { label: "Image", name: image, widget: image, required: false, hint: "Leave empty to show a Hustle Hive placeholder" }
               - label: "Icon"
                 name: icon
                 widget: select
-                options: ["pencil", "tent", "lightbulb", "rocket", "sparkles", "tools"]
+                options: ["pencil", "tent", "lightbulb", "rocket", "sparkles", "tools", "map"]
               - { label: "Link", name: href, widget: string, hint: "Full web address (https://...) opens in a new tab" }
               - { label: "Button label (optional — default is Find out more)", name: buttonLabel, widget: string, required: false }
+              - { label: "Label on the card (optional, e.g. Dates to be confirmed)", name: badge, widget: string, required: false }
               - { label: "Image position (advanced — leave as-is)", name: imagePosition, widget: string, required: false }
               - { label: "Coming soon?", name: comingSoon, widget: boolean, default: false }
               - { label: "Archived (hidden from the site)", name: archived, widget: boolean, default: false, hint: "Hides the card, sends its page to Community & Youth and leaves it out of the sitemap. Untick to bring it back." }
@@ -609,7 +610,7 @@ collections:
                 widget: select
                 required: false
                 hint: "Used by the 'Register interest' button on coming-soon programmes"
-                options: ["general", "makers-to-market", "holiday-clubs", "maker-days", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "partnership", "volunteer", "other"]
+                options: ["general", "makers-to-market", "holiday-clubs", "maker-days", "rangers", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "partnership", "volunteer", "other"]
 
   # ---------------------------------------------------------------------------
   # SHOP / MARKETPLACE
