@@ -21,6 +21,8 @@
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
 		{:else if name === 'sparkles'}
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+		{:else if name === 'map'}
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
 		{:else if name === 'tools'}
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437" />
 		{/if}
@@ -114,14 +116,28 @@
 						rel={external ? 'noopener noreferrer' : undefined}
 						class="group relative rounded-2xl overflow-hidden bg-stone-900/50 border border-stone-700/50 backdrop-blur-sm flex flex-col h-full hover:border-brand-orange/50 transition-colors duration-300"
 					>
-						<!-- Card Image -->
-						<div class="h-48 overflow-hidden">
-							<img
-								src={programme.image}
-								alt={programme.title}
-								loading="lazy"
-								class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 {programme.imagePosition || ''}"
-							/>
+						<!-- Optional label, e.g. "Dates to be confirmed" -->
+						{#if programme.badge}
+							<span class="absolute top-4 right-4 z-20 px-3 py-1 bg-brand-orange text-black text-sm font-bold rounded-full">
+								{programme.badge}
+							</span>
+						{/if}
+
+						<!-- Card Image (branded placeholder until a photo is set) -->
+						<div class="relative h-48 overflow-hidden bg-stone-900">
+							{#if programme.image}
+								<img
+									src={programme.image}
+									alt={programme.title}
+									loading="lazy"
+									class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 {programme.imagePosition || ''}"
+								/>
+							{:else}
+								<div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-stone-800 via-stone-900 to-black">
+									<div class="absolute inset-0 opacity-20" style="background-image: url('/images/honeycomb-pattern.svg'); background-size: 60px 60px;"></div>
+									<img src="/images/hustlehive-logo-160.webp" alt="" class="relative h-20 opacity-60" />
+								</div>
+							{/if}
 						</div>
 
 						<!-- Card Content -->
