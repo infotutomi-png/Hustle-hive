@@ -56,9 +56,9 @@ export function isExternal(href: string) {
 	return /^https?:\/\//.test(href);
 }
 
-/** Link to the contact page with a subject pre-selected (see CONTACT_SUBJECTS). */
+/** Link straight to the contact form with a subject pre-selected (see CONTACT_SUBJECTS). */
 export function contactHref(subject: string) {
-	return `/contact?subject=${encodeURIComponent(subject)}`;
+	return `/contact?subject=${encodeURIComponent(subject)}#message`;
 }
 
 // Subjects offered on the contact form. The value is what goes in ?subject=... and the email.
