@@ -9,7 +9,7 @@
 		{ label: 'Home', text: 'Start again from the homepage', href: '/' },
 		{ label: 'Community & Youth', text: 'Holiday clubs, Maker Days and programmes', href: COMMUNITY_URL },
 		{ label: 'Alternative Provision', text: 'For schools and local authorities', href: AP_URL },
-		{ label: 'Contact us', text: "Tell us what you were looking for", href: '/contact' }
+		{ label: 'Contact us', text: "Tell us what you were looking for", href: '/contact#message' }
 	];
 </script>
 

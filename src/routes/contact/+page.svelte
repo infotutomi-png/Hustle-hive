@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	import Seo from '$lib/components/Seo.svelte';
-	import { AP_CONTACT_URL, AP_SCHOOLS_URL, CONTACT_SUBJECTS, COMMUNITY_URL, MAPS_DIRECTIONS_URL, MAPS_EMBED_URL, company } from '$lib/links';
+	import { AP_SCHOOLS_URL, CONTACT_SUBJECTS, MAPS_DIRECTIONS_URL, MAPS_EMBED_URL, company, contactHref } from '$lib/links';
 
 	let isSubmitting = $state(false);
 
@@ -17,6 +17,12 @@
 	let subject = $state(
 		isValidSubject($page.form?.values?.subject) ? $page.form.values.subject : isValidSubject(fromUrl) ? fromUrl! : ''
 	);
+
+	// The cards at the top link to this same page with a different ?subject=, so keep the dropdown in step
+	$effect(() => {
+		const value = $page.url.searchParams.get('subject');
+		if (isValidSubject(value)) subject = value!;
+	});
 </script>
 
 <Seo
@@ -35,13 +41,14 @@
 
 	<!-- Which team? -->
 	<section aria-label="Contacts by area" class="max-w-6xl mx-auto px-4 mb-12 grid md:grid-cols-2 gap-4">
-		<a href="{COMMUNITY_URL}#contact" class="group rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-6 transition-colors duration-200">
+		<!-- Both cards jump down to the form on this page with the right subject chosen (they used to link away, which sent people round in a loop) -->
+		<a href={contactHref('general')} class="group rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-6 transition-colors duration-200">
 			<h2 class="text-xl font-bold text-white group-hover:text-brand-orange mb-1">Community &amp; Youth</h2>
 			<p class="text-gray-300">Programmes, holiday clubs, workshops, volunteering and general questions. Use the form below.</p>
 		</a>
-		<a href={AP_CONTACT_URL} class="group rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-6 transition-colors duration-200">
+		<a href={contactHref('school-referral')} class="group rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-6 transition-colors duration-200">
 			<h2 class="text-xl font-bold text-white group-hover:text-brand-orange mb-1">Alternative Provision</h2>
-			<p class="text-gray-300">Schools and local authorities: placements, referrals and Experience &amp; Engagement Days.</p>
+			<p class="text-gray-300">Schools and local authorities: placements, referrals and Experience &amp; Engagement Days. Use the form below.</p>
 		</a>
 	</section>
 
@@ -124,8 +131,11 @@
 					</div>
 				</div>
 
-				<!-- Contact Form -->
-				<div class="bg-stone-900/50 border border-stone-700/50 rounded-2xl p-8">
+				<!-- Contact Form. Contact links elsewhere on the site jump here via #message. The marker sits
+				     just above the card (clear of the fixed menu) rather than using scroll-margin, which
+				     isn't respected when SvelteKit restores the position after an in-site link. -->
+				<div class="relative bg-stone-900/50 border border-stone-700/50 rounded-2xl p-8">
+					<span id="message" class="absolute -top-28" aria-hidden="true"></span>
 					{#if $page.form?.success}
 						<!-- Success Message -->
 						<div class="text-center py-8">
