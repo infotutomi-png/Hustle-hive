@@ -70,7 +70,7 @@
     ],
     "healthHeading": "Health & safety",
     "health": [
-      "Practical learning is central to what we do, so safety is part of how we work, not just a policy in a folder. Access to equipment like 3D printers, hand tools and workshop machinery is matched to each learner's age, competence and individual risk assessment.",
+      "Practical learning is central to what we do, so safety is part of how we work, not just a policy in a folder. Access to equipment like 3D printers, heat presses, cutting machines and craft tools is matched to each learner's age, competence and individual risk assessment.",
       "We hold risk assessments and safe operating procedures for all practical activities, plus fire, first-aid and off-site arrangements."
     ],
     "onlineHeading": "Keeping learners safe online",
@@ -95,15 +95,14 @@
         "title": "Health & wellbeing",
         "links": [
           { "label": "Health & Safety", "href": "https://drive.google.com/file/d/1B-Nx6QdnSeX8u3wQ4a5itKOqbkR9Zo_D/view?usp=drivesdk" },
-          { "label": "Supporting participants with medical conditions", "href": "https://drive.google.com/file/d/1wLhEKOh7mNHsGGfbj4UZt1dfo9qMYWuU/view?usp=drivesdk" },
-          { "label": "Medicines policy and procedures", "href": "https://drive.google.com/file/d/1x6WmO1dnoSvmlCDDm9Uq1GkNbbMmocKB/view?usp=drivesdk" },
+          { "label": "Medical needs and medicines", "href": "https://drive.google.com/file/d/1wLhEKOh7mNHsGGfbj4UZt1dfo9qMYWuU/view?usp=drivesdk" },
           { "label": "Equality, Diversity & Inclusion policy", "href": "https://drive.google.com/file/d/1_pCsbnkfzG0OM6bAwaQt6tK_s-EYYDwY/view?usp=drivesdk" }
         ]
       },
       {
         "title": "Data & privacy",
         "links": [
-          { "label": "Data protection and GDPR", "href": "https://drive.google.com/file/d/1y-DsCjkcdPgS0tCJWjYIl7Y-bIaXx5FZ/view?usp=drivesdk" },
+          { "label": "Data protection", "href": "https://drive.google.com/file/d/1y-DsCjkcdPgS0tCJWjYIl7Y-bIaXx5FZ/view?usp=drivesdk" },
           { "label": "Parent & learner privacy notice", "href": "https://drive.google.com/file/d/1PEL6fby2zqPP_F0MetER8r_hcjViHIua/view?usp=drivesdk" },
           { "label": "Information sharing & confidentiality", "href": "https://drive.google.com/file/d/1WxAj9EBdzYWAeljyK44MmKpUIASip6BT/view?usp=drivesdk" },
           { "label": "Personal data breach policy", "href": "https://drive.google.com/file/d/1rckRqAg3X6hKWBA6X69_XmY3-tHgLaUf/view?usp=drivesdk" },
@@ -116,6 +115,8 @@
         "title": "Governance",
         "links": [
           { "label": "Behaviour policy", "href": "https://drive.google.com/file/d/1OdZWcjNVoHQ7U4zcrj6x94CsnPwvbbS6/view?usp=drivesdk" },
+          { "label": "Complaints procedure", "href": "https://drive.google.com/file/d/1mu5mHspEZN8jmjH0p3NWi1t9Ooug-lki/view?usp=drive_link" },
+          { "label": "Staff code of conduct", "href": "https://drive.google.com/file/d/1N40dMIffuvy6Rs8nRGrCEgkSdA3KIt46/view?usp=sharing" },
           { "label": "Financial operations", "href": "https://drive.google.com/file/d/138XcBkiyCB8V6LV9hYV0cbSNfcI6X17R/view?usp=drivesdk" }
         ]
       }

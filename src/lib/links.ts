@@ -74,6 +74,7 @@ const ALL_CONTACT_SUBJECTS = [
 	{ value: 'outdoor-education', label: 'Outdoor Education & Wellbeing' },
 	{ value: 'partnership', label: 'Partnership Opportunities' },
 	{ value: 'volunteer', label: 'Volunteering' },
+	{ value: 'complaints', label: 'Complaints' },
 	{ value: 'other', label: 'Other' }
 ];
 
