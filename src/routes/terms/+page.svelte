@@ -69,6 +69,6 @@
 	<h2>Contact</h2>
 	<p>
 		Questions about these terms? Email <a href="mailto:kieron@hustlehive.co.uk">kieron@hustlehive.co.uk</a> or use our
-		<a href="/contact#message">contact form</a>.
+		<a href="/contact#contact-form">contact form</a>.
 	</p>
 </LegalPage>
