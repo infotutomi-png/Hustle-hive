@@ -39,7 +39,7 @@
 				{#each sg.online as p}<p class="text-gray-300 mb-3">{p}</p>{/each}
 				<p class="text-gray-300">
 					{sg.onlineContact}
-					<a href="/contact#message" class="text-brand-orange font-semibold hover:underline">contact us</a>.
+					<a href="/contact#contact-form" class="text-brand-orange font-semibold hover:underline">contact us</a>.
 				</p>
 			</div>
 		</div>

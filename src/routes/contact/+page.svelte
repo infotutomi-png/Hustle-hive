@@ -131,11 +131,11 @@
 					</div>
 				</div>
 
-				<!-- Contact Form. Contact links elsewhere on the site jump here via #message. The marker sits
+				<!-- Contact Form. Contact links elsewhere on the site jump here via #contact-form. The marker sits
 				     just above the card (clear of the fixed menu) rather than using scroll-margin, which
 				     isn't respected when SvelteKit restores the position after an in-site link. -->
 				<div class="relative bg-stone-900/50 border border-stone-700/50 rounded-2xl p-8">
-					<span id="message" class="absolute -top-28" aria-hidden="true"></span>
+					<span id="contact-form" class="absolute -top-28" aria-hidden="true"></span>
 					{#if $page.form?.success}
 						<!-- Success Message -->
 						<div class="text-center py-8">
