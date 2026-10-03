@@ -24,7 +24,7 @@ export const company = {
 	name: 'Hustle Hive CIC',
 	number: '16691281',
 	registeredOffice: '69 Woodland Terrace, Darlington, DL3 9NT',
-	businessAddress: 'Unit 5 Paramo House, Denmark Street, Darlington, DL3 0LP',
+	businessAddress: 'Unit 6 Paramo House, Denmark Street, Darlington, DL3 0LP',
 	phone: '07593 975681'
 };
 
@@ -44,7 +44,7 @@ export const organisationJsonLd = {
 	telephone: '+44 7593 975681',
 	address: {
 		'@type': 'PostalAddress',
-		streetAddress: 'Unit 5 Paramo House, Denmark Street',
+		streetAddress: 'Unit 6 Paramo House, Denmark Street',
 		addressLocality: 'Darlington',
 		postalCode: 'DL3 0LP',
 		addressCountry: 'GB'
