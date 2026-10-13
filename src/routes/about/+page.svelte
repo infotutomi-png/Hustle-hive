@@ -3,7 +3,7 @@
 	import HustleHQ from '$lib/components/HustleHQ.svelte';
 	import about from '$lib/content/about.json';
 	import home from '$lib/content/home.json';
-	import { AP_URL, SAFEGUARDING_URL } from '$lib/links';
+	import { AP_URL, SAFEGUARDING_URL, company } from '$lib/links';
 
 	let imageLoaded = $state(false);
 
@@ -13,6 +13,7 @@
 		{ label: 'Team', href: '#team' },
 		{ label: 'Hustle HQ', href: '#hustle-hq' },
 		{ label: 'Safeguarding & policies', href: SAFEGUARDING_URL },
+		{ label: 'Accreditation', href: '#accreditation' },
 		{ label: 'Partners & funders', href: '#partners' }
 	];
 </script>
@@ -155,6 +156,24 @@
 					<p class="text-gray-300">Designated Safeguarding Lead: <strong class="text-white">{about.safeguarding.dsl}</strong>. Read how we keep everyone safe and find all of our policies, including privacy and data protection.</p>
 				</div>
 				<a href={SAFEGUARDING_URL} class="inline-flex justify-center px-6 py-3 border border-stone-600 hover:border-brand-orange text-white font-semibold rounded-lg transition-colors duration-200 flex-shrink-0">Safeguarding &amp; policies</a>
+			</div>
+
+			<!-- Accreditation (whole organisation, not just Alternative Provision) -->
+			<div id="accreditation" class="mb-16 scroll-mt-28 rounded-2xl bg-stone-900/50 border border-stone-700/50 p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 md:gap-10">
+				<img
+					src="/images/aqa-uas-registered-centre.webp"
+					alt="AQA Unit Award Scheme registered centre, centre number {company.aqaCentreNumber}"
+					width="480"
+					height="571"
+					loading="lazy"
+					class="w-36 md:w-44 h-auto flex-shrink-0"
+				/>
+				<div>
+					<h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Accreditation</h2>
+					<p class="text-gray-300 leading-relaxed">
+						Hustle Hive CIC is an <strong class="text-white">AQA Unit Award Scheme registered centre</strong> (centre no. {company.aqaCentreNumber}). The Unit Award Scheme lets us recognise what learners achieve, with an AQA certificate for each unit of work they complete.
+					</p>
+				</div>
 			</div>
 
 			<!-- Partners & funders -->

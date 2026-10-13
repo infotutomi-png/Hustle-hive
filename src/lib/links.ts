@@ -25,7 +25,9 @@ export const company = {
 	number: '16691281',
 	registeredOffice: '69 Woodland Terrace, Darlington, DL3 9NT',
 	businessAddress: 'Unit 6 Paramo House, Denmark Street, Darlington, DL3 0LP',
-	phone: '07593 975681'
+	phone: '07593 975681',
+	// AQA Unit Award Scheme registered centre (badge: /images/aqa-uas-registered-centre.webp)
+	aqaCentreNumber: '85724'
 };
 
 // Google Maps for the business address (no API key needed)

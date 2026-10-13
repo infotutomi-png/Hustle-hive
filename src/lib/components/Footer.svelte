@@ -169,7 +169,7 @@
 
 			<!-- Company details -->
 			<p class="mt-6 text-center md:text-left text-gray-400 text-xs leading-relaxed">
-				{company.name} · Company no. {company.number} · Registered office: {company.registeredOffice} · Business address: {company.businessAddress}
+				{company.name} · Company no. {company.number} · Registered office: {company.registeredOffice} · Business address: {company.businessAddress} · AQA Unit Award Scheme registered centre no. {company.aqaCentreNumber}
 			</p>
 		</div>
 	</div>
