@@ -38,7 +38,7 @@
 
 	<!-- At a glance -->
 	<section aria-label="At a glance" class="max-w-6xl mx-auto px-4 mb-20">
-		<div class="rounded-2xl bg-stone-900/60 border border-stone-700/50 p-6 md:p-8 grid md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-center">
+		<div class="rounded-2xl bg-stone-900/60 border border-stone-700/50 p-6 md:p-8 grid md:grid-cols-[auto_1fr_auto] gap-6 md:gap-10 items-center">
 			<div>
 				<div class="text-5xl font-bold text-brand-orange">{o.price}</div>
 				<div class="text-white font-medium">{o.priceUnit}</div>
@@ -52,6 +52,16 @@
 					</div>
 				{/each}
 			</dl>
+			<a href="/about#accreditation" class="block w-28 md:w-32 justify-self-start md:justify-self-end">
+				<img
+					src="/images/aqa-uas-registered-centre.webp"
+					alt="AQA Unit Award Scheme registered centre, centre number {company.aqaCentreNumber}"
+					width="480"
+					height="571"
+					loading="lazy"
+					class="w-full h-auto"
+				/>
+			</a>
 		</div>
 	</section>
 
