@@ -3,9 +3,10 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import HappeningSoon from '$lib/components/HappeningSoon.svelte';
 	import AboutIntro from '$lib/components/AboutIntro.svelte';
+	import InsideTheHive from '$lib/components/InsideTheHive.svelte';
 	import EmailSignup from '$lib/components/EmailSignup.svelte';
 	// Not on the homepage at the moment (components kept so they can come back):
-	// WhereToNext.svelte (replaced by the two pathway buttons in the hero), InsideTheHive.svelte,
+	// WhereToNext.svelte (replaced by the two pathway buttons in the hero),
 	// Programmes.svelte (the grid lives on /community) and MakersToMarket.svelte (gallery on its own page).
 	// Impact figures, testimonials and a News / Stories section can be added once there's content.
 </script>
@@ -18,6 +19,7 @@
 <main class="bg-black">
 	<Hero />
 	<HappeningSoon />
+	<InsideTheHive />
 	<AboutIntro />
 	<EmailSignup />
 </main>
