@@ -10,14 +10,10 @@
 			<h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">{content.heading}</h2>
 		</div>
 
-		<!-- Swipeable row on phones; wraps into a grid on larger screens -->
-		<ul
-			class="flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-px-4 px-4 pb-2 max-w-6xl mx-auto
-				md:grid md:grid-cols-5 md:overflow-visible md:snap-none"
-			aria-label={content.heading}
-		>
+		<!-- Grid (no sideways scrolling): 2 across on phones, 4 on larger screens -->
+		<ul class="grid grid-cols-2 md:grid-cols-4 gap-3 px-4 max-w-6xl mx-auto" aria-label={content.heading}>
 			{#each content.photos as photo}
-				<li class="snap-start shrink-0 w-[70%] sm:w-[45%] md:w-auto">
+				<li>
 					<img
 						src={photo.image}
 						alt={photo.alt}

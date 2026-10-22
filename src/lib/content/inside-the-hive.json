@@ -4,10 +4,37 @@
   "buttonLabel": "See what's at Hustle HQ",
   "buttonHref": "/about#hustle-hq",
   "photos": [
-    { "image": "/images/market1.webp", "alt": "Makers carving wooden figures and sketching designs around a workshop table" },
-    { "image": "/images/market2.webp", "alt": "Two makers in aprons crafting small wooden pieces" },
-    { "image": "/images/market3.webp", "alt": "Makers shaping wooden bowls and making notes at a workbench" },
-    { "image": "/images/market4.webp", "alt": "Makers showing handmade jewellery, wooden animals and artwork at a market stall" },
-    { "image": "/images/market5.webp", "alt": "Makers planning their business together with notebooks and a laptop" }
+    {
+      "image": "/images/hq-room.webp",
+      "alt": "Hustle HQ, with the 3D printer, printers, cutting machine and heat presses along one wall and laptops on a central table"
+    },
+    {
+      "image": "/images/hq-3d-printer.webp",
+      "alt": "The Bambu Lab 3D printer printing a green part"
+    },
+    {
+      "image": "/images/hq-cutting-machine.webp",
+      "alt": "A Cricut Maker 4 cutting machine with its safety rules on the wall above"
+    },
+    {
+      "image": "/images/hq-heat-press.webp",
+      "alt": "An auto heat press with heat-resistant gloves beside it"
+    },
+    {
+      "image": "/images/hq-mug-press.webp",
+      "alt": "A Cricut Mug Press on a heat-resistant mat"
+    },
+    {
+      "image": "/images/hq-sublimation-printer.webp",
+      "alt": "The Epson sublimation printer with a Hustle Hive safety sheet on top"
+    },
+    {
+      "image": "/images/hq-side-quest.webp",
+      "alt": "A printed T-shirt and mug made at Hustle HQ, next to a laptop showing the Hustle Hive logo"
+    },
+    {
+      "image": "/images/hq-3d-printer-boat.webp",
+      "alt": "The 3D printer and its four-colour filament system, with a small printed boat on top"
+    }
   ]
 }

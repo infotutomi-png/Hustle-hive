@@ -273,6 +273,8 @@ collections:
             fields:
               - { label: "Title", name: title, widget: string }
               - { label: "Intro", name: intro, widget: text }
+              - { label: "Room photo (wide, shown above the cards)", name: roomImage, widget: image, required: false }
+              - { label: "Room photo description", name: roomImageAlt, widget: string, required: false }
               - label: "Cards"
                 name: cards
                 widget: list

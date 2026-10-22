@@ -73,7 +73,10 @@
       { "image": "/images/ap/beach.webp", "alt": "Students in wetsuits on the beach" },
       { "image": "/images/ap/summit.webp", "alt": "Students on a hilltop litter pick" },
       { "image": "/images/ap/cooking.webp", "alt": "Students cooking outdoors on a camping stove" },
-      { "image": "/images/ap/classroom.webp", "alt": "Students working on laptops at Hustle Hive" }
+      { "image": "/images/ap/classroom.webp", "alt": "Students working on laptops at Hustle Hive" },
+      { "image": "/images/hq-room.webp", "alt": "The learning space at Hustle HQ, with making kit along one wall and laptops on a central table" },
+      { "image": "/images/hq-3d-printer.webp", "alt": "The 3D printer at Hustle HQ printing a green part" },
+      { "image": "/images/hq-heat-press.webp", "alt": "A heat press at Hustle HQ with heat-resistant gloves beside it" }
     ],
     "contact": {
       "heading": "Alternative Provision contact",

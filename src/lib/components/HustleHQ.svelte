@@ -14,11 +14,22 @@
 		<p class="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">{hq.intro}</p>
 	</div>
 
+	{#if hq.roomImage}
+		<img
+			src={hq.roomImage}
+			alt={hq.roomImageAlt}
+			width="1320"
+			height="719"
+			loading="lazy"
+			class="w-full h-auto rounded-2xl border border-stone-700/50 mb-6"
+		/>
+	{/if}
+
 	<div class="grid md:grid-cols-2 gap-6">
 		{#each hq.cards as card}
 			<article class="bg-stone-900/50 border border-stone-700/50 rounded-2xl overflow-hidden flex flex-col">
 				{#if card.image}
-					<img src={card.image} alt={card.title} loading="lazy" class="w-full h-44 object-cover" />
+					<img src={card.image} alt={card.title} loading="lazy" class="w-full h-56 object-cover" />
 				{/if}
 				<div class="p-6 flex-1 flex flex-col">
 					{#if !card.image}

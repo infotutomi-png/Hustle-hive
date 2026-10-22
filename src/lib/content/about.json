@@ -125,32 +125,34 @@
   "hq": {
     "title": "Inside Hustle HQ",
     "intro": "Hustle HQ is packed with the kind of kit most people never get to use. Here's what you'll find when you visit.",
+    "roomImage": "/images/hq-room.webp",
+    "roomImageAlt": "Hustle HQ: a bright room with a 3D printer, printers, a Cricut cutting machine and heat presses along one wall, laptops on a central table, and the words Ideas Made Here on the wall",
     "cards": [
       {
         "title": "3D Printing",
         "icon": "cube",
-        "image": "",
+        "image": "/images/hq-3d-printer.webp",
         "description": "Bring your designs to life, from multi-colour prototypes and keyrings to super-detailed miniatures and jewellery.",
         "kit": ["Bambu Lab P2S multi-colour 3D printer", "Elegoo 16K resin printer"]
       },
       {
         "title": "Cutting & Vinyl",
         "icon": "scissors",
-        "image": "",
+        "image": "/images/hq-cutting-machine.webp",
         "description": "Cut your own stickers, decals and iron-on designs.",
         "kit": ["Cricut vinyl cutter"]
       },
       {
         "title": "Printing & Pressing",
         "icon": "press",
-        "image": "",
+        "image": "/images/hq-heat-press.webp",
         "description": "Turn artwork into real products: T-shirts, tote bags, mugs and gifts in full, vibrant colour.",
         "kit": ["Epson A3 sublimation printer", "HTVRONT Auto Heat Press", "Cricut Mug Press"]
       },
       {
         "title": "Design",
         "icon": "laptop",
-        "image": "",
+        "image": "/images/hq-side-quest.webp",
         "description": "Design, brand and plan your projects on our laptops.",
         "kit": ["ASUS Vivobook laptops"]
       }
