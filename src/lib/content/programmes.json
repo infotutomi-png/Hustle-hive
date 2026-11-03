@@ -20,12 +20,12 @@
     {
       "title": "Brand Lab",
       "description": "Holiday club for ages 8–11: create your own mini brand, design products and make something to take home.",
-      "image": "/images/brand-lab.webp",
+      "image": "/images/brand-lab-demo.webp",
       "icon": "sparkles",
-      "href": "https://hustlehivebookings.com",
-      "buttonLabel": "See dates & book",
+      "href": "/programmes/brand-lab",
+      "buttonLabel": "",
       "badge": "",
-      "imagePosition": "object-[center_35%]",
+      "imagePosition": "object-[center_40%]",
       "comingSoon": false,
       "archived": false,
       "interestSubject": "holiday-clubs"
