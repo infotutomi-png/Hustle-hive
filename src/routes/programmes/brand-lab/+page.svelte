@@ -8,6 +8,7 @@
 		{ title: 'Create a mini brand', text: 'Invent a character, a name and a logo of your own' },
 		{ title: 'Learn how brands work', text: 'What makes a good logo, how colour works, and spotting famous logos' },
 		{ title: 'Make real products', text: 'Turn your design into something you can wear or use, with our printers and heat presses' },
+		{ title: 'Jingles and commercials', text: 'Write a jingle and make a commercial to launch your brand' },
 		{ title: 'Designer showcase', text: 'Show off what you have made at the end of the day' },
 		{ title: 'Something to take home', text: 'Every child leaves with something they designed and made' }
 	];
@@ -128,12 +129,12 @@
 
 			<!-- Animated advert (Cloudflare Stream). Doesn't autoplay; the poster image shows until someone presses play. -->
 			<div class="mt-10">
-				<h3 class="text-xl md:text-2xl font-bold text-white mb-2">Chillz, brought to life</h3>
-				<p class="text-gray-300 mb-5">From a pencil drawing to a T-shirt to an animated advert.</p>
+				<h3 class="text-xl md:text-2xl font-bold text-white mb-2">The Chillz commercial</h3>
+				<p class="text-gray-300 mb-5">Our designers also wrote jingles and made a commercial for their brands. Here's Chillz, from pencil drawing to T-shirt to animated advert.</p>
 				<div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-stone-700/50 bg-stone-900">
 					<iframe
 						src="https://customer-cclrl1ux6vgu15bo.cloudflarestream.com/1b55848a173eef5f3ec6723a519f6c13/iframe?preload=metadata&poster=https%3A%2F%2Fcustomer-cclrl1ux6vgu15bo.cloudflarestream.com%2F1b55848a173eef5f3ec6723a519f6c13%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
-						title="Chillz animated advert: the Brand Lab character snowboarding through ice to a party"
+						title="The Chillz commercial: the Brand Lab character snowboarding through ice to a party"
 						loading="lazy"
 						class="absolute inset-0 w-full h-full border-0"
 						allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
