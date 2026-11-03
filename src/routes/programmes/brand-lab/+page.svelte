@@ -18,6 +18,22 @@
 		{ image: '/images/brand-lab-shirt-monster.webp', alt: 'A finished T-shirt printed with a blue, green and pink three-eyed monster holding a racket' }
 	];
 
+	// Cloudflare Stream video IDs
+	const commercials = [
+		{
+			id: '1b55848a173eef5f3ec6723a519f6c13',
+			name: 'Chillz',
+			caption: 'from pencil drawing to T-shirt to animated advert.',
+			title: 'The Chillz commercial: the Brand Lab character snowboarding through ice to a party'
+		},
+		{
+			id: 'bf1bd04d5b2d4eab907e5cb87274ba96',
+			name: 'Rabbids Daaa!',
+			caption: 'a fan-made commercial by one of our teams, just for fun (not a real product).',
+			title: 'The Rabbids Daaa! commercial: a fan-made advert by a Brand Lab team, with a rabbit causing chaos in a muddy arena'
+		}
+	];
+
 	const sessionPhotos = [
 		{ image: '/images/brand-lab-table.webp', alt: 'Children designing logos and characters round the table at Hustle HQ', width: 1400, height: 952 },
 		{ image: '/images/brand-lab-smile.webp', alt: 'A smiling Brand Lab designer next to a laptop', width: 900, height: 1200 },
@@ -127,19 +143,26 @@
 				{/each}
 			</ul>
 
-			<!-- Animated advert (Cloudflare Stream). Doesn't autoplay; the poster image shows until someone presses play. -->
+			<!-- Commercials (Cloudflare Stream). They don't autoplay; the poster image shows until someone presses play. -->
 			<div class="mt-10">
-				<h3 class="text-xl md:text-2xl font-bold text-white mb-2">The Chillz commercial</h3>
-				<p class="text-gray-300 mb-5">Our designers also wrote jingles and made a commercial for their brands. Here's Chillz, from pencil drawing to T-shirt to animated advert.</p>
-				<div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-stone-700/50 bg-stone-900">
-					<iframe
-						src="https://customer-cclrl1ux6vgu15bo.cloudflarestream.com/1b55848a173eef5f3ec6723a519f6c13/iframe?preload=metadata&poster=https%3A%2F%2Fcustomer-cclrl1ux6vgu15bo.cloudflarestream.com%2F1b55848a173eef5f3ec6723a519f6c13%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
-						title="The Chillz commercial: the Brand Lab character snowboarding through ice to a party"
-						loading="lazy"
-						class="absolute inset-0 w-full h-full border-0"
-						allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-						allowfullscreen
-					></iframe>
+				<h3 class="text-xl md:text-2xl font-bold text-white mb-2">The commercials</h3>
+				<p class="text-gray-300 mb-6">Our designers also wrote jingles and made a commercial for their brands.</p>
+				<div class="grid md:grid-cols-2 gap-6">
+					{#each commercials as video}
+						<figure>
+							<div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-stone-700/50 bg-stone-900">
+								<iframe
+									src="https://customer-cclrl1ux6vgu15bo.cloudflarestream.com/{video.id}/iframe?preload=metadata&poster=https%3A%2F%2Fcustomer-cclrl1ux6vgu15bo.cloudflarestream.com%2F{video.id}%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+									title={video.title}
+									loading="lazy"
+									class="absolute inset-0 w-full h-full border-0"
+									allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+									allowfullscreen
+								></iframe>
+							</div>
+							<figcaption class="text-gray-300 mt-3"><strong class="text-white">{video.name}:</strong> {video.caption}</figcaption>
+						</figure>
+					{/each}
 				</div>
 			</div>
 		</section>
