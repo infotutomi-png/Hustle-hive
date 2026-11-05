@@ -221,6 +221,9 @@
       "packHeading": "Commissioner information pack",
       "packText": "Everything in one place: who we work with, our curriculum, a typical day, referral and placement planning, safeguarding, monitoring and reporting, SEND support, health and safety, our team and due diligence documents.",
       "packMeta": "PDF, 20 pages, 3.4 MB",
+      "guideHeading": "Placing a learner: from first enquiry to first day",
+      "guideText": "A one-page guide to what happens at each stage, who is involved and when, plus what you can expect from us throughout the placement. Print it or share it with colleagues.",
+      "guideMeta": "PDF, 1 page, 105 KB",
       "steps": [
         { "title": "Referral", "text": "The commissioner shares education history, attendance, SEND, health, behaviour, safeguarding and risk information." },
         { "title": "Suitability discussion", "text": "We review the information and talk with the commissioner about whether we can safely and appropriately meet the learner's needs." },

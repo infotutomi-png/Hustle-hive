@@ -133,6 +133,9 @@
 				<a href={COMMISSIONER_PACK_URL} download="Hustle-Hive-Commissioner-Pack.pdf" class="inline-flex justify-center px-6 py-3 border border-stone-600 hover:border-brand-orange text-white font-semibold rounded-lg transition-colors duration-200">Download commissioner pack</a>
 			</div>
 		</div>
+		<p class="text-gray-300 mt-4">
+			New to placing a learner with us? See <a href="{AP_SCHOOLS_URL}#placement-guide" class="text-brand-orange font-semibold hover:underline">how a placement works, from first enquiry to first day</a>.
+		</p>
 	</section>
 
 	<!-- Gallery -->
