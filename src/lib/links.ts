@@ -27,7 +27,9 @@ export const company = {
 	businessAddress: 'Unit 6 Paramo House, Denmark Street, Darlington, DL3 0LP',
 	phone: '07593 975681',
 	// AQA Unit Award Scheme registered centre (badge: /images/aqa-uas-registered-centre.webp)
-	aqaCentreNumber: '85724'
+	aqaCentreNumber: '85724',
+	// Information Commissioner's Office data protection registration
+	icoRegistrationNumber: 'ZC268067'
 };
 
 // Google Maps for the business address (no API key needed)

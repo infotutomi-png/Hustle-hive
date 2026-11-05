@@ -17,7 +17,7 @@
 	</p>
 	<p>
 		For the purposes of UK data protection law (the UK GDPR and the Data Protection Act 2018), {company.name} is the
-		data controller for the information described here.
+		data controller for the information described here. We are registered with the Information Commissioner's Office (ICO), registration number {company.icoRegistrationNumber}.
 	</p>
 
 	<h2>What we collect</h2>
