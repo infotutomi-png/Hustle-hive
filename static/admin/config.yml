@@ -534,6 +534,9 @@ collections:
                   - { label: "Commissioner pack heading", name: packHeading, widget: string }
                   - { label: "Commissioner pack text", name: packText, widget: text }
                   - { label: "Commissioner pack details (pages/size)", name: packMeta, widget: string }
+                  - { label: "Placement guide heading", name: guideHeading, widget: string }
+                  - { label: "Placement guide text", name: guideText, widget: text }
+                  - { label: "Placement guide details (pages/size)", name: guideMeta, widget: string }
                   - label: "Referral steps"
                     name: steps
                     widget: list

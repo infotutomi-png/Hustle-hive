@@ -14,6 +14,7 @@ export const AP_SCHOOLS_URL = '/alternative-provision/schools';
 export const AP_CONTACT_URL = '/alternative-provision#contact';
 export const SAFEGUARDING_URL = '/about/safeguarding';
 export const COMMISSIONER_PACK_URL = '/downloads/hustle-hive-commissioner-pack.pdf';
+export const PLACEMENT_GUIDE_URL = '/downloads/hustle-hive-placing-a-learner.pdf';
 
 export const MAKERS_URL = '/programmes/makers-to-market';
 export const MAKERS_APPLY_URL = '/programmes/makers-to-market/apply';

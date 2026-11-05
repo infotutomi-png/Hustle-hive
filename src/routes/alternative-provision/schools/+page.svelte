@@ -4,7 +4,7 @@
 	import TickList from '$lib/components/ap/TickList.svelte';
 	import content from '$lib/content/alternative-provision.json';
 	import about from '$lib/content/about.json';
-	import { AP_URL, COMMISSIONER_PACK_URL, SAFEGUARDING_URL, contactHref } from '$lib/links';
+	import { AP_URL, COMMISSIONER_PACK_URL, PLACEMENT_GUIDE_URL, SAFEGUARDING_URL, contactHref } from '$lib/links';
 
 	const s = content.schools;
 	const dsl = about.safeguarding.dsl;
@@ -28,6 +28,27 @@
 		<div class="max-w-6xl mx-auto px-4">
 			<h2 class="text-3xl md:text-4xl font-bold text-white mb-5">{s.referrals.heading}</h2>
 			<p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-3xl">{s.referrals.intro}</p>
+
+			<!-- One-page placement guide (static/downloads/hustle-hive-placing-a-learner.pdf; image is a render of it) -->
+			<div id="placement-guide" class="mb-10 scroll-mt-28">
+				<h3 class="text-xl md:text-2xl font-bold text-white mb-2">{s.referrals.guideHeading}</h3>
+				<p class="text-gray-300 mb-5 max-w-3xl">{s.referrals.guideText}</p>
+				<a href={PLACEMENT_GUIDE_URL} target="_blank" rel="noopener noreferrer" class="block rounded-2xl overflow-hidden border border-stone-700/50 hover:border-brand-orange transition-colors duration-200 mb-4">
+					<img
+						src="/images/placing-a-learner.webp"
+						alt="Placing a learner with Hustle Hive, in seven stages: 1, school gets in touch (we reply within 2 working days); 2, referral sent; 3, suitability review by our DSL and a Director (within 5 working days), then a decision on whether we can meet the learner's needs safely; 4, joint meeting with the school, family and learner; 5, placement agreement signed before the start date; 6, getting ready, with risk assessment, healthcare, evacuation and transport plans; 7, first day, with welcome and induction. Throughout the placement: absence reported by 10am, safeguarding shared promptly, a weekly attendance summary every Friday and reviews every 6 weeks."
+						width="1600"
+						height="1132"
+						loading="lazy"
+						class="w-full h-auto"
+					/>
+					<span class="sr-only">(opens the PDF in a new tab)</span>
+				</a>
+				<div class="flex flex-col sm:flex-row sm:items-center gap-3">
+					<a href={PLACEMENT_GUIDE_URL} download="Hustle-Hive-Placing-a-Learner.pdf" class="inline-flex justify-center px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200">Download the one-page guide</a>
+					<span class="text-gray-400 text-sm">{s.referrals.guideMeta}</span>
+				</div>
+			</div>
 
 			<div class="rounded-2xl bg-brand-orange/10 border border-brand-orange/40 p-6 md:p-8 mb-10 flex flex-col md:flex-row md:items-center gap-6">
 				<div class="flex-1">
