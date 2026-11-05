@@ -266,7 +266,7 @@ collections:
                     summary: "{{fields.label}}"
                     fields:
                       - { label: "Document name", name: label, widget: string }
-                      - { label: "Link (Google Drive share link or page address)", name: href, widget: string }
+                      - { label: "Link (a PDF in static/policies, e.g. /policies/behaviour.pdf, a Google Drive share link or a page address)", name: href, widget: string }
           - label: "Inside Hustle HQ (kit)"
             name: hq
             widget: object

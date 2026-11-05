@@ -54,7 +54,7 @@
 					<h3 class="text-lg font-bold text-brand-orange mb-3">{group.title}</h3>
 					<ul class="space-y-2">
 						{#each group.links as link}
-							{@const external = isExternal(link.href)}
+							{@const external = isExternal(link.href) || link.href.endsWith(".pdf")}
 							<li>
 								<a
 									href={link.href}
