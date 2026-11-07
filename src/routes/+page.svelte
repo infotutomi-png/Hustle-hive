@@ -22,5 +22,6 @@
 	<HappeningSoon />
 	<InsideTheHive />
 	<AboutIntro />
+	<GoogleReviews />
 	<EmailSignup />
 </main>
