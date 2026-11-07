@@ -4,6 +4,7 @@
 	import HappeningSoon from '$lib/components/HappeningSoon.svelte';
 	import AboutIntro from '$lib/components/AboutIntro.svelte';
 	import InsideTheHive from '$lib/components/InsideTheHive.svelte';
+	import GoogleReviews from '$lib/components/GoogleReviews.svelte';
 	import EmailSignup from '$lib/components/EmailSignup.svelte';
 	// Not on the homepage at the moment (components kept so they can come back):
 	// WhereToNext.svelte (replaced by the two pathway buttons in the hero),
