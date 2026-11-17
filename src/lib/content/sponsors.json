@@ -95,16 +95,25 @@
       "benefits": []
     },
     {
-      "id": "eco-build",
-      "name": "Futures / Eco Build",
-      "summary": "Our futures and eco build project. Sponsorship packages are being finalised.",
+      "id": "eco-future",
+      "name": "ECO//FUTURE",
+      "summary": "From client brief to scale model. Over ten weekly two-hour sessions in small groups, young people design a sustainable home for a family of four: making the most of sunlight, collecting rainwater and staying comfortable through the seasons. They draw it to scale, design a 3D-printed part, build a foam-board model and present it to the client. Skills: design and engineering, measuring and scale, digital modelling, practical model making, problem-solving and presenting ideas.",
       "image": "",
       "imageAlt": "",
       "raised": "",
       "packages": [],
-      "packagesNote": "Packages for this project are coming soon. Get in touch and we'll send you the details as soon as they're ready.",
-      "steps": [],
-      "benefits": []
+      "packagesNote": "Sponsorship packages for ECO//FUTURE are being finalised. Get in touch and we'll send you the details as soon as they're ready.",
+      "steps": [
+        "Meet the client",
+        "Investigate sustainable design",
+        "Draw to scale",
+        "Design for 3D printing",
+        "Build the home",
+        "Present to the client"
+      ],
+      "benefits": [
+        "Join the final showcase as a guest client: see each scale home, ask questions and give feedback"
+      ]
     }
   ],
   "sponsorsHeading": "Thank you to our sponsors",
