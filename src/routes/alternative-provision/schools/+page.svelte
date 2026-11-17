@@ -36,7 +36,7 @@
 				<a href={PLACEMENT_GUIDE_URL} target="_blank" rel="noopener noreferrer" class="block rounded-2xl overflow-hidden border border-stone-700/50 hover:border-brand-orange transition-colors duration-200 mb-4">
 					<img
 						src="/images/placing-a-learner.webp"
-						alt="Placing a learner with Hustle Hive, in seven stages: 1, school gets in touch (we reply within 2 working days); 2, referral sent; 3, suitability review by our DSL and a Director (within 5 working days), then a decision on whether we can meet the learner's needs safely; 4, joint meeting with the school, family and learner; 5, placement agreement signed before the start date; 6, getting ready, with risk assessment, healthcare, evacuation and transport plans; 7, first day, with welcome and induction. Throughout the placement: absence reported by 10am, safeguarding shared promptly, a weekly attendance summary every Friday and reviews every 6 weeks."
+						alt="Placing a learner with Hustle Hive, in seven stages: 1, school gets in touch (we reply within 24 hours); 2, referral sent; 3, suitability review by our DSL and a Director (within 5 working days), then a decision on whether we can meet the learner's needs safely; 4, joint meeting with the school, family and learner; 5, placement agreement signed before the start date; 6, getting ready, with risk assessment, healthcare, evacuation and transport plans; 7, first day, with welcome and induction. Throughout the placement: absence reported by 10am, safeguarding shared promptly, a weekly attendance summary every Friday and reviews every 6 weeks."
 						width="1600"
 						height="1132"
 						loading="lazy"

@@ -11,7 +11,7 @@
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<!-- Header -->
 	<section class="max-w-6xl mx-auto px-4 mb-12">
-		<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">{shop.title}</h1>
+		<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{shop.title}</h1>
 		<p class="text-lg md:text-xl text-gray-300">
 			{shop.subtitle}
 		</p>

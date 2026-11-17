@@ -44,7 +44,7 @@
 						<span class="inline-block px-3 py-1 bg-brand-orange/20 text-brand-orange text-sm font-medium rounded-full mb-3">
 							{seller.specialty}
 						</span>
-						<h1 class="text-3xl md:text-4xl font-bold text-white italic mb-2">
+						<h1 class="text-3xl md:text-4xl font-bold text-white mb-2">
 							{seller.shopName}
 						</h1>
 						<p class="text-lg text-brand-orange font-medium mb-4">

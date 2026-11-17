@@ -34,8 +34,8 @@
 	<!-- Content -->
 	<div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
 		<h1 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-			{hero.headingLine1}<br />
-			{line2Start} <span class="text-brand-orange">{line2Last}</span>
+			<span class="block text-balance">{hero.headingLine1}</span>
+			<span class="block text-balance">{line2Start} <span class="text-brand-orange">{line2Last}</span></span>
 		</h1>
 
 		<p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">

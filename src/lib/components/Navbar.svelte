@@ -52,7 +52,7 @@
 				<!-- Logo -->
 				<a href="/" class="flex items-center gap-2">
 					<img src="/images/hustlehive-logo-160.webp" alt="Hustle Hive" width="146" height="160" class="h-10 w-auto" />
-					<img src="/images/logo-title-48.webp" alt="" width="268" height="48" class="h-6 w-auto lg:hidden" />
+					<img src="/images/logo-title-48.webp" alt="" width="268" height="48" class="h-6 w-auto" />
 				</a>
 
 				<!-- Navigation Links -->
@@ -63,7 +63,7 @@
 							target={item.external ? '_blank' : undefined}
 							rel={item.external ? 'noopener noreferrer' : undefined}
 							aria-current={isCurrent(item) ? 'page' : undefined}
-							class="hover:text-white transition-colors duration-200 font-medium whitespace-nowrap {isCurrent(item) ? 'text-white' : 'text-brand-orange'}"
+							class="text-white hover:text-brand-orange transition-colors duration-200 font-medium whitespace-nowrap underline-offset-8 decoration-2 decoration-brand-orange {isCurrent(item) ? 'underline' : ''}"
 						>
 							{item.label}
 						</a>

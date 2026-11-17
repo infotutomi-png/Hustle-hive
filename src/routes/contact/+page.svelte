@@ -6,8 +6,8 @@
 
 	let isSubmitting = $state(false);
 
-	// TODO: replace with arrival and parking details (e.g. where to park, which door to use)
-	const arrivalInfo = 'Arrival and parking information coming soon.';
+	// Arrival and parking details shown under the map
+	const arrivalInfo = 'Parking is available on the road along Denmark Street.';
 
 	// Pre-select a subject from the web address, e.g. /contact?subject=after-school.
 	// After a failed submit, keep whatever the person had chosen.
@@ -33,7 +33,7 @@
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<!-- Hero Section -->
 	<section class="max-w-6xl mx-auto px-4 mb-12">
-		<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">Contact Us</h1>
+		<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
 		<p class="text-lg md:text-xl text-gray-300">
 			We'd love to hear from you
 		</p>
@@ -44,11 +44,13 @@
 		<!-- Both cards jump down to the form on this page with the right subject chosen (they used to link away, which sent people round in a loop) -->
 		<a href={contactHref('general')} class="group rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-6 transition-colors duration-200">
 			<h2 class="text-xl font-bold text-white group-hover:text-brand-orange mb-1">Community &amp; Youth</h2>
-			<p class="text-gray-300">Programmes, holiday clubs, workshops, volunteering and general questions. Use the form below.</p>
+			<p class="text-gray-300">Programmes, holiday clubs, workshops, volunteering and general questions.</p>
+			<span class="inline-flex items-center gap-1 mt-3 text-brand-orange font-semibold">Send a message <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span></span>
 		</a>
 		<a href={contactHref('school-referral')} class="group rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-6 transition-colors duration-200">
 			<h2 class="text-xl font-bold text-white group-hover:text-brand-orange mb-1">Alternative Provision</h2>
-			<p class="text-gray-300">Schools and local authorities: placements, referrals and Experience &amp; Engagement Days. Use the form below.</p>
+			<p class="text-gray-300">Schools and local authorities: placements, referrals and Experience &amp; Engagement Days.</p>
+			<span class="inline-flex items-center gap-1 mt-3 text-brand-orange font-semibold">Send a message <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span></span>
 		</a>
 	</section>
 

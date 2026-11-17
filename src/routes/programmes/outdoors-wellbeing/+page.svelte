@@ -28,7 +28,7 @@
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2L2 19h20L12 2z" />
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v17" />
 			</svg>
-			<h1 class="text-4xl md:text-5xl font-bold text-white italic">Outdoor Education & Wellbeing</h1>
+			<h1 class="text-4xl md:text-5xl font-bold text-white">Outdoor Education & Wellbeing</h1>
 		</div>
 		<p class="text-lg md:text-xl text-gray-300">
 			Nature-based learning, teamwork and wellbeing activities.
