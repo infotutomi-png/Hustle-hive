@@ -18,7 +18,7 @@
 	<h2>About us</h2>
 	<p>
 		This website is run by {company.name}, a community interest company registered in England and Wales (company no.
-		{company.number}). Registered office: {company.registeredOffice}. Business address: {company.businessAddress}.
+		{company.number}). Registered office: {company.registeredOffice}.
 	</p>
 
 	<h2>Using this website</h2>

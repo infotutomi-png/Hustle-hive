@@ -66,7 +66,7 @@
 			<svg class="w-10 h-10 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
 			</svg>
-			<h1 class="text-4xl md:text-5xl font-bold text-white italic">Brand Lab</h1>
+			<h1 class="text-4xl md:text-5xl font-bold text-white">Brand Lab</h1>
 		</div>
 		<p class="text-lg md:text-xl text-gray-300 mb-6">
 			Holiday club for ages 8–11: create your own mini brand, design products and make something to take home.

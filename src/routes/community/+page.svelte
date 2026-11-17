@@ -38,7 +38,7 @@
 	<!-- Header -->
 	<section class="max-w-6xl mx-auto px-4 mb-12">
 		<div class="text-sm text-gray-400 mb-3"><a href="/" class="hover:text-brand-orange">Home</a> / Community &amp; Youth</div>
-		<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">{programmesContent.communityTitle}</h1>
+		<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{programmesContent.communityTitle}</h1>
 		<p class="text-lg md:text-xl text-gray-300 max-w-3xl mb-8">
 			{programmesContent.communityIntro}
 		</p>

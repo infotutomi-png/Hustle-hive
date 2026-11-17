@@ -42,7 +42,7 @@
 			<svg class="w-10 h-10 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
 			</svg>
-			<h1 class="text-4xl md:text-5xl font-bold text-white italic">Makers to Market</h1>
+			<h1 class="text-4xl md:text-5xl font-bold text-white">Makers to Market</h1>
 		</div>
 		<p class="text-lg md:text-xl text-gray-300 mb-6">
 			A 12-week journey turning creative ideas into real-world success.

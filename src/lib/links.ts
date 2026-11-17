@@ -26,7 +26,7 @@ export const GOOGLE_BUSINESS_URL = 'https://maps.google.com/?cid=563399624823608
 export const company = {
 	name: 'Hustle Hive CIC',
 	number: '16691281',
-	registeredOffice: '69 Woodland Terrace, Darlington, DL3 9NT',
+	registeredOffice: 'Unit 6 Paramo House, Denmark Street, Darlington, DL3 0LP',
 	businessAddress: 'Unit 6 Paramo House, Denmark Street, Darlington, DL3 0LP',
 	phone: '07593 975681',
 	// AQA Unit Award Scheme registered centre (badge: /images/aqa-uas-registered-centre.webp)
