@@ -2,7 +2,7 @@
   "overview": {
     "heading": "Learning beyond the classroom.",
     "subheading": "Build skills. Grow confidence. Succeed.",
-    "intro": "Hustle Hive Alternative Provision offers small-group, hands-on learning in Darlington for young people in Years 6 to 11, commissioned by schools and local authorities.",
+    "intro": "Hustle Hive Alternative Provision offers small-group, hands-on learning in Darlington for young people in Years 5 to 11, commissioned by schools and local authorities.",
     "heroImages": [
       { "image": "/images/ap/treetop.webp", "alt": "A smiling student on a treetop ropes course" },
       { "image": "/images/ap/beach.webp", "alt": "Students in wetsuits relaxing on the beach with Gavin" },
@@ -12,7 +12,7 @@
     "priceUnit": "per learner, per day",
     "priceNote": "Includes transport, snacks and refreshments.",
     "facts": [
-      { "label": "Who", "value": "Years 6 to 11, with Key Stages taught separately" },
+      { "label": "Who", "value": "Years 5 to 11, with Key Stages taught separately" },
       { "label": "Group size", "value": "Up to 6 learners per day" },
       { "label": "When", "value": "Monday to Friday, 9:30am to 2:30pm" },
       { "label": "Where", "value": "Denmark Street, Darlington, and out across the Tees Valley" }
@@ -28,7 +28,7 @@
     },
     "who": {
       "heading": "Who do we work with?",
-      "intro": "Hustle Hive may be right for young people in Years 6 to 11 who would benefit from a smaller, practical and highly structured learning environment as part of an agreed education plan.",
+      "intro": "Hustle Hive may be right for young people in Years 5 to 11 who would benefit from a smaller, practical and highly structured learning environment as part of an agreed education plan.",
       "points": [
         "Young people who are disengaging from mainstream learning, or whose attendance and participation are becoming a concern.",
         "Learners who respond well to practical, project-based and vocationally relevant activities.",
@@ -300,7 +300,7 @@
       "heading": "Frequently asked questions",
       "items": [
         { "q": "What makes Hustle Hive different to other alternative provisions?", "a": "We balance cutting-edge technology and entrepreneurship with skills like bushcraft, mindfulness and wild wellness. Groups are small by design, learning is practical and purposeful, and everything is built around our Hustle 100 curriculum and a regulate, relate, reason approach." },
-        { "q": "Who is Hustle Hive suitable for?", "a": "Young people in Years 6 to 11 who would benefit from a smaller, practical and highly structured learning environment as part of an agreed education plan. Key Stages are taught separately." },
+        { "q": "Who is Hustle Hive suitable for?", "a": "Young people in Years 5 to 11 who would benefit from a smaller, practical and highly structured learning environment as part of an agreed education plan. Key Stages are taught separately." },
         { "q": "How many students attend each day?", "a": "Up to 6 learners per day, so staff can know each young person well and respond quickly when needs change." },
         { "q": "Do you provide transport?", "a": "Yes. Transport is included in our £155 daily rate, along with snacks and refreshments. Lunch can be provided by agreement." },
         { "q": "How do schools make a referral?", "a": "Contact Gavin or Kieron to discuss a placement. We'll ask for the learner's education, attendance, SEND, health, behaviour, safeguarding and risk information, then talk through suitability. See \"Referral & placement\" above for the full process." }
