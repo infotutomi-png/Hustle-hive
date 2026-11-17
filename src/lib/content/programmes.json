@@ -85,12 +85,12 @@
     {
       "title": "Outdoor Resilience & Mentoring",
       "description": "Outdoor mental health and resilience days, plus one-to-one mentoring for young adults moving from school to work.",
-      "image": "/images/outdoor_activities.jpeg",
+      "image": "/images/outdoor-resilience-walk.webp",
       "icon": "tent",
       "href": "/programmes/outdoor-resilience",
       "buttonLabel": "",
       "badge": "Dates to be confirmed",
-      "imagePosition": "object-[center_75%]",
+      "imagePosition": "object-[center_40%]",
       "comingSoon": false,
       "archived": false,
       "interestSubject": "outdoor-resilience"

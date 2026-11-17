@@ -7,7 +7,7 @@
 	seoTitle="Outdoor Resilience & Mentoring for Young People - Hustle Hive"
 	seoDescription="Outdoor mental health and resilience days for young people in Darlington, plus one-to-one mentoring with clinical supervision for young adults moving from school to work."
 	ogImage="/og/outdoor-resilience.jpg"
-	ogImageAlt="Two young people with rucksacks walking a woodland trail"
+	ogImageAlt="Gavin Copland from Hustle Hive with two young people and their rucksacks on a sunny countryside walk"
 	tagline="Outdoor mental health and resilience days, and one-to-one mentoring."
 	badge="Dates to be confirmed"
 	intro={[
