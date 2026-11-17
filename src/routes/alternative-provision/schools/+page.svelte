@@ -11,7 +11,7 @@
 </script>
 
 <Seo
-	title="For Schools & Local Authorities: Referrals, Safeguarding & Pricing - Hustle Hive"
+	title="For Schools: Referrals, Safeguarding & Pricing - Hustle Hive"
 	description="How alternative provision referrals work at Hustle Hive, how we keep young people safe and report back, our £155 daily rate, due diligence documents and FAQs."
 />
 

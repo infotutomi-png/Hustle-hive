@@ -16,7 +16,16 @@
 	{@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 
+<!-- Skip link: hidden until a keyboard user tabs to it, then jumps past the menu -->
+<a
+	href="#main-content"
+	class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-5 focus:py-3 focus:rounded-lg focus:bg-brand-orange focus:text-black focus:font-semibold"
+>
+	Skip to main content
+</a>
 <Navbar />
-{@render children()}
+<div id="main-content" tabindex="-1" class="outline-none">
+	{@render children()}
+</div>
 <Footer />
 <BackToTop />

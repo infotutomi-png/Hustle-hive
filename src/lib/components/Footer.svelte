@@ -55,7 +55,7 @@
 			<!-- Brand Column -->
 			<div>
 				<a href="/" class="inline-block mb-4">
-					<img src="/images/logo-full-160.webp" alt="Hustle Hive" class="h-20" />
+					<img src="/images/logo-full-160.webp" alt="Hustle Hive" width="229" height="160" class="h-20 w-auto" />
 				</a>
 				<p class="text-gray-400 text-sm leading-relaxed mb-6">
 					A community-powered makerspace and enterprise hub in Darlington, helping people of all ages build confidence, skills and real-world opportunities.
@@ -154,7 +154,9 @@
 					<img
 						src="/images/national-lottery-community-fund-digital-logo-black-background.webp"
 						alt="Supported by The National Lottery Community Fund"
-						class="h-16"
+						width="800"
+						height="391"
+						class="h-16 w-auto"
 					/>
 					<div class="flex items-center gap-6">
 						<a href="/privacy" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">
