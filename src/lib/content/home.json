@@ -69,10 +69,10 @@
       {
         "title": "MAKERS TO MARKET",
         "description": "12-week journey from product design to real-world market sales",
-        "image": "/images/makers-market-stall.webp",
+        "image": "/images/makers-workshop.webp",
         "icon": "pencil",
         "href": "/programmes/makers-to-market",
-        "imagePosition": "object-[center_30%]",
+        "imagePosition": "object-center",
         "comingSoon": false
       },
       {
