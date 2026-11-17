@@ -18,18 +18,19 @@
       "imageAlt": "Children printing their own T-shirt designs with a heat press"
     },
     {
-      "title": "Maker Days",
-      "tagline": "For home-educated children",
-      "text": "Hands-on project days: design a real-world project, build a model with CAD, 3D printers and vinyl cutters, then pitch it to family and friends.",
+      "title": "Outdoor Resilience Day",
+      "tagline": "Register your interest",
+      "text": "A full day outdoors building confidence, resilience and wellbeing, for young people who would otherwise never get the chance.",
       "details": [
-        "Ages 8–16",
-        "Ends with a pitch day"
+        "Small groups of 6",
+        "AQA certificated award for your CV",
+        "Dates to be confirmed"
       ],
-      "buttonLabel": "Find out more",
-      "buttonHref": "/programmes/maker-days",
+      "buttonLabel": "Register interest",
+      "buttonHref": "/contact?subject=general&message=Hello%2C%20I'd%20like%20to%20register%20interest%20in%20an%20Outdoor%20Resilience%20Day.#contact-form",
       "endDate": "",
-      "image": "/images/maker-days.webp",
-      "imageAlt": "Children building scale models of restaurant designs at Hustle HQ"
+      "image": "/images/outdoor_activities.jpeg",
+      "imageAlt": "Young people taking part in an outdoor activity session"
     },
     {
       "title": "Makers to Market",
@@ -44,6 +45,21 @@
       "endDate": "",
       "image": "/images/makers-workshop.webp",
       "imageAlt": "A maker peeling the backing off a vinyl design on a tote bag while a mentor looks on, with a heat press behind them"
+    },
+    {
+      "title": "Creatureverse: Rift Battles",
+      "tagline": "Register your interest",
+      "text": "Design your own creature, turn it into a 3D-printed model, create trading cards and packaging, then battle it out in a final tournament.",
+      "details": [
+        "AQA Unit Award",
+        "Ends with a tournament",
+        "Dates to be confirmed"
+      ],
+      "buttonLabel": "Register interest",
+      "buttonHref": "/contact?subject=general&message=Hello%2C%20I'd%20like%20to%20register%20interest%20in%20Creatureverse%3A%20Rift%20Battles.#contact-form",
+      "endDate": "",
+      "image": "/images/creatureverse-collectibles.webp",
+      "imageAlt": "Creatureverse creatures at every stage: a hand-drawn sketch, a 3D model on a laptop, painted 3D-printed figures, boxed collectibles and trading cards"
     }
   ]
 }
