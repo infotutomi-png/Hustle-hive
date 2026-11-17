@@ -37,7 +37,7 @@
 					<!-- Image (branded placeholder until one is set) -->
 					<div class="relative h-56 md:h-72 overflow-hidden bg-stone-900">
 						{#if card.image}
-							<img src={card.image} alt={card.imageAlt} loading="lazy" class="w-full h-full object-cover" />
+							<img src={card.image} alt={card.imageAlt} width="1200" height="800" loading="lazy" class="w-full h-full object-cover" />
 						{:else}
 							<div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-stone-800 via-stone-900 to-black">
 								<div class="absolute inset-0 opacity-20" style="background-image: url('/images/honeycomb-pattern.svg'); background-size: 60px 60px;"></div>
