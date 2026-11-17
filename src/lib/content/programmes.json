@@ -7,12 +7,12 @@
     {
       "title": "Makers to Market",
       "description": "12-week journey from product design to real-world market sales",
-      "image": "/images/makers-market-stall.webp",
+      "image": "/images/makers-workshop.webp",
       "icon": "pencil",
       "href": "/programmes/makers-to-market",
       "buttonLabel": "",
       "badge": "Starts 4 January 2027",
-      "imagePosition": "object-[center_30%]",
+      "imagePosition": "object-center",
       "comingSoon": false,
       "archived": false,
       "interestSubject": "makers-to-market"

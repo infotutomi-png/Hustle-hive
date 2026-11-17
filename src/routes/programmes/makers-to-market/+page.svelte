@@ -68,9 +68,9 @@
 	<section class="max-w-6xl mx-auto px-4 mb-12">
 		<div class="rounded-2xl overflow-hidden">
 			<img
-				src="/images/makers-market-stall.webp"
-				alt="Makers selling personalised T-shirts, mugs and 3D-printed gifts at a market stall"
-				class="w-full h-64 md:h-96 object-cover object-[center_30%]"
+				src="/images/makers-workshop.webp"
+				alt="A maker peeling the backing off a vinyl design on a tote bag while a mentor looks on, with a heat press behind them"
+				class="w-full h-64 md:h-96 object-cover object-center"
 			/>
 		</div>
 	</section>
