@@ -3,6 +3,19 @@ import { SHOW_SELLERS, SHOW_SHOP } from '$lib/features';
 import { BOOKINGS_URL, COMMUNITY_URL, MAKERS_URL } from '$lib/links';
 import { archivedProgrammePaths } from '$lib/programmes';
 
+
+// Security headers on every page (static files get the same ones from static/_headers).
+// No Content-Security-Policy yet: the site embeds Cloudflare Stream, Google Maps, the reviews widget and
+// the CMS, so a strict policy needs testing on its own. frame-ancestors still stops other sites framing us.
+const SECURITY_HEADERS: Record<string, string> = {
+	'Strict-Transport-Security': 'max-age=31536000',
+	'X-Content-Type-Options': 'nosniff',
+	'X-Frame-Options': 'SAMEORIGIN',
+	'Content-Security-Policy': "frame-ancestors 'self'",
+	'Referrer-Policy': 'strict-origin-when-cross-origin',
+	'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=(), usb=()'
+};
+
 // Permanent (308) redirects for pages that have been removed or hidden.
 export const handle: Handle = async ({ event, resolve }) => {
 	const path = event.url.pathname.replace(/\/+$/, '') || '/';
@@ -32,5 +45,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 		redirect(308, MAKERS_URL);
 	}
 
-	return resolve(event);
+	const response = await resolve(event);
+	for (const [name, value] of Object.entries(SECURITY_HEADERS)) response.headers.set(name, value);
+	return response;
 };

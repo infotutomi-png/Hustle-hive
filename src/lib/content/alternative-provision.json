@@ -225,13 +225,13 @@
       "guideText": "A one-page guide to what happens at each stage, who is involved and when, plus what you can expect from us throughout the placement. Print it or share it with colleagues.",
       "guideMeta": "PDF, 1 page, 105 KB",
       "steps": [
-        { "title": "Referral", "text": "The commissioner shares education history, attendance, SEND, health, behaviour, safeguarding and risk information." },
-        { "title": "Suitability discussion", "text": "We review the information and talk with the commissioner about whether we can safely and appropriately meet the learner's needs." },
+        { "title": "Referral", "text": "We reply to every enquiry within 2 working days. The commissioner then securely shares education history, attendance, SEND, health, behaviour, safeguarding and risk information." },
+        { "title": "Suitability discussion", "text": "Our Designated Safeguarding Lead and a Director review the referral and talk it through with the commissioner. You'll have our decision within 5 working days." },
         { "title": "Meeting parents and carers", "text": "A chance to build a positive, trusting relationship from the start, see the building and meet the staff." },
         { "title": "Placement agreement", "text": "Together we agree days, hours, objectives, responsibilities, information-sharing, safeguarding escalation, attendance procedures, review dates and costs." },
         { "title": "Induction", "text": "The learner is introduced to the environment, staff, routines, expectations, safety procedures and the purpose of the placement." },
         { "title": "Baseline and targets", "text": "Strengths, needs and priorities are recorded and turned into a small number of measurable targets." },
-        { "title": "Review", "text": "Progress, attendance, behaviour and suitability are reviewed at agreed intervals, with changes made when needed." },
+        { "title": "Review", "text": "Progress, attendance, behaviour and suitability are reviewed every 6 weeks with the school, family and learner, with changes made when needed." },
         { "title": "Transition or exit", "text": "The end of the placement is planned, with clear next steps and a summary of progress and recommendations." }
       ],
       "agreedHeading": "Agreed before every placement starts",
@@ -252,10 +252,11 @@
       "heading": "Safeguarding, monitoring & quality",
       "attendanceHeading": "Attendance & communication",
       "attendance": [
-        "Attendance is recorded for every session, and non-attendance is reported promptly to the commissioner.",
+        "Attendance is recorded for every session. Any absence or late arrival is reported to the school by 10am the same morning.",
+        "A weekly attendance summary is sent to the school every Friday.",
         "Named contacts are agreed for Hustle Hive, parents and carers, and the commissioner.",
-        "Significant incidents are recorded and shared promptly. Urgent safeguarding, health or safety information is shared immediately.",
-        "Formal progress updates are provided at agreed review points."
+        "Significant incidents are recorded and shared promptly. Our DSL contacts your DSL straight away about any safeguarding concern.",
+        "Formal progress reviews take place every 6 weeks."
       ],
       "qualityHeading": "Monitoring & quality assurance",
       "quality": [

@@ -39,7 +39,9 @@
 				<img
 					src="/images/national-lottery-community-fund-digital-logo-black-background.webp"
 					alt="The National Lottery Community Fund"
-					class="h-14 mb-6"
+					width="800"
+					height="391"
+					class="h-14 w-auto mb-6"
 				/>
 				<a
 					href={funding.buttonHref}

@@ -184,7 +184,7 @@
 					<div>
 						<h3 class="text-2xl font-bold text-white mb-4">{funding.heading}</h3>
 						<p class="text-gray-300 leading-relaxed mb-5">{funding.text}</p>
-						<img src="/images/national-lottery-community-fund-digital-logo-black-background.webp" alt="The National Lottery Community Fund" class="h-14" />
+						<img src="/images/national-lottery-community-fund-digital-logo-black-background.webp" alt="The National Lottery Community Fund" width="800" height="391" class="h-14 w-auto" />
 					</div>
 				</div>
 			</div>

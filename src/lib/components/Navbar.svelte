@@ -51,8 +51,8 @@
 			<div class="flex items-center justify-between max-w-7xl mx-auto">
 				<!-- Logo -->
 				<a href="/" class="flex items-center gap-2">
-					<img src="/images/hustlehive-logo-160.webp" alt="Hustle Hive" class="h-10" />
-					<img src="/images/logo-title-48.webp" alt="" class="h-6 lg:hidden" />
+					<img src="/images/hustlehive-logo-160.webp" alt="Hustle Hive" width="146" height="160" class="h-10 w-auto" />
+					<img src="/images/logo-title-48.webp" alt="" width="268" height="48" class="h-6 w-auto lg:hidden" />
 				</a>
 
 				<!-- Navigation Links -->
@@ -190,7 +190,7 @@
 
 			<!-- Logo at bottom -->
 			<div class="absolute bottom-12 left-0 right-0 flex justify-center opacity-30 pointer-events-none [@media(max-height:860px)]:hidden">
-				<img src="/images/hustlehive-logo-160.webp" alt="" class="h-20" />
+				<img src="/images/hustlehive-logo-160.webp" alt="" width="146" height="160" class="h-20 w-auto" />
 			</div>
 		</div>
 	</div>

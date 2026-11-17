@@ -8,7 +8,7 @@
 </script>
 
 <Seo
-	title="Our Approach, Curriculum & the Hustle 100 - Hustle Hive Alternative Provision"
+	title="Our Approach & the Hustle 100 Curriculum - Hustle Hive"
 	description="Regulate, relate, reason: how Hustle Hive supports young people in alternative provision, what a day looks like, and the Hustle 100 curriculum behind it."
 />
 
@@ -102,7 +102,7 @@
 				{/each}
 			</ul>
 		</div>
-		<img src={a.curriculum.image} alt={a.curriculum.imageAlt} loading="lazy" class="w-full max-w-md mx-auto rounded-2xl" />
+		<img src={a.curriculum.image} alt={a.curriculum.imageAlt} width="760" height="760" loading="lazy" class="w-full h-auto max-w-md mx-auto rounded-2xl" />
 	</section>
 
 	<!-- Hustle 100 -->

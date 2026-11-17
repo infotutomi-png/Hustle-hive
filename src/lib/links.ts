@@ -20,6 +20,8 @@ export const MAKERS_URL = '/programmes/makers-to-market';
 export const MAKERS_APPLY_URL = '/programmes/makers-to-market/apply';
 
 export const FACEBOOK_URL = 'https://www.facebook.com/share/1Gmf1xJUC8/';
+// Our Google Business Profile (Maps listing)
+export const GOOGLE_BUSINESS_URL = 'https://maps.google.com/?cid=5633996248236084818';
 
 export const company = {
 	name: 'Hustle Hive CIC',
@@ -47,6 +49,7 @@ export const organisationJsonLd = {
 	logo: `${SITE_URL}/images/logo-full.png`,
 	image: `${SITE_URL}/og-image.jpg`,
 	telephone: '+44 7593 975681',
+	email: 'kieron@hustlehive.co.uk',
 	address: {
 		'@type': 'PostalAddress',
 		streetAddress: 'Unit 6 Paramo House, Denmark Street',
@@ -54,7 +57,20 @@ export const organisationJsonLd = {
 		postalCode: 'DL3 0LP',
 		addressCountry: 'GB'
 	},
-	sameAs: [FACEBOOK_URL]
+	// Core weekday hours (holiday clubs and events are listed on the bookings site)
+	openingHoursSpecification: [
+		{
+			'@type': 'OpeningHoursSpecification',
+			dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+			opens: '09:30',
+			closes: '14:30'
+		}
+	],
+	areaServed: [
+		{ '@type': 'City', name: 'Darlington' },
+		{ '@type': 'Place', name: 'Tees Valley' }
+	],
+	sameAs: [FACEBOOK_URL, GOOGLE_BUSINESS_URL]
 };
 
 export function isExternal(href: string) {

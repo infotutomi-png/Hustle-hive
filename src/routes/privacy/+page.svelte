@@ -89,8 +89,7 @@
 	<h2>Cookies and third-party content</h2>
 	<p>
 		This website doesn't use advertising or analytics cookies. Cloudflare may set strictly necessary cookies to protect
-		the site. When you visit, your browser also loads fonts from Google Fonts and Fontshare, which means those services
-		receive your IP address. The map on our Contact page is provided by Google Maps; when it loads, Google receives your
+		the site. Our fonts are stored on our own website, so loading them doesn't share your details with anyone else. The map on our Contact page is provided by Google Maps; when it loads, Google receives your
 		IP address and may set its own cookies, as described in Google's privacy policy. The Google reviews on our homepage are shown using WeWidget; when they load, WeWidget receives your IP address and an anonymous view count, but it doesn't set cookies.
 	</p>
 
