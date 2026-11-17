@@ -13,7 +13,7 @@
 
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<section class="max-w-3xl mx-auto px-4">
-		<h1 class="text-4xl md:text-5xl font-bold text-white italic mb-4">{title}</h1>
+		<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{title}</h1>
 		<p class="text-gray-400 mb-10">Last updated: {updated}</p>
 		<div class="border-t border-stone-700/50 mb-10"></div>
 
