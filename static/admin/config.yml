@@ -609,7 +609,7 @@ collections:
               - label: "Icon"
                 name: icon
                 widget: select
-                options: ["pencil", "tent", "lightbulb", "rocket", "sparkles", "tools", "map"]
+                options: ["pencil", "tent", "lightbulb", "rocket", "sparkles", "tools", "map", "heart"]
               - { label: "Link", name: href, widget: string, hint: "Full web address (https://...) opens in a new tab" }
               - { label: "Button label (optional — default is Find out more)", name: buttonLabel, widget: string, required: false }
               - { label: "Label on the card (optional, e.g. Dates to be confirmed)", name: badge, widget: string, required: false }
