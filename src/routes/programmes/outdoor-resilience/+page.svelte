@@ -14,10 +14,10 @@
 		'We run outdoor mental health and resilience courses for young people who would otherwise never get the chance, plus one-to-one mentoring for young adults finding their feet as they make the uncertain move from school to work.',
 		"One young man we work with had lived in the shadow of Roseberry Topping his whole life and never once been up it. No car to get there, no one to climb it with, no one to show him where to start. A few weeks into one of our courses, we stood on the top together. That's why we do this."
 	]}
-	image="/images/outdoor_activities.jpeg"
-	imageAlt="Two young people with rucksacks walking a woodland trail"
-	imageWidth={1200}
-	imageHeight={911}
+	image="/images/outdoor-resilience-walk.webp"
+	imageAlt="Gavin Copland from Hustle Hive with two young people and their rucksacks on a sunny countryside walk"
+	imageWidth={1145}
+	imageHeight={859}
 	contactSubject="outdoor-resilience"
 	contactMessage="Hello, I'd like to register interest in Outdoor Resilience & Mentoring."
 	stepsHeading="Two ways we help"
