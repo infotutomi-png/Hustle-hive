@@ -15,6 +15,7 @@
 		packagesNote?: string;
 		steps?: string[];
 		benefits?: string[];
+		programmeHref?: string;
 	};
 	type Sponsor = { name: string; logo?: string; url?: string; programme?: string };
 
@@ -52,7 +53,9 @@
 
 <Seo
 	title="Sponsor a Programme - Hustle Hive"
-	description="Sponsor a Hustle Hive programme in Darlington: outdoor resilience and mentoring, Creatureverse and more. Packages from £75, with an impact summary for your CSR reporting."
+	description="Sponsor a Hustle Hive programme in Darlington: Creatureverse, outdoor resilience and mentoring, and ECO//FUTURE. Packages from £75, with an impact summary for your CSR reporting."
+	image="/og/sponsors.jpg"
+	imageAlt="Hustle Hive programmes: Creatureverse collectibles, an outdoor woodland walk and ECO//FUTURE scale model homes"
 />
 
 <main class="bg-black min-h-screen pt-32 pb-20">
@@ -124,6 +127,9 @@
 					<div class={selected.image ? 'md:col-span-3' : 'md:col-span-5'}>
 						<h3 class="text-2xl md:text-3xl font-bold text-white mb-3">{selected.name}</h3>
 						<p class="text-gray-300 leading-relaxed">{selected.summary}</p>
+						{#if selected.programmeHref}
+							<a href={selected.programmeHref} class="inline-flex items-center gap-2 mt-3 text-brand-orange font-semibold hover:underline">About this programme <span aria-hidden="true">&rarr;</span></a>
+						{/if}
 						{#if selected.raised}
 							<p class="inline-block mt-4 px-4 py-2 rounded-full bg-green-500/15 border border-green-500/30 text-green-300 font-semibold text-sm">{selected.raised}</p>
 						{/if}

@@ -47,6 +47,8 @@
 <Seo
 	title="Brand Lab Holiday Club for Ages 8–11 - Hustle Hive"
 	description="Brand Lab is a holiday club at Hustle HQ in Darlington for ages 8–11: create your own mini brand, design products and make something to take home."
+	image="/og/brand-lab.jpg"
+	imageAlt="Children printing their own T-shirt designs with a heat press"
 />
 
 {#snippet bookButton()}

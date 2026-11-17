@@ -15,6 +15,8 @@
 <Seo
 	title="Maker Days for Home-Educated Children (8–16) - Hustle Hive"
 	description="Hands-on project days in Darlington for home-educated children aged 8–16: real-world design challenges, CAD, 3D printing, vinyl cutting and model-making, ending in a pitch day."
+	image="/og/maker-days.jpg"
+	imageAlt="Children building scale models at Hustle HQ"
 />
 
 <main class="bg-black min-h-screen pt-32 pb-20">

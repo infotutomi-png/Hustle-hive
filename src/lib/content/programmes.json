@@ -57,6 +57,45 @@
       "interestSubject": "rangers"
     },
     {
+      "title": "Creatureverse: Rift Battles",
+      "description": "Design your own creature, 3D print and paint it, make trading cards and battle in a final tournament.",
+      "image": "/images/creatureverse-collectibles.webp",
+      "icon": "rocket",
+      "href": "/programmes/creatureverse",
+      "buttonLabel": "",
+      "badge": "Dates to be confirmed",
+      "imagePosition": "object-center",
+      "comingSoon": false,
+      "archived": false,
+      "interestSubject": "creatureverse"
+    },
+    {
+      "title": "ECO//FUTURE",
+      "description": "Design a sustainable home from a client brief and build it as a scale model. For home-educated young people.",
+      "image": "/images/eco-future-models.webp",
+      "icon": "lightbulb",
+      "href": "/programmes/eco-future",
+      "buttonLabel": "",
+      "badge": "Dates to be confirmed",
+      "imagePosition": "object-center",
+      "comingSoon": false,
+      "archived": false,
+      "interestSubject": "eco-future"
+    },
+    {
+      "title": "Outdoor Resilience & Mentoring",
+      "description": "Outdoor mental health and resilience days, plus one-to-one mentoring for young adults moving from school to work.",
+      "image": "/images/outdoor_activities.jpeg",
+      "icon": "tent",
+      "href": "/programmes/outdoor-resilience",
+      "buttonLabel": "",
+      "badge": "Dates to be confirmed",
+      "imagePosition": "object-[center_75%]",
+      "comingSoon": false,
+      "archived": false,
+      "interestSubject": "outdoor-resilience"
+    },
+    {
       "title": "Outdoor Education & Wellbeing",
       "description": "Nature-based learning, teamwork and wellbeing activities",
       "image": "/images/outdoor_activities.jpeg",
