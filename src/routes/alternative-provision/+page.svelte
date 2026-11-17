@@ -11,7 +11,7 @@
 
 <Seo
 	title="Alternative Provision in Darlington - Hustle Hive"
-	description="Small-group, hands-on alternative provision in Darlington for Years 6 to 11. £155 per learner per day including transport, for schools and local authorities."
+	description="Small-group, hands-on alternative provision in Darlington for Years 5 to 11. £155 per learner per day including transport, for schools and local authorities."
 />
 
 <main class="bg-black min-h-screen pt-32 pb-20">
