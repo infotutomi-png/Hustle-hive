@@ -1,0 +1,239 @@
+<script lang="ts">
+	import { page } from '$app/state';
+	import Seo from '$lib/components/Seo.svelte';
+	import content from '$lib/content/sponsors.json';
+
+	type Package = { name: string; price: string; funds: string; featured?: boolean; label?: string };
+	type Programme = {
+		id: string;
+		name: string;
+		summary: string;
+		image?: string;
+		imageAlt?: string;
+		raised?: string;
+		packages: Package[];
+		packagesNote?: string;
+		steps?: string[];
+		benefits?: string[];
+	};
+	type Sponsor = { name: string; logo?: string; url?: string; programme?: string };
+
+	// Written out in full so Tailwind generates each class
+	const LG_COLS: Record<number, string> = { 1: 'lg:grid-cols-2', 2: 'lg:grid-cols-2', 3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4' };
+
+	const programmes = content.programmes as Programme[];
+	const sponsors = content.sponsors as Sponsor[];
+
+	// Open a programme's tab from the web address, e.g. /sponsors?programme=creatureverse
+	const fromUrl = page.url.searchParams.get('programme');
+	let selectedId = $state(programmes.some((p) => p.id === fromUrl) ? fromUrl! : programmes[0]?.id);
+	const selected = $derived(programmes.find((p) => p.id === selectedId) ?? programmes[0]);
+
+	/** Contact form link with the sponsorship subject and a starter message filled in. */
+	function enquiryHref(programme?: Programme, pkg?: Package) {
+		let message = "Hello, I'm interested in sponsoring";
+		if (programme && pkg) message += ` ${programme.name}: ${pkg.name} (${pkg.price}).`;
+		else if (programme) message += ` ${programme.name}.`;
+		else message += ' a Hustle Hive programme.';
+		message += ' Please send me your sponsor briefing.';
+		return `/contact?subject=sponsorship&message=${encodeURIComponent(message)}#contact-form`;
+	}
+
+	// Arrow keys move between tabs (standard tab pattern)
+	function onTabKeydown(event: KeyboardEvent, index: number) {
+		const keys: Record<string, number> = { ArrowRight: 1, ArrowLeft: -1 };
+		if (!(event.key in keys)) return;
+		event.preventDefault();
+		const next = programmes[(index + keys[event.key] + programmes.length) % programmes.length];
+		selectedId = next.id;
+		document.getElementById(`tab-${next.id}`)?.focus();
+	}
+</script>
+
+<Seo
+	title="Sponsor a Programme - Hustle Hive"
+	description="Sponsor a Hustle Hive programme in Darlington: outdoor resilience and mentoring, Creatureverse and more. Packages from £75, with an impact summary for your CSR reporting."
+/>
+
+<main class="bg-black min-h-screen pt-32 pb-20">
+	<!-- Header -->
+	<section class="max-w-6xl mx-auto px-4 mb-12">
+		<div class="text-sm text-gray-400 mb-3"><a href="/" class="hover:text-brand-orange">Home</a> / Sponsor a Programme</div>
+		<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">{content.title}</h1>
+		<p class="text-lg md:text-xl text-gray-300 max-w-3xl mb-8">{content.intro}</p>
+		<div class="flex flex-col sm:flex-row gap-3">
+			<a href="#packages" class="inline-flex justify-center items-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200">
+				See sponsor packages
+			</a>
+			<a href={enquiryHref()} class="inline-flex justify-center items-center px-6 py-3 border border-stone-600 hover:border-brand-orange text-white font-semibold rounded-lg transition-colors duration-200">
+				Request our sponsor briefing
+			</a>
+		</div>
+	</section>
+
+	<!-- Story + what sponsors get -->
+	<section class="max-w-6xl mx-auto px-4 mb-16 grid md:grid-cols-2 gap-6">
+		<div class="rounded-2xl bg-stone-900/50 border border-stone-700/50 p-6 md:p-8">
+			<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">{content.story.heading}</h2>
+			<p class="text-gray-300 leading-relaxed">{content.story.text}</p>
+		</div>
+		<div class="rounded-2xl bg-brand-orange/10 border border-brand-orange/30 p-6 md:p-8">
+			<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">{content.benefitsHeading}</h2>
+			<ul class="space-y-3 mb-5">
+				{#each content.benefits as benefit}
+					<li class="flex gap-3 text-gray-200">
+						<svg class="w-6 h-6 flex-shrink-0 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+						<span>{benefit}</span>
+					</li>
+				{/each}
+			</ul>
+			<p class="text-gray-400 text-sm">{content.cicNote}</p>
+		</div>
+	</section>
+
+	<!-- Packages by programme -->
+	<section id="packages" class="max-w-6xl mx-auto px-4 mb-16 scroll-mt-28">
+		<h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Choose a programme to sponsor</h2>
+		<p class="text-lg text-gray-300 mb-6">Each programme has its own packages, so your support goes exactly where you want it.</p>
+
+		<div role="tablist" aria-label="Programmes" class="flex flex-wrap gap-2 mb-8">
+			{#each programmes as programme, i}
+				<button
+					id="tab-{programme.id}"
+					role="tab"
+					aria-selected={programme.id === selected.id}
+					aria-controls="panel-{programme.id}"
+					tabindex={programme.id === selected.id ? 0 : -1}
+					onclick={() => (selectedId = programme.id)}
+					onkeydown={(e) => onTabKeydown(e, i)}
+					class="px-4 py-2 rounded-full border font-semibold transition-colors duration-200 {programme.id === selected.id
+						? 'bg-brand-orange border-brand-orange text-black'
+						: 'border-stone-600 text-white hover:border-brand-orange'}"
+				>
+					{programme.name}
+				</button>
+			{/each}
+		</div>
+
+		{#key selected.id}
+			<div id="panel-{selected.id}" role="tabpanel" aria-labelledby="tab-{selected.id}" tabindex="0" class="outline-none">
+				<div class="grid md:grid-cols-5 gap-6 items-center mb-8">
+					{#if selected.image}
+						<img src={selected.image} alt={selected.imageAlt ?? ''} loading="lazy" class="md:col-span-2 w-full h-56 md:h-64 object-cover rounded-2xl" />
+					{/if}
+					<div class={selected.image ? 'md:col-span-3' : 'md:col-span-5'}>
+						<h3 class="text-2xl md:text-3xl font-bold text-white mb-3">{selected.name}</h3>
+						<p class="text-gray-300 leading-relaxed">{selected.summary}</p>
+						{#if selected.raised}
+							<p class="inline-block mt-4 px-4 py-2 rounded-full bg-green-500/15 border border-green-500/30 text-green-300 font-semibold text-sm">{selected.raised}</p>
+						{/if}
+					</div>
+				</div>
+
+				{#if selected.steps?.length}
+					<ol class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
+						{#each selected.steps as step, i}
+							<li class="rounded-xl bg-stone-900/50 border border-stone-700/50 p-4">
+								<span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-black font-bold mb-2" aria-hidden="true">{i + 1}</span>
+								<span class="text-white text-sm font-semibold">{step}</span>
+							</li>
+						{/each}
+					</ol>
+				{/if}
+
+				{#if selected.packages.length}
+					<div class="grid sm:grid-cols-2 {LG_COLS[Math.min(selected.packages.length, 4)]} gap-4">
+						{#each selected.packages as pkg}
+							<div class="relative flex flex-col rounded-2xl bg-stone-900/50 p-6 {pkg.featured ? 'border-2 border-brand-orange' : 'border border-stone-700/50'}">
+								{#if pkg.featured}
+									<span class="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-brand-orange text-black text-xs font-bold">{pkg.label || 'Biggest impact'}</span>
+								{/if}
+								<p class="text-white font-semibold mb-1">{pkg.name}</p>
+								<p class="text-3xl font-bold text-brand-orange mb-3 font-display">{pkg.price}</p>
+								<p class="text-gray-300 text-sm leading-relaxed mb-6">{pkg.funds}</p>
+								<a
+									href={enquiryHref(selected, pkg)}
+									class="mt-auto inline-flex justify-center items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition-colors duration-200 {pkg.featured
+										? 'bg-brand-orange hover:bg-brand-orange-dark text-black'
+										: 'border border-stone-600 hover:border-brand-orange text-white'}"
+								>
+									Sponsor this<span class="sr-only">: {pkg.name}, {pkg.price}</span>
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+								</a>
+							</div>
+						{/each}
+					</div>
+				{/if}
+
+				{#if selected.benefits?.length}
+					<div class="mt-8 rounded-2xl bg-brand-orange/10 border border-brand-orange/30 p-6">
+						<h4 class="text-xl font-bold text-white mb-4">Sponsor benefits for {selected.name}</h4>
+						<ul class="grid md:grid-cols-2 gap-3">
+							{#each selected.benefits as benefit}
+								<li class="flex gap-3 text-gray-200">
+									<svg class="w-6 h-6 flex-shrink-0 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+									<span>{benefit}</span>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				{/if}
+
+				{#if selected.packagesNote}
+					<p class="text-gray-400 mt-6 {selected.packages.length ? 'text-sm' : ''}">{selected.packagesNote}</p>
+				{/if}
+				{#if !selected.packages.length}
+					<a href={enquiryHref(selected)} class="inline-flex mt-5 items-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200">
+						Ask about sponsoring {selected.name}
+					</a>
+				{/if}
+			</div>
+		{/key}
+
+		<p class="text-gray-400 mt-8">
+			Something else in mind, like donating kit or giving your team's time?
+			<a href={enquiryHref()} class="text-brand-orange hover:underline">Talk to us</a>.
+		</p>
+	</section>
+
+	<!-- Sponsors -->
+	{#if sponsors.length}
+		<section class="max-w-6xl mx-auto px-4 mb-16">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-8">{content.sponsorsHeading}</h2>
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+				{#each sponsors as sponsor}
+					<svelte:element
+						this={sponsor.url ? 'a' : 'div'}
+						href={sponsor.url || undefined}
+						target={sponsor.url ? '_blank' : undefined}
+						rel={sponsor.url ? 'noopener noreferrer' : undefined}
+						class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-5 text-center transition-colors duration-200"
+					>
+						{#if sponsor.logo}
+							<img src={sponsor.logo} alt={sponsor.name} loading="lazy" class="h-14 w-auto max-w-full object-contain" />
+						{:else}
+							<span class="text-white font-semibold">{sponsor.name}</span>
+						{/if}
+						{#if sponsor.programme}
+							<span class="text-gray-400 text-xs">{sponsor.programme}</span>
+						{/if}
+					</svelte:element>
+				{/each}
+			</div>
+		</section>
+	{/if}
+
+	<!-- CTA -->
+	<section class="max-w-6xl mx-auto px-4">
+		<div class="rounded-2xl bg-stone-900/50 border border-stone-700/50 p-8 md:p-12 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-3">{content.ctaHeading}</h2>
+			<p class="text-lg text-gray-300 mb-6">{content.ctaText}</p>
+			<a href={enquiryHref()} class="inline-flex justify-center items-center gap-2 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200 text-lg">
+				Request our sponsor briefing
+			</a>
+			{#if content.thanks}
+				<p class="text-gray-400 text-sm mt-8">{content.thanks}</p>
+			{/if}
+		</div>
+	</section>
+</main>

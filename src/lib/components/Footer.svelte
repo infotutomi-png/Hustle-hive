@@ -9,6 +9,7 @@
 		FACEBOOK_URL,
 		MAKERS_URL,
 		SAFEGUARDING_URL,
+		SPONSORS_URL,
 		company
 	} from '$lib/links';
 
@@ -30,6 +31,7 @@
 			links: [
 				{ label: 'Community & Youth', href: COMMUNITY_URL },
 				{ label: 'Makers to Market', href: MAKERS_URL },
+				{ label: 'Sponsor a programme', href: SPONSORS_URL },
 				{ label: 'Book a course', href: BOOKINGS_URL, external: true }
 			]
 		},

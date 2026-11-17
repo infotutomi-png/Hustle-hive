@@ -18,6 +18,9 @@
 		isValidSubject($page.form?.values?.subject) ? $page.form.values.subject : isValidSubject(fromUrl) ? fromUrl! : ''
 	);
 
+	// Starter message from the web address (used by the Sponsor this buttons), e.g. ?message=...
+	const messageFromUrl = ($page.url.searchParams.get('message') ?? '').slice(0, 500);
+
 	// The cards at the top link to this same page with a different ?subject=, so keep the dropdown in step
 	$effect(() => {
 		const value = $page.url.searchParams.get('subject');
@@ -245,7 +248,7 @@
 									required
 									class="w-full px-4 py-3 bg-stone-800 border border-stone-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand-orange transition-colors duration-200 resize-none"
 									placeholder="How can we help you?"
-								>{$page.form?.values?.message ?? ''}</textarea>
+								>{$page.form?.values?.message ?? messageFromUrl}</textarea>
 								{#if $page.form?.errors?.message}
 									<p class="text-red-400 text-sm mt-1">{$page.form.errors.message}</p>
 								{/if}

@@ -16,6 +16,8 @@ export const SAFEGUARDING_URL = '/about/safeguarding';
 export const COMMISSIONER_PACK_URL = '/downloads/hustle-hive-commissioner-pack.pdf';
 export const PLACEMENT_GUIDE_URL = '/downloads/hustle-hive-placing-a-learner.pdf';
 
+export const SPONSORS_URL = '/sponsors';
+
 export const MAKERS_URL = '/programmes/makers-to-market';
 export const MAKERS_APPLY_URL = '/programmes/makers-to-market/apply';
 
@@ -93,6 +95,7 @@ const ALL_CONTACT_SUBJECTS = [
 	{ value: 'after-school', label: 'After-School Programme' },
 	{ value: 'entrepreneurship-hub', label: 'Entrepreneurship Hub' },
 	{ value: 'outdoor-education', label: 'Outdoor Education & Wellbeing' },
+	{ value: 'sponsorship', label: 'Sponsorship' },
 	{ value: 'partnership', label: 'Partnership Opportunities' },
 	{ value: 'volunteer', label: 'Volunteering' },
 	{ value: 'complaints', label: 'Complaints' },

@@ -1,0 +1,115 @@
+{
+  "title": "Sponsor a Programme",
+  "intro": "Local businesses help us give young people in Darlington chances they'd otherwise never get. Choose a programme, pick a package, and we'll show you exactly what your support made possible.",
+  "story": {
+    "heading": "Why we do this",
+    "text": "A young man we work with had lived in the shadow of Roseberry Topping his whole life and never once been up it. No car to get there, no one to climb it with, no one to show him where to start. A few weeks into one of our outdoor courses, we stood on the top together. Sponsors make days like that possible."
+  },
+  "benefitsHeading": "What every sponsor gets",
+  "benefits": [
+    "An impact summary for your CSR reporting",
+    "Recognition on our website",
+    "The option of an outdoor staff volunteering day"
+  ],
+  "cicNote": "As a community interest company, a third of our profit goes straight back into the community.",
+  "programmes": [
+    {
+      "id": "creatureverse",
+      "name": "Creatureverse: Rift Battles",
+      "summary": "A hands-on creative programme where young people design their own creatures, turn them into 3D-printed models, create trading cards and custom packaging, then battle them in a final tournament. Learners work towards an AQA Unit Award Scheme (UAS) award. We arrange dates once the cohort is formed.",
+      "image": "/images/hq-3d-printer.webp",
+      "imageAlt": "A 3D printer in the Hustle Hive workshop",
+      "raised": "",
+      "packages": [
+        {
+          "name": "Sole sponsor",
+          "price": "£2,500",
+          "funds": "Funds 10 learners for the full programme and their AQA UAS award. Exclusive branding as lead partner.",
+          "featured": true,
+          "label": "Lead partner"
+        },
+        {
+          "name": "Co-sponsor",
+          "price": "£1,250",
+          "funds": "Two sponsors, two teams: supports 10 learners together, with shared branding and partnership.",
+          "featured": false,
+          "label": ""
+        }
+      ],
+      "packagesNote": "Parents and carers book places and complete consent separately. Sponsors never need to give us any learner details.",
+      "steps": [
+        "Sketch your creature",
+        "Design it in 3D (with AI tools)",
+        "3D print it",
+        "Customise and paint",
+        "Trading card and packaging",
+        "Final tournament"
+      ],
+      "benefits": [
+        "Your brand on all course materials: posters, cards, packaging and website",
+        "A sponsor spotlight: interview and promotional content",
+        "Recognition at the final tournament, including judging and the award presentation",
+        "Promotion across our website and social media, reaching local families, schools and youth groups",
+        "The chance to have a display or pop-up at the tournament"
+      ]
+    },
+    {
+      "id": "outdoor-mentoring",
+      "name": "Outdoor Resilience & Mentoring",
+      "summary": "Outdoor mental health and resilience courses for young people who'd otherwise never get the chance, plus one-to-one mentoring for young adults making the uncertain move from school to work.",
+      "image": "/images/outdoor_activities.jpeg",
+      "imageAlt": "Young people taking part in an outdoor activity session",
+      "raised": "£3,000 raised so far. Thank you!",
+      "packages": [
+        {
+          "name": "Kit and lunch",
+          "price": "£75",
+          "funds": "Covers kit and lunch for a group",
+          "featured": false,
+          "label": ""
+        },
+        {
+          "name": "One young person",
+          "price": "£180",
+          "funds": "A full outdoor mental health day for one young person, plus ongoing support",
+          "featured": false,
+          "label": ""
+        },
+        {
+          "name": "Mentoring",
+          "price": "£600",
+          "funds": "Six 1:1 mentoring sessions for a young adult, with clinical supervision from a Clinical Psychologist",
+          "featured": false,
+          "label": ""
+        },
+        {
+          "name": "Group day",
+          "price": "£1,000",
+          "funds": "Takes a group of 6 out for the day. They leave with new confidence, soft skills and an AQA certificated award for their CV",
+          "featured": true,
+          "label": ""
+        }
+      ],
+      "packagesNote": "",
+      "steps": [],
+      "benefits": []
+    },
+    {
+      "id": "eco-build",
+      "name": "Futures / Eco Build",
+      "summary": "Our futures and eco build project. Sponsorship packages are being finalised.",
+      "image": "",
+      "imageAlt": "",
+      "raised": "",
+      "packages": [],
+      "packagesNote": "Packages for this project are coming soon. Get in touch and we'll send you the details as soon as they're ready.",
+      "steps": [],
+      "benefits": []
+    }
+  ],
+  "sponsorsHeading": "Thank you to our sponsors",
+  "sponsors": [],
+  "thanks": "",
+  "ctaHeading": "Want to make a real difference?",
+  "ctaText": "Send us a message and we'll send over our sponsor briefing."
+}

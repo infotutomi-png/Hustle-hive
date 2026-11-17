@@ -15,6 +15,7 @@ const PAGES = [
 	...activeProgrammePaths,
 	'/programmes/makers-to-market/apply',
 	'/contact',
+	'/sponsors',
 	'/privacy',
 	'/terms'
 ];
