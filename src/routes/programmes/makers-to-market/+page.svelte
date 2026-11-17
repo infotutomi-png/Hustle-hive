@@ -11,6 +11,8 @@
 <Seo
 	title="Makers to Market - Hustle Hive"
 	description="Applications open now for our 12-week Makers to Market programme in Darlington, starting Monday 4 January 2027 - take your handmade products from idea to real-world market sales."
+	image="/og/makers-to-market.jpg"
+	imageAlt="Makers to Market: a maker and mentor working on a printed tote bag"
 />
 
 <main class="bg-black min-h-screen pt-32 pb-20">

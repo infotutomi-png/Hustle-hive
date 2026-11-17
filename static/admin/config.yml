@@ -621,7 +621,7 @@ collections:
                 widget: select
                 required: false
                 hint: "Used by the 'Register interest' button on coming-soon programmes"
-                options: ["general", "makers-to-market", "holiday-clubs", "maker-days", "rangers", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "sponsorship", "partnership", "volunteer", "other"]
+                options: ["general", "makers-to-market", "holiday-clubs", "maker-days", "rangers", "creatureverse", "eco-future", "outdoor-resilience", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "sponsorship", "partnership", "volunteer", "other"]
 
   # ---------------------------------------------------------------------------
   # SPONSORS
@@ -657,6 +657,7 @@ collections:
               - { label: "Summary", name: summary, widget: text }
               - { label: "Image", name: image, widget: image, required: false }
               - { label: "Image description (for screen readers)", name: imageAlt, widget: string, required: false }
+              - { label: "Programme page link (optional, e.g. /programmes/creatureverse)", name: programmeHref, widget: string, required: false }
               - { label: "Amount raised (optional, e.g. £3,000 raised so far)", name: raised, widget: string, required: false }
               - { label: "Programme steps (optional)", name: steps, widget: list, required: false, field: { label: "Step", name: step, widget: string } }
               - label: "Packages"

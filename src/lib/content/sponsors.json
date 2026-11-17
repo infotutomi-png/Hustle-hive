@@ -51,7 +51,8 @@
         "Recognition at the final tournament, including judging and the award presentation",
         "Promotion across our website and social media, reaching local families, schools and youth groups",
         "The chance to have a display or pop-up at the tournament"
-      ]
+      ],
+      "programmeHref": "/programmes/creatureverse"
     },
     {
       "id": "outdoor-mentoring",
@@ -92,7 +93,8 @@
       ],
       "packagesNote": "",
       "steps": [],
-      "benefits": []
+      "benefits": [],
+      "programmeHref": "/programmes/outdoor-resilience"
     },
     {
       "id": "eco-future",
@@ -132,7 +134,8 @@
         "Help introduce the design brief, or join the final showcase as a guest client and give feedback",
         "A short summary of what learners made and achieved",
         "Acknowledgement in any local press coverage we secure for the project"
-      ]
+      ],
+      "programmeHref": "/programmes/eco-future"
     }
   ],
   "sponsorsHeading": "Thank you to our sponsors",

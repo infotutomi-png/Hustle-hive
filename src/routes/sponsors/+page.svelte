@@ -124,6 +124,9 @@
 					<div class={selected.image ? 'md:col-span-3' : 'md:col-span-5'}>
 						<h3 class="text-2xl md:text-3xl font-bold text-white mb-3">{selected.name}</h3>
 						<p class="text-gray-300 leading-relaxed">{selected.summary}</p>
+						{#if selected.programmeHref}
+							<a href={selected.programmeHref} class="inline-flex items-center gap-2 mt-3 text-brand-orange font-semibold hover:underline">About this programme <span aria-hidden="true">&rarr;</span></a>
+						{/if}
 						{#if selected.raised}
 							<p class="inline-block mt-4 px-4 py-2 rounded-full bg-green-500/15 border border-green-500/30 text-green-300 font-semibold text-sm">{selected.raised}</p>
 						{/if}

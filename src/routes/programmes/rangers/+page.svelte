@@ -62,6 +62,8 @@
 <Seo
 	title="Hustle Hive Rangers: Outdoor Skills for Ages 8–16 - Hustle Hive"
 	description="10-week outdoor skills programme for ages 8–16 in Darlington: map reading, navigation, nature, bushcraft and first aid, led by qualified outdoor leaders."
+	image="/og/rangers.jpg"
+	imageAlt="Hustle Hive Rangers balancing across a fallen tree in the woods"
 />
 
 {#snippet tick()}

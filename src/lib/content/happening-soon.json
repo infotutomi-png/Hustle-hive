@@ -26,8 +26,8 @@
         "AQA certificated award for your CV",
         "Dates to be confirmed"
       ],
-      "buttonLabel": "Register interest",
-      "buttonHref": "/contact?subject=general&message=Hello%2C%20I'd%20like%20to%20register%20interest%20in%20an%20Outdoor%20Resilience%20Day.#contact-form",
+      "buttonLabel": "Find out more",
+      "buttonHref": "/programmes/outdoor-resilience",
       "endDate": "",
       "image": "/images/outdoor_activities.jpeg",
       "imageAlt": "Young people taking part in an outdoor activity session"
@@ -55,8 +55,8 @@
         "Ends with a tournament",
         "Dates to be confirmed"
       ],
-      "buttonLabel": "Register interest",
-      "buttonHref": "/contact?subject=general&message=Hello%2C%20I'd%20like%20to%20register%20interest%20in%20Creatureverse%3A%20Rift%20Battles.#contact-form",
+      "buttonLabel": "Find out more",
+      "buttonHref": "/programmes/creatureverse",
       "endDate": "",
       "image": "/images/creatureverse-collectibles.webp",
       "imageAlt": "Creatureverse creatures at every stage: a hand-drawn sketch, a 3D model on a laptop, painted 3D-printed figures, boxed collectibles and trading cards"
