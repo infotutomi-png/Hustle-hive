@@ -621,7 +621,71 @@ collections:
                 widget: select
                 required: false
                 hint: "Used by the 'Register interest' button on coming-soon programmes"
-                options: ["general", "makers-to-market", "holiday-clubs", "maker-days", "rangers", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "partnership", "volunteer", "other"]
+                options: ["general", "makers-to-market", "holiday-clubs", "maker-days", "rangers", "school-referral", "after-school", "entrepreneurship-hub", "outdoor-education", "sponsorship", "partnership", "volunteer", "other"]
+
+  # ---------------------------------------------------------------------------
+  # SPONSORS
+  # ---------------------------------------------------------------------------
+  - name: sponsors
+    label: "Sponsors Page"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: sponsors
+        label: "Sponsors Page Content"
+        file: "src/lib/content/sponsors.json"
+        fields:
+          - { label: "Page title", name: title, widget: string }
+          - { label: "Introduction", name: intro, widget: text }
+          - label: "Story"
+            name: story
+            widget: object
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Text", name: text, widget: text }
+          - { label: "Benefits heading", name: benefitsHeading, widget: string }
+          - { label: "What every sponsor gets", name: benefits, widget: list, field: { label: "Benefit", name: benefit, widget: string } }
+          - { label: "CIC note", name: cicNote, widget: text }
+          - label: "Programmes"
+            name: programmes
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Link ID (lower-case, no spaces, e.g. creatureverse)", name: id, widget: string, hint: "Used in links like /sponsors?programme=creatureverse" }
+              - { label: "Programme name", name: name, widget: string }
+              - { label: "Summary", name: summary, widget: text }
+              - { label: "Image", name: image, widget: image, required: false }
+              - { label: "Image description (for screen readers)", name: imageAlt, widget: string, required: false }
+              - { label: "Amount raised (optional, e.g. £3,000 raised so far)", name: raised, widget: string, required: false }
+              - { label: "Programme steps (optional)", name: steps, widget: list, required: false, field: { label: "Step", name: step, widget: string } }
+              - label: "Packages"
+                name: packages
+                widget: list
+                required: false
+                summary: "{{fields.name}} - {{fields.price}}"
+                fields:
+                  - { label: "Package name", name: name, widget: string }
+                  - { label: "Price", name: price, widget: string, hint: "e.g. £2,500" }
+                  - { label: "What it funds", name: funds, widget: text }
+                  - { label: "Highlight this package?", name: featured, widget: boolean, default: false }
+                  - { label: "Highlight label (optional, default Biggest impact)", name: label, widget: string, required: false }
+              - { label: "Sponsor benefits for this programme (optional)", name: benefits, widget: list, required: false, field: { label: "Benefit", name: benefit, widget: string } }
+              - { label: "Note under the packages (optional)", name: packagesNote, widget: text, required: false }
+          - { label: "Sponsors heading", name: sponsorsHeading, widget: string }
+          - label: "Sponsors (only shown once you add one)"
+            name: sponsors
+            widget: list
+            required: false
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Logo", name: logo, widget: image, required: false }
+              - { label: "Website", name: url, widget: string, required: false }
+              - { label: "Programme they supported", name: programme, widget: string, required: false }
+          - { label: "Thank-you line (optional)", name: thanks, widget: text, required: false }
+          - { label: "Call to action heading", name: ctaHeading, widget: string }
+          - { label: "Call to action text", name: ctaText, widget: text }
 
   # ---------------------------------------------------------------------------
   # SHOP / MARKETPLACE
