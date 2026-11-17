@@ -17,8 +17,8 @@
       "id": "creatureverse",
       "name": "Creatureverse: Rift Battles",
       "summary": "A hands-on creative programme where young people design their own creatures, turn them into 3D-printed models, create trading cards and custom packaging, then battle them in a final tournament. Learners work towards an AQA Unit Award Scheme (UAS) award. We arrange dates once the cohort is formed.",
-      "image": "/images/hq-3d-printer.webp",
-      "imageAlt": "A 3D printer in the Hustle Hive workshop",
+      "image": "/images/creatureverse-collectibles.webp",
+      "imageAlt": "Creatureverse creatures at every stage: a hand-drawn sketch, a 3D model on a laptop, painted 3D-printed figures, boxed collectibles and trading cards",
       "raised": "",
       "packages": [
         {
@@ -95,16 +95,44 @@
       "benefits": []
     },
     {
-      "id": "eco-build",
-      "name": "Futures / Eco Build",
-      "summary": "Our futures and eco build project. Sponsorship packages are being finalised.",
-      "image": "",
-      "imageAlt": "",
+      "id": "eco-future",
+      "name": "ECO//FUTURE",
+      "summary": "Help ten home-educated young people design and build a more sustainable home. Over ten weekly two-hour sessions, learners work from a client brief: they decide where to place solar panels, work out how much rainwater a roof could collect, and turn their drawings into a physical scale model. At the final showcase they present their home and explain the decisions behind it. Once the cohort is fully funded, places are free for families, with materials and equipment included.",
+      "image": "/images/eco-future-models.webp",
+      "imageAlt": "Scale model homes made from card and foam board, one with a solar panel and a rainwater butt, beside a hand-drawn floor plan",
       "raised": "",
-      "packages": [],
-      "packagesNote": "Packages for this project are coming soon. Get in touch and we'll send you the details as soon as they're ready.",
-      "steps": [],
-      "benefits": []
+      "packages": [
+        {
+          "name": "Lead sponsor",
+          "price": "£2,500",
+          "funds": "All ten places, with recognition as the lead programme partner.",
+          "featured": true,
+          "label": "Lead partner"
+        },
+        {
+          "name": "Co-sponsor",
+          "price": "£1,250",
+          "funds": "Five places, with shared recognition when a second partner funds the other five.",
+          "featured": false,
+          "label": ""
+        }
+      ],
+      "packagesNote": "Funding covers staff time, workshop materials, digital design and 3D printing, learner support, assessment and the final showcase. Learners can work towards an AQA Unit Award Scheme certificate, subject to unit validation and achieving the required outcomes. Work in construction, architecture, renewable energy or building supplies? We'd love to show you what learners will make.",
+      "steps": [
+        "Meet the client",
+        "Investigate sustainable design",
+        "Draw to scale",
+        "Design for 3D printing",
+        "Build the home",
+        "Present to the client"
+      ],
+      "benefits": [
+        "Recognition on selected programme materials, our website and social media",
+        "A sponsor spotlight about why your business is backing local young people",
+        "Help introduce the design brief, or join the final showcase as a guest client and give feedback",
+        "A short summary of what learners made and achieved",
+        "Acknowledgement in any local press coverage we secure for the project"
+      ]
     }
   ],
   "sponsorsHeading": "Thank you to our sponsors",
