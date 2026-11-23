@@ -1,7 +1,7 @@
 import type { RequestHandler } from './$types';
 import { SITE_URL } from '$lib/links';
 import { activeProgrammePaths } from '$lib/programmes';
-import { SUPPORTERS_URL, supporters } from '$lib/supporters';
+import { SUPPORTERS_URL } from '$lib/supporters';
 
 // Public pages for search engines. Hidden sections (sellers, shop, /admin) are left out on purpose.
 // Add new pages here when they're created. Programme pages come from programmes.json (archived ones are left out).
@@ -17,8 +17,7 @@ const PAGES = [
 	'/programmes/makers-to-market/apply',
 	'/contact',
 	'/sponsors',
-	// The supporters wall is listed once it has at least one supporter
-	...(supporters.length ? [SUPPORTERS_URL] : []),
+	SUPPORTERS_URL,
 	'/privacy',
 	'/terms'
 ];

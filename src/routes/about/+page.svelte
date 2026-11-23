@@ -185,8 +185,12 @@
 						<h3 class="text-2xl font-bold text-white mb-4">{funding.heading}</h3>
 						<p class="text-gray-300 leading-relaxed mb-5">{funding.text}</p>
 						<img src="/images/national-lottery-community-fund-digital-logo-black-background.webp" alt="The National Lottery Community Fund" width="800" height="391" class="h-14 w-auto" />
-						<a href="/sponsors" class="inline-flex items-center gap-2 mt-6 text-brand-orange font-semibold hover:underline">
+						<a href="/sponsors" class="flex items-center gap-2 mt-6 text-brand-orange font-semibold hover:underline">
 							Businesses can sponsor our programmes too
+							<span aria-hidden="true">&rarr;</span>
+						</a>
+						<a href="/supporters" class="flex items-center gap-2 mt-3 text-brand-orange font-semibold hover:underline">
+							Meet our Hive Heroes, the people who support us
 							<span aria-hidden="true">&rarr;</span>
 						</a>
 					</div>

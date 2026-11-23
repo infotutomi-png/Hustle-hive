@@ -6,7 +6,7 @@
 </script>
 
 <Seo
-	title="Our Supporters - Hustle Hive"
+	title="Hive Heroes: Our Supporters - Hustle Hive"
 	description="The businesses and people helping Hustle Hive run free and funded programmes for young people and adults in Darlington. Thank you."
 	image="/og/sponsors.jpg"
 	imageAlt="Hustle Hive programmes: Creatureverse collectibles, an outdoor woodland walk and ECO//FUTURE scale model homes"
@@ -14,11 +14,11 @@
 
 <main class="bg-black min-h-screen pt-32 pb-20">
 	<section class="max-w-6xl mx-auto px-4 mb-12 text-center">
-		<p class="text-brand-orange font-bold uppercase tracking-wider text-sm mb-3">Thank you</p>
-		<h1 class="text-4xl md:text-5xl font-bold text-white mb-5">Our supporters</h1>
+		<h1 class="text-4xl md:text-5xl font-bold text-white mb-3">Hive Heroes</h1>
+		<p class="text-brand-orange font-bold text-lg md:text-xl mb-5">Thank you to our supporters</p>
 		<p class="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
 			Every cell in our hive is a business or person who has helped young people and adults in Darlington take part in our programmes.
-			{#if supporters.length}Choose one to see what they supported.{:else}Our first supporters will appear here soon.{/if}
+			{#if supporters.length}Choose one to see what they supported.{:else}Our first Hive Heroes will appear here soon.{/if}
 		</p>
 	</section>
 
