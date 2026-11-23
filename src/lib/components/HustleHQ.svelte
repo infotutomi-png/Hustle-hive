@@ -29,7 +29,7 @@
 		{#each hq.cards as card}
 			<article class="bg-stone-900/50 border border-stone-700/50 rounded-2xl overflow-hidden flex flex-col">
 				{#if card.image}
-					<img src={card.image} alt={card.title} loading="lazy" class="w-full h-56 object-cover" />
+					<img width="1200" height="800" src={card.image} alt={card.title} loading="lazy" class="w-full h-56 object-cover" />
 				{/if}
 				<div class="p-6 flex-1 flex flex-col">
 					{#if !card.image}

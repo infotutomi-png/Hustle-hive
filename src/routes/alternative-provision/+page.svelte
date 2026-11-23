@@ -31,7 +31,7 @@
 		</div>
 		<div class="grid grid-cols-3 gap-3">
 			{#each o.heroImages as img, i}
-				<img src={img.image} alt={img.alt} class="w-full aspect-[3/4] object-cover rounded-2xl border border-stone-700/50 {i === 1 ? 'translate-y-6' : ''}" fetchpriority={i === 0 ? 'high' : undefined} />
+				<img width="900" height="1200" src={img.image} alt={img.alt} class="w-full aspect-[3/4] object-cover rounded-2xl border border-stone-700/50 {i === 1 ? 'translate-y-6' : ''}" fetchpriority={i === 0 ? 'high' : undefined} />
 			{/each}
 		</div>
 	</section>
@@ -71,7 +71,7 @@
 			<h2 class="text-3xl md:text-4xl font-bold text-white mb-5">{o.why.heading}</h2>
 			{#each o.why.paragraphs as p}<p class="text-gray-300 text-lg leading-relaxed mb-4">{p}</p>{/each}
 		</div>
-		<img src={o.why.image} alt={o.why.imageAlt} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50" />
+		<img width="1200" height="900" src={o.why.image} alt={o.why.imageAlt} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50" />
 	</section>
 
 	<!-- Who we work with -->
@@ -92,7 +92,7 @@
 
 	<!-- Our offer -->
 	<section id="services" class="max-w-6xl mx-auto px-4 mb-20 scroll-mt-28 grid md:grid-cols-2 gap-10 items-center">
-		<img src={o.offer.image} alt={o.offer.imageAlt} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50 md:order-1" />
+		<img width="1200" height="900" src={o.offer.image} alt={o.offer.imageAlt} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50 md:order-1" />
 		<div class="md:order-2">
 			<h2 class="text-3xl md:text-4xl font-bold text-white mb-5">{o.offer.heading}</h2>
 			{#each o.offer.paragraphs as p}<p class="text-gray-300 text-lg leading-relaxed mb-4">{p}</p>{/each}
@@ -117,7 +117,7 @@
 				<p class="text-gray-400 mb-6">{o.days.note}</p>
 				<a href={enquireHref} class="inline-flex items-center gap-2 px-6 py-3 border border-stone-600 hover:border-brand-orange text-white font-semibold rounded-lg transition-colors duration-200">Enquire about a day</a>
 			</div>
-			<img src={o.days.image} alt={o.days.imageAlt} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50" />
+			<img width="1200" height="900" src={o.days.image} alt={o.days.imageAlt} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50" />
 		</div>
 	</section>
 
@@ -143,7 +143,7 @@
 		<h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Gallery</h2>
 		<div class="grid grid-cols-2 md:grid-cols-3 gap-3">
 			{#each o.gallery as img}
-				<img src={img.image} alt={img.alt} loading="lazy" class="w-full aspect-square object-cover rounded-xl border border-stone-700/50" />
+				<img width="800" height="800" src={img.image} alt={img.alt} loading="lazy" class="w-full aspect-square object-cover rounded-xl border border-stone-700/50" />
 			{/each}
 		</div>
 	</section>

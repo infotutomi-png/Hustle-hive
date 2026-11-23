@@ -5,7 +5,7 @@
 <ProgrammePage
 	title="ECO//FUTURE"
 	seoTitle="ECO//FUTURE: Sustainable Home Design and Engineering - Hustle Hive"
-	seoDescription="Ten weekly sessions in Darlington: home-educated young people design a sustainable home from a client brief, draw it to scale, 3D print a component and build a scale model."
+	seoDescription="Ten weekly sessions in Darlington: home-educated young people design a sustainable home from a client brief and build it as a scale model."
 	ogImage="/og/eco-future.jpg"
 	ogImageAlt="Scale model homes with a solar panel and rainwater butt beside a floor plan"
 	tagline="Sustainable home design and engineering, from client brief to scale model."

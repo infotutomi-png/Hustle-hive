@@ -19,8 +19,8 @@
 </script>
 
 <Seo
-	title="About Us - Hustle Hive"
-	description="Learn about Hustle Hive CIC - a community-powered makerspace and enterprise hub in Darlington, founded by teachers, helping people of all ages build confidence, skills, and real-world opportunities."
+	title="About Hustle Hive CIC - Makerspace in Darlington"
+	description="Hustle Hive CIC is a makerspace in Darlington founded by teachers, helping people of all ages build confidence, skills and real-world opportunities."
 />
 
 <svelte:head>
@@ -38,7 +38,7 @@
 				class:opacity-0={imageLoaded}
 			></div>
 			<!-- Focus point on the faces (upper third); on phones shift right so both faces fit -->
-			<img
+			<img width="1200" height="800"
 				src={about.heroImage}
 				alt={about.heroImageAlt}
 				class="w-full h-full object-cover object-[58%_22%] md:object-[center_25%] transition-opacity duration-500"

@@ -74,7 +74,7 @@
 
 						<!-- Card Image -->
 						<a href={programme.href} class="block h-48 overflow-hidden" tabindex="-1" aria-hidden="true">
-							<img
+							<img width="1200" height="800"
 								src={programme.image}
 								alt=""
 								loading="lazy"
@@ -130,7 +130,7 @@
 						<!-- Card Image (branded placeholder until a photo is set) -->
 						<div class="relative h-48 overflow-hidden bg-stone-900">
 							{#if programme.image}
-								<img
+								<img width="1200" height="800"
 									src={programme.image}
 									alt={programme.title}
 									loading="lazy"

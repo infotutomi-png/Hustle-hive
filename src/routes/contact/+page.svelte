@@ -2,6 +2,7 @@
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	import Seo from '$lib/components/Seo.svelte';
+	import ClickToLoad from '$lib/components/ClickToLoad.svelte';
 	import { AP_SCHOOLS_URL, CONTACT_SUBJECTS, MAPS_DIRECTIONS_URL, MAPS_EMBED_URL, company, contactHref } from '$lib/links';
 
 	let isSubmitting = $state(false);
@@ -310,15 +311,15 @@
 					decoding="async"
 					class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50"
 				/>
-				<div class="w-full aspect-[4/3] rounded-2xl overflow-hidden border border-stone-700/50 bg-stone-900">
-					<iframe
+				<!-- Google Maps only loads when someone asks for it (faster page, no Google cookies before then) -->
+				<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-stone-700/50 bg-stone-900">
+					<ClickToLoad
 						src={MAPS_EMBED_URL}
 						title="Map showing Hustle Hive at {company.businessAddress}"
-						loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"
-						class="w-full h-full border-0"
-						allowfullscreen
-					></iframe>
+						label="Show map"
+						note="Loads Google Maps"
+						icon="map"
+					/>
 				</div>
 			</div>
 		</div>
