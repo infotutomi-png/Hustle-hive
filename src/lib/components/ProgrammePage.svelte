@@ -7,6 +7,7 @@
 	import sponsors from '$lib/content/sponsors.json';
 	import { SPONSORS_URL } from '$lib/links';
 	import { iconPaths } from '$lib/icons';
+	import ModelViewer from '$lib/components/ModelViewer.svelte';
 
 	type Item = { title: string; text?: string };
 
@@ -34,6 +35,8 @@
 		extraHeading?: string;
 		extra?: string[];
 		/** Optional feature cards (icon names from $lib/icons), e.g. the Creatureverse digital system */
+		/** Optional rotatable 3D model (a .glb in static/models) with a heading and short text */
+		model?: { src: string; alt: string; poster?: string; heading: string; text: string[] };
 		featuresHeading?: string;
 		featuresIntro?: string;
 		featuresHighlight?: string;
@@ -143,6 +146,26 @@
 				</ul>
 			</section>
 		</div>
+
+		{#if p.model}
+			<section aria-labelledby="model" class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+				<div class="md:order-2">
+					<ModelViewer src={p.model.src} alt={p.model.alt} poster={p.model.poster} />
+				</div>
+				<div>
+					<h2 id="model" class="text-2xl md:text-3xl font-bold text-white mb-4">{p.model.heading}</h2>
+					<div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+						{#each p.model.text as para}
+							<p>{para}</p>
+						{/each}
+					</div>
+					<p class="mt-5 inline-flex items-center gap-2 text-sm text-gray-400">
+						<svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+						Drag to spin, pinch or scroll to zoom
+					</p>
+				</div>
+			</section>
+		{/if}
 
 		{#if p.featuresHeading && p.features?.length}
 			<section aria-labelledby="features">
