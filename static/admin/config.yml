@@ -45,6 +45,7 @@ collections:
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Title", name: title, widget: string }
+                  - { label: "Who it is for (small orange label)", name: audience, widget: string, required: false }
                   - { label: "Short description", name: text, widget: string }
                   - { label: "Link", name: href, widget: string }
                   - label: "Icon"

@@ -8,13 +8,15 @@
     "pathways": [
       {
         "title": "Community & Youth",
+        "audience": "For families & young people",
         "text": "Holiday clubs, workshops and programmes for young people, families and adults.",
         "href": "/community",
         "icon": "people"
       },
       {
         "title": "Alternative Provision",
-        "text": "Small-group, hands-on education for schools and local authorities.",
+        "audience": "For schools & councils",
+        "text": "Small-group, hands-on education for young people referred by schools and local authorities.",
         "href": "/alternative-provision",
         "icon": "graduation"
       }
