@@ -2,6 +2,7 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import HappeningSoon from '$lib/components/HappeningSoon.svelte';
+	import APHomeSection from '$lib/components/APHomeSection.svelte';
 	import AboutIntro from '$lib/components/AboutIntro.svelte';
 	import InsideTheHive from '$lib/components/InsideTheHive.svelte';
 	import GoogleReviews from '$lib/components/GoogleReviews.svelte';
@@ -20,6 +21,7 @@
 <main class="bg-black">
 	<Hero />
 	<HappeningSoon />
+	<APHomeSection />
 	<InsideTheHive />
 	<AboutIntro />
 	<GoogleReviews />
