@@ -2,9 +2,9 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import ClickToLoad from '$lib/components/ClickToLoad.svelte';
 	import SubjectTags from '$lib/components/SubjectTags.svelte';
-	import { BOOKINGS_URL, contactHref } from '$lib/links';
+	import { contactHref } from '$lib/links';
 
-	const details = ['Ages 8–11', '£39.99 per day', 'Only 10 places per day'];
+	const details = ['Ages 8–11', 'Holiday club', 'Last ran October half term 2026'];
 
 	const activities = [
 		{ title: 'Create a mini brand', text: 'Invent a character, a name and a logo of your own' },
@@ -48,18 +48,17 @@
 
 <Seo
 	title="Brand Lab Holiday Club for Ages 8–11 - Hustle Hive"
-	description="Brand Lab is a holiday club at Hustle HQ in Darlington for ages 8–11: create your own mini brand, design products and make something to take home."
+	description="Brand Lab, our Darlington holiday club for ages 8–11: see the mini brands, T-shirts and commercials young designers created, and register interest."
 	image="/og/brand-lab.jpg"
 	imageAlt="Children printing their own T-shirt designs with a heat press"
 />
 
-{#snippet bookButton()}
-	<a href={BOOKINGS_URL} target="_blank" rel="noopener noreferrer" class={buttonClass}>
-		See dates &amp; book
+{#snippet interestButton()}
+	<a href={contactHref('holiday-clubs')} class={buttonClass}>
+		Tell me when it's back
 		<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 		</svg>
-		<span class="sr-only">(opens in a new tab)</span>
 	</a>
 {/snippet}
 
@@ -73,15 +72,19 @@
 			<h1 class="text-4xl md:text-5xl font-bold text-white">Brand Lab</h1>
 		</div>
 		<p class="text-lg md:text-xl text-gray-300 mb-6">
-			Holiday club for ages 8–11: create your own mini brand, design products and make something to take home.
+			Our holiday club for ages 8–11, where young designers created their own mini brand, designed products and made something to take home.
 		</p>
+		<div class="rounded-xl bg-brand-orange/10 border border-brand-orange/40 px-5 py-4 mb-6 max-w-3xl">
+			<p class="text-white font-semibold">Brand Lab last ran in October half term 2026.</p>
+			<p class="text-gray-300">We're planning to run it again. Register your interest and we'll let you know first.</p>
+		</div>
 		<ul class="flex flex-wrap gap-2 mb-8">
 			{#each details as detail}
 				<li class="px-4 py-1.5 rounded-full border border-stone-700 text-gray-200 text-sm font-medium">{detail}</li>
 			{/each}
 		</ul>
 		<SubjectTags class="mb-8" />
-		{@render bookButton()}
+		{@render interestButton()}
 	</section>
 
 	<!-- Divider -->
@@ -103,7 +106,7 @@
 	<div class="max-w-6xl mx-auto px-4 space-y-20">
 		<!-- What happens -->
 		<section aria-labelledby="what-happens">
-			<h2 id="what-happens" class="text-2xl md:text-3xl font-bold text-white mb-6">What happens at Brand Lab</h2>
+			<h2 id="what-happens" class="text-2xl md:text-3xl font-bold text-white mb-6">What happened at Brand Lab</h2>
 			<ul class="grid md:grid-cols-2 gap-4">
 				{#each activities as item}
 					<li class="flex items-start gap-3">
@@ -193,11 +196,11 @@
 
 		<!-- Book -->
 		<section aria-labelledby="book" class="rounded-2xl bg-stone-900/50 border border-brand-orange/40 p-6 md:p-8">
-			<h2 id="book" class="text-2xl md:text-3xl font-bold text-white mb-3">Book Brand Lab</h2>
+			<h2 id="book" class="text-2xl md:text-3xl font-bold text-white mb-3">Want Brand Lab to come back?</h2>
 			<p class="text-gray-300 text-lg mb-6 max-w-3xl">
-				See the next dates and book a place on our bookings site. Can't see any dates? <a href={contactHref('holiday-clubs')} class="text-brand-orange font-semibold hover:underline">Contact us</a> and we'll let you know when the next Brand Lab is on.
+				There are no dates yet, but we're planning to run it again. Register your interest and we'll let you know as soon as the next Brand Lab is booked in.
 			</p>
-			{@render bookButton()}
+			{@render interestButton()}
 		</section>
 	</div>
 </main>
