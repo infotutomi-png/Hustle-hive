@@ -153,7 +153,33 @@
     }
   ],
   "sponsorsHeading": "Thank you to our sponsors",
-  "sponsors": [],
+  "sponsors": [
+    {
+      "name": "Example Business One",
+      "programme": "creatureverse",
+      "supported": "Ten Creatureverse places",
+      "quote": "EXAMPLE ONLY: we wanted local young people to have the chance to create something of their own.",
+      "when": "Spring 2027",
+      "url": "https://example.com"
+    },
+    {
+      "name": "Example Business Two",
+      "programme": "eco-future",
+      "supported": "Materials and 3D printing"
+    },
+    {
+      "name": "Example",
+      "anonymous": true,
+      "anonymousLabel": "A local family business",
+      "programme": "outdoor-mentoring",
+      "supported": "Six mentoring sessions"
+    },
+    {
+      "name": "Example Three",
+      "programme": "creatureverse",
+      "supported": "Trophies for the Rift Battles final"
+    }
+  ],
   "thanks": "",
   "ctaHeading": "Want to make a real difference?",
   "ctaText": "Send us a message and we'll send over our sponsor briefing."
