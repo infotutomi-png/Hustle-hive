@@ -6,6 +6,7 @@
 	import SubjectTags from '$lib/components/SubjectTags.svelte';
 	import sponsors from '$lib/content/sponsors.json';
 	import { SPONSORS_URL } from '$lib/links';
+	import { iconPaths } from '$lib/icons';
 
 	type Item = { title: string; text?: string };
 
@@ -32,13 +33,22 @@
 		details: Item[];
 		extraHeading?: string;
 		extra?: string[];
+		/** Optional feature cards (icon names from $lib/icons), e.g. the Creatureverse digital system */
+		featuresHeading?: string;
+		featuresIntro?: string;
+		featuresHighlight?: string;
+		features?: { title: string; text: string; icon: string }[];
 		/** id of this programme on the Sponsors page */
 		sponsorId: string;
 	}
 
 	let p: Props = $props();
 
-	const sponsorProgramme = sponsors.programmes.find((s) => s.id === p.sponsorId);
+	type SupportOption = { title: string; text: string; icon?: string };
+	const sponsorProgramme = sponsors.programmes.find((s) => s.id === p.sponsorId) as
+		| { name: string; packages: { name: string; price: string }[]; supportOptions?: SupportOption[] }
+		| undefined;
+	const sponsorEnquiryUrl = `/contact?subject=sponsorship&message=${encodeURIComponent(`Hello, I'm interested in sponsoring ${p.title}. Please send me more information.`)}#contact-form`;
 	const contactUrl = `/contact?subject=${encodeURIComponent(p.contactSubject)}&message=${encodeURIComponent(p.contactMessage)}#contact-form`;
 	const sponsorUrl = `${SPONSORS_URL}?programme=${encodeURIComponent(p.sponsorId)}#packages`;
 
@@ -134,6 +144,36 @@
 			</section>
 		</div>
 
+		{#if p.featuresHeading && p.features?.length}
+			<section aria-labelledby="features">
+				<h2 id="features" class="text-2xl md:text-3xl font-bold text-white mb-4">{p.featuresHeading}</h2>
+				{#if p.featuresIntro}
+					<p class="text-gray-300 text-lg leading-relaxed max-w-3xl mb-5">{p.featuresIntro}</p>
+				{/if}
+				{#if p.featuresHighlight}
+					<p class="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-2xl sm:rounded-full bg-brand-orange/10 border border-brand-orange/40 text-white font-semibold">
+						<svg class="w-5 h-5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+							{#each iconPaths('star') as d}<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" {d} />{/each}
+						</svg>
+						{p.featuresHighlight}
+					</p>
+				{/if}
+				<ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+					{#each p.features as f}
+						<li class="rounded-2xl bg-stone-900/50 border border-stone-700/50 p-6">
+							<span class="w-11 h-11 rounded-full bg-brand-orange/20 flex items-center justify-center mb-4" aria-hidden="true">
+								<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									{#each iconPaths(f.icon) as d}<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" {d} />{/each}
+								</svg>
+							</span>
+							<h3 class="text-lg font-bold text-white mb-2">{f.title}</h3>
+							<p class="text-gray-300 text-sm leading-relaxed">{f.text}</p>
+						</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
+
 		{#if p.extraHeading && p.extra?.length}
 			<section aria-labelledby="extra" class="rounded-2xl bg-stone-900/50 border border-stone-700/50 p-6 md:p-8">
 				<h2 id="extra" class="text-2xl md:text-3xl font-bold text-white mb-4">{p.extraHeading}</h2>
@@ -182,10 +222,32 @@
 							</li>
 						{/each}
 					</ul>
+					<a href={sponsorUrl} class="inline-flex items-center gap-2 text-brand-orange font-semibold hover:underline">
+						See sponsor packages <span aria-hidden="true">&rarr;</span>
+					</a>
+				{:else}
+					{#if sponsorProgramme.supportOptions?.length}
+						<p class="text-white font-semibold mb-4">You could help with:</p>
+						<ul class="grid sm:grid-cols-2 gap-3 mb-7">
+							{#each sponsorProgramme.supportOptions as option}
+								<li class="flex items-start gap-3 rounded-xl bg-black/30 border border-stone-700/50 p-4">
+									<svg class="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+										{#each iconPaths(option.icon) as d}<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" {d} />{/each}
+									</svg>
+									<p class="text-gray-300"><strong class="text-white font-semibold">{option.title}</strong>: {option.text}</p>
+								</li>
+							{/each}
+						</ul>
+					{/if}
+					<div class="flex flex-col sm:flex-row sm:items-center gap-4">
+						<a href={sponsorEnquiryUrl} class="inline-flex justify-center items-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-black font-semibold rounded-lg transition-colors duration-200">
+							Talk to us about sponsoring
+						</a>
+						<a href={sponsorUrl} class="inline-flex items-center gap-2 text-brand-orange font-semibold hover:underline">
+							How sponsorship works <span aria-hidden="true">&rarr;</span>
+						</a>
+					</div>
 				{/if}
-				<a href={sponsorUrl} class="inline-flex items-center gap-2 text-brand-orange font-semibold hover:underline">
-					See sponsor packages <span aria-hidden="true">&rarr;</span>
-				</a>
 			</section>
 		{/if}
 	</div>

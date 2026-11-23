@@ -690,6 +690,15 @@ collections:
                   - { label: "What it funds", name: funds, widget: text }
                   - { label: "Highlight this package?", name: featured, widget: boolean, default: false }
                   - { label: "Highlight label (optional, default Biggest impact)", name: label, widget: string, required: false }
+              - label: "Ways to support (shown instead of prices when there are no packages)"
+                name: supportOptions
+                widget: list
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Short description", name: text, widget: string }
+                  - { label: "Icon", name: icon, widget: select, options: ["ticket", "people", "box", "trophy", "star", "sparkles", "cards", "bolt", "heart"] }
               - { label: "Sponsor benefits for this programme (optional)", name: benefits, widget: list, required: false, field: { label: "Benefit", name: benefit, widget: string } }
               - { label: "Note under the packages (optional)", name: packagesNote, widget: text, required: false }
           - { label: "Sponsors heading", name: sponsorsHeading, widget: string }
