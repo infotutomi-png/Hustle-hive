@@ -150,7 +150,7 @@
 					Take your <span class="text-brand-orange font-semibold">handmade</span> products from idea to market with Hustle Hive's 12-week Makers to Market programme, designed to help you design, brand and sell your creations at real-world markets.
 				</p>
 				<p>
-					Whether you're crafting jewellery, baking goods, creating art, or building furniture, this programme gives you the skills, confidence, and support to turn your passion into a thriving business.
+					Whether it's printed mugs, T-shirts and tote bags, custom vinyl designs cut on our Cricut machines or 3D-printed products, this programme gives you the skills, confidence and support to turn your ideas into products people want to buy.
 				</p>
 				<p>
 					You'll work alongside mentors and fellow makers, gaining practical experience and building connections that last beyond the programme.
