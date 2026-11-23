@@ -77,6 +77,16 @@
 				Request our sponsor briefing
 			</a>
 		</div>
+
+		<!-- Hive Heroes: obvious route to the supporters wall -->
+		<a href={SUPPORTERS_URL} class="group mt-8 flex items-center gap-4 rounded-2xl bg-brand-orange/10 border border-brand-orange/40 hover:border-brand-orange p-5 md:p-6 transition-colors duration-200">
+			<img src="/images/hustlehive-logo-160.webp" alt="" width="146" height="160" class="w-10 md:w-12 h-auto flex-shrink-0" />
+			<span class="flex-1">
+				<span class="block text-lg md:text-xl font-bold text-white group-hover:text-brand-orange transition-colors duration-200">{supporters.length ? 'Thank you to our Hive Heroes' : 'Be one of our first Hive Heroes'}</span>
+				<span class="block text-gray-300">{supporters.length ? 'Meet the businesses and people who support our programmes.' : 'Every supporter gets a cell in our honeycomb, named or anonymous.'}</span>
+			</span>
+			<svg class="w-6 h-6 text-brand-orange flex-shrink-0 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+		</a>
 	</section>
 
 	<!-- Story + what sponsors get -->
@@ -232,7 +242,7 @@
 	{#if supporters.length}
 		<section class="max-w-5xl mx-auto px-4 mb-16">
 			<h2 class="text-3xl md:text-4xl font-bold text-white mb-3 text-center">{content.sponsorsHeading}</h2>
-			<p class="text-gray-300 text-lg mb-10 text-center">Choose a supporter to see what they made possible, or <a href={SUPPORTERS_URL} class="text-brand-orange font-semibold hover:underline">see all our supporters</a>.</p>
+			<p class="text-gray-300 text-lg mb-10 text-center">Choose a supporter to see what they made possible, or <a href={SUPPORTERS_URL} class="text-brand-orange font-semibold hover:underline">meet all our Hive Heroes</a>.</p>
 			<SupportersHive {supporters} />
 		</section>
 	{/if}
