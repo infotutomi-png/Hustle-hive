@@ -42,7 +42,7 @@
 	]}
 	model={{
 		src: '/models/emberclaw-lava-lizard.glb',
-		alt: 'Emberclaw the Lava Lizard, a 3D Creatureverse creature with glowing lava markings',
+		alt: 'Emberclaw the Lava Lizard, a 3D Creatureverse creature with fiery orange spikes and lava-cracked scales',
 		heading: 'Meet Emberclaw the Lava Lizard',
 		text: [
 			'Every Creatureverse creature starts as an idea on paper. This is Emberclaw, an example creature designed and modelled in 3D, just like the ones young people create on the programme.',
