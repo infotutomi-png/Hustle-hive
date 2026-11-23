@@ -38,7 +38,7 @@
 	function enquiryHref(programme?: Programme, pkg?: Package, option?: SupportOption) {
 		let message = "Hello, I'm interested in sponsoring";
 		if (programme && pkg) message += ` ${programme.name}: ${pkg.name} (${pkg.price}).`;
-		else if (programme && option) message += ` ${programme.name}: ${option.title.toLowerCase()}.`;
+		else if (programme && option) message += ` ${programme.name} (${option.title.toLowerCase()}).`;
 		else if (programme) message += ` ${programme.name}.`;
 		else message += ' a Hustle Hive programme.';
 		message += ' Please send me your sponsor briefing.';
