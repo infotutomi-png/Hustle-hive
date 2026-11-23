@@ -698,7 +698,7 @@ collections:
                 fields:
                   - { label: "Title", name: title, widget: string }
                   - { label: "Short description", name: text, widget: string }
-                  - { label: "Icon", name: icon, widget: select, options: ["ticket", "people", "box", "trophy", "star", "sparkles", "cards", "bolt", "heart"] }
+                  - { label: "Icon", name: icon, widget: select, options: ["ticket", "people", "box", "trophy", "star", "sparkles", "cards", "bolt", "heart", "sun", "drop", "home"] }
               - { label: "Sponsor benefits for this programme (optional)", name: benefits, widget: list, required: false, field: { label: "Benefit", name: benefit, widget: string } }
               - { label: "Note under the packages (optional)", name: packagesNote, widget: text, required: false }
           - { label: "Sponsors heading", name: sponsorsHeading, widget: string }

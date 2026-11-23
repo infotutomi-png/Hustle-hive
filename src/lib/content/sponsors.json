@@ -110,23 +110,30 @@
       "image": "/images/eco-future-models.webp",
       "imageAlt": "Scale model homes made from card and foam board, one with a solar panel and a rainwater butt, beside a hand-drawn floor plan",
       "raised": "",
-      "packages": [
+      "packages": [],
+      "supportOptions": [
         {
-          "name": "Lead sponsor",
-          "price": "£2,500",
-          "funds": "All ten places, with recognition as the lead programme partner.",
-          "featured": true,
-          "label": "Lead partner"
+          "icon": "ticket",
+          "title": "Fund places",
+          "text": "Cover places so home-educated young people can take part for free."
         },
         {
-          "name": "Co-sponsor",
-          "price": "£1,250",
-          "funds": "Five places, with shared recognition when a second partner funds the other five.",
-          "featured": false,
-          "label": ""
+          "icon": "people",
+          "title": "Back the whole cohort",
+          "text": "Fund all ten places, from the client brief to the final showcase."
+        },
+        {
+          "icon": "box",
+          "title": "Materials and 3D printing",
+          "text": "Foam board, model-making materials, digital design and 3D printing."
+        },
+        {
+          "icon": "star",
+          "title": "Be the client",
+          "text": "Help introduce the design brief, or join the final showcase as a guest client."
         }
       ],
-      "packagesNote": "Funding covers staff time, workshop materials, digital design and 3D printing, learner support, assessment and the final showcase. Learners can work towards an AQA Unit Award Scheme certificate, subject to unit validation and achieving the required outcomes. Work in construction, architecture, renewable energy or building supplies? We'd love to show you what learners will make.",
+      "packagesNote": "Support at any level makes a difference, and we will shape it with you. Funding covers staff time, workshop materials, digital design and 3D printing, learner support, assessment and the final showcase. Learners can work towards an AQA Unit Award Scheme certificate, subject to unit validation and achieving the required outcomes. Work in construction, architecture, renewable energy or building supplies? We would love to show you what learners will make.",
       "steps": [
         "Meet the client",
         "Investigate sustainable design",

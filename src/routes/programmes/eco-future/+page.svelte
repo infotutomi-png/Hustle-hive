@@ -31,12 +31,21 @@
 	]}
 	learnHeading="Skills learners practise"
 	learn={[
-		{ title: 'Design and engineering' },
-		{ title: 'Measuring and scale' },
-		{ title: 'Digital modelling' },
-		{ title: 'Practical model making' },
-		{ title: 'Problem-solving' },
-		{ title: 'Presenting ideas' }
+		{ title: 'Design and engineering', text: 'responding to a real client brief' },
+		{ title: 'Measuring and scale', text: 'turning full-size measurements into a scale floor plan' },
+		{ title: 'Digital modelling', text: 'designing a component for 3D printing' },
+		{ title: 'Practical model making', text: 'measuring, cutting and assembling a foam-board model' },
+		{ title: 'Problem-solving', text: 'balancing comfort, cost and environmental impact' },
+		{ title: 'Presenting ideas', text: 'explaining design decisions to the client' }
+	]}
+	featuresHeading="Sustainable design, investigated by learners"
+	featuresIntro="Learners don't just add eco features for show. They investigate each one and use what they find to shape their design."
+	featuresHighlight="The brief: a family of four, a plot, a model budget and a list of rooms they need"
+	features={[
+		{ icon: 'sun', title: 'Solar panels', text: 'Explore how sunlight and shade affect a roof, then decide where solar panels will work best.' },
+		{ icon: 'drop', title: 'Rainwater', text: 'Estimate how much rainwater the roof could collect, and plan how the home will use it.' },
+		{ icon: 'home', title: 'Insulation and comfort', text: 'Test insulation options to keep the home comfortable through the seasons.' },
+		{ icon: 'box', title: 'A 3D-printed part', text: 'Design one component, such as a rainwater tank or planter, which our staff 3D print for the model.' }
 	]}
 	extraHeading="The final showcase"
 	extra={[
