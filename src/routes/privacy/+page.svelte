@@ -9,7 +9,7 @@
 	description="How Hustle Hive CIC collects, uses and protects personal information sent through this website."
 />
 
-<LegalPage title="Privacy Policy" updated="28 September 2026">
+<LegalPage title="Privacy Policy" updated="23 November 2026">
 	<p>
 		This policy explains how {company.name} ("Hustle Hive", "we", "us") uses the personal information you give us
 		through this website. We are a community interest company registered in England and Wales
@@ -88,8 +88,9 @@
 
 	<h2>Cookies and third-party content</h2>
 	<p>
-		This website doesn't use advertising or analytics cookies. Cloudflare may set strictly necessary cookies to protect
-		the site. Our fonts are stored on our own website, so loading them doesn't share your details with anyone else. The map on our Contact page is provided by Google Maps; when it loads, Google receives your
+		This website doesn't use advertising or tracking cookies. To understand which pages are useful, we use Cloudflare Web
+		Analytics, which counts page visits without cookies and doesn't track you across other websites or build a profile of you.
+		Cloudflare may also set strictly necessary cookies to protect the site. Our fonts are stored on our own website, so loading them doesn't share your details with anyone else. The map on our Contact page is provided by Google Maps and only loads if you choose to show it; when it loads, Google receives your
 		IP address and may set its own cookies, as described in Google's privacy policy. The Google reviews on our homepage are shown using WeWidget; when they load, WeWidget receives your IP address and an anonymous view count, but it doesn't set cookies.
 	</p>
 
