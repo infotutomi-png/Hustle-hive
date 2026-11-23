@@ -43,14 +43,14 @@
 		</p>
 
 		<!-- Two pathways: which part of Hustle Hive are you here for? -->
-		<div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-8 text-left">
+		<div class="grid sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto mb-8 text-left">
 			{#each hero.pathways as pathway}
 				<!-- Icon and "who it's for" label on top, so the title gets the full width and stays on one line -->
 				<a
 					href={pathway.href}
-					class="group flex flex-col rounded-2xl bg-stone-900/80 border-2 border-stone-700 hover:border-brand-orange p-5 md:p-6 transition-colors duration-200"
+					class="group flex flex-col rounded-2xl bg-stone-900/80 border-2 border-stone-700 hover:border-brand-orange p-4 sm:p-5 md:p-6 transition-colors duration-200"
 				>
-					<span class="flex items-center gap-3 mb-3">
+					<span class="flex items-center gap-3 mb-2 sm:mb-3">
 						<span class="w-10 h-10 md:w-11 md:h-11 rounded-full bg-brand-orange/20 flex items-center justify-center flex-shrink-0" aria-hidden="true">
 						<svg class="w-5 h-5 md:w-6 md:h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							{#if pathway.icon === 'graduation'}
@@ -65,9 +65,15 @@
 							<span class="text-xs md:text-sm font-bold uppercase tracking-wider text-brand-orange">{pathway.audience}</span>
 						{/if}
 					</span>
-					<span class="block text-2xl md:text-[1.7rem] leading-tight font-bold text-white group-hover:text-brand-orange transition-colors duration-200">{pathway.title}</span>
-					<span class="block text-gray-300 text-[0.95rem] md:text-base leading-relaxed mt-2 mb-4">{pathway.text}</span>
-					<span class="mt-auto inline-flex items-center gap-2 text-brand-orange font-semibold" aria-hidden="true">
+					<!-- On phones the arrow sits beside the title (keeps the cards short); bigger screens get an "Explore" line -->
+					<span class="flex items-center justify-between gap-3">
+						<span class="text-[1.4rem] sm:text-2xl md:text-[1.7rem] leading-tight font-bold text-white group-hover:text-brand-orange transition-colors duration-200">{pathway.title}</span>
+						<svg class="sm:hidden w-6 h-6 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+						</svg>
+					</span>
+					<span class="block text-gray-300 text-[0.95rem] md:text-base leading-relaxed mt-1.5 sm:mt-2 sm:mb-4">{pathway.text}</span>
+					<span class="hidden sm:inline-flex mt-auto items-center gap-2 text-brand-orange font-semibold" aria-hidden="true">
 						Explore
 						<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
