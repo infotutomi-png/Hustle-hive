@@ -20,23 +20,30 @@
       "image": "/images/creatureverse-collectibles.webp",
       "imageAlt": "Creatureverse creatures at every stage: a hand-drawn sketch, a 3D model on a laptop, painted 3D-printed figures, boxed collectibles and trading cards",
       "raised": "",
-      "packages": [
+      "packages": [],
+      "supportOptions": [
         {
-          "name": "Sole sponsor",
-          "price": "£2,500",
-          "funds": "Funds 10 learners for the full programme and their AQA UAS award. Exclusive branding as lead partner.",
-          "featured": true,
-          "label": "Lead partner"
+          "icon": "ticket",
+          "title": "Fund places",
+          "text": "Cover places for young people who would otherwise miss out."
         },
         {
-          "name": "Co-sponsor",
-          "price": "£1,250",
-          "funds": "Two sponsors, two teams: supports 10 learners together, with shared branding and partnership.",
-          "featured": false,
-          "label": ""
+          "icon": "people",
+          "title": "Back a whole cohort",
+          "text": "Take a group of 10 learners from first sketch to final tournament."
+        },
+        {
+          "icon": "box",
+          "title": "Materials",
+          "text": "3D printing filament, paints, card printing and collector packaging."
+        },
+        {
+          "icon": "trophy",
+          "title": "Prizes and the tournament",
+          "text": "Trophies and prizes for the Rift Battles final, with your brand at the event."
         }
       ],
-      "packagesNote": "Parents and carers book places and complete consent separately. Sponsors never need to give us any learner details.",
+      "packagesNote": "Support at any level makes a difference, and we will shape it with you. Parents and carers book places and complete consent separately, so sponsors never need any learner details.",
       "steps": [
         "Sketch your creature",
         "Design it in 3D (with AI tools)",

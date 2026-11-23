@@ -2,8 +2,10 @@
 	import { page } from '$app/state';
 	import Seo from '$lib/components/Seo.svelte';
 	import content from '$lib/content/sponsors.json';
+	import { iconPaths } from '$lib/icons';
 
 	type Package = { name: string; price: string; funds: string; featured?: boolean; label?: string };
+	type SupportOption = { title: string; text: string; icon?: string };
 	type Programme = {
 		id: string;
 		name: string;
@@ -12,6 +14,8 @@
 		imageAlt?: string;
 		raised?: string;
 		packages: Package[];
+		/** Shown instead of priced packages, e.g. places, materials, prizes */
+		supportOptions?: SupportOption[];
 		packagesNote?: string;
 		steps?: string[];
 		benefits?: string[];
@@ -31,9 +35,10 @@
 	const selected = $derived(programmes.find((p) => p.id === selectedId) ?? programmes[0]);
 
 	/** Contact form link with the sponsorship subject and a starter message filled in. */
-	function enquiryHref(programme?: Programme, pkg?: Package) {
+	function enquiryHref(programme?: Programme, pkg?: Package, option?: SupportOption) {
 		let message = "Hello, I'm interested in sponsoring";
 		if (programme && pkg) message += ` ${programme.name}: ${pkg.name} (${pkg.price}).`;
+		else if (programme && option) message += ` ${programme.name}: ${option.title.toLowerCase()}.`;
 		else if (programme) message += ` ${programme.name}.`;
 		else message += ' a Hustle Hive programme.';
 		message += ' Please send me your sponsor briefing.';
@@ -164,6 +169,27 @@
 										: 'border border-stone-600 hover:border-brand-orange text-white'}"
 								>
 									Sponsor this<span class="sr-only">: {pkg.name}, {pkg.price}</span>
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+								</a>
+							</div>
+						{/each}
+					</div>
+				{/if}
+
+				{#if !selected.packages.length && selected.supportOptions?.length}
+					<h4 class="text-xl font-bold text-white mb-4">Ways to support {selected.name}</h4>
+					<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+						{#each selected.supportOptions as option}
+							<div class="flex flex-col rounded-2xl bg-stone-900/50 border border-stone-700/50 p-6">
+								<span class="w-11 h-11 rounded-full bg-brand-orange/20 flex items-center justify-center mb-4" aria-hidden="true">
+									<svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										{#each iconPaths(option.icon) as d}<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" {d} />{/each}
+									</svg>
+								</span>
+								<p class="text-white font-semibold text-lg mb-2">{option.title}</p>
+								<p class="text-gray-300 text-sm leading-relaxed mb-5">{option.text}</p>
+								<a href={enquiryHref(selected, undefined, option)} class="mt-auto inline-flex items-center gap-2 text-brand-orange font-semibold hover:underline">
+									Ask about this<span class="sr-only">: {option.title}</span>
 									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
 								</a>
 							</div>
