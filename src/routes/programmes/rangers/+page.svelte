@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
+	import SubjectTags from '$lib/components/SubjectTags.svelte';
 	import { contactHref } from '$lib/links';
 
 	const contactUrl = contactHref('rangers');
@@ -98,6 +99,7 @@
 		<p class="mb-6">
 			<span class="inline-block px-4 py-1.5 bg-brand-orange text-black text-sm md:text-base font-bold rounded-full">Dates to be confirmed</span>
 		</p>
+		<SubjectTags class="mb-6" />
 		<p class="text-gray-300 text-lg leading-relaxed max-w-3xl mb-8">
 			Hustle Hive Rangers gets young people out into the countryside around Darlington, learning the skills to explore it confidently and safely. Each week builds on the last. By week 10 your Ranger will plan and lead their own route, with family invited to join the celebration at the finish.
 		</p>

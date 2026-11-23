@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
+	import SubjectTags from '$lib/components/SubjectTags.svelte';
 	import { BOOKINGS_URL, contactHref } from '$lib/links';
 
 	const details = ['Ages 8–11', '£39.99 per day', 'Only 10 places per day'];
@@ -78,6 +79,7 @@
 				<li class="px-4 py-1.5 rounded-full border border-stone-700 text-gray-200 text-sm font-medium">{detail}</li>
 			{/each}
 		</ul>
+		<SubjectTags class="mb-8" />
 		{@render bookButton()}
 	</section>
 

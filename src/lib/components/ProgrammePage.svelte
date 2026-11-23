@@ -3,6 +3,7 @@
 	// Sponsor packages come from src/lib/content/sponsors.json (the Sponsors page in the CMS),
 	// so prices only need changing in one place.
 	import Seo from '$lib/components/Seo.svelte';
+	import SubjectTags from '$lib/components/SubjectTags.svelte';
 	import sponsors from '$lib/content/sponsors.json';
 	import { SPONSORS_URL } from '$lib/links';
 
@@ -77,6 +78,7 @@
 				<span class="inline-block px-4 py-1.5 bg-brand-orange text-black text-sm md:text-base font-bold rounded-full">{p.badge}</span>
 			</p>
 		{/if}
+		<SubjectTags class="mb-6" />
 		<div class="space-y-4 text-gray-300 text-lg leading-relaxed max-w-3xl mb-8">
 			{#each p.intro as para}
 				<p>{para}</p>
