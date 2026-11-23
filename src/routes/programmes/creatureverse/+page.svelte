@@ -40,6 +40,15 @@
 		{ title: 'An AQA Unit Award', text: 'nationally recognised evidence of what they achieved' },
 		{ title: 'Something to keep', text: 'their own creature, trading card and collector box' }
 	]}
+	model={{
+		src: '/models/emberclaw-lava-lizard.glb',
+		alt: 'Emberclaw the Lava Lizard, a 3D Creatureverse creature with glowing lava markings',
+		heading: 'Meet Emberclaw the Lava Lizard',
+		text: [
+			'Every Creatureverse creature starts as an idea on paper. This is Emberclaw, an example creature designed and modelled in 3D, just like the ones young people create on the programme.',
+			'Spin it round to see it from every angle. On many phones you can also place it in the room in front of you.'
+		]
+	}}
 	featuresHeading="Powered by our own Creatureverse system"
 	featuresIntro="We've built our own creature generator, digital collection and battle arena, so every creature has its own identity and every battle counts."
 	featuresHighlight="Rift Origins: 120 unique creatures to discover, including rare holographic editions"
