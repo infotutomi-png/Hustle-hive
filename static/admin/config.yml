@@ -615,6 +615,24 @@ collections:
               - { label: "Button label (optional — default is Find out more)", name: buttonLabel, widget: string, required: false }
               - { label: "Label on the card (optional, e.g. Dates to be confirmed)", name: badge, widget: string, required: false }
               - { label: "Image position (advanced — leave as-is)", name: imagePosition, widget: string, required: false }
+              - label: "Subjects covered"
+                name: subjects
+                widget: select
+                multiple: true
+                required: false
+                hint: "Shown as icon tags on the programme card and page. Tick only subjects the sessions really cover."
+                options:
+                  - { label: "Art & Design", value: art }
+                  - { label: "Design & Technology", value: dt }
+                  - { label: "Computing", value: computing }
+                  - { label: "AI", value: ai }
+                  - { label: "English", value: english }
+                  - { label: "Maths", value: maths }
+                  - { label: "Science", value: science }
+                  - { label: "Geography", value: geography }
+                  - { label: "Enterprise & Business", value: business }
+                  - { label: "PSHE & Wellbeing", value: pshe }
+                  - { label: "PE", value: pe }
               - { label: "Coming soon?", name: comingSoon, widget: boolean, default: false }
               - { label: "Archived (hidden from the site)", name: archived, widget: boolean, default: false, hint: "Hides the card, sends its page to Community & Youth and leaves it out of the sitemap. Untick to bring it back." }
               - label: "Register interest — contact form subject"

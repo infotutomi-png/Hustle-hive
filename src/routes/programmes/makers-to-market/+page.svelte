@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
+	import SubjectTags from '$lib/components/SubjectTags.svelte';
 	import ImageCarousel from '$lib/components/ImageCarousel.svelte';
 	import home from '$lib/content/home.json';
 	import { SHOW_SELLERS } from '$lib/features';
@@ -49,6 +50,7 @@
 		<p class="text-lg md:text-xl text-gray-300 mb-6">
 			A 12-week journey turning creative ideas into real-world success.
 		</p>
+		<SubjectTags class="mb-6" />
 
 		<!-- At a Glance -->
 		<div class="inline-block bg-stone-900/50 border border-stone-700/50 rounded-xl px-5 py-4">

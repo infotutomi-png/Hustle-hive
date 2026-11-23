@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
+	import SubjectTags from '$lib/components/SubjectTags.svelte';
 	import programmesContent from '$lib/content/programmes.json';
 	import { activeProgrammes } from '$lib/programmes';
 	import { BOOKINGS_URL, contactHref, isExternal } from '$lib/links';
@@ -93,6 +94,7 @@
 							<p class="text-gray-300 italic mb-4 flex-1">
 								{programme.description}
 							</p>
+							<SubjectTags subjects={(programme as { subjects?: string[] }).subjects ?? []} size="sm" class="mb-5" />
 
 							<div class="flex flex-wrap gap-3">
 								<a
@@ -154,6 +156,7 @@
 							<p class="text-gray-300 italic mb-4 flex-1">
 								{programme.description}
 							</p>
+							<SubjectTags subjects={(programme as { subjects?: string[] }).subjects ?? []} size="sm" class="mb-5" />
 
 							<span class="inline-flex items-center gap-2 px-5 py-2 bg-stone-700/60 group-hover:bg-stone-600/60 text-white font-medium rounded-lg transition-colors duration-200 border border-stone-600/50 w-fit">
 								{programme.buttonLabel || 'Find out more'}
