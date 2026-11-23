@@ -41,7 +41,7 @@
 						<p class="text-gray-300 mb-4"><strong class="text-white">{fw.name}</strong> {fw.text}</p>
 					{/each}
 				</div>
-				<img src={a.resilience.image} alt={a.resilience.imageAlt} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50" />
+				<img width="1200" height="900" src={a.resilience.image} alt={a.resilience.imageAlt} loading="lazy" class="w-full aspect-[4/3] object-cover rounded-2xl border border-stone-700/50" />
 			</div>
 		</div>
 	</section>

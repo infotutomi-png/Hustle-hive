@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/components/Seo.svelte';
+	import ClickToLoad from '$lib/components/ClickToLoad.svelte';
 	import SubjectTags from '$lib/components/SubjectTags.svelte';
 	import { BOOKINGS_URL, contactHref } from '$lib/links';
 
@@ -155,14 +156,14 @@
 					{#each commercials as video}
 						<figure>
 							<div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-stone-700/50 bg-stone-900">
-								<iframe
-									src="https://customer-cclrl1ux6vgu15bo.cloudflarestream.com/{video.id}/iframe?preload=metadata&poster=https%3A%2F%2Fcustomer-cclrl1ux6vgu15bo.cloudflarestream.com%2F{video.id}%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+								<!-- The video player only loads when someone presses play -->
+								<ClickToLoad
+									src="https://customer-cclrl1ux6vgu15bo.cloudflarestream.com/{video.id}/iframe?autoplay=true&preload=auto"
 									title={video.title}
-									loading="lazy"
-									class="absolute inset-0 w-full h-full border-0"
+									label="Play video"
+									poster="https://customer-cclrl1ux6vgu15bo.cloudflarestream.com/{video.id}/thumbnails/thumbnail.jpg?height=600"
 									allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-									allowfullscreen
-								></iframe>
+								/>
 							</div>
 							<figcaption class="text-gray-300 mt-3"><strong class="text-white">{video.name}:</strong> {video.caption}</figcaption>
 						</figure>

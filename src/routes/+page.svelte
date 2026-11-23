@@ -15,7 +15,7 @@
 
 <Seo
 	title="Hustle Hive - Community, Youth & Alternative Provision in Darlington"
-	description="Hustle Hive CIC is a community-powered makerspace in Darlington offering community and youth programmes, holiday clubs and courses, and alternative provision for schools and local authorities."
+	description="Hands-on makerspace in Darlington: courses and programmes for young people and adults, and alternative provision for schools and local authorities."
 />
 
 <main class="bg-black">

@@ -197,7 +197,7 @@
 						class="relative flex-shrink-0 h-full"
 						style="width: {100 / images.length}%;"
 					>
-						<img
+						<img width="1200" height="800"
 							src={image}
 							alt="{alt} {index + 1}"
 							loading="lazy"

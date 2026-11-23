@@ -4,8 +4,8 @@
 
 <ProgrammePage
 	title="Creatureverse: Rift Battles"
-	seoTitle="Creatureverse: Rift Battles - Design, 3D Print and Battle Your Own Creature - Hustle Hive"
-	seoDescription="A hands-on creative programme in Darlington: young people design their own creature, 3D print and paint it, make its trading card and collector box, then battle in our own Rift Battles arena and tournament. Work towards an AQA Unit Award."
+	seoTitle="Creatureverse: Design, 3D Print and Battle - Hustle Hive"
+	seoDescription="Young people in Darlington design a creature, 3D print and paint it, make its trading card, then battle in our Rift Battles tournament."
 	ogImage="/og/creatureverse.jpg"
 	ogImageAlt="Creatureverse 3D-printed creatures, collector boxes and trading cards"
 	tagline="Imagine it. Design it. Create it. Battle it."

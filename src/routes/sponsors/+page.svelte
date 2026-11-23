@@ -58,7 +58,7 @@
 
 <Seo
 	title="Sponsor a Programme - Hustle Hive"
-	description="Sponsor a Hustle Hive programme in Darlington: Creatureverse, outdoor resilience and mentoring, and ECO//FUTURE. Packages from £75, with an impact summary for your CSR reporting."
+	description="Sponsor a Hustle Hive programme in Darlington: fund places, materials or a whole cohort, with an impact summary for your CSR reporting."
 	image="/og/sponsors.jpg"
 	imageAlt="Hustle Hive programmes: Creatureverse collectibles, an outdoor woodland walk and ECO//FUTURE scale model homes"
 />
@@ -127,7 +127,7 @@
 			<div id="panel-{selected.id}" role="tabpanel" aria-labelledby="tab-{selected.id}" tabindex="0" class="outline-none">
 				<div class="grid md:grid-cols-5 gap-6 items-center mb-8">
 					{#if selected.image}
-						<img src={selected.image} alt={selected.imageAlt ?? ''} loading="lazy" class="md:col-span-2 w-full h-56 md:h-64 object-cover rounded-2xl" />
+						<img width="1200" height="800" src={selected.image} alt={selected.imageAlt ?? ''} loading="lazy" class="md:col-span-2 w-full h-56 md:h-64 object-cover rounded-2xl" />
 					{/if}
 					<div class={selected.image ? 'md:col-span-3' : 'md:col-span-5'}>
 						<h3 class="text-2xl md:text-3xl font-bold text-white mb-3">{selected.name}</h3>

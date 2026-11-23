@@ -36,8 +36,8 @@
 </script>
 
 <Seo
-	title="Makers to Market - Free 12-Week Programme in Darlington - Hustle Hive"
-	description="Applications open now for Makers to Market, a free 12-week programme in Darlington starting Monday 4 January 2027, Mondays 6pm to 8pm. Funded by The National Lottery Community Fund: free place, free materials, and keep or sell what you make."
+	title="Makers to Market - Free Course in Darlington - Hustle Hive"
+	description="Free 12-week course in Darlington, Mondays 6pm to 8pm from 4 January 2027. Lottery funded: free materials, and keep or sell what you make."
 	image="/og/makers-to-market.jpg"
 	imageAlt="Makers to Market: a maker and mentor working on a printed tote bag"
 />

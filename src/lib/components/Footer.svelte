@@ -81,7 +81,7 @@
 			<!-- Link columns -->
 			{#each columns as column}
 				<div>
-					<h3 class="text-white font-semibold text-lg mb-4">{column.title}</h3>
+					<h2 class="text-white font-semibold text-lg mb-4">{column.title}</h2>
 					<ul class="space-y-3">
 						{#each column.links as link}
 							<li>
@@ -107,7 +107,7 @@
 
 			<!-- Contact -->
 			<div>
-				<h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
+				<h2 class="text-white font-semibold text-lg mb-4">Contact</h2>
 				<ul class="space-y-4">
 					<li class="flex items-center gap-3">
 						<svg class="w-5 h-5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
