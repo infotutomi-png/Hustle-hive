@@ -40,6 +40,8 @@
 		featuresHeading?: string;
 		featuresIntro?: string;
 		featuresHighlight?: string;
+		/** Optional picture beside the features intro, e.g. the Creatureverse card back */
+		featuresImage?: { src: string; alt: string; width: number; height: number; caption?: string };
 		features?: { title: string; text: string; icon: string }[];
 		/** id of this programme on the Sponsors page */
 		sponsorId: string;
@@ -169,18 +171,37 @@
 
 		{#if p.featuresHeading && p.features?.length}
 			<section aria-labelledby="features">
-				<h2 id="features" class="text-2xl md:text-3xl font-bold text-white mb-4">{p.featuresHeading}</h2>
-				{#if p.featuresIntro}
-					<p class="text-gray-300 text-lg leading-relaxed max-w-3xl mb-5">{p.featuresIntro}</p>
-				{/if}
-				{#if p.featuresHighlight}
-					<p class="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-2xl sm:rounded-full bg-brand-orange/10 border border-brand-orange/40 text-white font-semibold">
-						<svg class="w-5 h-5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-							{#each iconPaths('star') as d}<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" {d} />{/each}
-						</svg>
-						{p.featuresHighlight}
-					</p>
-				{/if}
+				<div class={p.featuresImage ? 'flex flex-col md:flex-row md:items-center gap-8 md:gap-12 mb-8' : ''}>
+					<div class="flex-1">
+						<h2 id="features" class="text-2xl md:text-3xl font-bold text-white mb-4">{p.featuresHeading}</h2>
+						{#if p.featuresIntro}
+							<p class="text-gray-300 text-lg leading-relaxed max-w-3xl mb-5">{p.featuresIntro}</p>
+						{/if}
+						{#if p.featuresHighlight}
+							<p class="inline-flex items-center gap-2 {p.featuresImage ? '' : 'mb-8'} px-4 py-2 rounded-2xl sm:rounded-full bg-brand-orange/10 border border-brand-orange/40 text-white font-semibold">
+								<svg class="w-5 h-5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+									{#each iconPaths('star') as d}<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" {d} />{/each}
+								</svg>
+								{p.featuresHighlight}
+							</p>
+						{/if}
+					</div>
+					{#if p.featuresImage}
+						<figure class="flex-shrink-0 mx-auto md:mx-0 w-52 sm:w-60 md:w-64 text-center">
+							<img
+								src={p.featuresImage.src}
+								alt={p.featuresImage.alt}
+								width={p.featuresImage.width}
+								height={p.featuresImage.height}
+								loading="lazy"
+								class="w-full h-auto rounded-[16px] md:rotate-3 hover:rotate-0 transition-transform duration-300 shadow-[0_0_40px_rgba(147,51,234,0.45)]"
+							/>
+							{#if p.featuresImage.caption}
+								<figcaption class="text-gray-400 text-sm mt-4 leading-snug">{p.featuresImage.caption}</figcaption>
+							{/if}
+						</figure>
+					{/if}
+				</div>
 				<ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 					{#each p.features as f}
 						<li class="rounded-2xl bg-stone-900/50 border border-stone-700/50 p-6">

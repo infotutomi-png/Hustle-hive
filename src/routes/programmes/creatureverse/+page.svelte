@@ -52,6 +52,13 @@
 	featuresHeading="Powered by our own Creatureverse system"
 	featuresIntro="We've built our own creature generator, digital collection and battle arena, so every creature has its own identity and every battle counts."
 	featuresHighlight="Rift Origins: 120 unique creatures to discover, including rare holographic editions"
+	featuresImage={{
+		src: '/images/creatureverse-card-back.webp',
+		alt: 'The Creatureverse: Rift Battles card back: a dragon silhouette and glowing crystal over a purple rift, with leaf, fire, water and crystal symbols in the corners',
+		width: 560,
+		height: 814,
+		caption: 'The Creatureverse: Rift Battles card back. Every creature our learners design gets its own card in the game.'
+	}}
 	features={[
 		{
 			icon: 'sparkles',
