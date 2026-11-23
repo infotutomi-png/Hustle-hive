@@ -4,7 +4,7 @@
 	import SubjectTags from '$lib/components/SubjectTags.svelte';
 	import { contactHref } from '$lib/links';
 
-	const details = ['Ages 8–11', 'Holiday club', 'Last ran October half term 2026'];
+	const details = ['Ages 8–11', 'Holiday club'];
 
 	const activities = [
 		{ title: 'Create a mini brand', text: 'Invent a character, a name and a logo of your own' },
