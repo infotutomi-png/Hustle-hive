@@ -16,6 +16,12 @@
 		{ icon: 'cart', title: 'Keep or sell what you make', text: 'Everything you make is yours, to keep or to sell at market.' }
 	];
 
+	const whoFor = [
+		{ icon: 'people', title: 'Out of work?', text: 'Build skills and confidence, and earn from what you make.' },
+		{ icon: 'chart', title: 'Need to earn more?', text: 'Turn your making into extra income alongside your current work.' },
+		{ icon: 'sparkles', title: 'Love crafts?', text: 'Whether you make for fun or dream of starting a small business, this is for you.' }
+	];
+
 	const skills = [
 		{ icon: 'pencil', title: 'Product development', text: 'Refine your ideas and create a cohesive collection that is ready for market.' },
 		{ icon: 'sparkles', title: 'Branding and design', text: 'Build a brand identity, from your name and logo to labels and packaging.' },
@@ -31,7 +37,7 @@
 
 <Seo
 	title="Makers to Market - Free 12-Week Programme in Darlington - Hustle Hive"
-	description="Applications open now for Makers to Market, a free 12-week programme in Darlington starting Monday 4 January 2027. Funded by The National Lottery Community Fund: free place, free materials, and keep or sell what you make."
+	description="Applications open now for Makers to Market, a free 12-week programme in Darlington starting Monday 4 January 2027, Mondays 6pm to 8pm. Funded by The National Lottery Community Fund: free place, free materials, and keep or sell what you make."
 	image="/og/makers-to-market.jpg"
 	imageAlt="Makers to Market: a maker and mentor working on a printed tote bag"
 />
@@ -78,13 +84,13 @@
 		<SubjectTags class="mb-6" />
 
 		<!-- At a Glance -->
-		<div class="inline-block bg-stone-900/50 border border-stone-700/50 rounded-xl px-5 py-4">
+		<div class="inline-block max-w-2xl bg-stone-900/50 border border-stone-700/50 rounded-xl px-5 py-4">
 			<h2 class="text-sm font-semibold uppercase tracking-wide text-brand-orange mb-1">At a glance</h2>
 			<p class="text-white font-medium">12-week programme · Darlington</p>
 			<p class="text-gray-300">Starts: <strong class="text-white">Monday 4 January 2027</strong></p>
+			<p class="text-gray-300">When: <strong class="text-white">Mondays, 6pm to 8pm</strong></p>
 			<p class="text-gray-300">Cost: <strong class="text-white">Free</strong>, including materials</p>
-			<!-- TODO (add when confirmed): Who it's for, e.g. <p class="text-gray-300">Who it's for: ...</p> -->
-			<!-- TODO (add when confirmed): Time per week, e.g. <p class="text-gray-300">Time per week: ...</p> -->
+			<p class="text-gray-300">Who it's for: <strong class="text-white">people who are out of work, people who need to earn more, and anyone interested in crafts or starting a small business</strong></p>
 		</div>
 	</section>
 
@@ -118,6 +124,19 @@
 						</span>
 						<h3 class="text-xl font-bold text-white mb-2">{item.title}</h3>
 						<p class="text-gray-300 leading-relaxed">{item.text}</p>
+					</li>
+				{/each}
+			</ul>
+		</section>
+
+		<!-- Who it is for -->
+		<section aria-labelledby="who">
+			<h2 id="who" class="text-2xl md:text-3xl font-bold text-white mb-6">Who it's for</h2>
+			<ul class="grid md:grid-cols-3 gap-4">
+				{#each whoFor as who}
+					<li class="flex items-start gap-3 rounded-2xl bg-stone-900/50 border border-stone-700/50 p-5">
+						{@render icon(who.icon, 'w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5')}
+						<p class="text-gray-300"><strong class="text-white font-semibold">{who.title}</strong> {who.text}</p>
 					</li>
 				{/each}
 			</ul>
@@ -177,7 +196,7 @@
 		<!-- CTA -->
 		<section class="text-center">
 			<h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Ready to take your products to market?</h2>
-			<p class="text-gray-300 text-lg mb-8">Places are free and limited. Apply now to join the programme starting Monday 4 January 2027.</p>
+			<p class="text-gray-300 text-lg mb-8">Places are free and limited. Apply now to join the programme starting Monday 4 January 2027, running on Mondays from 6pm to 8pm.</p>
 			{@render applyButton('px-8 py-4 text-lg')}
 		</section>
 	</div>
