@@ -702,16 +702,33 @@ collections:
               - { label: "Sponsor benefits for this programme (optional)", name: benefits, widget: list, required: false, field: { label: "Benefit", name: benefit, widget: string } }
               - { label: "Note under the packages (optional)", name: packagesNote, widget: text, required: false }
           - { label: "Sponsors heading", name: sponsorsHeading, widget: string }
-          - label: "Sponsors (only shown once you add one)"
+          - label: "Supporters (the honeycomb wall at /supporters; it appears in the footer once you add one)"
             name: sponsors
             widget: list
             required: false
             summary: "{{fields.name}}"
+            hint: "Only add a name, logo or quote once the supporter has agreed how they would like to be credited."
             fields:
-              - { label: "Name", name: name, widget: string }
+              - { label: "Name", name: name, widget: string, hint: "For your records even if anonymous" }
+              - { label: "Keep anonymous?", name: anonymous, widget: boolean, default: false, hint: "Hides their name, logo and website on the site" }
+              - { label: "Anonymous label (optional)", name: anonymousLabel, widget: string, required: false, hint: "e.g. A local family business. Default: Anonymous supporter" }
               - { label: "Logo", name: logo, widget: image, required: false }
               - { label: "Website", name: url, widget: string, required: false }
-              - { label: "Programme they supported", name: programme, widget: string, required: false }
+              - label: "Programme they supported"
+                name: programme
+                widget: select
+                required: false
+                options:
+                  - { label: "Creatureverse", value: creatureverse }
+                  - { label: "ECO//FUTURE", value: eco-future }
+                  - { label: "Outdoor Resilience & Mentoring", value: outdoor-mentoring }
+                  - { label: "Makers to Market", value: makers-to-market }
+                  - { label: "Hustle Hive Rangers", value: rangers }
+                  - { label: "Brand Lab", value: brand-lab }
+                  - { label: "Hustle Hive in general", value: general }
+              - { label: "What they supported", name: supported, widget: string, required: false, hint: "e.g. Ten places and the tournament trophies" }
+              - { label: "Why we give (optional quote)", name: quote, widget: text, required: false }
+              - { label: "When (optional)", name: when, widget: string, required: false, hint: "e.g. Spring 2027" }
           - { label: "Thank-you line (optional)", name: thanks, widget: text, required: false }
           - { label: "Call to action heading", name: ctaHeading, widget: string }
           - { label: "Call to action text", name: ctaText, widget: text }

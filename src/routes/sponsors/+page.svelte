@@ -3,6 +3,8 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import content from '$lib/content/sponsors.json';
 	import { iconPaths } from '$lib/icons';
+	import SupportersHive from '$lib/components/SupportersHive.svelte';
+	import { SUPPORTERS_URL, supporters } from '$lib/supporters';
 
 	type Package = { name: string; price: string; funds: string; featured?: boolean; label?: string };
 	type SupportOption = { title: string; text: string; icon?: string };
@@ -21,13 +23,11 @@
 		benefits?: string[];
 		programmeHref?: string;
 	};
-	type Sponsor = { name: string; logo?: string; url?: string; programme?: string };
 
 	// Written out in full so Tailwind generates each class
 	const LG_COLS: Record<number, string> = { 1: 'lg:grid-cols-2', 2: 'lg:grid-cols-2', 3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4' };
 
 	const programmes = content.programmes as Programme[];
-	const sponsors = content.sponsors as Sponsor[];
 
 	// Open a programme's tab from the web address, e.g. /sponsors?programme=creatureverse
 	const fromUrl = page.url.searchParams.get('programme');
@@ -229,29 +229,11 @@
 	</section>
 
 	<!-- Sponsors -->
-	{#if sponsors.length}
-		<section class="max-w-6xl mx-auto px-4 mb-16">
-			<h2 class="text-3xl md:text-4xl font-bold text-white mb-8">{content.sponsorsHeading}</h2>
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-				{#each sponsors as sponsor}
-					<svelte:element
-						this={sponsor.url ? 'a' : 'div'}
-						href={sponsor.url || undefined}
-						target={sponsor.url ? '_blank' : undefined}
-						rel={sponsor.url ? 'noopener noreferrer' : undefined}
-						class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-stone-900/50 border border-stone-700/50 hover:border-brand-orange p-5 text-center transition-colors duration-200"
-					>
-						{#if sponsor.logo}
-							<img src={sponsor.logo} alt={sponsor.name} loading="lazy" class="h-14 w-auto max-w-full object-contain" />
-						{:else}
-							<span class="text-white font-semibold">{sponsor.name}</span>
-						{/if}
-						{#if sponsor.programme}
-							<span class="text-gray-400 text-xs">{sponsor.programme}</span>
-						{/if}
-					</svelte:element>
-				{/each}
-			</div>
+	{#if supporters.length}
+		<section class="max-w-5xl mx-auto px-4 mb-16">
+			<h2 class="text-3xl md:text-4xl font-bold text-white mb-3 text-center">{content.sponsorsHeading}</h2>
+			<p class="text-gray-300 text-lg mb-10 text-center">Choose a supporter to see what they made possible, or <a href={SUPPORTERS_URL} class="text-brand-orange font-semibold hover:underline">see all our supporters</a>.</p>
+			<SupportersHive {supporters} />
 		</section>
 	{/if}
 

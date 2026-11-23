@@ -12,6 +12,7 @@
 		SPONSORS_URL,
 		company
 	} from '$lib/links';
+	import { SUPPORTERS_URL, supporters } from '$lib/supporters';
 
 	const currentYear = new Date().getFullYear();
 
@@ -32,6 +33,8 @@
 				{ label: 'Community & Youth', href: COMMUNITY_URL },
 				{ label: 'Makers to Market', href: MAKERS_URL },
 				{ label: 'Sponsor a programme', href: SPONSORS_URL },
+				// Shown once the first supporter has been added in the CMS
+				...(supporters.length ? [{ label: 'Our supporters', href: SUPPORTERS_URL }] : []),
 				{ label: 'Book a course', href: BOOKINGS_URL, external: true }
 			]
 		},
