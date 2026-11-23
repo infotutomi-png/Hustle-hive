@@ -83,7 +83,12 @@
 				</a>
 			{/each}
 		</div>
-<!-- Quick route for schools straight to a referral -->		<p class="text-gray-300 mb-8">			School or local authority?			<a href={contactHref('school-referral')} class="text-brand-orange font-semibold hover:underline whitespace-nowrap">Make a referral <span aria-hidden="true">&rarr;</span></a>		</p>
+
+		<!-- Quick route for schools straight to a referral -->
+		<p class="text-gray-300 mb-8">
+			School or local authority?
+			<a href={contactHref('school-referral')} class="text-brand-orange font-semibold hover:underline whitespace-nowrap">Make a referral <span aria-hidden="true">&rarr;</span></a>
+		</p>
 
 		<div class="flex flex-col sm:flex-row justify-center gap-3">
 			<a
