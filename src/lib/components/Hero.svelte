@@ -1,6 +1,7 @@
 <script lang="ts">
 	import home from '$lib/content/home.json';
 	import { activeCards } from '$lib/happening-soon';
+	import { contactHref } from '$lib/links';
 
 	const hero = home.hero;
 	// The last word of the second headline line (e.g. "Futures.") is shown in brand orange
@@ -43,7 +44,7 @@
 		</p>
 
 		<!-- Two pathways: which part of Hustle Hive are you here for? -->
-		<div class="grid sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto mb-8 text-left">
+		<div class="grid sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto mb-5 text-left">
 			{#each hero.pathways as pathway}
 				<!-- Icon and "who it's for" label on top, so the title gets the full width and stays on one line -->
 				<a
@@ -82,6 +83,12 @@
 				</a>
 			{/each}
 		</div>
+
+		<!-- Quick route for schools straight to a referral -->
+		<p class="text-gray-300 mb-8">
+			School or local authority?
+			<a href={contactHref('school-referral')} class="text-brand-orange font-semibold hover:underline whitespace-nowrap">Make a referral <span aria-hidden="true">&rarr;</span></a>
+		</p>
 
 		<div class="flex flex-col sm:flex-row justify-center gap-3">
 			<a
